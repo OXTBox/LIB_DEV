@@ -13,6 +13,9 @@ Open it in LiveCode (keep it in LIB_DEV: it finds the other folders from there).
   and Explorer opens with the file selected.
 - **Right-click a name:** Reviewed / Not Reviewed (changes its state), Open in Explorer, Copy Path.
 - **Feedback + Submit:** your note about the selected file goes to the AI's inbox.
+- **Tell Claude:** one click asks the AI to read your reviews now (unsent feedback is submitted
+  first). It writes a line to `LIB_LLMIN/LIB_DEV/TELL_CLAUDE.txt`; the AI watches that file while a
+  session is open (`tools/wait_for_tell.sh`), and checks it when the next session starts.
 
 | File | Who writes it |
 |---|---|

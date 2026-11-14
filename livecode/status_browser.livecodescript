@@ -11,10 +11,13 @@
 ## The owner's states and feedback go to the AI's inbox: LIB_LLMIN/LIB_DEV/
 ##   REVIEW_STATE.txt     <full path> TAB reviewed|waiting TAB date time
 ##   REVIEW_FEEDBACK.txt  date time TAB <full path> TAB feedback (one line)
+##   TELL_CLAUDE.txt      date time TAB "tell" TAB counts: the "Tell Claude" button. The AI watches
+##                        this file while a session is open and reads your reviews when it changes.
 ######################################################################################
 
 local sEntries     -- [n][date|lib|path|done|warn|caveat]; list line n = entry n
 local sCount, sCurrent, sState, sNotes, sNoteText   -- sNoteText[path] = your stamped comments
+local sLastSent      -- the feedback text last submitted (Tell Claude submits unsent text first)
 
 on openStack
    SB.Refresh
@@ -22,12 +25,17 @@ end openStack
 
 -------------------------------------------------------------------- files
 
--- the projects folder: the folder above the one this stack sits in (projects/LIB_DEV/...)
+-- the projects folder: the nearest folder above this stack (or standalone) that holds LIB_LLMOUT,
+-- so a build anywhere under projects works (e.g. LIB_LLMIN/LIB_DEV/Status_Browser/Status_Browser.exe)
 function SB.Projects
    local tPath
    put the effective filename of this stack into tPath
    set the itemDel to "/"
-   return item 1 to -3 of tPath
+   repeat while the number of items of tPath > 1
+      delete item -1 of tPath
+      if there is a folder (tPath & "/LIB_LLMOUT") then return tPath
+   end repeat
+   return "//wsl$/Ubuntu/home/igame3d/projects"
 end SB.Projects
 
 function SB.ListFile
@@ -209,6 +217,7 @@ on SB.Submit
    else
       put sEntries[sCurrent]["path"] into tPath
    end if
+   put field "Feedback" into sLastSent
    replace return with " / " in tText
    replace tab with " " in tText
    put the short date && the long time into tStamp
@@ -223,6 +232,27 @@ on SB.Submit
       SB.Clicked sCurrent, false
    end if
 end SB.Submit
+
+-- one click: unsent feedback is submitted first, then a line in TELL_CLAUDE.txt wakes the AI
+on SB.TellClaude
+   local tReviewed, tWaiting, tKey, tText
+   put field "Feedback" into tText
+   if tText is not empty and tText is not sLastSent and not (tText begins with "Whatever feedback") then SB.Submit
+   put 0 into tReviewed
+   put 0 into tWaiting
+   put 1 into tKey
+   repeat while tKey <= sCount
+      if sState[sEntries[tKey]["path"]] is "reviewed" then
+         add 1 to tReviewed
+      else
+         add 1 to tWaiting
+      end if
+      add 1 to tKey
+   end repeat
+   SB.AppendLine SB.InboxFile("TELL_CLAUDE.txt"), the short date && the long time & tab & "tell" & tab & \
+         tReviewed && "reviewed," && tWaiting && "waiting," && the number of lines of SB.ReadText(SB.InboxFile("REVIEW_FEEDBACK.txt")) && "feedback lines"
+   put "Told Claude" && the short time into field "Label Field"
+end SB.TellClaude
 
 -- tests: one line
 function SB.State

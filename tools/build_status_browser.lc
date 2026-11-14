@@ -21,6 +21,13 @@ set the label of button "Refresh" to "Refresh"
 set the script of button "Refresh" to "on mouseUp" & return & "  SB.Refresh" & return & "end mouseUp"
 set the label of button "Submit" to "Submit"
 set the script of button "Submit" to "on mouseUp" & return & "  SB.Submit" & return & "end mouseUp"
+if there is not a button "TellClaude" then
+  create button "TellClaude"
+end if
+set the label of button "TellClaude" to "Tell Claude"
+set the rect of button "TellClaude" to 86, 3, 180, 21
+set the traversalOn of button "TellClaude" to false
+set the script of button "TellClaude" to "on mouseUp" & return & "  SB.TellClaude" & return & "end mouseUp"
 if there is not a button "ReviewMenu" then
   create button "ReviewMenu"
 end if
