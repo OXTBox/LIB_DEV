@@ -7,7 +7,8 @@
 
 The list is ~/projects/LIB_LLMOUT/FOR_REVIEW.txt, one tab-separated line a file:
     date time, LIB, full Windows path (\\\\wsl$\\Ubuntu\\...), work done, warnings, caveats
-Adding a path that is already listed replaces its line (it moves to the top of the stack's list).
+Adding a path that is already listed replaces its line (it moves to the top of the stack's list);
+if the owner had marked it Reviewed, it goes back to waiting (its state line says the AI changed it).
 """
 import os, sys, time
 
@@ -43,6 +44,24 @@ def add(path, done, warn='-', caveat='-'):
     lines.append('\t'.join([time.strftime('%Y-%m-%d %H:%M'), lib_of(path), w, clean(done), clean(warn), clean(caveat)]))
     open(LIST, 'w', encoding='utf-8', newline='\n').write('\n'.join(lines) + '\n')
     print('listed', w)
+    reopen(w)
+
+
+def reopen(w):
+    """a file the owner marked Reviewed that changes again goes back to waiting (the browser
+    keeps states by path, so it would otherwise still show + after the change)"""
+    st = os.path.join(INBOX, 'REVIEW_STATE.txt')
+    if not os.path.exists(st):
+        return
+    last = None
+    for line in open(st, encoding='utf-8').read().splitlines():
+        f = line.split('\t')
+        if len(f) >= 2 and f[0] == w:
+            last = f[1]
+    if last == 'reviewed':
+        with open(st, 'a', encoding='utf-8', newline='\n') as fh:
+            fh.write('\t'.join([w, 'waiting', time.strftime('%m/%d/%y %I:%M:%S %p'), 'AI: changed after your review']) + '\n')
+        print('  back to waiting (changed after your review)')
 
 
 def main(a):
