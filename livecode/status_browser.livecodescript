@@ -14,7 +14,7 @@
 ######################################################################################
 
 local sEntries     -- [n][date|lib|path|done|warn|caveat]; list line n = entry n
-local sCount, sCurrent, sState, sNotes
+local sCount, sCurrent, sState, sNotes, sNoteText   -- sNoteText[path] = your stamped comments
 
 on openStack
    SB.Refresh
@@ -69,8 +69,11 @@ on SB.Refresh
       if tLine is not empty then put item 2 of tLine into sState[item 1 of tLine]
    end repeat
    put empty into sNotes
+   put empty into sNoteText
    repeat for each line tLine in SB.ReadText(SB.InboxFile("REVIEW_FEEDBACK.txt"))
-      if tLine is not empty then put true into sNotes[item 2 of tLine]
+      if tLine is empty then next repeat
+      put true into sNotes[item 2 of tLine]
+      put "  " & item 1 of tLine & ":  " & item 3 to -1 of tLine & return after sNoteText[item 2 of tLine]
    end repeat
    -- entries, newest (last in the file) first
    put empty into tLines
@@ -117,6 +120,7 @@ end SB.ShortName
 -- a click: show the AI's details and open Explorer on the file
 on SB.Clicked pLine, pOpen
    if pLine < 1 or pLine > sCount then exit SB.Clicked
+   if pLine is not sCurrent then put "Feedback" into field "Label Field"
    put pLine into sCurrent
    put "LLM Details here:" & return & \
          "LIB: " & sEntries[pLine]["lib"] & "   (" & sEntries[pLine]["date"] & ")" & return & \
@@ -124,9 +128,15 @@ on SB.Clicked pLine, pOpen
          "Warnings: " & sEntries[pLine]["warn"] & return & \
          "Caveats: " & sEntries[pLine]["caveat"] & return & \
          "Full File Path: " & sEntries[pLine]["path"] & return & \
-         "State: " & SB.StateWord(sEntries[pLine]["path"]) into field "LLMNote"
+         "State: " & SB.StateWord(sEntries[pLine]["path"]) & SB.YourNotes(sEntries[pLine]["path"]) into field "LLMNote"
    if pOpen then SB.Explore sEntries[pLine]["path"]
 end SB.Clicked
+
+-- your earlier comments on this file, with their date and time
+function SB.YourNotes pPath
+   if sNoteText[pPath] is empty then return empty
+   return return & return & "Your feedback:" & return & char 1 to -2 of sNoteText[pPath]
+end SB.YourNotes
 
 function SB.StateWord pPath
    if sState[pPath] is "reviewed" then return "reviewed"
@@ -191,7 +201,7 @@ on SB.SetState pState
 end SB.SetState
 
 on SB.Submit
-   local tText, tPath
+   local tText, tPath, tStamp
    put field "Feedback" into tText
    if tText is empty or tText begins with "Whatever feedback" then exit SB.Submit
    if sCurrent is empty then
@@ -201,14 +211,17 @@ on SB.Submit
    end if
    replace return with " / " in tText
    replace tab with " " in tText
-   SB.AppendLine SB.InboxFile("REVIEW_FEEDBACK.txt"), the short date && the long time & tab & tPath & tab & tText
-   put empty into field "Feedback"
+   put the short date && the long time into tStamp
+   SB.AppendLine SB.InboxFile("REVIEW_FEEDBACK.txt"), tStamp & tab & tPath & tab & tText
+   -- the text stays in the field (the owner: Submit is also a save while you keep writing)
+   put "Saved" && the short time into field "Label Field"
    put true into sNotes[tPath]
+   put "  " & tStamp & ":  " & tText & return after sNoteText[tPath]
    if sCurrent is not empty then
       put SB.Mark(tPath) && SB.ShortName(tPath) & "   " & sEntries[sCurrent]["lib"] into line sCurrent of field "Scrolling List Field"
       set the hilitedLine of field "Scrolling List Field" to sCurrent
+      SB.Clicked sCurrent, false
    end if
-   answer "Feedback saved for the AI (LIB_LLMIN/LIB_DEV/REVIEW_FEEDBACK.txt)."
 end SB.Submit
 
 -- tests: one line

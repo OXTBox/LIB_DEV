@@ -12,6 +12,9 @@ else
   set the name of field 3 to "Feedback"
 end if
 put empty into field "Feedback"
+set the rect of field "Label Field" to 235, 131, 480, 152
+set the textAlign of field "Label Field" to "left"
+put "Feedback" into field "Label Field"
 set the title of stack tS to "FOR BILL Status_Browser"
 set the script of field "Scrolling List Field" to "on mouseUp pButton" & return & "  if pButton is 1 then SB.Clicked the hilitedLine of me, true" & return & "end mouseUp" & return &   "on mouseDown pButton" & return & "  if pButton is 3 then SB.RightClicked word 2 of the clickLine" & return & "end mouseDown"
 set the label of button "Refresh" to "Refresh"
