@@ -1,0 +1,34 @@
+-- run with: ~/projects/LIB_MCP/tools/lcmcp --standalone run - < tools/build_status_browser.lc
+-- takes the owner's layout (LIB_LLMOUT/Read/LIB_DEV/Status_Browser_owner.livecode, or the inbox copy)
+-- adds the scripts and the right-click menu, saves LIB_DEV/Status_Browser.livecode
+put "//wsl$/Ubuntu/home/igame3d/projects/LIB_LLMOUT/Read/LIB_DEV/Status_Browser_owner.livecode" into tSrc
+if there is not a file tSrc then put "//wsl$/Ubuntu/home/igame3d/projects/LIB_LLMIN/LIB_DEV/Status_Browser.livecode" into tSrc
+if there is a stack "Status_Browser" then delete stack "Status_Browser"
+go invisible stack tSrc
+put the short name of this stack into tS
+set the defaultStack to tS
+if there is a field "Feedback" then
+else
+  set the name of field 3 to "Feedback"
+end if
+put empty into field "Feedback"
+set the title of stack tS to "FOR BILL Status_Browser"
+set the script of field "Scrolling List Field" to "on mouseUp pButton" & return & "  if pButton is 1 then SB.Clicked the hilitedLine of me, true" & return & "end mouseUp" & return &   "on mouseDown pButton" & return & "  if pButton is 3 then SB.RightClicked word 2 of the clickLine" & return & "end mouseDown"
+set the label of button "Refresh" to "Refresh"
+set the script of button "Refresh" to "on mouseUp" & return & "  SB.Refresh" & return & "end mouseUp"
+set the label of button "Submit" to "Submit"
+set the script of button "Submit" to "on mouseUp" & return & "  SB.Submit" & return & "end mouseUp"
+if there is not a button "ReviewMenu" then
+  create button "ReviewMenu"
+end if
+set the style of button "ReviewMenu" to "menu"
+set the menuMode of button "ReviewMenu" to "popup"
+set the text of button "ReviewMenu" to "Reviewed" & return & "Not Reviewed" & return & "-" & return & "Open in Explorer" & return & "Copy Path"
+set the visible of button "ReviewMenu" to false
+set the script of button "ReviewMenu" to "on menuPick pItem" & return & "  SB.MenuPicked pItem" & return & "end menuPick"
+set the script of stack tS to textDecode(URL ("binfile://wsl$/Ubuntu/home/igame3d/projects/LIB_DEV/livecode/status_browser.livecodescript"), "UTF-8")
+set the fileName of stack tS to "//wsl$/Ubuntu/home/igame3d/projects/LIB_DEV/Status_Browser.livecode"
+save stack tS
+put the fileName of stack tS & " | " & the title of stack tS into tOut
+delete stack tS
+return tOut
