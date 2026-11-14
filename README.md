@@ -17,6 +17,17 @@ Open it in LiveCode (keep it in LIB_DEV: it finds the other folders from there).
   first). It writes a line to `LIB_LLMIN/LIB_DEV/TELL_CLAUDE.txt`; the AI watches that file while a
   session is open (`tools/wait_for_tell.sh`), and checks it when the next session starts.
 
+### Run it as a standalone (survives quitting LiveCode)
+Build `Status_Browser_Launcher.livecode` as a standalone ONCE; it opens the current
+`Status_Browser.livecode` from disk at every start, so updates need no rebuild. Closing the
+browser window quits it.
+1. Open `LIB_DEV/Status_Browser_Launcher.livecode` in the LiveCode IDE.
+2. File > Standalone Application Settings: General: name `Status_Browser`; Windows ticked;
+   Inclusions: "Search for required inclusions". Do NOT add Status_Browser.livecode as a stack file.
+3. File > Save as Standalone Application: any folder under `projects` (it finds the projects
+   folder by walking up to the one holding LIB_LLMOUT), e.g. `LIB_LLMIN/LIB_DEV/Status_Browser`.
+4. Double-click the .exe (pin it to the taskbar).
+
 | File | Who writes it |
 |---|---|
 | `~/projects/LIB_LLMOUT/FOR_REVIEW.txt` | the AI, with `tools/for_review.py add PATH "work done" "warnings" "caveats"` |

@@ -23,6 +23,13 @@ on openStack
    SB.Refresh
 end openStack
 
+-- run from the launcher standalone: closing the browser quits the app (no hidden leftovers).
+-- Only when the launcher is there, so other engines (the AI's test standalone) never quit.
+on closeStack
+   if the environment is "standalone application" and there is a stack "Status_Browser_Launcher" then quit
+   pass closeStack
+end closeStack
+
 -------------------------------------------------------------------- files
 
 -- the projects folder: the nearest folder above this stack (or standalone) that holds LIB_LLMOUT,
