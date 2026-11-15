@@ -22,7 +22,8 @@
 
 global gSceneObjects, bPaused, bPlaying
 
-constant kTickMS = 16          -- draw as often as this; the engine keeps its own 33 ms steps
+constant kTickMS = 33          -- draw once per engine step (the game only changes every 33 ms)
+constant kPausedMS = 100       -- paused: no drawing, just look for the resume ten times a second
 constant kMenuH = 22
 
 local sTickMsg, sRunning, sGfx, sGfxCount, sBG, sFrames, sFPSTick, sFPS, sMsgEnd, sEnded
@@ -135,32 +136,39 @@ end Player.ViewRect
 -------------------------------------------------------------------- the loop
 
 on Player.Tick
-   local tErr, tWas
+   local tErr, tWas, tWait
    put empty into sTickMsg
    if sRunning is not true then exit Player.Tick
-   put the defaultStack into tWas
-   Player.UseMe
-   try
-      Vibe.Step
-      if Vibe.Playing() then
-         Player.Draw
-      else
-         Player.Ended
-      end if
-   catch tErr
-      Player.Failed tErr, "playing"
-   end try
-   if tWas is not empty and there is a stack tWas then set the defaultStack to tWas
+   put kTickMS into tWait
+   if bPaused is true then
+      -- paused (Escape, the ... menu, or the notes box): the picture does not change, so
+      -- nothing is stepped or drawn; the window costs next to no CPU
+      put kPausedMS into tWait
+   else
+      put the defaultStack into tWas
+      Player.UseMe
+      try
+         Vibe.Step
+         if Vibe.Playing() then
+            Player.Draw
+         else
+            Player.Ended
+         end if
+      catch tErr
+         Player.Failed tErr, "playing"
+      end try
+      if tWas is not empty and there is a stack tWas then set the defaultStack to tWas
+      add 1 to sFrames
+   end if
    if sRunning is true then
-      send "Player.Tick" to me in kTickMS milliseconds
+      send "Player.Tick" to me in tWait milliseconds
       put the result into sTickMsg
    end if
-   add 1 to sFrames
    if the milliseconds - sFPSTick >= 1000 then
       put round(sFrames * 1000 / (the milliseconds - sFPSTick)) into sFPS
       put 0 into sFrames
       put the milliseconds into sFPSTick
-      Player.Status the uGame of me && "|" && sFPS && "fps" & Player.LevelText()
+      if bPaused is not true then Player.Status the uGame of me && "|" && sFPS && "fps" & Player.LevelText()
    end if
    if sMsgEnd > 0 and the milliseconds > sMsgEnd then Player.Message empty
 end Player.Tick
