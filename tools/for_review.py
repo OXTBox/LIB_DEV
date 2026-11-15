@@ -79,4 +79,7 @@ def main(a):
 
 
 if __name__ == '__main__':
+    if any(a in ('-h', '--help') for a in sys.argv[1:]):   # A-50: every tool answers --help
+        print(__doc__)
+        sys.exit(0)
     main(sys.argv[1:])
