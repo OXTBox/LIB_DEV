@@ -25,6 +25,7 @@ constant kBenchRel = "xt3D_Raylib_Livecode_Bridge/standalone/xt3d_Bench_LibMCP/x
 constant kBenchPort = 8770
 
 local sGames, sCount, sCurrent, sLastSent, sInfo
+local sDraft   -- [game] the Feedback field's text for that game (kept while you switch games)
 
 on openStack
    GB.Refresh
@@ -142,7 +143,12 @@ on GB.Clicked pLine
    local tName, tI, tWhen
    GB.UseMe
    if pLine is empty or pLine < 1 or pLine > sCount then exit GB.Clicked
-   if pLine is not sCurrent then put "Feedback" into field "FeedbackLabel"
+   if pLine is not sCurrent then
+      -- the Feedback field follows the selected game (the owner: it stayed stuck on one item)
+      if sCurrent is not empty then put field "Feedback" into sDraft[sGames[sCurrent]["name"]]
+      put sDraft[sGames[pLine]["name"]] into field "Feedback"
+      put "Feedback" into field "FeedbackLabel"
+   end if
    put pLine into sCurrent
    put sGames[pLine]["name"] into tName
    GB.UseLaunch

@@ -3,8 +3,10 @@
 ## Keeps the owner up with the files the AI makes.
 ##   LEFT   the files waiting for review, newest first (from LIB_LLMOUT/FOR_REVIEW.txt,
 ##          which the AI fills with LIB_DEV/tools/for_review.py). Refresh reloads it.
-##          Click a name: its details show on the right AND Explorer opens with it selected.
-##          Right-click a name: Reviewed / Not Reviewed / Open in Explorer / Copy Path.
+##          Click a name: its details show on the right (no file access: the owner, 14 Nov 13:05,
+##          Explorer over the Windows-WSL bridge spins about 30 s). Right-click a name:
+##          Reviewed / Not Reviewed / Open in Explorer / Copy Path (the only way Explorer opens).
+##          Each file keeps its own unsent feedback draft: switching files shows that file's text.
 ##          o = waiting, + = reviewed, * = has feedback
 ##   RIGHT  top: what the AI says about the file (LIB, work done, warnings, caveats, path)
 ##          bottom: the owner's feedback; Submit saves it for the AI to read
@@ -18,6 +20,7 @@
 local sEntries     -- [n][date|lib|path|done|warn|caveat]; list line n = entry n
 local sCount, sCurrent, sState, sNotes, sNoteText   -- sNoteText[path] = your stamped comments
 local sLastSent      -- the feedback text last submitted (Tell Claude submits unsent text first)
+local sDraft         -- [path] the Feedback field's text for that file (kept while you switch files)
 
 on openStack
    SB.Refresh
@@ -115,8 +118,8 @@ on SB.Refresh
    put tN into sCount
    put tOut into field "Scrolling List Field"
    put "LLM Details here:" & return & tN && "files for review." & return & return & \
-         "Click a name: details here, and Explorer opens on the file." & return & \
-         "Right-click a name: Reviewed / Not Reviewed." & return & \
+         "Click a name: details here." & return & \
+         "Right-click a name: Reviewed / Not Reviewed / Open in Explorer / Copy Path." & return & \
          "o waiting   + reviewed   * has feedback" into field "LLMNote"
    put empty into sCurrent
 end SB.Refresh
@@ -133,10 +136,14 @@ function SB.ShortName pPath
    return item -1 of pPath
 end SB.ShortName
 
--- a click: show the AI's details and open Explorer on the file
+-- a click: show the AI's details. Never opens Explorer (that is the right-click menu's job); pOpen is
+-- kept so older builds of the list's script still compile.
 on SB.Clicked pLine, pOpen
    if pLine < 1 or pLine > sCount then exit SB.Clicked
-   if pLine is not sCurrent then put "Feedback" into field "Label Field"
+   if pLine is not sCurrent then
+      SB.SwapDraft pLine
+      put "Feedback" into field "Label Field"
+   end if
    put pLine into sCurrent
    put "LLM Details here:" & return & \
          "LIB: " & sEntries[pLine]["lib"] & "   (" & sEntries[pLine]["date"] & ")" & return & \
@@ -145,8 +152,13 @@ on SB.Clicked pLine, pOpen
          "Caveats: " & sEntries[pLine]["caveat"] & return & \
          "Full File Path: " & sEntries[pLine]["path"] & return & \
          "State: " & SB.StateWord(sEntries[pLine]["path"]) & SB.YourNotes(sEntries[pLine]["path"]) into field "LLMNote"
-   if pOpen then SB.Explore sEntries[pLine]["path"]
 end SB.Clicked
+
+-- the Feedback field follows the selected file: keep the text written for the old one, show the new one's
+on SB.SwapDraft pNewLine
+   if sCurrent is not empty then put field "Feedback" into sDraft[sEntries[sCurrent]["path"]]
+   put sDraft[sEntries[pNewLine]["path"]] into field "Feedback"
+end SB.SwapDraft
 
 -- your earlier comments on this file, with their date and time
 function SB.YourNotes pPath
