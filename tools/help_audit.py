@@ -8,6 +8,10 @@ script with --help can write files, as some take no options and just do their jo
 A tool counts as having help when it uses argparse, or its source checks for '-h' / '--help'.
 Skipped: tests/ folders (test runners) and LIB_LLMIN (the inbox: files sent in, not ours).
 A script without `if __name__ == '__main__'` is a module, not a tool, and is skipped.
+
+The Test column (A-50 "one test that runs"): the repo's tests/run_tests.py (or another runner in
+tests/), and whether it needs LiveCode (it goes through LIB_MCP) or runs on plain Python. A repo
+with Python tools and no test counts as one thing to fix.
 """
 import os, re, sys
 
@@ -22,6 +26,22 @@ def tools_of(repo):
         for f in files:
             if f.endswith('.py'):
                 yield os.path.join(root, f)
+
+
+def test_of(repo):
+    """'python' / 'LiveCode' / '' : the repo's test runner and what it needs"""
+    tdir = os.path.join(repo, 'tests')
+    if not os.path.isdir(tdir):
+        return ''
+    runners = [f for f in sorted(os.listdir(tdir)) if f.startswith('run_tests') or f.endswith('_test.sh') or f == 'headless.sh']
+    if not runners:
+        return ''
+    try:
+        src = open(os.path.join(tdir, runners[0]), encoding='utf-8', errors='replace').read()
+    except OSError:
+        return ''
+    needs_lc = runners[0].endswith('.sh') or re.search(r'Client\.standalone|Client\(|lcmcp', src)
+    return 'LiveCode' if needs_lc else 'python'
 
 
 def has_help(src):
@@ -41,7 +61,7 @@ def main(argv):
         if name in SKIP_REPOS or not (name.startswith('LIB_') and os.path.isdir(os.path.join(repo, '.git'))):
             continue
         readme = os.path.exists(os.path.join(repo, 'README.md'))
-        no_help = []
+        no_help, ntools = [], 0
         for path in tools_of(repo):
             try:
                 src = open(path, encoding='utf-8', errors='replace').read()
@@ -49,15 +69,21 @@ def main(argv):
                 continue
             if "__name__" not in src:
                 continue
+            ntools += 1
             if not has_help(src):
                 no_help.append(os.path.relpath(path, repo))
-        missing += (not readme) + len(no_help)
-        rows.append((name, readme, no_help))
-    lines = ['| Repo | README | Tools without --help |', '|---|---|---|']
-    for name, readme, no_help in rows:
-        lines.append('| %s | %s | %s |' % (name, 'yes' if readme else '**NO**',
-                                           ', '.join('`%s`' % p for p in no_help) or '-'))
-    text = '\n'.join(lines) + '\n\n%d things to fix\n' % missing
+        test = test_of(repo)
+        missing += (not readme) + len(no_help) + (bool(ntools) and not test)
+        rows.append((name, readme, no_help, ntools, test))
+    lines = ['| Repo | README | Tools | Test that runs | Tools without --help |', '|---|---|---|---|---|']
+    for name, readme, no_help, ntools, test in rows:
+        lines.append('| %s | %s | %d | %s | %s |' % (name, 'yes' if readme else '**NO**', ntools,
+                                                     test or ('**NO**' if ntools else '-'),
+                                                     ', '.join('`%s`' % p for p in no_help) or '-'))
+    tested = sum(1 for r in rows if r[4])
+    plain = sum(1 for r in rows if r[4] == 'python')
+    text = '\n'.join(lines) + '\n\n%d of %d repos have a test that runs (%d on plain Python, %d need LiveCode)\n%d things to fix\n' % (
+        tested, len(rows), plain, tested - plain, missing)
     print(text)
     if out:
         open(out, 'w').write(text)
