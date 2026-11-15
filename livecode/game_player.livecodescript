@@ -106,11 +106,17 @@ on closeStack
       catch tErr
       end try
    end if
-   if the uQuitOnClose of me is true and the environment is "standalone application" then
-      send "quit" to me in 0 milliseconds
-   end if
+   -- the Game_Player app: this window was its only job, so end the program now (a message
+   -- sent to this window would never arrive: destroyStack removes it as it closes)
+   if the uQuitOnClose of me is true and the environment is "standalone application" then quit
    pass closeStack
 end closeStack
+
+-- LIB_ALPHA 12b: closing frees the window (and, in the Game_Player app, ends it)
+on closeStackRequest
+   set the destroyStack of me to true
+   pass closeStackRequest
+end closeStackRequest
 
 command Player.StopTimer
    if sTickMsg is not empty then cancel sTickMsg

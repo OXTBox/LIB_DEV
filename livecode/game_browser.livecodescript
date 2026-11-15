@@ -233,13 +233,27 @@ on GB.PlayVibe pName
       exit GB.PlayVibe
    end if
    put textEncode(pName, "UTF-8") into URL ("binfile:" & specialFolderPath("temporary") & "/game_player_request.txt")
-   launch pName with GB.Win(tExe)
-   if the result is not empty then
-      GB.Say "Could not start" && GB.Win(tExe) & ":" && the result
-   else
-      GB.Say "Starting" && pName && "in its own Game_Player window."
+   -- Windows' start: a new program every time (LiveCode's launch refuses a second copy of an
+   -- app it started), and the browser does not wait for it
+   if the platform is not "Win32" then
+      GB.Say "Game_Player runs on Windows only."
+      exit GB.PlayVibe
    end if
+   GB.Start tExe, pName
+   GB.Say "Starting" && pName && "in its own Game_Player window."
 end GB.PlayVibe
+
+-- start a program without waiting for it; the folder is a local one (cmd can't start in \\wsl$)
+command GB.Start pExe, pArg
+   local tWas, tCmd
+   put the defaultFolder into tWas
+   set the defaultFolder to specialFolderPath("temporary")
+   put "start " & quote & quote & " " & quote & GB.Win(pExe) & quote into tCmd
+   if pArg is not empty then put " " & quote & pArg & quote after tCmd
+   set the hideConsoleWindows to true
+   get shell(tCmd)
+   set the defaultFolder to tWas
+end GB.Start
 
 -- Game_Player.exe as LiveCode builds it, in LIB_DEV/Game_Player (or the inbox)
 function GB.PlayerExe
@@ -263,7 +277,7 @@ on GB.PlayXt3d pName
          exit GB.PlayXt3d
       end if
       GB.Say "Starting the xt3d games bench..."
-      launch GB.Win(tExe)
+      GB.Start tExe, empty
       repeat 60 times
          wait 500 milliseconds with messages
          if GB.BenchAlive() then exit repeat
