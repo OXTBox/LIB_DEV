@@ -85,6 +85,25 @@ function GL.Info pProjects, pName
    return tInfo
 end GL.Info
 
+-- SKINS (A-86, Opus 15 Nov 2026): the editor's Edit > Replace With Model... saves skins as
+--   LIB_GAMES/Vibecode3D_Games/Skins/<Game>/<skin>.skin.txt   mesh name TAB model file (relative to projects)
+--   LIB_GAMES/Vibecode3D_Games/Skins/<Game>/ACTIVE.txt         the skin in use (empty or missing: placeholders)
+-- Before a game starts its active skin goes into the global gV3DSkin[mesh name] = model file, and the
+-- engine's Mesh.Define (xt3d overrides) uses that model instead of the game's placeholder mesh.
+command GL.LoadSkin pProjects, pName
+   global gV3DSkin
+   local tDir, tSkin, tLine
+   put empty into gV3DSkin
+   put pProjects & "/LIB_GAMES/Vibecode3D_Games/Skins/" & pName into tDir
+   put word 1 to -1 of line 1 of GL.ReadText(tDir & "/ACTIVE.txt") into tSkin
+   if tSkin is empty then exit GL.LoadSkin
+   set the itemDelimiter to tab
+   repeat for each line tLine in GL.ReadText(tDir & "/" & tSkin & ".skin.txt")
+      if tLine is empty or char 1 of tLine is "#" then next repeat
+      if item 2 of tLine is not empty then put pProjects & "/" & item 2 of tLine into gV3DSkin[item 1 of tLine]
+   end repeat
+end GL.LoadSkin
+
 -- the game in its own window. Returns empty, or why it could not.
 -- pQuitOnClose: closing the window quits the app (the Game_Player app sets it)
 function GL.Open pProjects, pName, pQuitOnClose
@@ -102,6 +121,7 @@ function GL.Open pProjects, pName, pQuitOnClose
       return "The engine library did not load:" && tErr
    end try
    GL.GameNotes pProjects
+   GL.LoadSkin pProjects, pName
    put GL.Info(pProjects, pName) into tInfo
    put "Play" && pName into tStack
    if there is a stack tStack then close stack tStack
