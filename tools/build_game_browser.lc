@@ -1,0 +1,68 @@
+-- run with: ~/projects/LIB_MCP/tools/lcmcp --standalone run - < tools/build_game_browser.lc
+-- takes the owner's layout (LIB_DEV/GAME_Browser_gui_For_edits.livecode; this build never writes to it),
+-- adds the scripts and the right-click menu, saves LIB_DEV/GAME_Browser.livecode.
+-- Also (re)makes LIB_DEV/Game_Player_Launcher.livecode, the stack the owner saves ONCE as the
+-- Game_Player standalone. The owner's own control scripts are kept (the list's arrowKey sizing,
+-- the drag bars); only the empty mouse handlers of the list are filled in.
+put "//wsl$/Ubuntu/home/igame3d/projects/LIB_DEV" into tDev
+put tDev & "/GAME_Browser_gui_For_edits.livecode" into tSrc
+if there is a stack "GAME_Browser" then delete stack "GAME_Browser"
+go invisible stack tSrc
+put the short name of this stack into tS
+set the defaultStack to tS
+-- the list: our mouse handlers + the owner's arrowKey
+put the script of field "Games_List" into tOwn
+put offset("on arrowKey", tOwn) into tA
+put offset("end arrowKey", tOwn) into tB
+put empty into tArrow
+if tA > 0 and tB > tA then put char tA to tB + 11 of tOwn into tArrow
+put "on mouseUp pButton" & return & "  if pButton is empty or pButton is 1 then GB.Clicked the hilitedLine of me" & return & "end mouseUp" & return & return & \
+      "on mouseDown pButton" & return & "  if pButton is 3 then GB.RightClicked word 2 of the clickLine" & return & "end mouseDown" & return & return & \
+      "on mouseDoubleUp pButton" & return & "  if pButton is 1 then GB.PlayCurrent" & return & "end mouseDoubleUp" & return & return & \
+      "on returnKey" & return & "  GB.PlayCurrent" & return & "end returnKey" & return & return & \
+      "on enterKey" & return & "  GB.PlayCurrent" & return & "end enterKey" & return & return & tArrow into tListScript
+set the script of field "Games_List" to tListScript
+put the result into tErrList
+set the lockText of field "Games_List" to true
+set the listBehavior of field "Games_List" to true
+set the dontWrap of field "Games_List" to true
+put empty into field "Feedback"
+if there is a button "VibeCheck" and there is a button "xt3dCheck" then
+  if not (the hilite of button "VibeCheck") and not (the hilite of button "xt3dCheck") then set the hilite of button "VibeCheck" to true
+end if
+set the script of button "Refresh" to "on mouseUp" & return & "  GB.Refresh" & return & "end mouseUp"
+set the script of button "Submit" to "on mouseUp" & return & "  GB.Submit" & return & "end mouseUp"
+set the script of button "TellClaude" to "on mouseUp" & return & "  GB.TellClaude" & return & "end mouseUp"
+set the label of button "TellClaude" to "Tell Claude"
+set the style of button "ReviewMenu" to "menu"
+set the menuMode of button "ReviewMenu" to "popup"
+set the visible of button "ReviewMenu" to false
+set the script of button "ReviewMenu" to "on menuPick pItem" & return & "  GB.MenuPicked pItem" & return & "end menuPick"
+set the title of stack tS to "FOR BILL GAME_Browser | double-click a game to play, right-click for the engine"
+set the script of stack tS to textDecode(URL ("binfile:" & tDev & "/livecode/game_browser.livecodescript"), "UTF-8")
+put the result into tErrStack
+set the fileName of stack tS to tDev & "/GAME_Browser.livecode"
+save stack tS
+put the fileName of stack tS & " | list script: " & tErrList & " | stack script: " & tErrStack & " | arrowKey kept: " & (tArrow is not empty) into tOut
+delete stack tS
+-- the Game_Player launcher stack
+if there is a stack "Game_Player_Launcher" then delete stack "Game_Player_Launcher"
+create invisible stack "Game_Player_Launcher"
+set the defaultStack to "Game_Player_Launcher"
+set the rect of stack "Game_Player_Launcher" to 200, 200, 620, 360
+set the title of stack "Game_Player_Launcher" to "FOR BILL Game_Player_Launcher | save me ONCE as a standalone named Game_Player"
+create field "About"
+set the rect of field "About" to 10, 10, 410, 150
+set the lockText of field "About" to true
+put "Game_Player: one game per program, started by the GAME_Browser." & return & return & \
+      "Build ONCE: File > Standalone Application Settings: name Game_Player, Windows," & return & \
+      "Inclusions: Search for required inclusions." & return & \
+      "Then File > Save as Standalone Application into LIB_DEV/Game_Player." & return & return & \
+      "It loads everything else from disk at each start: no rebuilds for updates." into field "About"
+set the script of stack "Game_Player_Launcher" to textDecode(URL ("binfile:" & tDev & "/livecode/launcher_game_player.livecodescript"), "UTF-8")
+put the result into tErrL
+set the fileName of stack "Game_Player_Launcher" to tDev & "/Game_Player_Launcher.livecode"
+save stack "Game_Player_Launcher"
+put return & the fileName of stack "Game_Player_Launcher" & " | script: " & tErrL after tOut
+delete stack "Game_Player_Launcher"
+return tOut
