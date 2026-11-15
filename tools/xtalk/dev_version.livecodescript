@@ -22,6 +22,19 @@ function Dev.Stamp
    return format("%04d%02d%02d_%02d%02d%02d", item 1 of tD, item 2 of tD, item 3 of tD, item 4 of tD, item 5 of tD, item 6 of tD)
 end Dev.Stamp
 
+-- puts stack pStack at the top left of pRect when that rect lies on the screen (below the title bar),
+-- else in the middle of the screen
+command Dev.PlaceOnScreen pStack, pRect
+   local tScreen
+   put the screenRect into tScreen
+   if item 1 of pRect >= item 1 of tScreen and item 2 of pRect >= item 2 of tScreen + 24 \
+         and item 3 of pRect <= item 3 of tScreen and item 4 of pRect <= item 4 of tScreen then
+      set the topLeft of stack pStack to item 1 to 2 of pRect
+   else
+      set the loc of stack pStack to the screenLoc
+   end if
+end Dev.PlaceOnScreen
+
 function Dev.NewVersion pOld, pConcept, pFolder, pScriptFile, pTitleWho
    local tName, tPath, tProp, tSet, tSets, tProps, i, tScript, tFirst
    if there is not a stack pOld then return "error: no stack " & pOld
@@ -44,6 +57,9 @@ function Dev.NewVersion pOld, pConcept, pFolder, pScriptFile, pTitleWho
    repeat for each item tProp in kStackProps
       set the tProp of stack tName to the tProp of stack pOld
    end repeat
+   -- where the window opens: where the old one was, or centred when that was off the screen
+   -- (owner, 15 Nov: the first dev version opened at -288,-81)
+   Dev.PlaceOnScreen tName, the rect of stack pOld
    -- custom property sets: the default (empty name) and each named set
    put the customPropertySets of stack pOld into tSets
    put the customProperties of stack pOld into tProps
