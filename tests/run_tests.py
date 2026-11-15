@@ -34,6 +34,14 @@ def main():
     check('WSL path to a Windows path', w == '\\\\wsl$\\Ubuntu\\home\\igame3d\\projects\\LIB_DEV\\README.md', w)
     check('the LIB of a path', for_review.lib_of('/home/igame3d/projects/LIB_DEV/tools/x.py') == 'LIB_DEV')
     check('tabs and newlines are cleaned out of list fields', for_review.clean('a\tb\n c') == 'a b c')
+    import rename_in_handlers as rn
+    src = 'global gKeep\r\non a\r\n   put 1 into tArray["x"]\r\n   do "put 2 into tArray"\r\n   put tArrayName into t\r\nend a\r\non b\r\n   put tArray into x\r\nend b\r\n'
+    new, ch, pr = rn.plan(src, [('a', 'tArray', 'tXYZArray')])
+    check('rename: only inside the named handler, do strings too, CR LF kept',
+          not pr and 'put 1 into tXYZArray["x"]' in new and 'into tXYZArray"' in new and 'tArrayName' in new
+          and 'put tArray into x' in new and '\r\n' in new)
+    check('rename: refused when the new name is already used there', rn.plan(src, [('a', 'tArray', 'tArrayName')])[2])
+    check('rename: refused for a global', rn.plan(src, [('a', 'gKeep', 'gOther')])[2])
     return done()
 
 
