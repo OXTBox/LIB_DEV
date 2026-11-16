@@ -20,7 +20,7 @@
 ## <Prefix>.StartLevel), uLevels (count, 0 = no level menu), uQuitOnClose.
 ######################################################################################
 
-global gSceneObjects, bPaused, bPlaying, bStill
+global gSceneObjects, bPaused, bPlaying, bStill, gV3DTickMS   -- gV3DTickMS: a game's own frame time (ms), else kTickMS
 
 constant kTickMS = 33          -- draw once per engine step (the game only changes every 33 ms)
 constant kPausedMS = 100       -- paused: no drawing, just look for the resume ten times a second
@@ -144,6 +144,7 @@ on Player.Tick
    put empty into sTickMsg
    if sRunning is not true then exit Player.Tick
    put kTickMS into tWait
+   if gV3DTickMS is a number and gV3DTickMS >= 8 and gV3DTickMS <= 200 then put gV3DTickMS into tWait
    if bPaused is true then
       -- paused (Escape, the ... menu, or the notes box): the picture does not change, so
       -- nothing is stepped or drawn; the window costs next to no CPU
