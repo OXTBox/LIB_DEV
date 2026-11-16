@@ -20,10 +20,11 @@
 ## <Prefix>.StartLevel), uLevels (count, 0 = no level menu), uQuitOnClose.
 ######################################################################################
 
-global gSceneObjects, bPaused, bPlaying
+global gSceneObjects, bPaused, bPlaying, bStill
 
 constant kTickMS = 33          -- draw once per engine step (the game only changes every 33 ms)
 constant kPausedMS = 100       -- paused: no drawing, just look for the resume ten times a second
+constant kStillMS = 50         -- still (bStill, set by the game): no step, no drawing until a key or the mouse
 constant kMenuH = 22
 
 local sTickMsg, sRunning, sGfx, sGfxCount, sBG, sFrames, sFPSTick, sFPS, sMsgEnd, sEnded
@@ -40,6 +41,7 @@ on Player.Start
    local tErr
    Player.StopTimer
    Player.UseMe
+   put false into bStill
    put empty into sEnded
    try
       Vibe.Begin Player.ViewRect()
@@ -144,7 +146,12 @@ on Player.Tick
       -- paused (Escape, the ... menu, or the notes box): the picture does not change, so
       -- nothing is stepped or drawn; the window costs next to no CPU
       put kPausedMS into tWait
+   else if bStill is true and the keysDown is empty and the mouse is up then
+      -- still: the game said nothing moves (an editor at rest), so the picture stays as it is
+      -- until a key or the mouse is pressed, or the game puts false into bStill
+      put kStillMS into tWait
    else
+      put false into bStill
       put the defaultStack into tWas
       Player.UseMe
       try
@@ -168,7 +175,11 @@ on Player.Tick
       put round(sFrames * 1000 / (the milliseconds - sFPSTick)) into sFPS
       put 0 into sFrames
       put the milliseconds into sFPSTick
-      if bPaused is not true then Player.Status the uGame of me && "|" && sFPS && "fps" & Player.LevelText()
+      if bPaused is not true and bStill is true then
+         Player.Status the uGame of me && "| at rest (nothing moves, nothing drawn)" & Player.LevelText()
+      else if bPaused is not true then
+         Player.Status the uGame of me && "|" && sFPS && "fps" & Player.LevelText()
+      end if
    end if
    if sMsgEnd > 0 and the milliseconds > sMsgEnd then Player.Message empty
 end Player.Tick
