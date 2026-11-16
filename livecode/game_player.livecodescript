@@ -27,6 +27,8 @@ constant kPausedMS = 100       -- paused: no drawing, just look for the resume t
 constant kStillMS = 50         -- still (bStill, set by the game): no step, no drawing until a key or the mouse
 constant kMenuH = 22
 
+local sAway        -- true while the program is in the background and this player paused it
+local sMovingFPS   -- the frame rate the last time it moved (shown while at rest)
 local sTickMsg, sRunning, sGfx, sGfxCount, sBG, sFrames, sFPSTick, sFPS, sMsgEnd, sEnded
 local sLevel
 
@@ -176,8 +178,9 @@ on Player.Tick
       put 0 into sFrames
       put the milliseconds into sFPSTick
       if bPaused is not true and bStill is true then
-         Player.Status the uGame of me && "| at rest (nothing moves, nothing drawn)" & Player.LevelText()
+         Player.Status the uGame of me && "| at rest: 0 fps (nothing moves, nothing drawn; moving it was" && sMovingFPS && "fps)" & Player.LevelText()
       else if bPaused is not true then
+         if sFPS > 0 then put sFPS into sMovingFPS
          Player.Status the uGame of me && "|" && sFPS && "fps" & Player.LevelText()
       end if
    end if
@@ -303,6 +306,8 @@ command Player.Status pText
       Player.MakeLabel "PlayerStatus", 10, the height of me - 22, 420, 18, "65,200,120"
    end if
    put pText into field "PlayerStatus" of me
+   -- above anything the game made on the card (the editor's panels)
+   if the layer of field "PlayerStatus" of me < the number of controls of me then set the layer of field "PlayerStatus" of me to top
 end Player.Status
 
 -- a centred message; pMS 0 = until replaced, empty pText removes it
@@ -398,6 +403,26 @@ on Player.MenuPick pItem
 end Player.MenuPick
 
 -------------------------------------------------------------------- input
+
+-- in the background: paused, so keys typed in other programs never reach the game (the engine
+-- reads the keyboard itself, the keysDown, which sees every key on the PC) and it costs no CPU;
+-- back in front: it goes on, unless it was paused before (Escape)
+on suspend
+   if sRunning is true and bPaused is not true then
+      Player.TogglePause
+      put true into sAway
+      Player.Message "PAUSED: IN THE BACKGROUND (click here to go on)", 0
+   end if
+   pass suspend
+end suspend
+
+on resume
+   if sAway is true then
+      put false into sAway
+      if bPaused is true then Player.TogglePause
+   end if
+   pass resume
+end resume
 
 -- Escape pauses and resumes here; it never reaches the engine (which would stop the game).
 -- GameNotes (a front script) sees keys first, so ` and F2 still open the note box.
