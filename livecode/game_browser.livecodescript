@@ -238,7 +238,7 @@ on GB.PlayVibe pName
    put GB.PlayerExe() into tExe
    if tExe is empty then
       GB.Say "The Game_Player app is not built yet (once only, see LIB_DEV/README.md):" & return & \
-            "open LIB_DEV/Game_Player_Launcher.livecode, File > Save as Standalone Application," & return & \
+            "open LIB_DEV/livecode/Game_Player_Launcher.livecode, File > Save as Standalone Application," & return & \
             "into LIB_DEV/Game_Player. Then pick the game again."
       exit GB.PlayVibe
    end if

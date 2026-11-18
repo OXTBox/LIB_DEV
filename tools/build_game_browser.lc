@@ -1,11 +1,11 @@
 -- run with: ~/projects/LIB_MCP/tools/lcmcp --standalone run - < tools/build_game_browser.lc
--- takes the owner's layout (LIB_DEV/GAME_Browser_gui_For_edits.livecode; this build never writes to it),
--- adds the scripts and the right-click menu, saves LIB_DEV/GAME_Browser.livecode.
--- Also makes LIB_DEV/Game_Player_Launcher.livecode if it is missing (never over an existing one), the stack the owner saves ONCE as the
+-- takes the owner's layout (LIB_DEV/livecode/GAME_Browser_gui_For_edits.livecode; this build never writes to it),
+-- adds the scripts and the right-click menu, saves LIB_DEV/livecode/GAME_Browser.livecode.
+-- Also makes LIB_DEV/livecode/Game_Player_Launcher.livecode if it is missing (never over an existing one), the stack the owner saves ONCE as the
 -- Game_Player standalone. The owner's own control scripts are kept (the list's arrowKey sizing,
 -- the drag bars); only the empty mouse handlers of the list are filled in.
 put "//wsl$/Ubuntu/home/igame3d/projects/LIB_DEV" into tDev
-put tDev & "/GAME_Browser_gui_For_edits.livecode" into tSrc
+put tDev & "/livecode/GAME_Browser_gui_For_edits.livecode" into tSrc
 if there is a stack "GAME_Browser" then delete stack "GAME_Browser"
 go invisible stack tSrc
 put the short name of this stack into tS
@@ -41,13 +41,13 @@ set the script of button "ReviewMenu" to "on menuPick pItem" & return & "  GB.Me
 set the title of stack tS to "FOR BILL GAME_Browser | double-click a game to play, right-click for the engine"
 set the script of stack tS to textDecode(URL ("binfile:" & tDev & "/livecode/game_browser.livecodescript"), "UTF-8")
 put the result into tErrStack
-set the fileName of stack tS to tDev & "/GAME_Browser.livecode"
+set the fileName of stack tS to tDev & "/livecode/GAME_Browser.livecode"
 save stack tS
 put the fileName of stack tS & " | list script: " & tErrList & " | stack script: " & tErrStack & " | arrowKey kept: " & (tArrow is not empty) into tOut
 delete stack tS
 -- the Game_Player launcher stack: made ONCE. The owner saves his standalone settings in it, so it
 -- is never rebuilt over (delete the file by hand to remake it; its script only matters at build time)
-if there is a file (tDev & "/Game_Player_Launcher.livecode") then return tOut & return & "Game_Player_Launcher.livecode exists: left alone"
+if there is a file (tDev & "/livecode/Game_Player_Launcher.livecode") then return tOut & return & "Game_Player_Launcher.livecode exists: left alone"
 if there is a stack "Game_Player_Launcher" then delete stack "Game_Player_Launcher"
 create invisible stack "Game_Player_Launcher"
 set the defaultStack to "Game_Player_Launcher"
@@ -63,7 +63,7 @@ put "Game_Player: one game per program, started by the GAME_Browser." & return &
       "It loads everything else from disk at each start: no rebuilds for updates." into field "About"
 set the script of stack "Game_Player_Launcher" to textDecode(URL ("binfile:" & tDev & "/livecode/launcher_game_player.livecodescript"), "UTF-8")
 put the result into tErrL
-set the fileName of stack "Game_Player_Launcher" to tDev & "/Game_Player_Launcher.livecode"
+set the fileName of stack "Game_Player_Launcher" to tDev & "/livecode/Game_Player_Launcher.livecode"
 save stack "Game_Player_Launcher"
 put return & the fileName of stack "Game_Player_Launcher" & " | script: " & tErrL after tOut
 delete stack "Game_Player_Launcher"
