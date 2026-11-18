@@ -17,7 +17,7 @@ Open it in LiveCode (keep it in LIB_DEV: it finds the other folders from there).
   first). It writes a line to `LIB_LLMIN/LIB_DEV/TELL_CLAUDE.txt`; the AI watches that file while a
   session is open (`tools/wait_for_tell.sh`), and checks it when the next session starts.
 
-### The layout is yours: `Status_Browser_gui_For_edits.livecode`
+### The layout is yours: `livecode/Status_Browser_gui_For_edits.livecode`
 Edit the GUI there (move, resize, restyle). The build (`tools/build_status_browser.lc`) reads
 the layout from it, adds the scripts and saves `Status_Browser.livecode`; it never writes to
 your file. Keep the control names (Scrolling List Field, LLMNote, Feedback, Label Field, Submit,
@@ -27,7 +27,7 @@ Refresh, TellClaude, ReviewMenu).
 Build `Status_Browser_Launcher.livecode` as a standalone ONCE; it opens the current
 `Status_Browser.livecode` from disk at every start, so updates need no rebuild. Closing the
 browser window quits it.
-1. Open `LIB_DEV/Status_Browser_Launcher.livecode` in the LiveCode IDE.
+1. Open `LIB_DEV/livecode/Status_Browser_Launcher.livecode` in the LiveCode IDE.
 2. File > Standalone Application Settings: General: name `Status_Browser`; Windows ticked;
    Inclusions: "Search for required inclusions". Do NOT add Status_Browser.livecode as a stack file.
    (Opened in the IDE the launcher only shows itself, with a Test button; it launches only as
@@ -46,7 +46,7 @@ Rebuild after editing `livecode/status_browser.livecodescript`:
 `~/projects/LIB_MCP/tools/lcmcp --standalone run - < tools/build_status_browser.lc`
 (the owner's original layout is kept in `LIB_LLMOUT/Read/LIB_DEV/Status_Browser_owner.livecode`).
 
-## GAME_Browser.livecode: a list of the games, each played as its own program
+## livecode/GAME_Browser.livecode: a list of the games, each played as its own program
 Open it in LiveCode (keep it in LIB_DEV). The menus inside the engines had grown too long;
 this is the short way in.
 - **Left:** every game in `LIB_GAMES/Vibecode3D_Games`. Click (or arrow up/down) shows its details
@@ -66,7 +66,7 @@ A game never runs inside the browser:
 - **xt3d** starts the xt3d games bench (if it is not running) and asks it to play the game.
 
 ### Build the Game_Player app ONCE
-1. Open `LIB_DEV/Game_Player_Launcher.livecode` in the LiveCode IDE (it only shows a note there).
+1. Open `LIB_DEV/livecode/Game_Player_Launcher.livecode` in the LiveCode IDE (it only shows a note there).
 2. File > Standalone Application Settings: General: name `Game_Player`; Windows ticked;
    Inclusions: "Search for required inclusions".
 3. File > Save as Standalone Application into `LIB_DEV/Game_Player` (the browser looks in
@@ -76,7 +76,7 @@ no rebuild.
 
 | File | What |
 |---|---|
-| `GAME_Browser_gui_For_edits.livecode` | your layout: edit it freely; the build never writes to it (keep the control names) |
+| `livecode/GAME_Browser_gui_For_edits.livecode` | your layout: edit it freely; the build never writes to it (keep the control names) |
 | `livecode/game_browser.livecodescript` | the browser's script |
 | `livecode/game_launch.livecodescript` | shared: a game's details (GL.Info) and its window (GL.Open) |
 | `livecode/game_player.livecodescript` | the game window: timer, drawing, ... menu, status and messages |

@@ -3,7 +3,7 @@
 -- adds the scripts and the right-click menu, saves LIB_DEV/Status_Browser.livecode
 -- layout source: the owner's GUI file (he edits the layout there; this build never writes to it),
 -- else his first layout in LIB_LLMOUT/Read/LIB_DEV
-put "//wsl$/Ubuntu/home/igame3d/projects/LIB_DEV/Status_Browser_gui_For_edits.livecode" into tSrc
+put "//wsl$/Ubuntu/home/igame3d/projects/LIB_DEV/livecode/Status_Browser_gui_For_edits.livecode" into tSrc
 if there is not a file tSrc then put "//wsl$/Ubuntu/home/igame3d/projects/LIB_LLMOUT/Read/LIB_DEV/Status_Browser_owner.livecode" into tSrc
 if there is not a file tSrc then put "//wsl$/Ubuntu/home/igame3d/projects/LIB_LLMIN/LIB_DEV/Status_Browser.livecode" into tSrc
 if there is a stack "Status_Browser" then delete stack "Status_Browser"
