@@ -150,7 +150,8 @@ function GL.Open pProjects, pName, pQuitOnClose
    set the backgroundColor of stack tStack to "0,0,0"
    set the resizable of stack tStack to false
    set the destroyStack of stack tStack to true
-   set the title of stack tStack to "FOR BILL |" && pName && "| Escape pauses, ... top right: Reset, Levels, Quit"
+   set the title of stack tStack to "FOR OWNER |" && pName && "| Escape pauses, ... top right: Reset, Levels, Quit"
+   dispatch "Users.TitleStack" with tStack, pName && "| Escape pauses, ... top right: Reset, Levels, Quit"   -- LIB_USERS words it, when in use
    set the rect of stack tStack to GL.WindowRect()
    try
       show stack tStack

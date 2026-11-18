@@ -29,6 +29,7 @@ constant kGap = 8
 ---------------------------------------------------------------- opening and closing
 on preOpenStack
    set the title of this stack to "FOR OWNER | Priority Tube"
+   dispatch "Users.TitleStack" with the short name of this stack, "Priority Tube"   -- LIB_USERS words it, when in use
    set the resizable of this stack to true
    set the backgroundColor of this stack to "10,10,14"
    set the minWidth of this stack to 760

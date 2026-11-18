@@ -8,7 +8,7 @@ script "dev_version"
 --   put Dev.NewVersion("TTRPG_Client", "TTRPG_Client", "<folder>", "<folder>/livecode/client_main.livecodescript", "Opus")
 --
 -- pScriptFile: the stack script's source file (empty = keep the old stack's script).
--- pTitleWho: the title prefix (the AI driving it, or "FOR BILL"); the title becomes pTitleWho && the new name.
+-- pTitleWho: the title prefix (the AI driving it, or "FOR OWNER"); kept for old callers: with LIB_USERS in use, Users.TitleStack words it; the title becomes pTitleWho && the new name.
 -- Not carried: substacks (none yet in our apps). Run it from the sandbox or Message Box, never from a
 -- handler of the old stack (it is deleted from memory). Returns the new file's path, or "error: ...".
 -- Dev.Stamp(): yyyymmdd_hhmmss from the system clock.
@@ -81,6 +81,7 @@ function Dev.NewVersion pOld, pConcept, pFolder, pScriptFile, pTitleWho
       return "error: script does not compile: " & the result
    end if
    if pTitleWho is not empty then set the title of stack tName to pTitleWho && tName
+   dispatch "Users.TitleStack" with tName   -- LIB_USERS words it, when in use
    set the visible of stack tName to true   -- created invisible so it builds unseen; saved and shown visible
    save stack tName as tPath
    if the result is not empty then
