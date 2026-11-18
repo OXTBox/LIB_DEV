@@ -17,7 +17,20 @@ a loop, not a build:
    echoes the old post-Antack T3D game menu). Change little until he asks; collect his reactions in
    PLAN.md section 5.
 
-## Where things stand
+## Where things stand (updated 18 Nov, just after midnight)
+- 17 Nov night, done from the tube (one helper agent per task kept memory small): LIB_GUI stages 1-2
+  (branch gui-step1), Users.Title (LIB_USERS branch users-title) + 9 scripts moved to it (branches
+  users-title / current), board menus "Leave comment..." / "Explore here...", On Git or Not step 4
+  (GIT_DECISIONS.txt), tube Delete/U removal (TUBE_REMOVED.txt), comment window titles.
+- LIB_MENU is its own LIB (owner); PLAN.md sections 5/5b = his iGame3D 2009/2013 Data/Scripts menus
+  (one file per menu, Default set + user override, folder-filled Wizard menu). Steps 1-2 are bubbles.
+- t40 now runs in its own folder (_work_t40). **t39 still backs up the real BOARD_COMMENTS /
+  GIT_DECISIONS**: give it its own folder too before running it again and again.
+- Waiting on the owner: look at LIB_GUI notes.gui; try the new board menus; "FOR OWNER" vs his name in
+  titles; LIB_ALPHA rules 13/14 -> Users.Title; game pause menus follow LIB_MENU rules (dev mode only?).
+- Next in his tube: Step code by Claude / Spark (needs his outline review), cellmap v3 follow-ups.
+
+## Older (17 Nov evening)
 - All of tonight's work is on LIB_DEV branch `on-git-or-not` (not merged): On Git or Not board,
   shared `livecode/board_canvas.livecodescript` (Project Map runs it too), right-click comments with
   yellow note nodes, the Priority Tube. Headless: OXT-BEYOND/tests t39 (48 checks), t40 (17 checks).
