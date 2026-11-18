@@ -48,6 +48,10 @@ on Player.Start
    put false into bStill
    put empty into sEnded
    Player.LoadInput
+   -- the engine contract: Engine.Info("edition") and Engine.Has() answer from these
+   global gV3DEdition, gV3DHas
+   put "XT" into gV3DEdition
+   put empty into gV3DHas
    try
       Vibe.Begin Player.ViewRect()
       dispatch "Game.OnStart" to card 1 of me
