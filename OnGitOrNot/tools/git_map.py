@@ -332,7 +332,7 @@ def main():
     rows = make_map.layout(parts)
     rows = [["B", "title", "FOR OWNER | On Git or Not"],
             ["B", "bar", "ON GIT OR NOT"],
-            ["B", "help", "wheel zoom | drag black to pan | drag a header to move | click a chip for its files | F fit  B not-on-git only  R rebuild  T tell Claude  0 100%"],
+            ["B", "help", "wheel zoom | drag black to pan | drag a header to move | click a chip for its files | right-click anything to comment | F fit  B not-on-git only  R rebuild  T tell Claude  0 100%"],
             ["B", "tool", "tools/git_map.py"],
             ["B", "panel", "NOT ON GIT: loose files, then folders not on git, then .gitignore (biggest first)"],
             ["B", "legend", "26,110,52|255,255,255|on git"],

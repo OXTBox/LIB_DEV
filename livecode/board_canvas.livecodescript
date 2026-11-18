@@ -7,6 +7,9 @@ script "board_canvas"
 -- Data: map_data.txt next to the stack (made by the board's tool, tools/make_map.py by default).
 --   B key value   board settings: title, bar, help, tool, panel, bkinds, legend (fill|ink|text, one a row)
 --   L chipId      the right panel's lines in this order (else: the red chips, YOU's first)
+-- Comments: right-click anything (a box, a chip, a column title, a string, a panel line, the black)
+-- opens a big comment box; a saved comment is a yellow note on the board tied to what it is about.
+-- All boards share LIB_LLMIN/LIB_DEV/BOARD_COMMENTS.txt; the order of comments is NOT their priority.
 -- Moved boxes are kept in positions.txt next to the stack.
 --
 -- Mouse: wheel zooms at the pointer; drag the black to pan; drag a part's header to move it with its
@@ -29,6 +32,8 @@ local sMenuMap   -- popup item -> Windows path & tab & 1 when a folder (for the 
 local sMenuChip  -- the chip whose popup is open
 local sConf      -- board settings from the B rows (legend: one line each)
 local sPanelOrder -- chip names from the L rows, one a line
+local sCmt       -- the comment being written: target, words, id, where, text
+local sNotes     -- note name -> its comment line (id, date, board, target, words, state, where, text)
 
 constant kTop = 44
 constant kPanelW = 330
@@ -117,6 +122,8 @@ command pmBuild pKeepView
    repeat for each line tLine in tData
       if item 1 of tLine is "E" then pmMakeEdge tLine
    end repeat
+   put empty into sNotes
+   pmMakeNotes
    set the title of this stack to pmConf("title", "FOR OWNER | Project Map")
    -- each chip keeps its own files (group, label, Windows path, folder flag), so a click never searches the disk
    repeat for each key tName in tFiles
@@ -135,6 +142,11 @@ command pmBuild pKeepView
    unlock screen
 end pmBuild
 
+-- a line in the help bar, when it is there (a rebuild may be under way)
+command pmSay pText
+   if there is a field "HUD_Help" then put pText into field "HUD_Help"
+end pmSay
+
 -- a board setting from the data's B rows, or pDefault
 function pmConf pKey, pDefault
    if sConf[pKey] is empty then return pDefault
@@ -145,7 +157,9 @@ command pmClear
    local i, tName
    repeat with i = the number of controls of this card down to 1
       put the short name of control i of this card into tName
-      if char 1 to 2 of tName is among the items of "P:,C:,E:,Z:,HU" then delete control i of this card
+      -- the popup button stays (it cannot be deleted while its menu is in use)
+      if tName is "HUD_Popup" then next repeat
+      if char 1 to 2 of tName is among the items of "P:,C:,E:,Z:,N:,HU" then delete control i of this card
    end repeat
 end pmClear
 
@@ -315,7 +329,7 @@ command pmMakeHud
    create field "HUD_Help"
    pmStyleField "HUD_Help", "22,22,28", "22,22,28", "160,160,175", 0
    set the textSize of field "HUD_Help" to 11
-   put pmConf("help", "wheel zoom | drag black to pan | drag a header to move | click to focus | F fit  B blockers  R rebuild  T tell Claude  0 100%") into field "HUD_Help"
+   pmSay pmConf("help", "wheel zoom | drag black to pan | drag a header to move | click to focus | right-click anything to comment | F fit  B blockers  R rebuild  T tell Claude  0 100%")
    create field "HUD_Legend"
    pmStyleField "HUD_Legend", "22,22,28", "60,60,70", "235,235,235", 1
    set the textSize of field "HUD_Legend" to 11
@@ -325,7 +339,7 @@ command pmMakeHud
    set the textSize of field "HUD_Blockers" to 12
    set the margins of field "HUD_Blockers" to 10
    set the vScrollbar of field "HUD_Blockers" to true
-   create button "HUD_Popup"
+   if there is not a button "HUD_Popup" then create button "HUD_Popup"
    set the style of button "HUD_Popup" to "menu"
    set the menuMode of button "HUD_Popup" to "popup"
    set the visible of button "HUD_Popup" to false
@@ -340,6 +354,7 @@ command pmFillLegend
       repeat for each line tLine in sConf["legend"]
          put pmSwatch(item 1 of tLine, item 2 of tLine, item 3 of tLine) after tH
       end repeat
+      put pmSwatch("255,236,140", "30,30,30", "comment (order is not priority)") after tH
       set the htmlText of field "HUD_Legend" to tH & "</p>"
       exit pmFillLegend
    end if
@@ -351,6 +366,7 @@ command pmFillLegend
    put pmSwatch("16,16,20", "255,255,255", "next") after tH
    put pmSwatch("215,35,140", "255,255,255", "waits review") after tH
    put pmSwatch("190,22,22", "255,255,255", "blocked") after tH
+   put pmSwatch("255,236,140", "30,30,30", "comment (order is not priority)") after tH
    put "</p>" after tH
    set the htmlText of field "HUD_Legend" to tH
 end pmFillLegend
@@ -391,7 +407,8 @@ command pmFillBlockers
          put pmShort(tName) & tab & tName & return after tLine
       end repeat
       pmAddPanelLines tLine, tH
-      put "<p></p><p><font color=" & quote & "#8888A0" & quote & ">Click a line to fly there.</font></p>" after tH
+      pmPanelComments tH
+      put "<p></p><p><font color=" & quote & "#8888A0" & quote & ">Click a line to fly there. Right-click one to comment on it.</font></p>" after tH
       set the htmlText of field "HUD_Blockers" to tH
       set the dontWrap of field "HUD_Blockers" to false
       exit pmFillBlockers
@@ -416,7 +433,8 @@ command pmFillBlockers
    put "<p></p><p><font color=" & quote & "#FF9A9A" & quote & "><b>Other blocks (" & the number of lines of tOther & ")</b></font></p>" after tH
    put "-" & return & "-" & return after sBlockList
    pmAddPanelLines tOther, tH
-   put "<p></p><p><font color=" & quote & "#8888A0" & quote & ">Click a line to fly there. B shows only red and pink.</font></p>" after tH
+   pmPanelComments tH
+   put "<p></p><p><font color=" & quote & "#8888A0" & quote & ">Click a line to fly there. B shows only red and pink. Right-click anything to comment.</font></p>" after tH
    set the htmlText of field "HUD_Blockers" to tH
    set the dontWrap of field "HUD_Blockers" to false
 end pmFillBlockers
@@ -577,7 +595,7 @@ command pmFocus pName
    repeat for each key tName in sKind
       if sKind[tName] is "zone" then next repeat
       if pName is empty then
-         put not sBlockersOnly or sKind[tName] is among the items of pmConf("bkinds", "block,review") into tOn
+         put not sBlockersOnly or sKind[tName] is among the items of (pmConf("bkinds", "block,review") & ",note") into tOn
       else
          put tName is among the lines of tLit into tOn
       end if
@@ -615,16 +633,20 @@ command pmRebuild
    else
       put "python3 -I " & quote & tPath & quote into tCmd
    end if
-   put "Rebuilding..." into field "HUD_Help"
+   pmSay "Rebuilding..."
    put shell(tCmd) into tOut
    pmBuild true
-   put "Rebuilt:" && line 1 of tOut into field "HUD_Help"
+   pmSay "Rebuilt:" && line 1 of tOut
 end pmRebuild
 
 ---------------------------------------------------------------- the mouse and keys
 on mouseDown pButton
    local tName
    put the short name of the target into tName
+   if pButton is 3 then
+      pmRightClick tName
+      exit mouseDown
+   end if
    if pButton is not 1 then pass mouseDown
    if tName is "HUD_Blockers" then
       pmPanelClick
@@ -635,6 +657,8 @@ on mouseDown pButton
    put sDragFrom into sDragStart
    if char 1 to 2 of tName is "P:" then
       put tName into sDrag
+   else if char 1 to 2 of tName is "N:" then
+      put "note" && tName into sDrag
    else if char 1 to 2 of tName is "C:" then
       put "click" && tName into sDrag
    else
@@ -658,17 +682,32 @@ on mouseMove pX, pY
       pmDraw
    else if char 1 to 2 of sDrag is "P:" then
       pmMovePart sDrag, tDX / sZoom, tDY / sZoom
+   else if word 1 of sDrag is "note" then
+      pmMoveNote word 2 to -1 of sDrag, tDX / sZoom, tDY / sZoom
    end if
 end mouseMove
 
 on mouseUp pButton
    local tWas, tMoved
+   switch the short name of the target
+      case "HUD_CmtSave"
+         pmCommentSave
+         exit mouseUp
+      case "HUD_CmtCancel"
+         pmCommentClose
+         exit mouseUp
+   end switch
    put sDrag into tWas
    put empty into sDrag
    if tWas is empty then pass mouseUp
    put abs(item 1 of the mouseLoc - item 1 of sDragStart) + abs(item 2 of the mouseLoc - item 2 of sDragStart) > 4 into tMoved
    if tMoved then
       if char 1 to 2 of tWas is "P:" then pmSavePositions
+      if word 1 of tWas is "note" then pmNoteMoved word 2 to -1 of tWas
+      exit mouseUp
+   end if
+   if word 1 of tWas is "note" then
+      pmPopupNote word 2 to -1 of tWas
       exit mouseUp
    end if
    if tWas is "pan" then
@@ -718,10 +757,11 @@ command pmPanelClick
    put word 2 of the clickLine into tLine
    if tLine is not a number then exit pmPanelClick
    put line tLine of sBlockList into tName
-   if char 1 to 2 of tName is "C:" then pmFlyTo tName
+   if char 1 to 2 of tName is among the items of "C:,N:" then pmFlyTo tName
 end pmPanelClick
 
 on rawKeyDown pKey
+   if the short name of the target is "HUD_CmtBox" then pass rawKeyDown
    -- the wheel: 65308 down (out), 65309 up (in)
    if pKey is 65309 then
       pmZoomAt 1.15, item 1 of the mouseLoc, item 2 of the mouseLoc
@@ -733,6 +773,7 @@ on rawKeyDown pKey
 end rawKeyDown
 
 on keyDown pChar
+   if the short name of the target is "HUD_CmtBox" then pass keyDown
    switch pChar
       case "f"
          pmFit
@@ -835,6 +876,16 @@ end pmMenuSafe
 on menuPick pItem
    local tHit, tAction, tKey
    if the short name of the target is not "HUD_Popup" then pass menuPick
+   if pItem is "Edit this comment..." then
+      pmCommentEdit sMenuChip
+      exit menuPick
+   end if
+   if pItem is "Delete this comment" then
+      pmCommentWrite sNotes[sMenuChip], "deleted"
+      pmBuild true
+      pmSay "Comment deleted   (T tells Claude)"
+      exit menuPick
+   end if
    if pItem is "Feedback on this blocker..." then
       pmBlockFeedback sMenuChip
       exit menuPick
@@ -889,7 +940,7 @@ end pmAppendLine
 command pmMarkReviewed pWinPath
    pmAppendLine "REVIEW_STATE.txt", pWinPath & tab & "reviewed" & tab & the short date && the long time
    pmRebuild
-   put "Reviewed:" && pmLastPart(pWinPath) & "   (T tells Claude)" into field "HUD_Help"
+   pmSay "Reviewed:" && pmLastPart(pWinPath) & "   (T tells Claude)"
 end pmMarkReviewed
 
 command pmFeedback pWinPath
@@ -900,12 +951,12 @@ command pmFeedback pWinPath
    replace return with " " in tText
    replace tab with " " in tText
    pmAppendLine "REVIEW_FEEDBACK.txt", the short date && the long time & tab & pWinPath & tab & tText
-   put "Feedback saved:" && pmLastPart(pWinPath) & "   (T tells Claude)" into field "HUD_Help"
+   pmSay "Feedback saved:" && pmLastPart(pWinPath) & "   (T tells Claude)"
 end pmFeedback
 
 command pmTellClaude
    pmAppendLine "TELL_CLAUDE.txt", the short date && the long time & tab & "tell" & tab & "from the" && pmConf("bar", "PROJECT MAP")
-   put "Told Claude" && the short time into field "HUD_Help"
+   pmSay "Told Claude" && the short time
 end pmTellClaude
 
 function pmLastPart pWinPath
@@ -918,7 +969,7 @@ end pmLastPart
 command pmExplore pWinPath, pIsFolder
    local tCmd
    if the platform is not "Win32" then
-      put "Path:" && pWinPath into field "HUD_Help"
+      pmSay "Path:" && pWinPath
       exit pmExplore
    end if
    set the hideConsoleWindows to true
@@ -928,7 +979,7 @@ command pmExplore pWinPath, pIsFolder
       put "start " & quote & quote & " explorer.exe /select," & quote & pWinPath & quote into tCmd
    end if
    get shell(tCmd)
-   put "Explorer:" && pWinPath into field "HUD_Help"
+   pmSay "Explorer:" && pWinPath
 end pmExplore
 
 ---------------------------------------------------------------- red chips: feedback and files on a blocker
@@ -953,7 +1004,7 @@ command pmBlockFeedback pChip
    replace return with " " in tText
    replace tab with " " in tText
    pmBlockNote pChip, "feedback", tText
-   put "Feedback saved on the blocker   (T tells Claude)" into field "HUD_Help"
+   pmSay "Feedback saved on the blocker   (T tells Claude)"
 end pmBlockFeedback
 
 -- the paths only: Claude reads the files themselves
@@ -968,7 +1019,7 @@ command pmBlockFiles pChip
       pmBlockNote pChip, "file", tFile
       add 1 to tN
    end repeat
-   put tN && "file path(s) passed to Claude for this blocker   (T tells Claude)" into field "HUD_Help"
+   pmSay tN && "file path(s) passed to Claude for this blocker   (T tells Claude)"
 end pmBlockFiles
 
 command pmBlockNote pChip, pKind, pText
@@ -982,3 +1033,367 @@ function pmBlockWords pChip
    replace tab with " " in tText
    return tText
 end pmBlockWords
+
+---------------------------------------------------------------- comments on anything (right-click)
+-- LIB_LLMIN/LIB_DEV/BOARD_COMMENTS.txt, one line each; the last line of an id wins:
+--   id TAB date time TAB board TAB target TAB the target's words TAB open|deleted TAB where TAB text
+--   target: P:part, C:chip, Z:zone, E:fromBox>toBox (a string), @x,y (the black)
+--   where:  dx,dy,x,y = the note's place from its part's corner, and on the board
+--   text:   returns kept as \n
+-- Comments are in the order written: that is NOT their priority (a priority board comes later).
+constant kNoteW = 240
+constant kCmtFile = "BOARD_COMMENTS.txt"
+
+on escapeKey
+   if there is a field "HUD_CmtBox" then
+      pmCommentClose
+   else
+      pass escapeKey
+   end if
+end escapeKey
+
+-- in the comment box: Ctrl+Enter saves, Enter alone makes a new line
+on returnInField
+   if the short name of the target is "HUD_CmtBox" and the controlKey is down then
+      pmCommentSave
+   else
+      pass returnInField
+   end if
+end returnInField
+
+on enterInField
+   if the short name of the target is "HUD_CmtBox" and the controlKey is down then
+      pmCommentSave
+   else
+      pass enterInField
+   end if
+end enterInField
+
+command pmRightClick pName
+   local tLine, tWX, tWY, tFrom, tTo
+   if pName is "HUD_Blockers" then
+      put word 2 of the clickLine into tLine
+      if tLine is not a number then exit pmRightClick
+      put line tLine of sBlockList into pName
+      if char 1 to 2 of pName is not among the items of "C:,N:" then exit pmRightClick
+   end if
+   if char 1 to 3 of pName is "HUD" then exit pmRightClick
+   switch char 1 to 2 of pName
+      case "N:"
+         pmCommentEdit pName
+         break
+      case "P:"
+         pmCommentOpen pName, "part" && char 3 to -1 of pName, empty, empty
+         break
+      case "C:"
+      case "Z:"
+         pmCommentOpen pName, pmWords(pName), empty, empty
+         break
+      case "E:"
+         set the itemDelimiter to tab
+         repeat for each line tLine in sEdges
+            if item 1 of tLine is pName then
+               put item 2 of tLine into tFrom
+               put item 3 of tLine into tTo
+            end if
+         end repeat
+         if tFrom is empty then exit pmRightClick
+         pmCommentOpen "E:" & tFrom & ">" & tTo, "the string from" && pmWords(tFrom) && "to" && pmWords(tTo), empty, empty
+         break
+      default
+         put round(sPanX + item 1 of the mouseLoc / sZoom) into tWX
+         put round(sPanY + (item 2 of the mouseLoc - kTop) / sZoom) into tWY
+         pmCommentOpen "@" & tWX & "," & tWY, "the board here", empty, empty
+   end switch
+end pmRightClick
+
+-- a box's words for a comment line: its first line, without "owner:" and the click hint
+function pmWords pBox
+   local tText
+   if char 1 to 2 of pBox is "P:" then return char 3 to -1 of pBox
+   if there is not a field pBox then return pBox
+   put line 1 of field pBox into tText
+   if tText begins with "owner:" then delete char 1 to 7 of tText
+   if tText ends with " - click to list them" then delete char -21 to -1 of tText
+   replace tab with " " in tText
+   if the number of chars of tText > 90 then put char 1 to 87 of tText & "..." into tText
+   return tText
+end pmWords
+
+-- the big comment box (fixed on screen, over the board)
+command pmCommentOpen pTarget, pWords, pId, pText
+   local tL, tT, tW, tH
+   pmCommentClose
+   put pTarget into sCmt["target"]
+   put pWords into sCmt["words"]
+   put pId into sCmt["id"]
+   put 560 into tW
+   put 330 into tH
+   put max(10, (the width of this card - kPanelW - tW) div 2) into tL
+   put max(kTop + 10, (the height of this card - tH) div 2) into tT
+   create field "HUD_CmtTitle"
+   pmStyleField "HUD_CmtTitle", "40,36,12", "232,190,40", "255,236,140", 2
+   set the textSize of field "HUD_CmtTitle" to 13
+   set the htmlText of field "HUD_CmtTitle" to "<p><b>" & pmHtml(pWords) & "</b></p><p><font color=" & quote & "#C8B878" & quote & "><i>Comments are kept in the order written: that is not their priority.</i></font></p>"
+   set the rect of field "HUD_CmtTitle" to tL, tT, tL + tW, tT + 54
+   create field "HUD_CmtBox"
+   pmStyleField "HUD_CmtBox", "255,248,210", "232,190,40", "20,20,20", 2
+   set the lockText of field "HUD_CmtBox" to false
+   set the traversalOn of field "HUD_CmtBox" to true
+   set the vScrollbar of field "HUD_CmtBox" to true
+   set the textSize of field "HUD_CmtBox" to 15
+   set the margins of field "HUD_CmtBox" to 10
+   set the rect of field "HUD_CmtBox" to tL, tT + 54, tL + tW, tT + tH - 40
+   put pText into field "HUD_CmtBox"
+   create button "HUD_CmtSave"
+   set the label of button "HUD_CmtSave" to "Save comment (Ctrl+Enter)"
+   set the rect of button "HUD_CmtSave" to tL + tW - 330, tT + tH - 34, tL + tW - 130, tT + tH - 6
+   create button "HUD_CmtCancel"
+   set the label of button "HUD_CmtCancel" to "Cancel (Esc)"
+   set the rect of button "HUD_CmtCancel" to tL + tW - 120, tT + tH - 34, tL + tW, tT + tH - 6
+   create field "HUD_CmtBack"
+   pmStyleField "HUD_CmtBack", "40,36,12", "232,190,40", "255,236,140", 2
+   set the rect of field "HUD_CmtBack" to tL, tT + tH - 40, tL + tW, tT + tH
+   set the layer of field "HUD_CmtBack" to top
+   set the layer of field "HUD_CmtTitle" to top
+   set the layer of field "HUD_CmtBox" to top
+   set the layer of button "HUD_CmtSave" to top
+   set the layer of button "HUD_CmtCancel" to top
+   focus on field "HUD_CmtBox"
+   select after text of field "HUD_CmtBox"
+   pmSay "Writing a comment: Ctrl+Enter (or the button) saves, Esc cancels, Enter makes a new line"
+end pmCommentOpen
+
+command pmCommentClose
+   local tName
+   repeat for each item tName in "HUD_CmtTitle,HUD_CmtBox,HUD_CmtSave,HUD_CmtCancel,HUD_CmtBack"
+      if there is a control tName then delete control tName
+   end repeat
+end pmCommentClose
+
+command pmCommentSave
+   local tText, tLine, tWhere
+   if there is not a field "HUD_CmtBox" then exit pmCommentSave
+   put field "HUD_CmtBox" into tText
+   pmCommentClose
+   if word 1 to -1 of tText is empty then exit pmCommentSave
+   if sCmt["id"] is not empty then
+      -- an edit: same id, target and place
+      put sNotes["N:" & sCmt["id"]] into tLine
+      set the itemDelimiter to tab
+      put tText into item 8 of tLine
+      pmCommentWrite tLine, "open"
+   else
+      put pmNewNoteWhere(sCmt["target"]) into tWhere
+      put "c" & the milliseconds & tab & the short date && the long time & tab & pmConf("bar", "PROJECT MAP") & tab & sCmt["target"] & tab & sCmt["words"] & tab & "open" & tab & tWhere & tab & tText into tLine
+      pmCommentWrite tLine, "open"
+   end if
+   pmBuild true
+   pmSay "Comment saved on" && sCmt["words"] & "   (T tells Claude)"
+end pmCommentSave
+
+-- append one comment line (the last line of an id wins) with this state
+command pmCommentWrite pLine, pState
+   local tText, tFile
+   set the itemDelimiter to tab
+   put pState into item 6 of pLine
+   put the short date && the long time into item 2 of pLine
+   put item 8 to -1 of pLine into tText
+   replace return with "\n" in tText
+   replace tab with " " in tText
+   put tText into item 8 of pLine
+   put pmInboxFile(kCmtFile) into tFile
+   if there is not a file tFile then
+      put textEncode("# Comments from the boards (Project Map, On Git or Not), one a line; the last line of an id wins." & return & \
+            "# The order of comments is NOT their priority (a priority board comes later)." & return & \
+            "# id, date time, board, target, the target's words, open|deleted, where, text (\n = new line)" & return, "UTF-8") into URL ("binfile:" & tFile)
+   end if
+   pmAppendLine kCmtFile, item 1 to 8 of pLine
+end pmCommentWrite
+
+-- where a new note goes: right of what it is about, below the notes already there
+function pmNewNoteWhere pTarget
+   local tBox, tR, tX, tY, tPart, tPR, tName
+   put pmAnchorOf(pTarget, empty) into tBox
+   if tBox is empty then
+      set the itemDelimiter to ","
+      put char 2 to -1 of pTarget into tR
+      return "0,0," & item 1 of tR & "," & item 2 of tR
+   end if
+   put sRect[tBox] into tR
+   put item 1 of tR + item 3 of tR + 24 into tX
+   put item 2 of tR into tY
+   repeat for each key tName in sNotes
+      if pmAnchorOf(pmNoteItem(tName, 4), pmNoteItem(tName, 5)) is tBox then add 30 to tY
+   end repeat
+   put pmPartOfBox(tBox) into tPart
+   put sRect[tPart] into tPR
+   if char 1 to 2 of tPart is not "P:" then put "0,0,0,0" into tPR
+   return (tX - item 1 of tPR) & "," & (tY - item 2 of tPR) & "," & tX & "," & tY
+end pmNewNoteWhere
+
+function pmNoteLine pNote
+   return sNotes[pNote]
+end pmNoteLine
+
+function pmNoteItem pNote, pItem
+   set the itemDelimiter to tab
+   return item pItem of sNotes[pNote]
+end pmNoteItem
+
+-- the box a comment is about, as the board stands now: a chip is found by its words when the
+-- numbers changed; a chip that is gone falls back to its part; empty = a free note
+function pmAnchorOf pTarget, pWords
+   local tName, tPart, tStart
+   if char 1 of pTarget is "@" then return empty
+   if char 1 to 2 of pTarget is "E:" then
+      set the itemDelimiter to ">"
+      delete char 1 to 2 of pTarget
+      put item 1 of pTarget into pTarget
+   end if
+   if char 1 to 2 of pTarget is "C:" then
+      put char 1 to 30 of pWords into tStart
+      if sRect[pTarget] is not empty and (pWords is empty or pmWords(pTarget) begins with tStart) then return pTarget
+      set the itemDelimiter to "#"
+      put "P:" & char 3 to -1 of item 1 of pTarget into tPart
+      repeat for each line tName in sChips[tPart]
+         if pmWords(tName) begins with tStart then return tName
+      end repeat
+      if sRect[tPart] is not empty then return tPart
+      return empty
+   end if
+   if sRect[pTarget] is not empty then return pTarget
+   return empty
+end pmAnchorOf
+
+-- read BOARD_COMMENTS.txt and put this board's open comments on it as yellow notes
+command pmMakeNotes
+   local tText, tLine, tLast, tId, tBoard, tName
+   put pmInboxFile(kCmtFile) into tName
+   if there is not a file tName then exit pmMakeNotes
+   put textDecode(URL ("binfile:" & tName), "UTF-8") into tText
+   put pmConf("bar", "PROJECT MAP") into tBoard
+   set the itemDelimiter to tab
+   repeat for each line tLine in tText
+      if char 1 of tLine is "#" or item 3 of tLine is not tBoard then next repeat
+      put tLine into tLast[item 1 of tLine]
+   end repeat
+   repeat for each key tId in tLast
+      if item 6 of tLast[tId] is "open" then pmMakeNote tLast[tId]
+   end repeat
+end pmMakeNotes
+
+command pmMakeNote pLine
+   local tName, tText, tBox, tPart, tWhere, tPR, tH, tEdge
+   set the itemDelimiter to tab
+   put "N:" & item 1 of pLine into tName
+   put pLine into sNotes[tName]
+   put item 8 of pLine into tText
+   replace "\n" with return in tText
+   put item 7 of pLine into tWhere
+   put pmAnchorOf(item 4 of pLine, item 5 of pLine) into tBox
+   create field tName
+   pmStyleField tName, "255,236,140", "200,165,30", "30,30,30", 1
+   set the textSize of field tName to 12
+   set the htmlText of field tName to "<p><b>comment " & pmHtml(word 1 of item 2 of pLine) & "</b></p>" & pmHtmlLines(tText)
+   set the width of field tName to kNoteW
+   put the formattedHeight of field tName + 6 into tH
+   put "note" into sKind[tName]
+   set the itemDelimiter to ","
+   if tBox is not empty and char 1 to 2 of pmPartOfBox(tBox) is "P:" then
+      put pmPartOfBox(tBox) into tPart
+      put tPart into sPartOf[tName]
+      put tName & return after sChips[tPart]
+      put item 1 of tWhere & "," & item 2 of tWhere into sOff[tName]
+      put "0,0," & kNoteW & "," & tH into sRect[tName]
+      pmPlaceChip tName
+   else
+      put item 3 of tWhere & "," & item 4 of tWhere & "," & kNoteW & "," & tH into sRect[tName]
+   end if
+   if tBox is not empty then
+      put "E:" & (the number of lines of sEdges + 1) into tEdge
+      create graphic tEdge
+      set the style of graphic tEdge to "line"
+      set the antialiased of graphic tEdge to true
+      set the foregroundColor of graphic tEdge to "232,200,60"
+      set the cWidth of graphic tEdge to 2
+      set the layer of graphic tEdge to 1
+      put tEdge & tab & tName & tab & tBox & return after sEdges
+   end if
+end pmMakeNote
+
+function pmHtmlLines pText
+   local tLine, tOut
+   repeat for each line tLine in pText
+      put "<p>" & pmHtml(tLine) & "</p>" after tOut
+   end repeat
+   return tOut
+end pmHtmlLines
+
+command pmMoveNote pNote, pDX, pDY
+   local tR
+   if sPartOf[pNote] is not empty then
+      set the itemDelimiter to ","
+      put (item 1 of sOff[pNote] + pDX) & "," & (item 2 of sOff[pNote] + pDY) into sOff[pNote]
+      pmPlaceChip pNote
+   else
+      put sRect[pNote] into tR
+      put item 1 of tR + pDX into item 1 of tR
+      put item 2 of tR + pDY into item 2 of tR
+      put tR into sRect[pNote]
+   end if
+   pmDraw
+end pmMoveNote
+
+-- a dragged note keeps its new place (a new line for its id)
+command pmNoteMoved pNote
+   local tLine, tR
+   put sNotes[pNote] into tLine
+   put sRect[pNote] into tR
+   set the itemDelimiter to tab
+   put round(item 1 of sOff[pNote]) & "," & round(item 2 of sOff[pNote]) & "," & round(item 1 of tR) & "," & round(item 2 of tR) into item 7 of tLine
+   if sPartOf[pNote] is empty then put "0,0," & round(item 1 of tR) & "," & round(item 2 of tR) into item 7 of tLine
+   pmCommentWrite tLine, "open"
+   put tLine into sNotes[pNote]
+   set the itemDelimiter to tab
+   put "open" into item 6 of sNotes[pNote]
+end pmNoteMoved
+
+command pmPopupNote pNote
+   put pNote into sMenuChip
+   set the text of button "HUD_Popup" to "(" & pmMenuSafe(pmNoteItem(pNote, 5)) & return & "Edit this comment..." & return & "Delete this comment"
+   popup button "HUD_Popup" at the mouseLoc
+end pmPopupNote
+
+command pmCommentEdit pNote
+   local tText
+   put pmNoteItem(pNote, 8) into tText
+   replace "\n" with return in tText
+   pmCommentOpen pmNoteItem(pNote, 4), pmNoteItem(pNote, 5), char 3 to -1 of pNote, tText
+end pmCommentEdit
+
+-- the panel's last section: every comment on this board, in the order written (not priority)
+command pmPanelComments @xHtml
+   local tName, tLines, tLine
+   repeat for each key tName in sNotes
+      put pmNoteItem(tName, 1) & tab & tName & return after tLines
+   end repeat
+   if tLines is empty then exit pmPanelComments
+   sort lines of tLines
+   put "<p></p><p><font color=" & quote & "#FFE88C" & quote & "><b>COMMENTS (" & the number of lines of tLines & ")</b></font></p>" after xHtml
+   put "<p><font color=" & quote & "#C8B878" & quote & "><i>in the order written: not their priority</i></font></p>" after xHtml
+   put "-" & return & "-" & return & "-" & return after sBlockList
+   set the itemDelimiter to tab
+   repeat for each line tLine in tLines
+      put item 2 of tLine into tName
+      put "<p><font color=" & quote & "#FFE88C" & quote & ">- " & pmHtml(pmNoteItem(tName, 5)) & ": " & pmHtml(line 1 of pmTextOf(tName)) & "</font></p>" after xHtml
+      put tName & return after sBlockList
+   end repeat
+end pmPanelComments
+
+function pmTextOf pNote
+   local tText
+   put pmNoteItem(pNote, 8) into tText
+   replace "\n" with return in tText
+   return tText
+end pmTextOf

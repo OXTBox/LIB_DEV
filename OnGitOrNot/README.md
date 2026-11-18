@@ -24,3 +24,11 @@ Keys: F fit, B not-on-git only, R rebuild, T tell Claude, 0 100%.
   this board's title, legend, panel and tool come from the B and L rows of map_data.txt.
 - Not yet: Commit / Ignore / Delete / Leave on each loose thing (written to
   LIB_LLMIN/LIB_DEV/GIT_DECISIONS.txt for Claude to carry out): step 4 of PLAN.md.
+
+## Comments on anything
+Right-click anything (a card, a chip, a column title, a string, a line of the right panel, or the black)
+and a big comment box opens: Enter makes a new line, **Ctrl+Enter** or the button saves, Esc cancels.
+A saved comment becomes a yellow note on the board, tied by a yellow string to what it is about; it
+moves with its card, can be dragged (it keeps its place), and a click on it offers Edit / Delete.
+All comments of both boards go to `LIB_LLMIN/LIB_DEV/BOARD_COMMENTS.txt`, and the right panel lists
+them at its end. **The order of comments is not their priority**: a priority board comes later.

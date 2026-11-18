@@ -11,3 +11,7 @@
   LIB_LLMIN/LIB_DEV/MAP_NOTES.txt (date, part, blocker, feedback|file, text or Windows path). `feedback`
   prints it. Read the files he points to, act on the blocker, update ProjectMap/board.txt, log what you did
   in LIB_LLMOUT/Read/LIB_DEV/FEEDBACK_HANDLED.txt.
+- Board comments (Project Map, On Git or Not): right-click anything on a board writes a comment to
+  LIB_LLMIN/LIB_DEV/BOARD_COMMENTS.txt (id, date, board, target, words, open|deleted, where, text; the
+  last line of an id wins). `feedback` prints it. The order of comments is NOT their priority. Act on open
+  comments; log what you did in LIB_LLMOUT/Read/LIB_DEV/FEEDBACK_HANDLED.txt.
