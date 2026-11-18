@@ -17,7 +17,20 @@ a loop, not a build:
    echoes the old post-Antack T3D game menu). Change little until he asks; collect his reactions in
    PLAN.md section 5.
 
-## FOR THE NEXT SESSION (18 Nov, midday, before a /clear)
+## FOR THE NEXT SESSION (18 Nov, afternoon, before a /clear) -- START HERE
+Owner's order for the next session:
+1. **Main session: "A Menus kind in LIB_DATA"** (bubble n-3a5a9676, ~15 min). LIB_MENU is on main
+   (steps 1-2 merged). Mind his layout answer in LIB_MENU/NEXT.md step 0: menus live per game or app,
+   `Data/Default/<game or app>/Menus/` (item lists) + `Menus/Functions/` (callbacks). Make the kind fit that.
+2. **One helper agent: "The last 4 Rename Day games"** (bubble n-944ad4da, ~30 min). Brief:
+   Next_Steps_With_Claude/FOR_OPUS_RENAME_DAY_STEP3_11_18_2026.md (+ TWO ENGINES note). It "waits for
+   vector-toss-dangle to merge": LIB_GAMES is checked out on branch `vector-toss-dangle` (not merged);
+   ask the owner whether to merge it first if the helper needs VectorToss.
+Done this session: LIB_MENU merged to main + 3 sized next bubbles; GAD battles step 2 built, played
+("working great"), bug 0004 fixed (Base followed the squad), merged to LIB_GAD main. Owner's two
+BitEditor Heights-tab notes sized (c1795032797521, c1795033087850).
+
+## Earlier (18 Nov, midday, before a /clear)
 Done this session: LIB_SYSTEM notes (STATUS archived, operating prompt draft 2, DONE list), LIB_GUI popup
 kind, Users.Title for built apps, battles plan (LIB_GAD `gad-battles`, step 2 waits for the owner's go).
 Owner's tube rule: "We'll pile up big jobs until we can't find any old small ones left to push through":
