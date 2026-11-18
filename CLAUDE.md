@@ -7,3 +7,7 @@
 - "Tell Claude" button: it writes a line to LIB_LLMIN/LIB_DEV/TELL_CLAUDE.txt. While a session is
   open, keep `tools/wait_for_tell.sh` running in the background; when it exits, read the feedback,
   act on it, and start it again. At a session start, also check that file for clicks made while away.
+- Project Map (ProjectMap/): the owner can give feedback or pick files on a red blocker; they land in
+  LIB_LLMIN/LIB_DEV/MAP_NOTES.txt (date, part, blocker, feedback|file, text or Windows path). `feedback`
+  prints it. Read the files he points to, act on the blocker, update ProjectMap/board.txt, log what you did
+  in LIB_LLMOUT/Read/LIB_DEV/FEEDBACK_HANDLED.txt.

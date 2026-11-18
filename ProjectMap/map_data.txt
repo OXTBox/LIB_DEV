@@ -1,4 +1,4 @@
-# map_data.txt made 2026-11-17 19:35 by tools/make_map.py; do not edit (edit board.txt)
+# map_data.txt made 2026-11-17 19:38 by tools/make_map.py; do not edit (edit board.txt)
 Z	ENGINES	ENGINES	0	184	300
 Z	GAMES	GAMES	390	184	630
 Z	BLOCKS	BUILDING BLOCKS	1110	184	960
@@ -114,65 +114,63 @@ C	LIB_BIT#3	LIB_BIT	has	18	157	262	23	BitEditor Heights tab
 C	LIB_BIT#4	LIB_BIT	done	18	184	262	57	DONE\n- cellmap v2 format\n- cellmap v3 plan KEPT (stacked maps, packs, slopes)
 C	LIB_BIT#5	LIB_BIT	next	18	245	262	23	cellmap v3 follow-ups A-92..A-95
 C	LIB_BIT#6	LIB_BIT	block	18	272	262	38	owner: test the BitEditor Heights tab (F-3), never seen on a screen
-C	LIB_BIT#7	LIB_BIT	review	18	314	262	38	1 file waits your review (oldest 2026-11-16) - click to list them
-F	LIB_BIT#7	LIB_BIT	11-16  lib_cellmap.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\livecode\lib_cellmap.livecodescript	0	1
-P	LIB_MAP	part	1110	650	280	67	LIB_MAP	Levels from 1-bit grids for both engines
+P	LIB_MAP	part	1110	608	280	67	LIB_MAP	Levels from 1-bit grids for both engines
 C	LIB_MAP#1	LIB_MAP	has	18	73	262	23	17 handlers in 1 scripts
-P	LIB_TRACE	part	1110	784	280	52	LIB_TRACE	Bitmap -> shapes
+P	LIB_TRACE	part	1110	742	280	52	LIB_TRACE	Bitmap -> shapes
 C	LIB_TRACE#1	LIB_TRACE	has	18	58	262	23	6 handlers in 1 scripts
-P	LIB_GENERICA	part	1110	903	280	67	LIB_GENERICA	A game's words as plain label files: retheme by editing labels
+P	LIB_GENERICA	part	1110	861	280	67	LIB_GENERICA	A game's words as plain label files: retheme by editing labels
 C	LIB_GENERICA#1	LIB_GENERICA	has	18	73	262	23	10 handlers in 1 scripts
 C	LIB_GENERICA#2	LIB_GENERICA	has	18	100	262	23	Galactica set: 49 lists, 533 labels
 C	LIB_GENERICA#3	LIB_GENERICA	has	18	127	262	23	Sequencer {@list:n}
 C	LIB_GENERICA#4	LIB_GENERICA	review	18	154	262	23	genetic_anomaly overlay is a DRAFT
-P	LIB_LISTS	part	1110	1118	280	52	LIB_LISTS	Game word lists by name (CATALOG.md)
+P	LIB_LISTS	part	1110	1076	280	52	LIB_LISTS	Game word lists by name (CATALOG.md)
 C	LIB_LISTS#1	LIB_LISTS	has	18	58	262	38	Star names (155) and street, city, people lists
 C	LIB_LISTS#2	LIB_LISTS	review	18	100	262	38	1 file waits your review (oldest 2026-11-17) - click to list them
 F	LIB_LISTS#2	LIB_LISTS	11-17  CATALOG.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LISTS\CATALOG.md	0	1
-P	LIB_SCRIPTBLOCKS	part	1110	1294	280	67	LIB_SCRIPTBLOCKS	Harvest, manage and export script blocks (GAD's code palette)
+P	LIB_SCRIPTBLOCKS	part	1110	1252	280	67	LIB_SCRIPTBLOCKS	Harvest, manage and export script blocks (GAD's code palette)
 C	LIB_SCRIPTBLOCKS#1	LIB_SCRIPTBLOCKS	has	18	73	262	23	20 handlers in 1 scripts
 C	LIB_SCRIPTBLOCKS#2	LIB_SCRIPTBLOCKS	has	18	100	262	38	24 blocks, 351 handlers of GAD_WORKING + Generica
-P	LIB_XTJSON	part	1440	260	280	67	LIB_XTJSON	Stacks <-> JSON: harvest, rebuild, batch app
+P	LIB_XTJSON	part	1110	1428	280	67	LIB_XTJSON	Stacks <-> JSON: harvest, rebuild, batch app
 C	LIB_XTJSON#1	LIB_XTJSON	has	18	73	262	23	70 handlers in 5 scripts
 C	LIB_XTJSON#2	LIB_XTJSON	has	18	100	262	38	113 of 115 stacks harvested, nested-group bug fixed
 C	LIB_XTJSON#3	LIB_XTJSON	block	18	142	262	38	Web_Collector_Watcher stack crashes the engine (A-11)
 C	LIB_XTJSON#4	LIB_XTJSON	review	18	184	262	38	1 file waits your review (oldest 2026-11-14) - click to list them
 F	LIB_XTJSON#4	LIB_XTJSON	11-14  CLIP_DND_ENOCHIAN.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_XTJSON\docs\analysis\CLIP_DND_ENOCHIAN.md	0	1
-P	LIB_MOCAP	part	1440	520	280	67	LIB_MOCAP	Video -> motion capture -> stick characters, all local
+P	LIB_MOCAP	part	1440	260	280	67	LIB_MOCAP	Video -> motion capture -> stick characters, all local
 C	LIB_MOCAP#1	LIB_MOCAP	has	18	73	262	23	2 handlers in 1 scripts
 C	LIB_MOCAP#2	LIB_MOCAP	has	18	100	262	23	mocap_skin.py skins a procedural body
 C	LIB_MOCAP#3	LIB_MOCAP	review	18	127	262	38	1 file waits your review (oldest 2026-11-15) - click to list them
 F	LIB_MOCAP#3	LIB_MOCAP	11-15  anim_list.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\livecode\anim_list.livecodescript	0	1
-P	LIB_BVH	part	1440	723	280	67	LIB_BVH	The BVH motion library (local only: rights unsettled)
+P	LIB_BVH	part	1440	463	280	67	LIB_BVH	The BVH motion library (local only: rights unsettled)
 C	LIB_BVH#1	LIB_BVH	has	18	73	262	38	Animazoo, FreeBVH, iGame3D, Harold Lloyd clips
 C	LIB_BVH#2	LIB_BVH	next	18	115	262	38	Cut the Harold Lloyd take into climb / hang / recover for DeadDays
 C	LIB_BVH#3	LIB_BVH	block	18	157	262	38	owner: check the film title for the credit ("Safety Last!", 1923?)
-P	LIB_DATA	part	1440	956	280	67	LIB_DATA	The one Data folder every app loads and saves through (Documents/Data)
+P	LIB_DATA	part	1440	696	280	67	LIB_DATA	The one Data folder every app loads and saves through (Documents/Data)
 C	LIB_DATA#1	LIB_DATA	has	18	73	262	23	25 handlers in 1 scripts
 C	LIB_DATA#2	LIB_DATA	review	18	100	262	38	2 files wait your review (oldest 2026-11-15) - click to list them
 F	LIB_DATA#2	LIB_DATA	11-15  lib_data.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DATA\livecode\lib_data.livecodescript	0	1
 F	LIB_DATA#2	LIB_DATA	11-15  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DATA\README.md	0	1
-P	LIB_THEME	part	1440	1132	280	67	LIB_THEME	One look for every stack (dark / light)
+P	LIB_THEME	part	1440	872	280	67	LIB_THEME	One look for every stack (dark / light)
 C	LIB_THEME#1	LIB_THEME	has	18	73	262	23	32 handlers in 2 scripts
 C	LIB_THEME#2	LIB_THEME	review	18	100	262	38	1 file waits your review (oldest 2026-11-15) - click to list them
 F	LIB_THEME#2	LIB_THEME	11-15  theme_studio.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_THEME\livecode\theme_studio.livecodescript	0	1
-P	LIB_GLOBALS	part	1440	1308	280	67	LIB_GLOBALS	Every global name, its use and its Python twin
+P	LIB_GLOBALS	part	1440	1048	280	67	LIB_GLOBALS	Every global name, its use and its Python twin
 C	LIB_GLOBALS#1	LIB_GLOBALS	review	18	73	262	38	1 file waits your review (oldest 2026-11-15) - click to list them
 F	LIB_GLOBALS#1	LIB_GLOBALS	11-15  GLOBALS.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GLOBALS\GLOBALS.md	0	1
-P	LIB_GUI	part	1770	260	280	52	LIB_GUI	Future GUI-building application
+P	LIB_GUI	part	1440	1197	280	52	LIB_GUI	Future GUI-building application
 C	LIB_GUI#1	LIB_GUI	done	18	58	262	42	DONE\n- Plan by Fable (16 Nov)
 C	LIB_GUI#2	LIB_GUI	next	18	104	262	23	Build from PLAN.md
 C	LIB_GUI#3	LIB_GUI	block	18	131	262	38	Plan only, no code; waits its turn after GAD battles
 C	LIB_GUI#4	LIB_GUI	review	18	173	262	38	2 files wait your review (oldest 2026-11-16) - click to list them
 F	LIB_GUI#4	LIB_GUI	11-16  PLAN.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\PLAN.md	0	1
 F	LIB_GUI#4	LIB_GUI	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\README.md	0	1
-P	LIB_RAYGUI	part	1770	509	280	67	LIB_RAYGUI	raylib GUI library parroting xt3d and Vibecode3D tools
+P	LIB_RAYGUI	part	1440	1446	280	67	LIB_RAYGUI	raylib GUI library parroting xt3d and Vibecode3D tools
 C	LIB_RAYGUI#1	LIB_RAYGUI	done	18	73	262	42	DONE\n- Plan by Fable (16 Nov)
 C	LIB_RAYGUI#2	LIB_RAYGUI	block	18	119	262	23	Plan only, no code yet
 C	LIB_RAYGUI#3	LIB_RAYGUI	review	18	146	262	38	2 files wait your review (oldest 2026-11-16) - click to list them
 F	LIB_RAYGUI#3	LIB_RAYGUI	11-16  PLAN.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_RAYGUI\PLAN.md	0	1
 F	LIB_RAYGUI#3	LIB_RAYGUI	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_RAYGUI\README.md	0	1
-P	LIB_TOOLBAR	part	1770	731	280	67	LIB_TOOLBAR	One-stop floating launcher of buttons for every LIB
+P	LIB_TOOLBAR	part	1770	260	280	67	LIB_TOOLBAR	One-stop floating launcher of buttons for every LIB
 C	LIB_TOOLBAR#1	LIB_TOOLBAR	done	18	73	262	42	DONE\n- Plan by Fable from your O-8 answer
 C	LIB_TOOLBAR#2	LIB_TOOLBAR	block	18	119	262	23	Plan only, no code yet
 C	LIB_TOOLBAR#3	LIB_TOOLBAR	review	18	146	262	38	2 files wait your review (oldest 2026-11-16) - click to list them
@@ -228,13 +226,13 @@ F	OXT-BEYOND#4	OXT-BEYOND	11-16  t20_editor_tools.txt	\\wsl$\Ubuntu\home\igame3d
 F	OXT-BEYOND#4	OXT-BEYOND	11-16  t37_editor_layout.txt	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\tests\t37_editor_layout.txt	0	1
 F	OXT-BEYOND#4	OXT-BEYOND	11-16  t38_window_shape.txt	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\tests\t38_window_shape.txt	0	1
 P	LIB_DEV	part	2160	1140	280	67	LIB_DEV	Where the developer's needs are met: Status Browser, Game Browser, this map
-C	LIB_DEV#1	LIB_DEV	has	18	73	262	23	177 handlers in 10 scripts
+C	LIB_DEV#1	LIB_DEV	has	18	73	262	23	183 handlers in 10 scripts
 C	LIB_DEV#2	LIB_DEV	has	18	100	262	23	Status Browser + Tell Claude button
 C	LIB_DEV#3	LIB_DEV	has	18	127	262	38	Dev.NewVersion (one dev stack per iteration)
 C	LIB_DEV#4	LIB_DEV	demo	18	169	262	23	Project Map (this stack)
 C	LIB_DEV#5	LIB_DEV	review	18	196	262	23	branch project-map not merged
 C	LIB_DEV#6	LIB_DEV	review	18	223	262	38	1 loose file not committed - click to list them
-F	LIB_DEV#6	LIB_DEV	make_map.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\tools\make_map.py	0	0
+F	LIB_DEV#6	LIB_DEV	map_data.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\map_data.txt	0	0
 C	LIB_DEV#7	LIB_DEV	review	18	265	262	38	12 files wait your review (oldest 2026-11-14) - click to list them
 F	LIB_DEV#7	LIB_DEV	11-14  Status_Browser.livecode	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Status_Browser.livecode	0	1
 F	LIB_DEV#7	LIB_DEV	11-14  Status_Browser_Launcher.livecode	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Status_Browser_Launcher.livecode	0	1
@@ -246,8 +244,8 @@ F	LIB_DEV#7	LIB_DEV	11-16  window_shape.livecodescript	\\wsl$\Ubuntu\home\igame3
 F	LIB_DEV#7	LIB_DEV	11-16  window_shape_lab.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\window_shape_lab.livecodescript	0	1
 F	LIB_DEV#7	LIB_DEV	11-17  audit.sh	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\bash\audit.sh	0	1
 F	LIB_DEV#7	LIB_DEV	11-17  board.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\board.txt	0	1
-F	LIB_DEV#7	LIB_DEV	11-17  ProjectMap.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\ProjectMap.oxtstack	0	1
 F	LIB_DEV#7	LIB_DEV	11-17  for_review.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\tools\for_review.py	0	1
+F	LIB_DEV#7	LIB_DEV	11-17  ProjectMap.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\ProjectMap.oxtstack	0	1
 P	LIB_MCP	part	2160	1481	280	67	LIB_MCP	Lets Claude, a local model or any tool drive a running engine
 C	LIB_MCP#1	LIB_MCP	has	18	73	262	23	24 handlers in 2 scripts
 P	LIB_COMFY	part	2490	260	280	67	LIB_COMFY	ComfyUI as a Blueprint-style node editor for Vibecode3D games
@@ -323,8 +321,7 @@ C	GOAL#1	GOAL	next	18	58	262	23	iGame3D XT on itch.io (handle xAction)
 C	GOAL#2	GOAL	next	18	85	262	53	"Does it stand alone, and is it easy and enjoyable enough to put away the old IDE?"
 C	GOAL#3	GOAL	next	18	142	262	38	GAD = Generic Any Data; Genetic Anomaly Detector as the long game
 P	YOU	core	1830	-69	280	67	YOU	The owner: red strings end here when only you can unblock them
-C	YOU#1	YOU	block	18	73	262	53	owner: 136 files wait your review in all (Status Browser) - click to list them
-F	YOU#1	LIB_BIT	11-16  lib_cellmap.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\livecode\lib_cellmap.livecodescript	0	1
+C	YOU#1	YOU	block	18	73	262	53	owner: 135 files wait your review in all (Status Browser) - click to list them
 F	YOU#1	LIB_COMFY	11-17  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_COMFY\README.md	0	1
 F	YOU#1	LIB_COMFY	11-17  vector_pong_variants.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_COMFY\workflows\vector_pong_variants.json	0	1
 F	YOU#1	LIB_COMFY	11-17  __init__.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_COMFY\ComfyUI-Vibecode3D\__init__.py	0	1
@@ -342,8 +339,8 @@ F	YOU#1	LIB_DEV	11-16  window_shape.livecodescript	\\wsl$\Ubuntu\home\igame3d\pr
 F	YOU#1	LIB_DEV	11-16  window_shape_lab.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\window_shape_lab.livecodescript	0	1
 F	YOU#1	LIB_DEV	11-17  audit.sh	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\bash\audit.sh	0	1
 F	YOU#1	LIB_DEV	11-17  board.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\board.txt	0	1
-F	YOU#1	LIB_DEV	11-17  ProjectMap.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\ProjectMap.oxtstack	0	1
 F	YOU#1	LIB_DEV	11-17  for_review.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\tools\for_review.py	0	1
+F	YOU#1	LIB_DEV	11-17  ProjectMap.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\ProjectMap.oxtstack	0	1
 F	YOU#1	LIB_EDITOR	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR\iGame3D_XT\README.md	0	1
 F	YOU#1	LIB_EDITOR	11-16  Vibecode3D_Play_Ig3dEditor.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR\iGame3D_XT\Vibecode3D_Play_Ig3dEditor.livecodescript	0	1
 F	YOU#1	LIB_EDITOR	11-16  window_shape.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR\iGame3D_XT\Tools\window_shape.livecodescript	0	1

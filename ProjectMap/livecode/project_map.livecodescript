@@ -21,6 +21,7 @@ local sDrag, sDragFrom, sDragStart
 local sFocus, sBlockersOnly
 local sBlockList -- control names in the panel's order
 local sMenuMap   -- popup item -> Windows path & tab & 1 when a folder (for the open popup)
+local sMenuChip  -- the chip whose popup is open
 
 constant kTop = 44
 constant kPanelW = 330
@@ -620,7 +621,9 @@ on mouseUp pButton
       pmFocus empty
    else if word 1 of tWas is "click" then
       pmFocus word 2 to -1 of tWas
-      if the cFiles of field (word 2 to -1 of tWas) is not empty then
+      if sKind[word 2 to -1 of tWas] is "block" then
+         pmPopupBlock word 2 to -1 of tWas
+      else if the cFiles of field (word 2 to -1 of tWas) is not empty then
          pmPopupFiles word 2 to -1 of tWas
       end if
    else
@@ -700,6 +703,7 @@ end keyDown
 ---------------------------------------------------------------- the files of a pink (or red) chip
 -- a popup of the chip's files (by LIB when they come from more than one); a pick shows it in Explorer
 command pmPopupFiles pChip
+   put pChip into sMenuChip
    set the text of button "HUD_Popup" to pmFilesMenu(pChip)
    popup button "HUD_Popup" at the mouseLoc
 end pmPopupFiles
@@ -769,6 +773,14 @@ end pmMenuSafe
 on menuPick pItem
    local tHit, tAction, tKey
    if the short name of the target is not "HUD_Popup" then pass menuPick
+   if pItem is "Feedback on this blocker..." then
+      pmBlockFeedback sMenuChip
+      exit menuPick
+   end if
+   if pItem is "Select file(s) for Claude..." then
+      pmBlockFiles sMenuChip
+      exit menuPick
+   end if
    put sMenuMap[pItem] into tHit
    put "Open in Explorer" into tAction
    if tHit is empty then
@@ -856,3 +868,55 @@ command pmExplore pWinPath, pIsFolder
    get shell(tCmd)
    put "Explorer:" && pWinPath into field "HUD_Help"
 end pmExplore
+
+---------------------------------------------------------------- red chips: feedback and files on a blocker
+-- LIB_LLMIN/LIB_DEV/MAP_NOTES.txt, one line each:
+--   date time TAB part TAB the blocker's words TAB feedback|file TAB the text, or a file's Windows path
+-- for_review.py feedback prints it at every session start.
+command pmPopupBlock pChip
+   local tMenu
+   put empty into sMenuMap
+   put pChip into sMenuChip
+   put "(About this blocker" & return & "Feedback on this blocker..." & return & "Select file(s) for Claude..." & return into tMenu
+   if the cFiles of field pChip is not empty then put "-" & return & pmFilesMenu(pChip) after tMenu
+   set the text of button "HUD_Popup" to tMenu
+   popup button "HUD_Popup" at the mouseLoc
+end pmPopupBlock
+
+command pmBlockFeedback pChip
+   local tText
+   ask "Feedback on:" && pmBlockWords(pChip)
+   if the result is "Cancel" or it is empty then exit pmBlockFeedback
+   put it into tText
+   replace return with " " in tText
+   replace tab with " " in tText
+   pmBlockNote pChip, "feedback", tText
+   put "Feedback saved on the blocker   (T tells Claude)" into field "HUD_Help"
+end pmBlockFeedback
+
+-- the paths only: Claude reads the files themselves
+command pmBlockFiles pChip
+   local tFiles, tFile, tN
+   answer files "Files for Claude to look at about:" && pmBlockWords(pChip)
+   if the result is "Cancel" or it is empty then exit pmBlockFiles
+   put it into tFiles
+   repeat for each line tFile in tFiles
+      if tFile is empty then next repeat
+      replace "/" with "\" in tFile
+      pmBlockNote pChip, "file", tFile
+      add 1 to tN
+   end repeat
+   put tN && "file path(s) passed to Claude for this blocker   (T tells Claude)" into field "HUD_Help"
+end pmBlockFiles
+
+command pmBlockNote pChip, pKind, pText
+   pmAppendLine "MAP_NOTES.txt", the short date && the long time & tab & char 3 to -1 of sPartOf[pChip] & tab & pmBlockWords(pChip) & tab & pKind & tab & pText
+end pmBlockNote
+
+function pmBlockWords pChip
+   local tText
+   put field pChip into tText
+   replace return with " " in tText
+   replace tab with " " in tText
+   return tText
+end pmBlockWords

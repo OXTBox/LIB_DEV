@@ -38,6 +38,12 @@ They write the Status Browser's own files (`LIB_LLMIN/LIB_DEV/REVIEW_STATE.txt`,
 reads them at every session start. Reviewed rebuilds the map, so the file leaves the pink count
 at once. **T** = Tell Claude (a line in `TELL_CLAUDE.txt`, which wakes a waiting session).
 
+## Talking about a red blocker
+Click a red chip: **Feedback on this blocker...** (a line of words) or **Select file(s) for
+Claude...** (pick one or more files; only their paths are passed, Claude reads them). Both go to
+`LIB_LLMIN/LIB_DEV/MAP_NOTES.txt` with the part and the blocker's words; press **T** to wake Claude.
+A red chip that has files (YOU's review total) still lists them under these two.
+
 ## Using it
 wheel = zoom at the pointer, drag the black = pan, drag a header = move a part with its chips
 (kept in `positions.txt`), click a box = focus (its strings and neighbours stay lit), click the black = clear.

@@ -3,7 +3,8 @@
 
     python3 -I tools/for_review.py add PATH "work done" ["warnings"] ["caveats"]
     python3 -I tools/for_review.py list            the list, newest last
-    python3 -I tools/for_review.py feedback        the owner's feedback and review states (LIB_LLMIN/LIB_DEV)
+    python3 -I tools/for_review.py feedback        the owner's feedback and review states (LIB_LLMIN/LIB_DEV),
+                                                   and MAP_NOTES.txt: his feedback and files on the Project Map's red blockers
     python3 -I tools/for_review.py relink          listed files that moved: point their lines to where they are now
                                                    (the Project Map runs it on every rebuild)
 
@@ -165,7 +166,7 @@ def main(a):
     elif a[:1] == ['list']:
         print(open(LIST, encoding='utf-8').read() if os.path.exists(LIST) else '(empty)')
     elif a[:1] == ['feedback']:
-        for f in ('REVIEW_STATE.txt', 'REVIEW_FEEDBACK.txt'):
+        for f in ('REVIEW_STATE.txt', 'REVIEW_FEEDBACK.txt', 'MAP_NOTES.txt'):
             p = os.path.join(INBOX, f)
             print('==', f)
             print(open(p, encoding='utf-8').read() if os.path.exists(p) else '(none yet)')
