@@ -97,13 +97,32 @@ def reviews():
                 continue
             b = l.split("\t")
             if len(b) >= 3 and state.get(b[2]) != "reviewed":
-                waiting[b[1]].append(b[0][:10])
+                waiting[b[1]].append(file_entry(b[1], b[2], b[0][:10], b[3] if len(b) > 3 else ""))
     return waiting
+
+
+def to_linux(win):
+    """\\\\wsl$\\Ubuntu\\home\\... -> /home/... (other Windows paths stay as they are)"""
+    m = re.match(r"^\\\\(wsl\$|wsl\.localhost)\\[^\\]+(\\.*)$", win)
+    return m.group(2).replace("\\", "/") if m else win
+
+
+def to_win(linux):
+    return "\\\\wsl$\\Ubuntu" + linux.replace("/", "\\")
+
+
+def file_entry(group, win, date, note):
+    """one file for a pink chip's popup: group, label, Windows path, 1 when it is a folder"""
+    win = win.strip()
+    name = re.split(r"[\\/]", win.rstrip("\\/"))[-1]
+    folder = 1 if os.path.isdir(to_linux(win)) else 0
+    return [group, (date[5:] + "  " if date else "") + name, win, folder, date]
 
 
 def add_counted(parts):
     waiting = reviews()
     today = datetime.date.today()
+    all_waiting = []
     for p in parts:
         folder = os.path.join(PROJECTS, FOLDER.get(p["name"], p["name"]))
         lib = FOLDER.get(p["name"], p["name"])
@@ -118,13 +137,16 @@ def add_counted(parts):
                     b = b.strip(" *")
                     if b:
                         p["chips"].append(["review", f"branch {b} not merged"])
-                loose = [l for l in git(folder, "status", "--porcelain").split("\n") if l.strip()]
+                loose = [l[3:].strip().strip('"') for l in git(folder, "status", "--porcelain").split("\n") if l.strip()]
                 if loose:
-                    p["chips"].append(["review", f"{len(loose)} loose file{'s' if len(loose) > 1 else ''} not committed"])
+                    files_ = [file_entry(lib, to_win(os.path.join(folder, f.split(" -> ")[-1]).rstrip("/")), "", "")
+                              for f in loose]
+                    p["chips"].append(["review", f"{len(loose)} loose file{'s' if len(loose) > 1 else ''} not committed", files_])
         w = waiting.pop(lib, [])
         if w:
-            oldest = min(w)
-            p["chips"].append(["review", f"{len(w)} file{'s' if len(w) > 1 else ''} wait{'' if len(w) > 1 else 's'} your review (oldest {oldest})"])
+            oldest = min(e[4] for e in w)
+            all_waiting.extend(w)
+            p["chips"].append(["review", f"{len(w)} file{'s' if len(w) > 1 else ''} wait{'' if len(w) > 1 else 's'} your review (oldest {oldest})", w])
             try:
                 age = (today - datetime.date.fromisoformat(oldest)).days
             except ValueError:
@@ -132,14 +154,14 @@ def add_counted(parts):
             if age > STALE_DAYS:
                 p["stale"] = True
     # reviews of folders that are not parts land on YOU
-    rest = sum(len(v) for v in waiting.values())
+    rest = [e for v in waiting.values() for e in v]
+    all_waiting.extend(rest)
     you = next((p for p in parts if p["name"] == "YOU"), None)
     if you is not None:
-        n_all = rest + sum(int(t.split()[0]) for p in parts for k, t in p["chips"]
-                           if k == "review" and "wait your review" in t)
-        you["chips"].insert(0, ["block", f"owner: {n_all} files wait your review in all (Status Browser)"])
+        you["chips"].insert(0, ["block", f"owner: {len(all_waiting)} files wait your review in all (Status Browser)",
+                                sorted(all_waiting, key=lambda e: (e[0], e[4]))])
         if rest:
-            you["chips"].append(["review", f"{rest} more wait your review in " + ", ".join(sorted(waiting))])
+            you["chips"].append(["review", f"{len(rest)} more wait your review in " + ", ".join(sorted(waiting)), rest])
     return parts
 
 
@@ -157,21 +179,26 @@ def lines_of(text, chars):
 def block_of(p):
     """a part as rows relative to its header: (header height, chip rows, edges, total height)"""
     chips, edges = [], []
-    done = [t for k, t in p["chips"] if k == "done"]
-    for k, t in p["chips"]:
+    done = [c[1] for c in p["chips"] if c[0] == "done"]
+    for c in p["chips"]:
+        k, t, files = c[0], c[1], (c[2] if len(c) > 2 else [])
         if k == "done":
             if done is not None:
-                chips.append(["done", "DONE\\n" + "\\n".join("- " + d for d in done), len(done) + 1])
+                chips.append(["done", "DONE\\n" + "\\n".join("- " + d for d in done), len(done) + 1, []])
                 done = None
             continue
-        chips.append([k, t, lines_of(t, CHARS)])
+        if files:
+            t += " - click to list them"
+        chips.append([k, t, lines_of(t, CHARS), files])
     title_lines = 1 + (lines_of(p["what"], CHARS) if p["what"] else 0)
     head_h = 22 + LINE_H * title_lines
     rows, dy = [], head_h + 6
-    for i, (k, t, n) in enumerate(chips, 1):
+    for i, (k, t, n, files) in enumerate(chips, 1):
         cid = f"{p['name']}#{i}"
         h = LINE_H * n + PAD + (4 if k == "done" else 0)
         rows.append(["C", cid, p["name"], k, CHIP_IN, dy, CHIP_W, h, t])
+        for g, label, win, isdir, _ in files:
+            rows.append(["F", cid, g, label, win, isdir])
         if k == "block" and t.lower().startswith("owner:") and p["name"] != "YOU":
             edges.append(["E", cid, "YOU", "red"])
         dy += h + 4

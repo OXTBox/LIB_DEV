@@ -21,6 +21,13 @@ under it. Open `ProjectMap.oxtstack` in OXT-Beyond.
 The NOW, GOAL and YOU cards sit on top. The right panel, **What is stopping us**, lists every red
 chip, the ones only you can unblock first; click a line to fly there.
 
+## Files waiting for review
+Click a pink chip (or YOU's red "files wait your review" chip) and a popup lists its files, newest
+first by date; YOU's list is grouped by LIB. Pick one and Explorer opens with the file selected (a
+folder opens itself). The paths travel with the map: make_map.py writes them into map_data.txt and
+the stack keeps each chip's list in its `cFiles` property, so a click never searches the disk or
+waits on the WSL bridge. Loose (uncommitted) files are listed the same way.
+
 ## Using it
 wheel = zoom at the pointer, drag the black = pan, drag a header = move a part with its chips
 (kept in `positions.txt`), click a box = focus (its strings and neighbours stay lit), click the black = clear.

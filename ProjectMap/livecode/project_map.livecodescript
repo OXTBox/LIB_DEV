@@ -20,6 +20,7 @@ local sZoom, sPanX, sPanY
 local sDrag, sDragFrom, sDragStart
 local sFocus, sBlockersOnly
 local sBlockList -- control names in the panel's order
+local sMenuMap   -- popup item -> Windows path & tab & 1 when a folder (for the open popup)
 
 constant kTop = 44
 constant kPanelW = 330
@@ -62,7 +63,7 @@ end pmReadText
 
 ---------------------------------------------------------------- building
 command pmBuild
-   local tData, tLine, tName, tPos
+   local tData, tLine, tName, tPos, tFiles
    put pmReadText("map_data.txt") into tData
    lock screen
    lock messages
@@ -89,10 +90,17 @@ command pmBuild
          case "C"
             pmMakeChip tLine
             break
+         case "F"
+            put item 3 to 6 of tLine & return after tFiles["C:" & item 2 of tLine]
+            break
       end switch
    end repeat
    repeat for each line tLine in tData
       if item 1 of tLine is "E" then pmMakeEdge tLine
+   end repeat
+   -- each chip keeps its own files (group, label, Windows path, folder flag), so a click never searches the disk
+   repeat for each key tName in tFiles
+      if there is a field tName then set the cFiles of field tName to tFiles[tName]
    end repeat
    pmMakeHud
    unlock messages
@@ -280,6 +288,10 @@ command pmMakeHud
    set the textSize of field "HUD_Blockers" to 12
    set the margins of field "HUD_Blockers" to 10
    set the vScrollbar of field "HUD_Blockers" to true
+   create button "HUD_Popup"
+   set the style of button "HUD_Popup" to "menu"
+   set the menuMode of button "HUD_Popup" to "popup"
+   set the visible of button "HUD_Popup" to false
    pmLayoutHud
 end pmMakeHud
 
@@ -603,6 +615,9 @@ on mouseUp pButton
       pmFocus empty
    else if word 1 of tWas is "click" then
       pmFocus word 2 to -1 of tWas
+      if the cFiles of field (word 2 to -1 of tWas) is not empty then
+         pmPopupFiles word 2 to -1 of tWas
+      end if
    else
       pmFocus tWas
    end if
@@ -673,3 +688,91 @@ on keyDown pChar
          pass keyDown
    end switch
 end keyDown
+
+---------------------------------------------------------------- the files of a pink (or red) chip
+-- a popup of the chip's files (by LIB when they come from more than one); a pick shows it in Explorer
+command pmPopupFiles pChip
+   set the text of button "HUD_Popup" to pmFilesMenu(pChip)
+   popup button "HUD_Popup" at the mouseLoc
+end pmPopupFiles
+
+-- the popup's text for a chip's files; fills sMenuMap for menuPick
+function pmFilesMenu pChip
+   local tFiles, tLine, tGroups, tGroup, tMenu, tLabel, tCount
+   put the cFiles of field pChip into tFiles
+   put empty into sMenuMap
+   set the itemDelimiter to tab
+   repeat for each line tLine in tFiles
+      if item 1 of tLine is not among the lines of tGroups then put item 1 of tLine & return after tGroups
+   end repeat
+   put "(" & the number of lines of tFiles && "files: pick one to show it in Explorer" & return & "-" & return into tMenu
+   if the number of lines of tGroups > 1 then
+      repeat for each line tGroup in tGroups
+         put empty into tCount
+         repeat for each line tLine in tFiles
+            if item 1 of tLine is tGroup then add 1 to tCount
+         end repeat
+         put pmMenuSafe(tGroup) && "[" & tCount & "]" into tLabel
+         put tLabel & return after tMenu
+         repeat for each line tLine in tFiles
+            if item 1 of tLine is tGroup then put tab & pmMenuItem(tLabel & "|", tLine) & return after tMenu
+         end repeat
+      end repeat
+   else
+      repeat for each line tLine in tFiles
+         put pmMenuItem(empty, tLine) & return after tMenu
+      end repeat
+   end if
+   return tMenu
+end pmFilesMenu
+
+-- one menu line; remembers its path under the name menuPick will give back
+function pmMenuItem pParent, pLine
+   local tLabel, tN
+   set the itemDelimiter to tab
+   put pmMenuSafe(item 2 of pLine) into tLabel
+   if item 4 of pLine is 1 then put tLabel && "[folder]" into tLabel
+   put 1 into tN
+   repeat while sMenuMap[pParent & tLabel] is not empty
+      add 1 to tN
+      put pmMenuSafe(item 2 of pLine) && "#" & tN into tLabel
+   end repeat
+   put item 3 of pLine & tab & item 4 of pLine into sMenuMap[pParent & tLabel]
+   return tLabel
+end pmMenuItem
+
+-- menu text treats ( ! - / & and | as commands: keep them out of labels
+function pmMenuSafe pText
+   replace "&" with "+" in pText
+   replace "/" with "-" in pText
+   replace "|" with "-" in pText
+   replace tab with " " in pText
+   if char 1 of pText is among the items of "(,!,-" then put " " before pText
+   return pText
+end pmMenuSafe
+
+on menuPick pItem
+   local tHit
+   if the short name of the target is not "HUD_Popup" then pass menuPick
+   put sMenuMap[pItem] into tHit
+   set the itemDelimiter to tab
+   if tHit is not empty then pmExplore item 1 of tHit, item 2 of tHit
+end menuPick
+
+-- Explorer with the file selected (a folder opens itself). "start" returns at once, so the
+-- map never waits on the WSL bridge; nothing on the disk is checked here (the folder flag came with the data)
+command pmExplore pWinPath, pIsFolder
+   local tCmd
+   if the platform is not "Win32" then
+      put "Path:" && pWinPath into field "HUD_Help"
+      exit pmExplore
+   end if
+   set the hideConsoleWindows to true
+   if pIsFolder is 1 then
+      put "start " & quote & quote & " explorer.exe " & quote & pWinPath & quote into tCmd
+   else
+      put "start " & quote & quote & " explorer.exe /select," & quote & pWinPath & quote into tCmd
+   end if
+   get shell(tCmd)
+   put "Explorer:" && pWinPath into field "HUD_Help"
+end pmExplore
