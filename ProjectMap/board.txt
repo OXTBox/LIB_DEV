@@ -214,9 +214,9 @@ link: LIB_GUI, LIB_DEV
 
 == LIB_INPUT | BLOCKS
 what: Mouse, keyboard and game controller as named actions, with presets and profiles; two settings faces
-done: Library, presets, profiles, app face and developer face (18 Nov, branch input-steps, t48 113 checks)
+done: Library, presets, profiles, app face and developer face (18 Nov, t48 113 checks)
 done: Game Player: ... > Controls... for a game with an actions file; Hunter is the first (18 Nov)
-review: owner: try Hunter > ... > Controls...; is the app face what "only the required inputs" meant?
+has: Merged to main 18 Nov; the owner: "Lib_input looks great"
 block: Controller written but never tried with a real one (needs the xt3d bridge and a pad)
 link: LIB_GUI, LIB_DATA, LIB_GAMES, xt3d
 
