@@ -22,3 +22,4 @@ n-9662240e	240	big	ComfyUI as a node editor for the games, deeper: open ended
 n-dda4604e	20	utility	Window titles from Users.Title in each stack: small and mechanical
 c1794977086199	10	fix	The comment window says what you clicked on (box, words, board) so you know where you are after a break
 c1794977779027	40	utility	"Leave comment" and "Explore here..." on every right-click menu, plus a one-page LIB_MENU plan (rules for menus everywhere)
+c1794978427043	15	plan	The boards as the way into the files (they show relationships Explorer cannot): goes with the LIB_MENU bubble, best done together
