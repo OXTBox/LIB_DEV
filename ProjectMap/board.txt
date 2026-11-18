@@ -274,7 +274,7 @@ link: LIB_USERS
 what: Who is at the controls: owner, Claude, Spark, other agents
 done: LIB_USERS plan KEPT (17 Nov)
 done: Users.Title words the window titles (17 Nov, branch users-title)
-next: Move the 10 hand-made window titles to Users.Title (LIB_USERS/TITLES_TO_MOVE.md)
+done: Moved the 10 hand-made window titles to Users.Title (17 Nov; LIB_USERS/TITLES_TO_MOVE.md)
 link: LIB_SYSTEM
 
 == LIB_PUBLIC | SYSTEM
