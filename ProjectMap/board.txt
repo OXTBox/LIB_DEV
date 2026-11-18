@@ -277,7 +277,8 @@ link: LIB_DEV
 == LIB_COMFY | TOOLS
 what: ComfyUI as a Blueprint-style node editor for Vibecode3D games
 demo: Build Game -> playable ComfyPong ("it worked!")
-next: Go deep later
+done: Six genre kits (24 nodes) merged 18 Nov; owner tested their output; kit-made games live in LIB_COMFY/games (one ComfyPong demo in LIB_GAMES)
+next: Stand-alone Comfy Games app on the Vibecode3D Library stack (genre menu, games menu, star ratings, sort by stars / date): after other projects clear
 link: LIB_GAMES
 
 == LIB_SPARK | TOOLS
@@ -314,6 +315,7 @@ what: Who is at the controls: owner, Claude, Spark, other agents
 done: LIB_USERS plan KEPT (17 Nov)
 done: Users.Title words the window titles (17 Nov, branch users-title)
 done: Moved the 10 hand-made window titles to Users.Title (17 Nov; LIB_USERS/TITLES_TO_MOVE.md)
+done: Your 6 PLAN answers written in (18 Nov): titles say FOR OWNER, never a name; personas lower case
 link: LIB_SYSTEM
 
 == LIB_PUBLIC | SYSTEM
