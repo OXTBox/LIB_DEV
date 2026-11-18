@@ -11,6 +11,11 @@ script "priority_tube"
 -- back the last one removed.
 -- Keys: arrows move the selected bubble, wheel scrolls, Delete removes, U undoes a removal, R reload,
 -- T tell Claude, Esc deselect.
+-- Right-click a bubble: its menu (Move to top / Move to bottom / Remove from the tube), then LIB_MENU's
+-- ending: "Leave comment..." (a line in LIB_LLMIN/LIB_DEV/BOARD_COMMENTS.txt, board PRIORITY TUBE, target
+-- = the bubble's id) and "Explore here..." (Explorer at the bubble's folder or file). LIB_MENU is loaded
+-- from ~/projects/LIB_MENU/livecode/lib_menu.livecodescript (two folders above this stack); without it
+-- the menu is plain (no ending) and the bar says "Menus need LIB_MENU".
 
 local sIds      -- the ids, top first, one a line
 local sItem     -- id -> its items.txt line: id source minutes kind score title detail why
@@ -21,6 +26,8 @@ local sSel      -- the selected id
 local sDrag, sGrab, sDragFrom
 local sScroll   -- how far the tube is scrolled
 local sRemoved  -- the ids taken off the tube (TUBE_REMOVED.txt), one a line
+local sMenuId   -- the bubble whose menu is open
+local sAskAnswer -- checks only: the next comment's text instead of asking
 
 constant kTop = 44
 constant kPanelW = 380
@@ -60,6 +67,14 @@ function ptInboxFile pName
    return item 1 to -3 of tPath & "/LIB_LLMIN/LIB_DEV/" & pName
 end ptInboxFile
 
+-- ~/projects as the stack sees it (two folders above the tube's stack)
+function ptProjects
+   local tPath
+   put ptFolder() into tPath
+   set the itemDelimiter to "/"
+   return item 1 to -3 of tPath
+end ptProjects
+
 function ptRead pPath
    if there is not a file pPath then return empty
    return textDecode(URL ("binfile:" & pPath), "UTF-8")
@@ -73,6 +88,7 @@ command ptBuild
    put empty into sIds
    put empty into sScroll
    put empty into sRemoved
+   ptUseMenu
    set the itemDelimiter to tab
    repeat for each line tLine in ptRead(ptInboxFile("TUBE_REMOVED.txt"))
       if char 1 of tLine is "#" or tLine is empty then next repeat
@@ -145,6 +161,13 @@ command ptMakeControls
       put the short name of control i of this card into tName
       if char 1 to 2 of tName is among the items of "G:,B:" or tName is among the items of "Tube,TubeTop,TubeBottom,Bar,Panel" then delete control i of this card
    end repeat
+   -- the one popup menu: made once and kept (a popup can't be deleted while its menu is in use)
+   if there is not a button "TubeMenu" then
+      create button "TubeMenu"
+      set the style of button "TubeMenu" to "menu"
+      set the menuMode of button "TubeMenu" to "popup"
+      set the visible of button "TubeMenu" to false
+   end if
    create field "Bar"
    ptStyle "Bar", "22,22,28", "235,235,235"
    set the textSize of field "Bar" to 13
@@ -429,6 +452,13 @@ end ptIdOf
 
 on mouseDown pButton
    local tId
+   if pButton is 3 then
+      put ptIdOf(the short name of the target) into tId
+      if tId is empty then pass mouseDown
+      ptSelect tId
+      ptPopupMenu tId
+      exit mouseDown
+   end if
    if pButton is not 1 then pass mouseDown
    put ptIdOf(the short name of the target) into tId
    if tId is empty then
@@ -476,11 +506,17 @@ on arrowKey pDir
    if sSel is empty or pDir is not among the items of "up,down" then pass arrowKey
    put lineOffset(sSel, sIds) into tAt
    if the shiftKey is down then
-      if pDir is "up" then ptMoveTo sSel, 1
-      else ptMoveTo sSel, the number of lines of sIds
+      if pDir is "up" then
+         ptMoveTo sSel, 1
+      else
+         ptMoveTo sSel, the number of lines of sIds
+      end if
    else
-      if pDir is "up" then ptMoveTo sSel, tAt - 1
-      else ptMoveTo sSel, tAt + 1
+      if pDir is "up" then
+         ptMoveTo sSel, tAt - 1
+      else
+         ptMoveTo sSel, tAt + 1
+      end if
    end if
 end arrowKey
 
@@ -615,6 +651,211 @@ command ptTell
    put textEncode(tText, "UTF-8") into URL ("binfile:" & tFile)
    set the htmlText of field "Bar" to "<p><b>PRIORITY TUBE</b>&nbsp;&nbsp;&nbsp;<font color=" & quote & "#FFE88C" & quote & ">Told Claude" && the short time & "</font></p>"
 end ptTell
+
+---------------------------------------------------------------- the right-click menu (LIB_MENU)
+-- LIB_MENU (the menu rules every stack shares), found from the tube's own place; loaded once.
+-- Every call into Menu.* is guarded by ptMenuOn: without the library the menu is plain, no ending.
+command ptUseMenu
+   local tLib
+   if ptMenuOn() then exit ptUseMenu
+   put ptMenuLib() into tLib
+   if there is a file tLib then
+      start using stack tLib
+   end if
+end ptUseMenu
+
+function ptMenuLib
+   return ptProjects() & "/LIB_MENU/livecode/lib_menu.livecodescript"
+end ptMenuLib
+
+function ptMenuOn
+   return "LIB_MENU" is among the lines of the stacksInUse
+end ptMenuOn
+
+-- a line in the bar at the top
+command ptSay pText
+   if there is a field "Bar" then
+      set the htmlText of field "Bar" to "<p><b>PRIORITY TUBE</b>&nbsp;&nbsp;&nbsp;<font color=" & quote & "#FFE88C" & quote & ">" & ptHtml(pText) & "</font></p>"
+   end if
+end ptSay
+
+-- menu text treats ( ! - / & and | as commands: keep them out of labels (LIB_MENU's Menu.Safe)
+function ptMenuSafe pText
+   if ptMenuOn() then return Menu.Safe(pText)
+   replace "&" with "+" in pText
+   replace "/" with numToCodepoint(8725) in pText
+   replace "|" with "-" in pText
+   replace tab with " " in pText
+   replace return with " " in pText
+   if char 1 of pText is among the items of "(,!,-" then put " " before pText
+   return pText
+end ptMenuSafe
+
+-- a bubble's menu: its title (greyed), its own lines; the ending comes from LIB_MENU
+function ptBubbleMenu pId
+   local tTitle
+   put ptItem(pId, 6) into tTitle
+   if the number of chars of tTitle > 60 then put char 1 to 57 of tTitle & "..." into tTitle
+   return "(" & ptMenuSafe(tTitle) & return & "Move to top" & return & "Move to bottom" & return & "-" & return & "Remove from the tube"
+end ptBubbleMenu
+
+-- fill the popup with the bubble's menu and the ending (headless checks stop here)
+command ptMenuSet pId
+   put pId into sMenuId
+   if ptMenuOn() then
+      set the text of button "TubeMenu" to Menu.WithEnd(ptBubbleMenu(pId))
+   else
+      set the text of button "TubeMenu" to ptBubbleMenu(pId)
+   end if
+end ptMenuSet
+
+command ptPopupMenu pId
+   if not ptMenuOn() then ptSay "Menus need LIB_MENU: not found at" && ptMenuLib()
+   ptMenuSet pId
+   popup button "TubeMenu" at the mouseLoc
+end ptPopupMenu
+
+on menuPick pItem
+   local tId
+   if the short name of the target is not "TubeMenu" then pass menuPick
+   put sMenuId into tId
+   if tId is empty or sItem[tId] is empty then exit menuPick
+   -- a guard in its own if: OpenXTalk evaluates both sides of "and"
+   if ptMenuOn() then
+      if Menu.IsEnd(pItem) then
+         -- LIB_MENU sends it back as menuLeaveComment / menuExploreHere
+         Menu.EndPick pItem, tId, the long id of this stack
+         exit menuPick
+      end if
+   end if
+   switch pItem
+      case "Move to top"
+         ptMoveTo tId, 1
+         break
+      case "Move to bottom"
+         ptMoveTo tId, the number of lines of sIds
+         break
+      case "Remove from the tube"
+         ptRemove tId
+         break
+   end switch
+end menuPick
+
+-- the ending's two lines, sent back by LIB_MENU's Menu.EndPick
+on menuLeaveComment pTarget
+   ptCommentAsk pTarget
+end menuLeaveComment
+
+on menuExploreHere pTarget
+   ptExploreHere pTarget
+end menuExploreHere
+
+-- checks only: the next comment's text, so no dialog opens
+command ptTestAnswer pText
+   put pText into sAskAnswer
+end ptTestAnswer
+
+command ptCommentAsk pId
+   local tText
+   if sAskAnswer is not empty then
+      put sAskAnswer into tText
+      put empty into sAskAnswer
+   else
+      ask "Comment on" && quote & ptItem(pId, 6) & quote & ":"
+      if the result is "Cancel" then exit ptCommentAsk
+      put it into tText
+   end if
+   if word 1 to -1 of tText is empty then exit ptCommentAsk
+   ptCommentWrite pId, tText
+   ptSay "Comment saved on" && ptItem(pId, 6) & "   (T tells Claude)"
+end ptCommentAsk
+
+-- one line in BOARD_COMMENTS.txt, the boards' format:
+--   id TAB date time TAB board TAB target TAB the target's words TAB open TAB where TAB text (\n = new line)
+command ptCommentWrite pId, pText
+   local tLine, tWords, tHeader, tFile
+   replace return with "\n" in pText
+   replace tab with " " in pText
+   put ptItem(pId, 6) into tWords
+   replace tab with " " in tWords
+   replace return with " " in tWords
+   put "c" & the milliseconds & tab & the short date && the long time & tab & "PRIORITY TUBE" & tab & pId & tab & tWords & tab & "open" & tab & "0,0,0,0" & tab & pText into tLine
+   put "# Comments from the boards (Project Map, On Git or Not), one a line; the last line of an id wins." & return & \
+         "# The order of comments is NOT their priority (a priority board comes later)." & return & \
+         "# id, date time, board, target, the target's words, open|deleted, where, text (\n = new line)" into tHeader
+   put ptInboxFile("BOARD_COMMENTS.txt") into tFile
+   if ptMenuOn() then
+      Menu.AppendLine tFile, tLine, tHeader
+   else
+      ptAppendLine tFile, tLine, tHeader
+   end if
+end ptCommentWrite
+
+-- without LIB_MENU: the same record line, written here
+command ptAppendLine pFile, pLine, pHeader
+   local tText
+   put ptRead(pFile) into tText
+   if tText is empty then put pHeader into tText
+   if tText is not empty and the last char of tText is not return then put return after tText
+   put pLine & return after tText
+   put textEncode(tText, "UTF-8") into URL ("binfile:" & pFile)
+end ptAppendLine
+
+-- where a bubble comes from, for Explorer: path TAB 1 (a folder) or 0 (a file); empty = nowhere.
+--   next step of <part>: the part's folder in ~/projects, else the Project Map's board.txt
+--   comment on <board>: the folder of the part it is about, else BOARD_COMMENTS.txt
+function ptExplorePath pId
+   local tSource, tPart, tLine, tTarget, tPath
+   put ptItem(pId, 2) into tSource
+   if tSource begins with "next step of " then
+      put word 4 to -1 of tSource into tPart
+      put ptProjects() & "/" & tPart into tPath
+      if tPart is not empty and there is a folder tPath then return tPath & tab & 1
+      put ptProjects() & "/LIB_DEV/ProjectMap/board.txt" into tPath
+      if there is a file tPath then return tPath & tab & 0
+      return empty
+   end if
+   if tSource begins with "comment on " then
+      set the itemDelimiter to tab
+      repeat for each line tLine in ptRead(ptInboxFile("BOARD_COMMENTS.txt"))
+         if item 1 of tLine is pId then put item 4 of tLine into tTarget
+      end repeat
+      -- the itemDelimiter is tab here: no "among the items of"
+      if char 1 to 2 of tTarget is "P:" or char 1 to 2 of tTarget is "C:" then
+         put char 3 to -1 of tTarget into tPart
+         set the itemDelimiter to "#"
+         put item 1 of tPart into tPart
+         put ptProjects() & "/" & tPart into tPath
+         if tPart is not empty and there is a folder tPath then return tPath & tab & 1
+      end if
+      put ptInboxFile("BOARD_COMMENTS.txt") into tPath
+      if there is a file tPath then return tPath & tab & 0
+   end if
+   return empty
+end ptExplorePath
+
+command ptExploreHere pId
+   local tWhere, tPath
+   put ptExplorePath(pId) into tWhere
+   if tWhere is empty then
+      ptSay "No file or folder for this bubble"
+      exit ptExploreHere
+   end if
+   set the itemDelimiter to tab
+   put item 1 of tWhere into tPath
+   if ptMenuOn() then
+      Menu.Explore tPath, item 2 of tWhere
+      ptSay the result
+   else
+      replace "/" with "\" in tPath
+      ptSay "Path:" && tPath & "   (Explorer needs LIB_MENU)"
+   end if
+end ptExploreHere
+
+-- for checks: the popup's text now
+function ptMenuNow
+   return the text of button "TubeMenu"
+end ptMenuNow
 
 -- for checks: the order now
 function sIdsNow

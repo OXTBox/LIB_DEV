@@ -30,3 +30,6 @@
   LIB_MENU's Menu.End; the boards load ~/projects/LIB_MENU/livecode/lib_menu.livecodescript themselves);
   rules in ~/projects/LIB_MENU/PLAN.md. Test: OXT-BEYOND/tests/t39_board_canvas.txt works in its own
   folder (_work_t39), never in the real LIB_LLMIN.
+  The Priority Tube (right-click a bubble) and the Status Browser (right-click a file) end their menus the
+  same way and load LIB_MENU the same way; their comments use board PRIORITY TUBE (target = bubble id) and
+  STATUS BROWSER (target = the file's path). Tests t40 / t13 work in _work_t40 / _work_t13.
