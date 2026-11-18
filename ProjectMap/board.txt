@@ -190,6 +190,7 @@ done: owner saw the Notes window: "LOVELY" (18 Nov)
 done: LIB_GUI look fixes: choice and list text readable, dark File menu, field hint shows (18 Nov)
 done: LIB_GUI stage 3: resizing, panels, sliders, drawn tabs, view placeholder (18 Nov)
 done: Gui.FromStack: your IDE layouts read into .gui files, exact round trip; Status Browser 7 of 8 controls (18 Nov)
+next: LIB_GUI: a popup kind (right-click menus in .gui; FromStack reads them too)
 link: LIB_TOOLBAR, LIB_RAYGUI
 
 == LIB_RAYGUI | BLOCKS

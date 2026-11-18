@@ -1,4 +1,4 @@
-# map_data.txt made 2026-11-17 23:52 by tools/make_map.py; do not edit (edit board.txt)
+# map_data.txt made 2026-11-17 23:54 by tools/make_map.py; do not edit (edit board.txt)
 Z	ENGINES	ENGINES	0	184	300
 Z	GAMES	GAMES	390	184	630
 Z	BLOCKS	BUILDING BLOCKS	1110	184	960
@@ -171,16 +171,17 @@ F	LIB_GLOBALS#1	LIB_GLOBALS	11-15  GLOBALS.md	\\wsl$\Ubuntu\home\igame3d\project
 P	LIB_GUI	part	1440	1461	280	52	LIB_GUI	Future GUI-building application	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI
 C	LIB_GUI#1	LIB_GUI	has	18	58	262	23	79 handlers in 1 scripts
 C	LIB_GUI#2	LIB_GUI	done	18	85	262	117	DONE\n- Plan by Fable (16 Nov)\n- PLAN.md stages 1-2: .gui files + native windows (17 Nov, branch gui-step1)\n- owner saw the Notes window: "LOVELY" (18 Nov)\n- LIB_GUI look fixes: choice and list text readable, dark File menu, field hint shows (18 Nov)\n- LIB_GUI stage 3: resizing, panels, sliders, drawn tabs, view placeholder (18 Nov)\n- Gui.FromStack: your IDE layouts read into .gui files, exact round trip; Status Browser 7 of 8 controls (18 Nov)
-C	LIB_GUI#3	LIB_GUI	review	18	206	262	23	branch gui-step1 not merged
-C	LIB_GUI#4	LIB_GUI	review	18	233	262	38	8 files wait your review (oldest 2026-11-16) - click to list them
-F	LIB_GUI#4	LIB_GUI	11-16  PLAN.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\PLAN.md	0	1
-F	LIB_GUI#4	LIB_GUI	11-17  notes.gui	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\gui\notes.gui	0	1
-F	LIB_GUI#4	LIB_GUI	11-17  status_browser.gui	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\gui\status_browser.gui	0	1
-F	LIB_GUI#4	LIB_GUI	11-17  stage3.gui	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\gui\stage3.gui	0	1
-F	LIB_GUI#4	LIB_GUI	11-17  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\README.md	0	1
-F	LIB_GUI#4	LIB_GUI	11-17  lib_gui.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\livecode\lib_gui.livecodescript	0	1
-F	LIB_GUI#4	LIB_GUI	11-17  status_browser_from_stack.gui	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\gui\status_browser_from_stack.gui	0	1
-F	LIB_GUI#4	LIB_GUI	11-17  NEXT.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\NEXT.md	0	1
+C	LIB_GUI#3	LIB_GUI	next	18	206	262	53	LIB_GUI: a popup kind (right-click menus in .gui; FromStack reads them too)
+C	LIB_GUI#4	LIB_GUI	review	18	263	262	23	branch gui-step1 not merged
+C	LIB_GUI#5	LIB_GUI	review	18	290	262	38	8 files wait your review (oldest 2026-11-16) - click to list them
+F	LIB_GUI#5	LIB_GUI	11-16  PLAN.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\PLAN.md	0	1
+F	LIB_GUI#5	LIB_GUI	11-17  notes.gui	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\gui\notes.gui	0	1
+F	LIB_GUI#5	LIB_GUI	11-17  status_browser.gui	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\gui\status_browser.gui	0	1
+F	LIB_GUI#5	LIB_GUI	11-17  stage3.gui	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\gui\stage3.gui	0	1
+F	LIB_GUI#5	LIB_GUI	11-17  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\README.md	0	1
+F	LIB_GUI#5	LIB_GUI	11-17  lib_gui.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\livecode\lib_gui.livecodescript	0	1
+F	LIB_GUI#5	LIB_GUI	11-17  status_browser_from_stack.gui	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\gui\status_browser_from_stack.gui	0	1
+F	LIB_GUI#5	LIB_GUI	11-17  NEXT.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\NEXT.md	0	1
 P	LIB_RAYGUI	part	1770	260	280	67	LIB_RAYGUI	raylib GUI library parroting xt3d and Vibecode3D tools	\\wsl$\Ubuntu\home\igame3d\projects\LIB_RAYGUI
 C	LIB_RAYGUI#1	LIB_RAYGUI	done	18	73	262	42	DONE\n- Plan by Fable (16 Nov)
 C	LIB_RAYGUI#2	LIB_RAYGUI	block	18	119	262	23	Plan only, no code yet
@@ -204,14 +205,18 @@ C	LIB_TOOLBAR#3	LIB_TOOLBAR	review	18	146	262	38	2 files wait your review (oldes
 F	LIB_TOOLBAR#3	LIB_TOOLBAR	11-16  PLAN.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TOOLBAR\PLAN.md	0	1
 F	LIB_TOOLBAR#3	LIB_TOOLBAR	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TOOLBAR\README.md	0	1
 P	LIB_EDITOR	core	2160	260	280	67	LIB_EDITOR	Editing tools as one-method example cards; iGame3D XT lives here	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR
-C	LIB_EDITOR#1	LIB_EDITOR	has	18	73	262	23	388 handlers in 15 scripts
+C	LIB_EDITOR#1	LIB_EDITOR	has	18	73	262	23	421 handlers in 17 scripts
 C	LIB_EDITOR#2	LIB_EDITOR	has	18	100	262	38	E01 Blocks, E02 RaiseLower, E13 Walk The Map (30 fps)
 C	LIB_EDITOR#3	LIB_EDITOR	next	18	142	262	38	E03-E12, E14, E15 on the cellmap format
 C	LIB_EDITOR#4	LIB_EDITOR	review	18	184	262	23	branch cellmap-v3-followups not merged
 C	LIB_EDITOR#5	LIB_EDITOR	review	18	211	262	23	branch editor-cards not merged
 C	LIB_EDITOR#6	LIB_EDITOR	review	18	238	262	23	branch release-checklist not merged
-C	LIB_EDITOR#7	LIB_EDITOR	review	18	265	262	38	1 loose file not committed - click to list them
+C	LIB_EDITOR#7	LIB_EDITOR	review	18	265	262	38	5 loose files not committed - click to list them
+F	LIB_EDITOR#7	LIB_EDITOR	cards_yard.cellmap	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR\maps\cards_yard.cellmap	0	0
+F	LIB_EDITOR#7	LIB_EDITOR	make_card_maps.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR\tools\make_card_maps.py	0	0
+F	LIB_EDITOR#7	LIB_EDITOR	E07_PadOpensDoor.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR\examples\E07_PadOpensDoor.livecodescript	0	0
 F	LIB_EDITOR#7	LIB_EDITOR	_engine_stubs.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR\tests\_engine_stubs.livecodescript	0	0
+F	LIB_EDITOR#7	LIB_EDITOR	e07_headless.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR\tests\e07_headless.txt	0	0
 C	LIB_EDITOR#8	LIB_EDITOR	review	18	307	262	38	5 files wait your review (oldest 2026-11-16) - click to list them
 F	LIB_EDITOR#8	LIB_EDITOR	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR\iGame3D_XT\README.md	0	1
 F	LIB_EDITOR#8	LIB_EDITOR	11-16  Vibecode3D_Play_Ig3dEditor.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR\iGame3D_XT\Vibecode3D_Play_Ig3dEditor.livecodescript	0	1
@@ -276,7 +281,10 @@ C	LIB_DEV#5	LIB_DEV	done	18	211	262	72	DONE\n- Status Browser + review list\n- P
 C	LIB_DEV#6	LIB_DEV	next	18	287	262	23	Your next input on the Project Map
 C	LIB_DEV#7	LIB_DEV	next	18	314	262	68	Status Browser: copy your wheel-zoom (scaleFactor) handlers from the stack into its script file, then load the new menu
 C	LIB_DEV#8	LIB_DEV	review	18	386	262	23	branch on-git-or-not not merged
-C	LIB_DEV#9	LIB_DEV	review	18	413	262	38	1 loose file not committed - click to list them
+C	LIB_DEV#9	LIB_DEV	review	18	413	262	38	4 loose files not committed - click to list them
+F	LIB_DEV#9	LIB_DEV	NEXT.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\PriorityTube\NEXT.md	0	0
+F	LIB_DEV#9	LIB_DEV	claude_sizes.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\PriorityTube\claude_sizes.txt	0	0
+F	LIB_DEV#9	LIB_DEV	items.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\PriorityTube\items.txt	0	0
 F	LIB_DEV#9	LIB_DEV	board.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\board.txt	0	0
 C	LIB_DEV#10	LIB_DEV	review	18	455	262	38	27 files wait your review (oldest 2026-11-14) - click to list them
 F	LIB_DEV#10	LIB_DEV	11-14  Status_Browser.livecode	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Status_Browser.livecode	0	1

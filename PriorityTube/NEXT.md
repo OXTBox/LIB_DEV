@@ -17,6 +17,25 @@ a loop, not a build:
    echoes the old post-Antack T3D game menu). Change little until he asks; collect his reactions in
    PLAN.md section 5.
 
+## FOR THE NEXT SESSION (written 18 Nov, ~00:00 WSL clock; the long session was making the laptop hot)
+Start a FRESH session (not --continue). Then:
+1. **LIB_GUI popup kind** (owner: "yes we need a pop up kind of menu, but in a new session"): a `popup`
+   widget kind in .gui (right-click menus, the LIB_MENU ending), and Gui.FromStack reading popups
+   (the Status Browser's `ReviewMenu` was its one unknown control). Bubble n-e8a10791, ~40 min.
+   LIB_GUI branch gui-step1; t41 has 221 checks.
+2. **Editor cards**: E03, E04, E05, E06 are done and committed (LIB_EDITOR branch `editor-cards`).
+   The helper was stopped (heat) in the middle of **E07** (pad opens door): uncommitted files in
+   LIB_EDITOR: examples/E07_PadOpensDoor.livecodescript, tests/e07_headless.txt,
+   tests/_engine_stubs.livecodescript, changes to maps/cards_yard.cellmap and tools/make_card_maps.py.
+   Check them, finish E07, then E08-E12, E14, E15.
+3. **Status Browser**: copy the owner's wheel-zoom (scaleFactor) handlers from Status_Browser.livecode
+   into livecode/status_browser.livecodescript BEFORE loading the new LIB_MENU menu (bubble n-7bcf81f6).
+4. **Fable** runs in its own session: Next_Steps_With_Claude/FABLE_JOB_1..3 (TWO ENGINES note inside).
+   When the owner says a Fable job is done: review its branch, run tests, update the Project Map.
+Rules learned tonight: one helper agent per bubble; tests run under `flock /tmp/oxt_headless.lock`
+and in their own work folders (t39, t40, t13 do now), never the real LIB_LLMIN; the main session
+alone loads scripts into his open stacks and edits ProjectMap/board.txt.
+
 ## Where things stand (updated 18 Nov, just after midnight)
 - 17 Nov night, done from the tube (one helper agent per task kept memory small): LIB_GUI stages 1-2
   (branch gui-step1), Users.Title (LIB_USERS branch users-title) + 9 scripts moved to it (branches
