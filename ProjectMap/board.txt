@@ -92,7 +92,8 @@ what: Generic Any Data + our Genetic Anomaly Detector (Galactica-4 as reference)
 has: GAD essence and variable inventory
 has: Self-writing script system mapped (5 bugs found)
 demo: GeneticAnomaly prototype (ga-turns)
-next: Battles step 1: one-page plan (Bases map turn -> LIB_RTS fight -> back)
+done: Battles step 1: one-page plan (18 Nov, LIB_GAD branch gad-battles; copy in LIB_LLMOUT/LIB_GAD)
+review: Battles plan: say yes (or change) before step 2; 4 questions at its end
 next: Battles step 2: smallest loop (two Bases, one anomaly, one fight)
 block: owner: say yes or no to the one-page battle plan before any code
 link: LIB_RTS, LIB_GENERICA, LIB_LISTS, LIB_SCRIPTBLOCKS
