@@ -11,6 +11,13 @@ it leaves out on purpose, and what is loose**, and decide each loose thing with 
 reading git output. Same board, same feel as the Project Map ("a whole house instead of just the
 idea of one"): the view of where things are, not the innards.
 
+**Scope, the owner's correction (17 Nov, before the /clear):** "it's what you are not putting on
+gitignore and is in the project now, we'll expand it to remote locations later, I just need to get
+my eyes on things". So: **this machine, now.** Every file and folder in `~/projects` lands on one
+side: ON GIT (tracked) or NOT ON GIT, and the NOT ON GIT side is the point: everything git does not
+keep, whether a .gitignore rule hides it, nobody committed it, or its folder is not a repository,
+made visible with the rule or reason that keeps it out. No remotes, no backups in this build.
+
 ## 2. What the board shows
 
 One card per folder in `~/projects` (every LIB_*, the engines, and the non-git folders), in the
@@ -20,12 +27,11 @@ unknown folders go to a sixth column, NOT SORTED). Under each card, chips:
 | Chip | Colour | Example | Popup on click |
 |---|---|---|---|
 | On git | green | "93 files on git (main)" | none, or the top folders |
-| Left out on purpose | grey | "216 files ignored: TEMPLATES_DO_NOT_COMMIT, __pycache__" | the ignore rules that cause it |
+| Hidden by .gitignore | grey | "216 files ignored: TEMPLATES_DO_NOT_COMMIT, __pycache__" | by rule: each rule, its folders and counts; each file Open / Commit instead / Leave |
 | Loose | hot pink | "4 files not on git" | each file: Open in Explorer / Commit / Ignore / Delete / Leave |
 | Unmerged branch | pink | "branch vector-toss-dangle (3 commits)" | Merge / Keep / Delete branch |
 | Big things on disk only | lavender | "LIB_LLMOUT/Read: 115 MB, 6,425 files" | Open in Explorer |
 | Not a repository | red | "TO_REMOVE: 296 MB, no git" | Make it a LIB repo / Ignore folder / Delete |
-| Not backed up | red, string to YOU | "no remote: only on this machine" | see section 5 |
 
 Top row: **ON GIT** (totals), **NOT ON GIT** (totals, biggest first), **YOU** (decisions waiting).
 The right panel lists every loose thing, biggest first; click to fly there (Project Map's panel).
@@ -51,7 +57,7 @@ The right panel lists every loose thing, biggest first; click to fly there (Proj
 
 ## 4. Known facts to start from (17 Nov survey)
 
-- 39 git repositories, **all without a remote**. Branches not merged: LIB_GAMES `vector-toss-dangle`
+- 39 git repositories (none has a remote; remotes are a later step). Branches not merged: LIB_GAMES `vector-toss-dangle`
   (checked out!) and `engine-contract`, LIB_COMFY `comfy-vector-pong` (checked out), LIB_EDITOR and
   LIB_ig3d `release-checklist`, LIB_USERS `library-plans`.
 - Loose now: LIB_GAMES 4 ComfyPong games (made by the Comfy node: belong with LIB_COMFY's branch),
@@ -68,9 +74,7 @@ The right panel lists every loose thing, biggest first; click to fly there (Proj
 
 ## 5. Questions for the owner (default in brackets)
 
-1. Backup: should "on git" also mean "off this machine" (a private remote, or a dated zip of every
-   repo's .git to V: or another drive)? [the board shows "no remote" in red; no remote is made
-   until you say where]
+1. (Later, by the owner's word: remote locations and backups. Not in this build.)
 2. TO_REMOVE (296 MB): delete after a look? [shown red, untouched]
 3. LIB_COMPANY / FACE / LUA / OMEGA: make repos, fold into another LIB, or delete? [shown red]
 4. One board or a second tab in the Project Map? [a separate stack, sharing the canvas library]
