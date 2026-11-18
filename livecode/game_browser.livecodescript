@@ -22,9 +22,13 @@
 
 constant kGamesRel = "LIB_GAMES/Vibecode3D_Games"
 constant kBenchRel = "xt3D_Raylib_Livecode_Bridge/standalone/xt3d_Bench_LibMCP/xt3d_Bench_LibMCP.exe"
-constant kBenchPort = 8770
+constant kBenchPort = 8770     -- LIB_PORTS/ports.tsv: xt3d-bench-mcp
+constant kPingMs = 1500        -- is the bench there? (LIB_PORTS rule 3: a health check waits at most 2 s)
+constant kRunMs = 15000        -- a request to the bench
 
 local sGames, sCount, sCurrent, sLastSent, sInfo
+local sHttp    -- [socket] ["state"] empty / done / error, ["data"]: GB.Http's requests in flight
+local sBusy    -- what the browser is waiting for (one bench request at a time)
 local sDraft   -- [game] the Feedback field's text for that game (kept while you switch games)
 
 on openStack
@@ -220,8 +224,8 @@ end GB.PlayCurrent
 
 on GB.Explore pPath
    if the platform is not "Win32" then exit GB.Explore
-   set the hideConsoleWindows to true
-   get shell("explorer.exe /select," & quote & GB.Win(pPath) & quote)
+   set the cursor to busy
+   open process ("explorer.exe /select," & quote & GB.Win(pPath) & quote) for neither
 end GB.Explore
 
 -------------------------------------------------------------------- Vibecode3D: its own program
@@ -246,19 +250,25 @@ on GB.PlayVibe pName
       exit GB.PlayVibe
    end if
    GB.Start tExe, pName
-   GB.Say "Starting" && pName && "in its own Game_Player window."
+   if the result is "process is already open" then
+      GB.Say pName && "is already open in a Game_Player window."
+   else if the result is not empty then
+      GB.Say "Game_Player did not start:" && the result
+   else
+      GB.Say "Starting" && pName && "in its own Game_Player window."
+   end if
 end GB.PlayVibe
 
--- start a program without waiting for it; the folder is a local one (cmd can't start in \\wsl$)
+-- start a program without waiting for it. No shell: on 18 Nov every shell() took 20-50 s to start
+-- (antivirus scanning cmd.exe), so "start" froze the browser; open process took 15 ms.
+-- LiveCode refuses the same command line twice while it runs: the result is "process is already open".
 command GB.Start pExe, pArg
-   local tWas, tCmd
-   put the defaultFolder into tWas
-   set the defaultFolder to specialFolderPath("temporary")
-   put "start " & quote & quote & " " & quote & GB.Win(pExe) & quote into tCmd
+   local tCmd
+   set the cursor to busy
+   put quote & GB.Win(pExe) & quote into tCmd
    if pArg is not empty then put " " & quote & pArg & quote after tCmd
-   set the hideConsoleWindows to true
-   get shell(tCmd)
-   set the defaultFolder to tWas
+   open process tCmd for neither
+   return the result
 end GB.Start
 
 -- Game_Player.exe as LiveCode builds it, in LIB_DEV/Game_Player (or the inbox)
@@ -274,57 +284,163 @@ end GB.PlayerExe
 -------------------------------------------------------------------- xt3d: the games bench
 
 on GB.PlayXt3d pName
-   local tExe, tCode, tReply
+   local tExe, tCode, tReply, tStart
    GB.UseMe
+   if sBusy is not empty then
+      GB.Say "Still waiting for the bench (" & sBusy & "); try again in a moment."
+      exit GB.PlayXt3d
+   end if
+   put "checking the xt3d games bench" into sBusy
+   GB.Say "Checking the xt3d games bench..."
    if not GB.BenchAlive() then
       put GB.Projects() & "/" & kBenchRel into tExe
       if there is not a file tExe then
+         put empty into sBusy
          GB.Say "No xt3d games bench at" && GB.Win(tExe) & return & "(build it: xt3D_Raylib_Livecode_Bridge/standalone/README.md)"
          exit GB.PlayXt3d
       end if
+      put "starting the xt3d games bench" into sBusy
       GB.Say "Starting the xt3d games bench..."
       GB.Start tExe, empty
-      repeat 60 times
+      put the milliseconds into tStart
+      repeat until GB.BenchAlive() or the milliseconds - tStart > 30000
+         set the cursor to busy
          wait 500 milliseconds with messages
-         if GB.BenchAlive() then exit repeat
       end repeat
       if not GB.BenchAlive() then
-         GB.Say "The xt3d games bench did not answer on port" && kBenchPort & "."
+         put empty into sBusy
+         GB.Say "The xt3d games bench did not answer on port" && kBenchPort && "within 30 seconds."
          exit GB.PlayXt3d
       end if
       wait 4 seconds with messages            -- it opens its window and raylib after the server
    end if
+   put "asking the bench to play" && pName into sBusy
    put "xbListGames" & return & "xbPlayGame" && quote & pName & quote into tCode
-   put GB.Bench("POST", "/run", tCode) into tReply
+   put GB.Bench("POST", "/run", tCode, kRunMs) into tReply
+   put empty into sBusy
    GB.Say "xt3d games bench:" && pName && tReply
 end GB.PlayXt3d
 
 function GB.BenchToken
+   set the cursor to busy
    return line 1 of GB.ReadText("C:/LIB_MCP/devtoken_" & kBenchPort & ".txt")
 end GB.BenchToken
 
 function GB.BenchAlive
    if GB.BenchToken() is empty then return false
-   return GB.Bench("GET", "/ping", empty) begins with "OK"
+   return GB.Bench("GET", "/ping", empty, kPingMs) begins with "OK"
 end GB.BenchAlive
 
--- through Windows' curl.exe (as LIB_MCP's lcmcp does), with a time limit: never hangs the browser
-function GB.Bench pMethod, pRoute, pBody
-   local tUrl, tCmd, tBody, tOut
-   if the platform is not "Win32" then return "not on Windows"
-   put "http://127.0.0.1:" & kBenchPort & pRoute into tUrl
-   put "curl.exe -sS -m 15 -H " & quote & "X-Token: " & GB.BenchToken() & quote into tCmd
-   if pMethod is "POST" then
-      put specialFolderPath("temporary") & "/game_browser_post.txt" into tBody
-      put textEncode(pBody, "UTF-8") into URL ("binfile:" & tBody)
-      put " -X POST -H " & quote & "Expect:" & quote & " -H " & quote & "Content-Type: text/plain; charset=utf-8" & quote & \
-            " --data-binary " & quote & "@" & GB.Win(tBody) & quote after tCmd
-   end if
-   put " " & tUrl after tCmd
-   set the hideConsoleWindows to true
-   put shell(tCmd) into tOut
-   return textDecode(tOut, "UTF-8")
+function GB.Bench pMethod, pRoute, pBody, pTimeoutMs
+   return GB.Http(pMethod, kBenchPort, pRoute, pBody, GB.BenchToken(), pTimeoutMs)
 end GB.Bench
+
+-------------------------------------------------------------------- HTTP without curl
+
+-- one request to 127.0.0.1:pPort over a socket of our own. No shell (curl.exe could take 50 s
+-- just to start), and the window keeps working while it waits: the busy cursor turns, clicks and
+-- keys are handled. Returns the body, or "(no answer in N ms)" / "(error: ...)".
+function GB.Http pMethod, pPort, pRoute, pBody, pToken, pTimeoutMs
+   local tSock, tReq, tBytes, tStart, tState, tData, tAt
+   put "127.0.0.1:" & pPort & "|gb" & the milliseconds into tSock
+   put textEncode(pBody, "UTF-8") into tBytes
+   put pMethod && pRoute && "HTTP/1.1" & crlf & "Host: 127.0.0.1:" & pPort & crlf & \
+         "X-Token: " & pToken & crlf & "Connection: close" & crlf into tReq
+   if pMethod is "POST" then
+      put "Content-Type: text/plain; charset=utf-8" & crlf & \
+            "Content-Length: " & the number of bytes of tBytes & crlf after tReq
+   end if
+   put crlf after tReq
+   put empty into sHttp[tSock]["state"]
+   put empty into sHttp[tSock]["data"]
+   put textEncode(tReq, "UTF-8") & tBytes into sHttp[tSock]["send"]
+   put the milliseconds into tStart
+   set the cursor to busy
+   open socket to tSock with message "GB.HttpOpen"
+   if the result is not empty then
+      delete variable sHttp[tSock]
+      return "(error:" && the result & ")"
+   end if
+   repeat until sHttp[tSock]["state"] is not empty or the milliseconds - tStart > pTimeoutMs
+      set the cursor to busy
+      wait 20 milliseconds with messages
+   end repeat
+   put sHttp[tSock]["state"] into tState
+   put sHttp[tSock]["data"] into tData
+   if tState is empty then
+      -- still connecting: closing it now lets its late error land on the next socket (18 Nov,
+      -- error 10038 on the request after a timeout). It is closed when it answers or fails.
+      put "abandoned" into sHttp[tSock]["state"]
+      return "(no answer in" && pTimeoutMs && "ms)"
+   end if
+   delete variable sHttp[tSock]
+   close socket tSock
+   if tState begins with "error" then return "(" & tState & ")"
+   put offset(crlf & crlf, tData) into tAt
+   if tAt > 0 then delete char 1 to tAt + 3 of tData
+   return textDecode(tData, "UTF-8")
+end GB.Http
+
+on GB.HttpOpen pSock
+   if pSock is not among the lines of the keys of sHttp then exit GB.HttpOpen
+   if sHttp[pSock]["state"] is "abandoned" then
+      delete variable sHttp[pSock]
+      close socket pSock
+      exit GB.HttpOpen
+   end if
+   write sHttp[pSock]["send"] to socket pSock
+   read from socket pSock with message "GB.HttpRead"
+end GB.HttpOpen
+
+on GB.HttpRead pSock, pData
+   if pSock is not among the lines of the keys of sHttp then exit GB.HttpRead
+   if sHttp[pSock]["state"] is "abandoned" then exit GB.HttpRead
+   put pData after sHttp[pSock]["data"]
+   if GB.HttpComplete(sHttp[pSock]["data"]) then
+      put "done" into sHttp[pSock]["state"]
+   else
+      read from socket pSock with message "GB.HttpRead"
+   end if
+end GB.HttpRead
+
+-- the whole reply is in: the head, and as many body bytes as its Content-Length
+function GB.HttpComplete pData
+   local tAt, tHead, tLen, tLine
+   put offset(crlf & crlf, pData) into tAt
+   if tAt is 0 then return false
+   put char 1 to tAt of pData into tHead
+   replace numToChar(13) with empty in tHead
+   put empty into tLen
+   repeat for each line tLine in tHead
+      if tLine begins with "Content-Length:" then put word 2 of tLine into tLen
+   end repeat
+   if tLen is not an integer then return false      -- no length: wait for the server to close
+   return the number of bytes of pData - (tAt + 3) >= tLen
+end GB.HttpComplete
+
+on socketClosed pSock
+   if pSock is among the lines of the keys of sHttp then
+      if sHttp[pSock]["state"] is "abandoned" then
+         delete variable sHttp[pSock]
+      else
+         put "done" into sHttp[pSock]["state"]
+      end if
+   else
+      pass socketClosed
+   end if
+end socketClosed
+
+on socketError pSock, pErr
+   if pSock is among the lines of the keys of sHttp then
+      if sHttp[pSock]["state"] is "abandoned" then
+         delete variable sHttp[pSock]
+      else
+         put "error:" && pErr into sHttp[pSock]["state"]
+      end if
+   else
+      pass socketError
+   end if
+end socketError
 
 -------------------------------------------------------------------- feedback
 
