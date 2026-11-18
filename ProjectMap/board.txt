@@ -304,10 +304,12 @@ what: Third-party applications (LiveCode servers 7.1.4 / 9.6.3)
 
 # ---------------- SYSTEM ----------------
 == LIB_SYSTEM | SYSTEM | core
-what: The rules and the plan: LIB_ALPHA, STATUS, TODO, OMEGA
-has: Night shutdown, operating prompt, model economy
-block: owner: correct LIB_ALPHA / OPERATING_PROMPT (O-1), they stand as written
-review: STATUS.md header is from 14 Nov (needs a rewrite)
+what: The rules and the plan: LIB_ALPHA, STATUS, TODO, DONE, OMEGA
+has: Night shutdown, operating prompt, model economy, ISSUES tickets
+done: Operating prompt draft 2, on your word (18 Nov)
+done: STATUS archived (13-17 Nov) and rewritten for 18 Nov
+done: TODO turned into a DONE list; TODO keeps only what is open (18 Nov)
+review: Operating prompt draft 2, STATUS, DONE, TODO (18 Nov)
 link: LIB_USERS
 
 == LIB_USERS | SYSTEM
