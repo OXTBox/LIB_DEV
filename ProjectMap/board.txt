@@ -1,0 +1,285 @@
+# PROJECT MAP board: the hand-kept half of the map (tools/make_map.py adds the counted half).
+# First pass by Opus, 17 Nov 2026, from a cursory look: STATUS, TODO, the resume plan, READMEs, git.
+# Edit freely in any text editor, then press Rebuild in the Project Map stack.
+#
+# == NAME | ZONE | core          a part (core = purple box, yellow text; else grey box, white text)
+#    what:   one line: what it is
+#    has:    a feature that works (green)
+#    demo:   a demo, or in production now (lavender)
+#    done:   one finished step; all done: lines make one gold list
+#    next:   the next planned step (white outline)
+#    block:  what stops the next step (red); start with "owner:" and a red string ties it to YOU
+#    review: waits for a review (hot pink); the counted reviews are added by make_map.py
+#    link:   parts this one feeds or depends on (grey strings), comma separated
+#
+# ZONES (columns, left to right): ENGINES, GAMES, BLOCKS, TOOLS, SYSTEM
+# The top row is not a zone: == NOW, == GOAL and == YOU are drawn above the columns.
+
+== NOW | TOP | core
+what: Where we are, 17 Nov 2026
+has: Opus alone from here (no Fable time): big things start as a one-page plan
+has: Every branch merged 16 Nov; main is the truth in every repository
+next: GAD battles: one-page plan, then the smallest playable loop
+next: Your 16 Nov game notes (GridSprint, InterceptorRun, DeadDays)
+
+== GOAL | TOP | core
+what: Where we are going
+next: iGame3D XT on itch.io (handle xAction)
+next: "Does it stand alone, and is it easy and enjoyable enough to put away the old IDE?"
+next: GAD = Generic Any Data; Genetic Anomaly Detector as the long game
+
+== YOU | TOP | core
+what: The owner: red strings end here when only you can unblock them
+next: New tasks go in one file: LIB_LLMIN/LIB_SYSTEM/NEW_TASKS.txt
+
+# ---------------- ENGINES ----------------
+== Vibecode3D | ENGINES | core
+what: The owner's 3D engine and editor in xTalk: vector wireframes, 1983 arcade look
+has: Game notes (` or F2) and in-game command line (/next /back /play /games)
+has: iGame3D main UI remade (26-tool toolbar, menus, 755-model library)
+demo: 54 playable games run in it (LIB_GAMES)
+done: Standalone collected by LIB_BUILD
+done: Escape and pause rules, HUDs below the bars, WASD everywhere
+link: LIB_GAMES, LIB_BIT, LIB_BUILD
+
+== xt3d | ENGINES | core
+what: xt3D_Raylib_Livecode_Bridge: xTalk drives raylib 3D (xRay)
+has: Games bench runs Thrmnlra unchanged (27 fps)
+has: Box2DXT physics works outside the IDE (could replace faked physics)
+next: E13 Walk The Map in the xt3d games bench
+link: LIB_GAMES, LIB_RAYGUI, LIB_BIT
+
+== iGame3D_2026_CLAUDE | ENGINES
+what: Writable copy of the 2008 iGame3D (Lua) for real-engine tests
+has: 2007 Pro external loads in 7.1.4 32-bit, runs Lua
+block: Physics broken: faked in our games
+link: LIB_ig3d
+
+== xtalk_py | ENGINES
+what: xTalk runtime in Python + the script corpus
+has: Script corpus with INDEX.md (toCorpus / fromXJSON)
+next: Pythonizing day (later, by the owner's word)
+link: LIB_XTJSON, LIB_GLOBALS
+
+# ---------------- GAMES ----------------
+== LIB_GAMES | GAMES | core
+what: Small, teachable games and demos for Vibecode3D and xt3d; the Sequencer
+demo: 15 Spark road-trip games (on main)
+demo: Thrmnlra typing war, Amazing Couple, DeadDays, VectorPong3D ...
+demo: Vector Toss (branch vector-toss-dangle)
+done: Round one games
+done: Round two games (owner concepts)
+done: Spark road trip: 15 games played on the real engine
+done: Owner's 15 Nov notes (LTA camera, SquadBuggy snipers)
+next: 16 Nov notes: GridSprint crash box + traffic, InterceptorRun homing + rotor + zoom, DeadDays sparks + mouse look + Shift
+block: Engine contract (cellmap v3 follow-ups A-92..A-95) before games move to xRay / Box2DXT
+link: Vibecode3D, xt3d, PROMPT_GLAZE, LIB_SPARK, LIB_COMFY
+
+== PROMPT_GLAZE | GAMES | core
+what: The umbrella game: two vector heroes dropped into every game we build
+has: Banter / glossary work feeds GAD tropes
+next: Vector Toss Stamina rules (HANG TIME) when its work resumes
+block: Waits on LIB_GAMES games settling (not now, by plan)
+link: LIB_GAMES, LIB_GAD
+
+== LIB_GAD | GAMES | core
+what: Generic Any Data + our Genetic Anomaly Detector (Galactica-4 as reference)
+has: GAD essence and variable inventory
+has: Self-writing script system mapped (5 bugs found)
+demo: GeneticAnomaly prototype (ga-turns)
+next: Battles step 1: one-page plan (Bases map turn -> LIB_RTS fight -> back)
+next: Battles step 2: smallest loop (two Bases, one anomaly, one fight)
+block: owner: say yes or no to the one-page battle plan before any code
+link: LIB_RTS, LIB_GENERICA, LIB_LISTS, LIB_SCRIPTBLOCKS
+
+== LIB_RTS | GAMES
+what: The 2008 RTS system rebuilt in xTalk: select, command, the living and the dead
+demo: RTS_Demo
+block: owner: play RTS_Demo two minutes and say whether it was fun
+link: LIB_GAD
+
+== LIB_TTRPG | GAMES
+what: TTRPG Studio: a role-playing table run by local models
+has: 18 skills, self-play, terminal version ("That was great!")
+done: Engine and prompts
+done: Stack built, owner tests all pass
+done: Tuning pass
+block: owner: open the TTRPG Studio window (never seen on a screen)
+block: qwen 7B + 2B fill RAM to 95%; 13B out of reach
+next: Step 9: the old studio's world code (later)
+
+== LIB_HOWTO | GAMES
+what: Step-by-step game tutorials (18 topics, 92 steps)
+done: Outline
+next: Step code by Claude, step words by Spark
+block: owner: review the outline first
+
+# ---------------- BLOCKS (libraries) ----------------
+== LIB_BIT | BLOCKS | core
+what: 1-bit grids, the BitEditor and cellmaps: the hub between editor and engines
+has: cellmap v2 (five heights a cell), Python + xTalk give identical answers
+has: BitEditor Heights tab
+done: cellmap v2 format
+done: cellmap v3 plan KEPT (stacked maps, packs, slopes)
+next: cellmap v3 follow-ups A-92..A-95
+block: owner: test the BitEditor Heights tab (F-3), never seen on a screen
+link: LIB_MAP, LIB_EDITOR, Vibecode3D, xt3d
+
+== LIB_MAP | BLOCKS
+what: Levels from 1-bit grids for both engines
+link: LIB_BIT
+
+== LIB_TRACE | BLOCKS
+what: Bitmap -> shapes
+link: LIB_BIT
+
+== LIB_GENERICA | BLOCKS
+what: A game's words as plain label files: retheme by editing labels
+has: Galactica set: 49 lists, 533 labels
+has: Sequencer {@list:n}
+review: genetic_anomaly overlay is a DRAFT
+link: LIB_GAD
+
+== LIB_LISTS | BLOCKS
+what: Game word lists by name (CATALOG.md)
+has: Star names (155) and street, city, people lists
+link: LIB_GAD
+
+== LIB_SCRIPTBLOCKS | BLOCKS
+what: Harvest, manage and export script blocks (GAD's code palette)
+has: 24 blocks, 351 handlers of GAD_WORKING + Generica
+link: LIB_GAD
+
+== LIB_XTJSON | BLOCKS
+what: Stacks <-> JSON: harvest, rebuild, batch app
+has: 113 of 115 stacks harvested, nested-group bug fixed
+block: Web_Collector_Watcher stack crashes the engine (A-11)
+link: xtalk_py, LIB_GAD
+
+== LIB_MOCAP | BLOCKS
+what: Video -> motion capture -> stick characters, all local
+has: mocap_skin.py skins a procedural body
+link: LIB_BVH
+
+== LIB_BVH | BLOCKS
+what: The BVH motion library (local only: rights unsettled)
+has: Animazoo, FreeBVH, iGame3D, Harold Lloyd clips
+next: Cut the Harold Lloyd take into climb / hang / recover for DeadDays
+block: owner: check the film title for the credit ("Safety Last!", 1923?)
+link: LIB_GAMES
+
+== LIB_DATA | BLOCKS
+what: The one Data folder every app loads and saves through (Documents/Data)
+link: Vibecode3D, LIB_BUILD
+
+== LIB_THEME | BLOCKS
+what: One look for every stack (dark / light)
+link: LIB_DEV
+
+== LIB_GLOBALS | BLOCKS
+what: Every global name, its use and its Python twin
+link: xtalk_py
+
+== LIB_GUI | BLOCKS
+what: Future GUI-building application
+done: Plan by Fable (16 Nov)
+next: Build from PLAN.md
+block: Plan only, no code; waits its turn after GAD battles
+link: LIB_TOOLBAR, LIB_RAYGUI
+
+== LIB_RAYGUI | BLOCKS
+what: raylib GUI library parroting xt3d and Vibecode3D tools
+done: Plan by Fable (16 Nov)
+block: Plan only, no code yet
+link: xt3d
+
+== LIB_TOOLBAR | BLOCKS
+what: One-stop floating launcher of buttons for every LIB
+done: Plan by Fable from your O-8 answer
+block: Plan only, no code yet
+
+# ---------------- TOOLS ----------------
+== LIB_EDITOR | TOOLS | core
+what: Editing tools as one-method example cards; iGame3D XT lives here
+has: E01 Blocks, E02 RaiseLower, E13 Walk The Map (30 fps)
+next: E03-E12, E14, E15 on the cellmap format
+link: LIB_BIT, LIB_ig3d
+
+== LIB_ig3d | TOOLS | core
+what: Where the worlds converge: glossary, procedures, engine categories
+has: iGame3D external API documented (123 commands, 53 functions)
+done: GLOSSARY.md
+done: PROCEDURES.md
+block: owner: say keep / change / later on RELEASE_CHECKLIST.md
+link: LIB_EDITOR, LIB_PUBLIC
+
+== OXT-BEYOND | TOOLS
+what: The new xTalk IDE (Seth Morrow); MCP bridge lets Claude drive it
+has: Headless runner: 138 checks pass, sockets and processes work
+has: MCP bridge connected
+link: LIB_DEV, LIB_TTRPG
+
+== LIB_DEV | TOOLS
+what: Where the developer's needs are met: Status Browser, Game Browser, this map
+has: Status Browser + Tell Claude button
+has: Dev.NewVersion (one dev stack per iteration)
+demo: Project Map (this stack)
+link: LIB_THEME
+
+== LIB_MCP | TOOLS
+what: Lets Claude, a local model or any tool drive a running engine
+link: LIB_DEV
+
+== LIB_COMFY | TOOLS
+what: ComfyUI as a Blueprint-style node editor for Vibecode3D games
+demo: Build Game -> playable ComfyPong ("it worked!")
+next: Go deep later
+link: LIB_GAMES
+
+== LIB_SPARK | TOOLS
+what: The local model (spark-x2.6-4b): unmetered first drafts
+has: Game designs, concept prompts with a FUN block
+block: iGame3D 2008 manifest run stopped since 13 Nov (LM Studio down)
+link: LIB_GAMES, LIB_HOWTO
+
+== LIB_BUILD | TOOLS
+what: Collects bench, standalone, games and libraries into one portable folder
+done: C:\LIB_DEMO: 3,146 files, 311 MB
+link: LIB_PUBLIC
+
+== LIB_TEST | TOOLS
+what: What the owner should open and try now (the test sheet)
+link: LIB_GAMES
+
+== LIB_UPBGE | TOOLS
+what: Small Blender Game Engine templates (22 specs, Trench Run)
+
+== LIB_BIN | TOOLS
+what: Third-party applications (LiveCode servers 7.1.4 / 9.6.3)
+
+# ---------------- SYSTEM ----------------
+== LIB_SYSTEM | SYSTEM | core
+what: The rules and the plan: LIB_ALPHA, STATUS, TODO, OMEGA
+has: Night shutdown, operating prompt, model economy
+block: owner: correct LIB_ALPHA / OPERATING_PROMPT (O-1), they stand as written
+review: STATUS.md header is from 14 Nov (needs a rewrite)
+link: LIB_USERS
+
+== LIB_USERS | SYSTEM
+what: Who is at the controls: owner, Claude, Spark, other agents
+done: LIB_USERS plan KEPT (17 Nov)
+next: Users.Title words the window titles
+link: LIB_SYSTEM
+
+== LIB_PUBLIC | SYSTEM
+what: The public page: engines as the interface to vibecoding
+has: Vibecode3D Library.exe launcher, Steam-style install sim
+link: LIB_BUILD
+
+== LIB_LLMIN / LLMOUT | SYSTEM
+what: The inbox (LIB_LLMIN/<project>) and the done pile (LIB_LLMOUT/Read)
+has: FOR_REVIEW.txt feeds the Status Browser
+
+== Unsorted folders | SYSTEM
+what: LIB_COMPANY, LIB_FACE, LIB_LUA, LIB_OMEGA, LIB_ARRAY: notes or empty, no git
+block: owner: say what each is for, or let them stay notes
