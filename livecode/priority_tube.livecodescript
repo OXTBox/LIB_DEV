@@ -248,6 +248,7 @@ command ptFillBubbles
 end ptFillBubbles
 
 function ptMinutes pMin
+   if pMin is not a number then return "not sized by Claude yet"
    if pMin < 60 then return pMin && "min"
    if pMin mod 60 is 0 then return pMin div 60 && "h"
    return pMin div 60 & "h" & format("%02d", pMin mod 60)
