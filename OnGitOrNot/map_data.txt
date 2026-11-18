@@ -1,0 +1,744 @@
+# map_data.txt made 2026-11-17 20:23 by OnGitOrNot/tools/git_map.py; do not edit
+B	title	FOR OWNER | On Git or Not
+B	bar	ON GIT OR NOT
+B	help	wheel zoom | drag black to pan | drag a header to move | click a chip for its files | F fit  B not-on-git only  R rebuild  T tell Claude  0 100%
+B	tool	tools/git_map.py
+B	panel	NOT ON GIT: loose files, then folders not on git, then .gitignore (biggest first)
+B	legend	26,110,52|255,255,255|on git
+B	legend	215,35,140|255,255,255|loose: not on git, not ignored
+B	legend	70,70,80|225,225,230|hidden by .gitignore
+B	legend	20,20,24|150,150,165|private
+B	legend	128,100,180|255,255,255|big, this disk only
+B	legend	190,22,22|255,255,255|not a repository
+Z	ENGINES	ENGINES	0	184	300
+Z	GAMES	GAMES	390	184	300
+Z	BLOCKS	BUILDING BLOCKS	780	184	630
+Z	TOOLS	TOOLS & IDE	1500	184	630
+Z	SYSTEM	SYSTEM & FLOW	2220	184	300
+Z	NOTSORTED	NOT SORTED	2610	184	300
+P	iGame3D_2026_CLAUDE	part	0	260	280	52	iGame3D_2026_CLAUDE	Not a repository
+C	iGame3D_2026_CLAUDE#1	iGame3D_2026_CLAUDE	block	18	58	262	53	owner: not a repository, nothing here is on git (615 files, 49 MB) - click to list them
+F	iGame3D_2026_CLAUDE#1	iGame3D_2026_CLAUDE	Data/  [597 files, 32 MB]	\\wsl$\Ubuntu\home\igame3d\projects\iGame3D_2026_CLAUDE\Data	1	0
+F	iGame3D_2026_CLAUDE#1	iGame3D_2026_CLAUDE	iGame3D3102009.exe  [1 file, 5.3 MB]	\\wsl$\Ubuntu\home\igame3d\projects\iGame3D_2026_CLAUDE\iGame3D3102009.exe	0	0
+F	iGame3D_2026_CLAUDE#1	iGame3D_2026_CLAUDE	igame3d.exe  [1 file, 2.7 MB]	\\wsl$\Ubuntu\home\igame3d\projects\iGame3D_2026_CLAUDE\igame3d.exe	0	0
+F	iGame3D_2026_CLAUDE#1	iGame3D_2026_CLAUDE	igame3dvs.exe  [1 file, 2.7 MB]	\\wsl$\Ubuntu\home\igame3d\projects\iGame3D_2026_CLAUDE\igame3dvs.exe	0	0
+F	iGame3D_2026_CLAUDE#1	iGame3D_2026_CLAUDE	iGame3D Pro external.dll  [1 file, 1.3 MB]	\\wsl$\Ubuntu\home\igame3d\projects\iGame3D_2026_CLAUDE\iGame3D Pro external.dll	0	0
+F	iGame3D_2026_CLAUDE#1	iGame3D_2026_CLAUDE	vorbis.dll  [1 file, 1.0 MB]	\\wsl$\Ubuntu\home\igame3d\projects\iGame3D_2026_CLAUDE\vorbis.dll	0	0
+F	iGame3D_2026_CLAUDE#1	iGame3D_2026_CLAUDE	murgaLua.exe  [1 file, 1015 KB]	\\wsl$\Ubuntu\home\igame3d\projects\iGame3D_2026_CLAUDE\murgaLua.exe	0	0
+F	iGame3D_2026_CLAUDE#1	iGame3D_2026_CLAUDE	vorbisenc.dll  [1 file, 888 KB]	\\wsl$\Ubuntu\home\igame3d\projects\iGame3D_2026_CLAUDE\vorbisenc.dll	0	0
+F	iGame3D_2026_CLAUDE#1	iGame3D_2026_CLAUDE	Newton.dll  [1 file, 428 KB]	\\wsl$\Ubuntu\home\igame3d\projects\iGame3D_2026_CLAUDE\Newton.dll	0	0
+F	iGame3D_2026_CLAUDE#1	iGame3D_2026_CLAUDE	fluid.exe  [1 file, 404 KB]	\\wsl$\Ubuntu\home\igame3d\projects\iGame3D_2026_CLAUDE\fluid.exe	0	0
+F	iGame3D_2026_CLAUDE#1	iGame3D_2026_CLAUDE	wrap_oal.dll  [1 file, 404 KB]	\\wsl$\Ubuntu\home\igame3d\projects\iGame3D_2026_CLAUDE\wrap_oal.dll	0	0
+F	iGame3D_2026_CLAUDE#1	iGame3D_2026_CLAUDE	OpenAL32.dll  [1 file, 108 KB]	\\wsl$\Ubuntu\home\igame3d\projects\iGame3D_2026_CLAUDE\OpenAL32.dll	0	0
+F	iGame3D_2026_CLAUDE#1	iGame3D_2026_CLAUDE	iGame3D ig3d Reference.rtf  [1 file, 86 KB]	\\wsl$\Ubuntu\home\igame3d\projects\iGame3D_2026_CLAUDE\iGame3D ig3d Reference.rtf	0	0
+F	iGame3D_2026_CLAUDE#1	iGame3D_2026_CLAUDE	vorbisfile.dll  [1 file, 64 KB]	\\wsl$\Ubuntu\home\igame3d\projects\iGame3D_2026_CLAUDE\vorbisfile.dll	0	0
+F	iGame3D_2026_CLAUDE#1	iGame3D_2026_CLAUDE	ogg.dll  [1 file, 36 KB]	\\wsl$\Ubuntu\home\igame3d\projects\iGame3D_2026_CLAUDE\ogg.dll	0	0
+F	iGame3D_2026_CLAUDE#1	iGame3D_2026_CLAUDE	LICENSE  [1 file, 34 KB]	\\wsl$\Ubuntu\home\igame3d\projects\iGame3D_2026_CLAUDE\LICENSE	0	0
+F	iGame3D_2026_CLAUDE#1	iGame3D_2026_CLAUDE	alut.dll  [1 file, 32 KB]	\\wsl$\Ubuntu\home\igame3d\projects\iGame3D_2026_CLAUDE\alut.dll	0	0
+F	iGame3D_2026_CLAUDE#1	iGame3D_2026_CLAUDE	physac.lua  [1 file, 10 KB]	\\wsl$\Ubuntu\home\igame3d\projects\iGame3D_2026_CLAUDE\physac.lua	0	0
+F	iGame3D_2026_CLAUDE#1	iGame3D_2026_CLAUDE	README_CLAUDE.md  [1 file, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\iGame3D_2026_CLAUDE\README_CLAUDE.md	0	0
+P	Vibecode3D	core	0	409	280	52	Vibecode3D	Repository
+C	Vibecode3D#1	Vibecode3D	has	18	58	262	23	30 files on git (4.2 MB)
+C	Vibecode3D#2	Vibecode3D	ignored	18	85	262	83	8 files hidden by .gitignore (44 MB): standalone/, *:Zone.Identifier, LIB_XTJSON.livecodescript, livecode/LCHarvest2.livecodescript - click to list them
+F	Vibecode3D#2	rule standalone/  [4]	standalone/VibeCode3D/Linux/VibeCode3D	\\wsl$\Ubuntu\home\igame3d\projects\Vibecode3D\standalone\VibeCode3D\Linux\VibeCode3D	0	0
+F	Vibecode3D#2	rule standalone/  [4]	standalone/VibeCode3D/Linux/revsecurity.so	\\wsl$\Ubuntu\home\igame3d\projects\Vibecode3D\standalone\VibeCode3D\Linux\revsecurity.so	0	0
+F	Vibecode3D#2	rule standalone/  [4]	standalone/VibeCode3D/Windows x86-64/VibeCode3D.exe	\\wsl$\Ubuntu\home\igame3d\projects\Vibecode3D\standalone\VibeCode3D\Windows x86-64\VibeCode3D.exe	0	0
+F	Vibecode3D#2	rule standalone/  [4]	standalone/VibeCode3D/Windows x86-64/revsecurity.dll	\\wsl$\Ubuntu\home\igame3d\projects\Vibecode3D\standalone\VibeCode3D\Windows x86-64\revsecurity.dll	0	0
+F	Vibecode3D#2	rule *:Zone.Identifier  [2]	Archive/3D_ENGINE_IN_LIVECODE_STACK_SCRIPT_11112026g.txt:Zone.Identifier	\\wsl$\Ubuntu\home\igame3d\projects\Vibecode3D\Archive\3D_ENGINE_IN_LIVECODE_STACK_SCRIPT_11112026g.txt:Zone.Identifier	0	0
+F	Vibecode3D#2	rule *:Zone.Identifier  [2]	Archive/WHAT_CAN_WE_CLEAN/LIB_XTJSON.livecodescript:Zone.Identifier	\\wsl$\Ubuntu\home\igame3d\projects\Vibecode3D\Archive\WHAT_CAN_WE_CLEAN\LIB_XTJSON.livecodescript:Zone.Identifier	0	0
+F	Vibecode3D#2	rule LIB_XTJSON.livecodescript  [1]	Archive/WHAT_CAN_WE_CLEAN/LIB_XTJSON.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\Vibecode3D\Archive\WHAT_CAN_WE_CLEAN\LIB_XTJSON.livecodescript	0	0
+F	Vibecode3D#2	rule livecode/LCHarvest2.livecodescript  [1]	livecode/LCHarvest2.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\Vibecode3D\livecode\LCHarvest2.livecodescript	0	0
+P	xt3D_Raylib_Livecode_Bridge	core	0	615	280	52	xt3D_Raylib_Livecode_Bridge	Repository
+C	xt3D_Raylib_Livecode_Bridge#1	xt3D_Raylib_Livecode_Bridge	has	18	58	262	23	55 files on git (12 MB)
+C	xt3D_Raylib_Livecode_Bridge#2	xt3D_Raylib_Livecode_Bridge	review	18	85	262	38	1 loose file (1 new, 30 KB): not on git, not ignored - click to list them
+F	xt3D_Raylib_Livecode_Bridge#2	xt3D_Raylib_Livecode_Bridge	__pycache__/gen_xt3d.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\__pycache__\gen_xt3d.cpython-314.pyc	0	0
+C	xt3D_Raylib_Livecode_Bridge#3	xt3D_Raylib_Livecode_Bridge	ignored	18	127	262	83	111 files hidden by .gitignore (68 MB): 3DModels/, standalone/xt3d_Bench_LibMCP/, *:Zone.Identifier, /api.lcdoc - click to list them
+F	xt3D_Raylib_Livecode_Bridge#3	rule 3DModels/  [101]	3DModels/obj/  [36 files, 21 MB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\obj	1	0
+F	xt3D_Raylib_Livecode_Bridge#3	rule 3DModels/  [101]	3DModels/glb/virtualcityglTF/  [22 files, 3.3 MB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\glb\virtualcityglTF	1	0
+F	xt3D_Raylib_Livecode_Bridge#3	rule 3DModels/  [101]	3DModels/off/  [21 files, 955 KB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\off	1	0
+F	xt3D_Raylib_Livecode_Bridge#3	rule 3DModels/  [101]	3DModels/gltf/  [11 files, 200 KB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\gltf	1	0
+F	xt3D_Raylib_Livecode_Bridge#3	rule 3DModels/  [101]	3DModels/glb/  [4 files, 6.6 MB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\glb	1	0
+F	xt3D_Raylib_Livecode_Bridge#3	rule 3DModels/  [101]	3DModels/fbx/  [3 files, 4.0 MB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\fbx	1	0
+F	xt3D_Raylib_Livecode_Bridge#3	rule 3DModels/  [101]	3DModels/ply/  [2 files, 333 KB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\ply	1	0
+F	xt3D_Raylib_Livecode_Bridge#3	rule 3DModels/  [101]	3DModels/  [1 file, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels	1	0
+F	xt3D_Raylib_Livecode_Bridge#3	rule 3DModels/  [101]	3DModels/wtf/  [1 file, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\wtf	1	0
+F	xt3D_Raylib_Livecode_Bridge#3	rule standalone/xt3d_Bench_LibMCP/  [2]	standalone/xt3d_Bench_LibMCP/xt3d_Bench_LibMCP.exe	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\standalone\xt3d_Bench_LibMCP\xt3d_Bench_LibMCP.exe	0	0
+F	xt3D_Raylib_Livecode_Bridge#3	rule standalone/xt3d_Bench_LibMCP/  [2]	standalone/xt3d_Bench_LibMCP/xt3d_Bench_LibMCP.exe - Shortcut.lnk	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\standalone\xt3d_Bench_LibMCP\xt3d_Bench_LibMCP.exe - Shortcut.lnk	0	0
+F	xt3D_Raylib_Livecode_Bridge#3	rule *:Zone.Identifier  [1]	LCHarvest2.livecodescript:Zone.Identifier	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\LCHarvest2.livecodescript:Zone.Identifier	0	0
+F	xt3D_Raylib_Livecode_Bridge#3	rule /api.lcdoc  [1]	api.lcdoc	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\api.lcdoc	0	0
+F	xt3D_Raylib_Livecode_Bridge#3	rule /manifest.xml  [1]	manifest.xml	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\manifest.xml	0	0
+F	xt3D_Raylib_Livecode_Bridge#3	rule /module.2.lcm  [1]	module.2.lcm	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\module.2.lcm	0	0
+F	xt3D_Raylib_Livecode_Bridge#3	rule /org.xtalk.xtbridge.0.1.0.lce  [1]	org.xtalk.xtbridge.0.1.0.lce	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\org.xtalk.xtbridge.0.1.0.lce	0	0
+F	xt3D_Raylib_Livecode_Bridge#3	rule /org.xtalk.xtbridge.lci  [1]	org.xtalk.xtbridge.lci	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\org.xtalk.xtbridge.lci	0	0
+F	xt3D_Raylib_Livecode_Bridge#3	rule standalone/xt3d_Bench/  [1]	standalone/xt3d_Bench/xt3d_Bench.exe	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\standalone\xt3d_Bench\xt3d_Bench.exe	0	0
+F	xt3D_Raylib_Livecode_Bridge#3	rule *.lnk  [1]	tools/start_claude_LITE.bat - Shortcut.lnk	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\tools\start_claude_LITE.bat - Shortcut.lnk	0	0
+P	xtalk_py	part	0	863	280	52	xtalk_py	Repository
+C	xtalk_py#1	xtalk_py	has	18	58	262	23	50 files on git (1.1 MB)
+C	xtalk_py#2	xtalk_py	ignored	18	85	262	38	2 files hidden by .gitignore (26 KB): __pycache__/ - click to list them
+F	xtalk_py#2	rule __pycache__/  [2]	tools/__pycache__/glossary_census.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\xtalk_py\tools\__pycache__\glossary_census.cpython-314.pyc	0	0
+F	xtalk_py#2	rule __pycache__/  [2]	tools/__pycache__/spark_catalogue.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\xtalk_py\tools\__pycache__\spark_catalogue.cpython-314.pyc	0	0
+P	LIB_GAD	core	390	260	280	52	LIB_GAD	Repository
+C	LIB_GAD#1	LIB_GAD	has	18	58	262	23	33 files on git (329 KB)
+P	LIB_GAMES	core	390	379	280	52	LIB_GAMES	Repository
+C	LIB_GAMES#1	LIB_GAMES	has	18	58	262	53	93 files on git (1.8 MB), branch vector-toss-dangle checked out, not main
+C	LIB_GAMES#2	LIB_GAMES	review	18	115	262	38	branch vector-toss-dangle not merged into main
+C	LIB_GAMES#3	LIB_GAMES	review	18	157	262	38	4 loose files (4 new, 65 KB): not on git, not ignored - click to list them
+F	LIB_GAMES#3	LIB_GAMES	Vibecode3D_Games/Vibecode3D_Play_ComfyPong1.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_ComfyPong1.livecodescript	0	0
+F	LIB_GAMES#3	LIB_GAMES	Vibecode3D_Games/Vibecode3D_Play_ComfyPong2.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_ComfyPong2.livecodescript	0	0
+F	LIB_GAMES#3	LIB_GAMES	Vibecode3D_Games/Vibecode3D_Play_ComfyPong2102167373.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_ComfyPong2102167373.livecodescript	0	0
+F	LIB_GAMES#3	LIB_GAMES	Vibecode3D_Games/Vibecode3D_Play_ComfyPong3.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_ComfyPong3.livecodescript	0	0
+C	LIB_GAMES#4	LIB_GAMES	ignored	18	199	262	53	216 files hidden by .gitignore (5.6 MB): TEMPLATES_DO_NOT_COMMIT/, __pycache__/ - click to list them
+F	LIB_GAMES#4	rule TEMPLATES_DO_NOT_COMMIT/  [214]	TEMPLATES_DO_NOT_COMMIT/T3D_To_Recreate/Antack/Models/  [35 files, 1.7 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\TEMPLATES_DO_NOT_COMMIT\T3D_To_Recreate\Antack\Models	1	0
+F	LIB_GAMES#4	rule TEMPLATES_DO_NOT_COMMIT/  [214]	TEMPLATES_DO_NOT_COMMIT/T3D_To_Recreate/Antack/Scripts/  [27 files, 20 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\TEMPLATES_DO_NOT_COMMIT\T3D_To_Recreate\Antack\Scripts	1	0
+F	LIB_GAMES#4	rule TEMPLATES_DO_NOT_COMMIT/  [214]	TEMPLATES_DO_NOT_COMMIT/T3D_Texts/Models/  [21 files, 117 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\TEMPLATES_DO_NOT_COMMIT\T3D_Texts\Models	1	0
+F	LIB_GAMES#4	rule TEMPLATES_DO_NOT_COMMIT/  [214]	TEMPLATES_DO_NOT_COMMIT/T3D_To_Recreate/Antack/Sounds/  [20 files, 1.3 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\TEMPLATES_DO_NOT_COMMIT\T3D_To_Recreate\Antack\Sounds	1	0
+F	LIB_GAMES#4	rule TEMPLATES_DO_NOT_COMMIT/  [214]	TEMPLATES_DO_NOT_COMMIT/T3D_To_Recreate/Antack/Animations/explosion.folder/  [16 files, 41 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\TEMPLATES_DO_NOT_COMMIT\T3D_To_Recreate\Antack\Animations\explosion.folder	1	0
+F	LIB_GAMES#4	rule TEMPLATES_DO_NOT_COMMIT/  [214]	TEMPLATES_DO_NOT_COMMIT/T3D_To_Recreate/Antack/Levels/AntackGUI0/  [13 files, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\TEMPLATES_DO_NOT_COMMIT\T3D_To_Recreate\Antack\Levels\AntackGUI0	1	0
+F	LIB_GAMES#4	rule TEMPLATES_DO_NOT_COMMIT/  [214]	TEMPLATES_DO_NOT_COMMIT/3DS/  [11 files, 1.6 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\TEMPLATES_DO_NOT_COMMIT\3DS	1	0
+F	LIB_GAMES#4	rule TEMPLATES_DO_NOT_COMMIT/  [214]	TEMPLATES_DO_NOT_COMMIT/T3D_To_Recreate/Antack/Levels/AntackFight1/  [8 files, 8 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\TEMPLATES_DO_NOT_COMMIT\T3D_To_Recreate\Antack\Levels\AntackFight1	1	0
+F	LIB_GAMES#4	rule TEMPLATES_DO_NOT_COMMIT/  [214]	TEMPLATES_DO_NOT_COMMIT/T3D_To_Recreate/Antack/Levels/AntackFight2/  [8 files, 8 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\TEMPLATES_DO_NOT_COMMIT\T3D_To_Recreate\Antack\Levels\AntackFight2	1	0
+F	LIB_GAMES#4	rule TEMPLATES_DO_NOT_COMMIT/  [214]	TEMPLATES_DO_NOT_COMMIT/T3D_To_Recreate/Antack/Levels/AntackFight3/  [8 files, 9 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\TEMPLATES_DO_NOT_COMMIT\T3D_To_Recreate\Antack\Levels\AntackFight3	1	0
+F	LIB_GAMES#4	rule TEMPLATES_DO_NOT_COMMIT/  [214]	TEMPLATES_DO_NOT_COMMIT/T3D_To_Recreate/Antack/Levels/AntackFight4/  [8 files, 8 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\TEMPLATES_DO_NOT_COMMIT\T3D_To_Recreate\Antack\Levels\AntackFight4	1	0
+F	LIB_GAMES#4	rule TEMPLATES_DO_NOT_COMMIT/  [214]	TEMPLATES_DO_NOT_COMMIT/T3D_To_Recreate/Antack/Levels/AntackTrainer/  [8 files, 9 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\TEMPLATES_DO_NOT_COMMIT\T3D_To_Recreate\Antack\Levels\AntackTrainer	1	0
+F	LIB_GAMES#4	rule TEMPLATES_DO_NOT_COMMIT/  [214]	TEMPLATES_DO_NOT_COMMIT/T3D_To_Recreate/Antack/Levels/AntackTrainer/Textures/  [7 files, 9 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\TEMPLATES_DO_NOT_COMMIT\T3D_To_Recreate\Antack\Levels\AntackTrainer\Textures	1	0
+F	LIB_GAMES#4	rule TEMPLATES_DO_NOT_COMMIT/  [214]	TEMPLATES_DO_NOT_COMMIT/T3D_To_Recreate/Antack/Levels/AntackGUI1/  [6 files, 815 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\TEMPLATES_DO_NOT_COMMIT\T3D_To_Recreate\Antack\Levels\AntackGUI1	1	0
+F	LIB_GAMES#4	rule TEMPLATES_DO_NOT_COMMIT/  [214]	TEMPLATES_DO_NOT_COMMIT/T3D_To_Recreate/Antack/Levels/AntackGUI2/  [6 files, 815 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\TEMPLATES_DO_NOT_COMMIT\T3D_To_Recreate\Antack\Levels\AntackGUI2	1	0
+F	LIB_GAMES#4	rule TEMPLATES_DO_NOT_COMMIT/  [214]	TEMPLATES_DO_NOT_COMMIT/T3D_To_Recreate/Antack/  [3 files, 632 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\TEMPLATES_DO_NOT_COMMIT\T3D_To_Recreate\Antack	1	0
+F	LIB_GAMES#4	rule TEMPLATES_DO_NOT_COMMIT/  [214]	TEMPLATES_DO_NOT_COMMIT/T3D_To_Recreate/Antack/Levels/AntackFight1/Textures/  [3 files, 28 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\TEMPLATES_DO_NOT_COMMIT\T3D_To_Recreate\Antack\Levels\AntackFight1\Textures	1	0
+F	LIB_GAMES#4	rule TEMPLATES_DO_NOT_COMMIT/  [214]	TEMPLATES_DO_NOT_COMMIT/T3D_To_Recreate/Antack/Levels/AntackGUI0/Textures/  [2 files, 7 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\TEMPLATES_DO_NOT_COMMIT\T3D_To_Recreate\Antack\Levels\AntackGUI0\Textures	1	0
+F	LIB_GAMES#4	rule TEMPLATES_DO_NOT_COMMIT/  [214]	TEMPLATES_DO_NOT_COMMIT/  [1 file, 35 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\TEMPLATES_DO_NOT_COMMIT	1	0
+F	LIB_GAMES#4	rule TEMPLATES_DO_NOT_COMMIT/  [214]	TEMPLATES_DO_NOT_COMMIT/T3D_Texts/Data/  [1 file, 25 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\TEMPLATES_DO_NOT_COMMIT\T3D_Texts\Data	1	0
+F	LIB_GAMES#4	rule TEMPLATES_DO_NOT_COMMIT/  [214]	TEMPLATES_DO_NOT_COMMIT/T3D_To_Recreate/Antack/Animations/  [1 file, 31 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\TEMPLATES_DO_NOT_COMMIT\T3D_To_Recreate\Antack\Animations	1	0
+F	LIB_GAMES#4	rule TEMPLATES_DO_NOT_COMMIT/  [214]	TEMPLATES_DO_NOT_COMMIT/T3D_To_Recreate/Antack/Data/  [1 file, 25 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\TEMPLATES_DO_NOT_COMMIT\T3D_To_Recreate\Antack\Data	1	0
+F	LIB_GAMES#4	rule __pycache__/  [2]	tools/__pycache__/couple_mazes.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\tools\__pycache__\couple_mazes.cpython-314.pyc	0	0
+F	LIB_GAMES#4	rule __pycache__/  [2]	tools/__pycache__/udg_to_udead.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\tools\__pycache__\udg_to_udead.cpython-314.pyc	0	0
+P	LIB_HOWTO	part	390	669	280	52	LIB_HOWTO	Repository
+C	LIB_HOWTO#1	LIB_HOWTO	has	18	58	262	23	7 files on git (4 KB)
+P	LIB_RTS	part	390	788	280	52	LIB_RTS	Repository
+C	LIB_RTS#1	LIB_RTS	has	18	58	262	23	7 files on git (97 KB)
+P	LIB_TTRPG	part	390	907	280	52	LIB_TTRPG	Repository
+C	LIB_TTRPG#1	LIB_TTRPG	has	18	58	262	23	38 files on git (392 KB)
+C	LIB_TTRPG#2	LIB_TTRPG	ignored	18	85	262	53	78 files hidden by .gitignore (1.2 MB): work/, *_dev_*, __pycache__/ - click to list them
+F	LIB_TTRPG#2	rule work/  [75]	work/data/characters/player.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\data\characters\player.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/data/logs/2026-11-15_103551_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\data\logs\2026-11-15_103551_session.jsonl	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/data/logs/2026-11-15_111057_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\data\logs\2026-11-15_111057_session.jsonl	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/data/logs/2026-11-15_111906_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\data\logs\2026-11-15_111906_session.jsonl	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/data/scenes/2026-11-15_103555_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\data\scenes\2026-11-15_103555_flooded_crypt.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/data/scenes/2026-11-15_111102_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\data\scenes\2026-11-15_111102_flooded_crypt.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/data/scenes/2026-11-15_111910_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\data\scenes\2026-11-15_111910_flooded_crypt.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/live_lc/characters/eliana.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\characters\eliana.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/live_lc/characters/player.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\characters\player.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/live_lc/logs/2026-11-15_100628_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\logs\2026-11-15_100628_session.jsonl	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/live_lc/logs/2026-11-15_100653_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\logs\2026-11-15_100653_session.jsonl	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/live_lc/logs/2026-11-15_100720_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\logs\2026-11-15_100720_session.jsonl	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/live_lc/scenes/2026-11-15_100633_the_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\scenes\2026-11-15_100633_the_flooded_crypt.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/live_lc/scenes/2026-11-15_100706_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\scenes\2026-11-15_100706_flooded_crypt.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/live_lc/scenes/2026-11-15_100725_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\scenes\2026-11-15_100725_flooded_crypt.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/selfplay/2026-11-15_103630_flooded_crypt.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\selfplay\2026-11-15_103630_flooded_crypt.txt	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/selfplay/2026-11-15_111147_flooded_crypt.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\selfplay\2026-11-15_111147_flooded_crypt.txt	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/selfplay_skills_run.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\selfplay_skills_run.txt	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/characters/player.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\characters\player.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/logs/2026-11-15_100825_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\logs\2026-11-15_100825_session.jsonl	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/logs/2026-11-15_101109_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\logs\2026-11-15_101109_session.jsonl	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/logs/2026-11-15_101346_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\logs\2026-11-15_101346_session.jsonl	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100829_a_faded_tomb.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100829_a_faded_tomb.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100836_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100836_goblin_toll_bridge.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100843_the_vanished_keeper.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100843_the_vanished_keeper.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100849_cursed_masks.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100849_cursed_masks.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100855_the_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100855_the_flooded_crypt.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100901_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100901_goblin_toll_bridge.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100908_flood_stained_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100908_flood_stained_crypt.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100918_the_flood_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100918_the_flood_crypt.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100926_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100926_goblin_toll_bridge.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100934_the_vanishing_keeper.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100934_the_vanishing_keeper.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100943_cursed_masks.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100943_cursed_masks.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100951_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100951_flooded_crypt.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101000_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101000_goblin_toll_bridge.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101012_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101012_flooded_crypt.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101019_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101019_goblin_toll_bridge.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101026_the_vanishing_keeper.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101026_the_vanishing_keeper.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101033_cursed_masks.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101033_cursed_masks.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101040_crypt_of_echoes.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101040_crypt_of_echoes.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101048_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101048_goblin_toll_bridge.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101114_the_frigid_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101114_the_frigid_crypt.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101126_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101126_goblin_toll_bridge.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101138_the_lighthouse_keeper.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101138_the_lighthouse_keeper.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101157_cursed_masks.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101157_cursed_masks.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101220_the_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101220_the_flooded_crypt.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101245_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101245_goblin_toll_bridge.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101320_the_vanishing_lightkeeper.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101320_the_vanishing_lightkeeper.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101338_cursed_masks.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101338_cursed_masks.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101351_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101351_flooded_crypt.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/characters/player.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\characters\player.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/logs/2026-11-15_101422_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\logs\2026-11-15_101422_session.jsonl	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101439_flooded_crypt_under_a_chapel.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101439_flooded_crypt_under_a_chapel.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101506_toll_bridge_run_by_goblins.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101506_toll_bridge_run_by_goblins.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101534_vanished_lighthouse_keeper.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101534_vanished_lighthouse_keeper.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101600_the_market_stall_of_cursed_masks.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101600_the_market_stall_of_cursed_masks.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101624_the_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101624_the_flooded_crypt.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101647_toll_bridge_run_by_goblins.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101647_toll_bridge_run_by_goblins.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101714_flooded_crypt_beneath_the_chapel.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101714_flooded_crypt_beneath_the_chapel.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101740_flooded_crypt_scene.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101740_flooded_crypt_scene.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101829_toll_bridge_run_by_goblins.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101829_toll_bridge_run_by_goblins.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101916_the_mysterious_lighthouse.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101916_the_mysterious_lighthouse.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102002_the_cursed_mask_market_stalls.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102002_the_cursed_mask_market_stalls.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102049_the_flooded_crypt_under_the_chapel.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102049_the_flooded_crypt_under_the_chapel.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102138_toll_bridge_run_by_goblins.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102138_toll_bridge_run_by_goblins.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102227_flooded_crypt_under_a_chapel.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102227_flooded_crypt_under_a_chapel.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102246_toll_bridge_run_by_goblins.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102246_toll_bridge_run_by_goblins.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102306_the_vanishing_lighthouse_keeper.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102306_the_vanishing_lighthouse_keeper.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102324_cursed_masks.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102324_cursed_masks.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102345_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102345_flooded_crypt.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102405_toll_bridge_run_by_goblins.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102405_toll_bridge_run_by_goblins.json	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune_gemma.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune_gemma.txt	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune_gemma_w2.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune_gemma_w2.txt	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune_gemma_w3.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune_gemma_w3.txt	0	0
+F	LIB_TTRPG#2	rule work/  [75]	work/tune_qwen.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune_qwen.txt	0	0
+F	LIB_TTRPG#2	rule *_dev_*  [2]	client/TTRPG_Client_dev_20261115_131247.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\client\TTRPG_Client_dev_20261115_131247.oxtstack	0	0
+F	LIB_TTRPG#2	rule *_dev_*  [2]	client/TTRPG_Client_dev_20261115_131905.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\client\TTRPG_Client_dev_20261115_131905.oxtstack	0	0
+F	LIB_TTRPG#2	rule __pycache__/  [1]	ref/__pycache__/ttrpg_ref.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\ref\__pycache__\ttrpg_ref.cpython-314.pyc	0	0
+P	PROMPT_GLAZE	core	390	1083	280	52	PROMPT_GLAZE	Repository
+C	PROMPT_GLAZE#1	PROMPT_GLAZE	has	18	58	262	23	2 files on git (2 KB)
+P	LIB_BIT	core	780	260	280	52	LIB_BIT	Repository
+C	LIB_BIT#1	LIB_BIT	has	18	58	262	23	58 files on git (1.1 MB)
+C	LIB_BIT#2	LIB_BIT	ignored	18	85	262	53	9 files hidden by .gitignore (184 KB): tests/_*, __pycache__/ - click to list them
+F	LIB_BIT#2	rule tests/_*  [8]	editor/tests/_py_pick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_pick.txt	0	0
+F	LIB_BIT#2	rule tests/_*  [8]	editor/tests/_py_segments.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_segments.txt	0	0
+F	LIB_BIT#2	rule tests/_*  [8]	editor/tests/_py_segments_glyph.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_segments_glyph.txt	0	0
+F	LIB_BIT#2	rule tests/_*  [8]	editor/tests/_py_upgraded.cellmap	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_upgraded.cellmap	0	0
+F	LIB_BIT#2	rule tests/_*  [8]	editor/tests/_py_walk.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_walk.txt	0	0
+F	LIB_BIT#2	rule tests/_*  [8]	editor/tests/_py_walk_glyph.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_walk_glyph.txt	0	0
+F	LIB_BIT#2	rule tests/_*  [8]	editor/tests/_test_heights.cellmap	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_test_heights.cellmap	0	0
+F	LIB_BIT#2	rule tests/_*  [8]	editor/tests/_test_saved.cellmap	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_test_saved.cellmap	0	0
+F	LIB_BIT#2	rule __pycache__/  [1]	editor/python/__pycache__/cellmap.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\python\__pycache__\cellmap.cpython-314.pyc	0	0
+P	LIB_BVH	part	780	436	280	52	LIB_BVH	Repository
+C	LIB_BVH#1	LIB_BVH	has	18	58	262	23	74 files on git (18 MB)
+C	LIB_BVH#2	LIB_BVH	private	18	85	262	38	private: BVH clips: rights not settled, kept on this machine
+P	LIB_DATA	part	780	597	280	52	LIB_DATA	Repository
+C	LIB_DATA#1	LIB_DATA	has	18	58	262	23	6 files on git (25 KB)
+P	LIB_GENERICA	part	780	716	280	52	LIB_GENERICA	Repository
+C	LIB_GENERICA#1	LIB_GENERICA	has	18	58	262	23	160 files on git (669 KB)
+C	LIB_GENERICA#2	LIB_GENERICA	ignored	18	85	262	38	2 files hidden by .gitignore (20 KB): __pycache__/ - click to list them
+F	LIB_GENERICA#2	rule __pycache__/  [2]	python/__pycache__/generica.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GENERICA\python\__pycache__\generica.cpython-314.pyc	0	0
+F	LIB_GENERICA#2	rule __pycache__/  [2]	tools/__pycache__/extract_script_examples.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GENERICA\tools\__pycache__\extract_script_examples.cpython-314.pyc	0	0
+P	LIB_GLOBALS	part	780	877	280	52	LIB_GLOBALS	Repository
+C	LIB_GLOBALS#1	LIB_GLOBALS	has	18	58	262	23	9 files on git (501 KB)
+C	LIB_GLOBALS#2	LIB_GLOBALS	ignored	18	85	262	38	2 files hidden by .gitignore (64 KB): __pycache__/ - click to list them
+F	LIB_GLOBALS#2	rule __pycache__/  [2]	python/__pycache__/lib_globals.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GLOBALS\python\__pycache__\lib_globals.cpython-314.pyc	0	0
+F	LIB_GLOBALS#2	rule __pycache__/  [2]	tools/__pycache__/globals_census.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GLOBALS\tools\__pycache__\globals_census.cpython-314.pyc	0	0
+P	LIB_GUI	part	780	1038	280	52	LIB_GUI	Repository
+C	LIB_GUI#1	LIB_GUI	has	18	58	262	23	3 files on git (18 KB)
+P	LIB_LISTS	part	780	1157	280	52	LIB_LISTS	Repository
+C	LIB_LISTS#1	LIB_LISTS	has	18	58	262	23	290 files on git (882 KB)
+P	LIB_MAP	part	780	1276	280	52	LIB_MAP	Repository
+C	LIB_MAP#1	LIB_MAP	has	18	58	262	23	7 files on git (36 KB)
+P	LIB_MOCAP	part	780	1395	280	52	LIB_MOCAP	Repository
+C	LIB_MOCAP#1	LIB_MOCAP	has	18	58	262	23	157 files on git (2.4 MB)
+C	LIB_MOCAP#2	LIB_MOCAP	ignored	18	85	262	83	71 files hidden by .gitignore (9.2 MB): library/*/*_stick.txt, __pycache__/, input/*, library/*/*_skinned.glb - click to list them
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_Dancing_-_Break_Dancing/Animazoo_Dancing_-_Break_Dancing_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_Dancing_-_Break_Dancing\Animazoo_Dancing_-_Break_Dancing_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_Dancing_-_Break_Dancing_2/Animazoo_Dancing_-_Break_Dancing_2_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_Dancing_-_Break_Dancing_2\Animazoo_Dancing_-_Break_Dancing_2_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_Dancing_-_Capoiera/Animazoo_Dancing_-_Capoiera_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_Dancing_-_Capoiera\Animazoo_Dancing_-_Capoiera_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_Jumping_-_Hopping/Animazoo_Jumping_-_Hopping_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_Jumping_-_Hopping\Animazoo_Jumping_-_Hopping_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_Jumping_-_Spinning_Kick/Animazoo_Jumping_-_Spinning_Kick_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_Jumping_-_Spinning_Kick\Animazoo_Jumping_-_Spinning_Kick_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_Jumping_-_fly_kick/Animazoo_Jumping_-_fly_kick_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_Jumping_-_fly_kick\Animazoo_Jumping_-_fly_kick_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_Martial_Arts_-_Kick/Animazoo_Martial_Arts_-_Kick_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_Martial_Arts_-_Kick\Animazoo_Martial_Arts_-_Kick_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_Martial_Arts_-_Side_Kick/Animazoo_Martial_Arts_-_Side_Kick_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_Martial_Arts_-_Side_Kick\Animazoo_Martial_Arts_-_Side_Kick_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_On_the_phone/Animazoo_On_the_phone_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_On_the_phone\Animazoo_On_the_phone_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_combo_left_southport/Animazoo_combo_left_southport_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_combo_left_southport\Animazoo_combo_left_southport_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_cross_left/Animazoo_cross_left_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_cross_left\Animazoo_cross_left_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_cross_right/Animazoo_cross_right_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_cross_right\Animazoo_cross_right_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_haymaker_left/Animazoo_haymaker_left_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_haymaker_left\Animazoo_haymaker_left_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_haymaker_right/Animazoo_haymaker_right_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_haymaker_right\Animazoo_haymaker_right_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_hook_left/Animazoo_hook_left_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_hook_left\Animazoo_hook_left_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_hook_right/Animazoo_hook_right_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_hook_right\Animazoo_hook_right_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_hooker_walk/Animazoo_hooker_walk_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_hooker_walk\Animazoo_hooker_walk_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_jab_right/Animazoo_jab_right_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_jab_right\Animazoo_jab_right_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_lean_back/Animazoo_lean_back_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_lean_back\Animazoo_lean_back_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_lean_back_arms_folded/Animazoo_lean_back_arms_folded_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_lean_back_arms_folded\Animazoo_lean_back_arms_folded_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_left_jab/Animazoo_left_jab_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_left_jab\Animazoo_left_jab_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_legs_crossed_lady_style/Animazoo_legs_crossed_lady_style_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_legs_crossed_lady_style\Animazoo_legs_crossed_lady_style_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_legs_crossed_man_style/Animazoo_legs_crossed_man_style_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_legs_crossed_man_style\Animazoo_legs_crossed_man_style_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_machine_gun/Animazoo_machine_gun_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_machine_gun\Animazoo_machine_gun_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_pointing/Animazoo_pointing_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_pointing\Animazoo_pointing_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_reading_a_magazine/Animazoo_reading_a_magazine_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_reading_a_magazine\Animazoo_reading_a_magazine_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_stand_push/Animazoo_stand_push_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_stand_push\Animazoo_stand_push_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_stand_push_stand/Animazoo_stand_push_stand_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_stand_push_stand\Animazoo_stand_push_stand_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_talking_angry_gesturing/Animazoo_talking_angry_gesturing_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_talking_angry_gesturing\Animazoo_talking_angry_gesturing_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_upper_cut_right/Animazoo_upper_cut_right_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_upper_cut_right\Animazoo_upper_cut_right_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_walk_and_stop/Animazoo_walk_and_stop_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_walk_and_stop\Animazoo_walk_and_stop_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_walking_waving_behind/Animazoo_walking_waving_behind_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_walking_waving_behind\Animazoo_walking_waving_behind_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_watching_sport/Animazoo_watching_sport_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_watching_sport\Animazoo_watching_sport_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_watching_tv/Animazoo_watching_tv_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_watching_tv\Animazoo_watching_tv_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_waving_1_hand/Animazoo_waving_1_hand_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_waving_1_hand\Animazoo_waving_1_hand_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_waving_2_hands/Animazoo_waving_2_hands_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_waving_2_hands\Animazoo_waving_2_hands_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/FreeBVH_BoxerWarming1/FreeBVH_BoxerWarming1_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\FreeBVH_BoxerWarming1\FreeBVH_BoxerWarming1_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/FreeBVH_DANCE/FreeBVH_DANCE_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\FreeBVH_DANCE\FreeBVH_DANCE_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/FreeBVH_FallStunt1/FreeBVH_FallStunt1_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\FreeBVH_FallStunt1\FreeBVH_FallStunt1_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/FreeBVH_MIKE8/FreeBVH_MIKE8_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\FreeBVH_MIKE8\FreeBVH_MIKE8_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/FreeBVH_cellphone/FreeBVH_cellphone_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\FreeBVH_cellphone\FreeBVH_cellphone_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/FreeBVH_drunk1/FreeBVH_drunk1_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\FreeBVH_drunk1\FreeBVH_drunk1_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/FreeBVH_floordancers21/FreeBVH_floordancers21_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\FreeBVH_floordancers21\FreeBVH_floordancers21_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/FreeBVH_limp1/FreeBVH_limp1_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\FreeBVH_limp1\FreeBVH_limp1_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/FreeBVH_lowguntoknee1/FreeBVH_lowguntoknee1_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\FreeBVH_lowguntoknee1\FreeBVH_lowguntoknee1_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/FreeBVH_matrix1/FreeBVH_matrix1_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\FreeBVH_matrix1\FreeBVH_matrix1_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/FreeBVH_onelegdance/FreeBVH_onelegdance_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\FreeBVH_onelegdance\FreeBVH_onelegdance_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/FreeBVH_rowingboat/FreeBVH_rowingboat_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\FreeBVH_rowingboat\FreeBVH_rowingboat_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/FreeBVH_skiing/FreeBVH_skiing_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\FreeBVH_skiing\FreeBVH_skiing_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/FreeBVH_spectator/FreeBVH_spectator_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\FreeBVH_spectator\FreeBVH_spectator_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/FreeBVH_stand_yoyo/FreeBVH_stand_yoyo_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\FreeBVH_stand_yoyo\FreeBVH_stand_yoyo_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/FreeBVH_traffic/FreeBVH_traffic_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\FreeBVH_traffic\FreeBVH_traffic_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/FreeBVH_walkslip1/FreeBVH_walkslip1_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\FreeBVH_walkslip1\FreeBVH_walkslip1_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/FreeBVH_wall/FreeBVH_wall_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\FreeBVH_wall\FreeBVH_wall_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/FreeBVH_whoaholdon/FreeBVH_whoaholdon_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\FreeBVH_whoaholdon\FreeBVH_whoaholdon_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Harold_Lloyd_Safety_Last_1923/Harold_Lloyd_Safety_Last_1923_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Harold_Lloyd_Safety_Last_1923\Harold_Lloyd_Safety_Last_1923_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Video_To_Mocap_Example_1/Video_To_Mocap_Example_1_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Video_To_Mocap_Example_1\Video_To_Mocap_Example_1_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/iGame3D_reachhigh/iGame3D_reachhigh_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\iGame3D_reachhigh\iGame3D_reachhigh_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/iGame3D_throwtoss1/iGame3D_throwtoss1_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\iGame3D_throwtoss1\iGame3D_throwtoss1_stick.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/iGame3D_underHandThrow/iGame3D_underHandThrow_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\iGame3D_underHandThrow\iGame3D_underHandThrow_stick.txt	0	0
+F	LIB_MOCAP#2	rule __pycache__/  [6]	tools/__pycache__/bvh.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\tools\__pycache__\bvh.cpython-314.pyc	0	0
+F	LIB_MOCAP#2	rule __pycache__/  [6]	tools/__pycache__/mocap_lib.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\tools\__pycache__\mocap_lib.cpython-314.pyc	0	0
+F	LIB_MOCAP#2	rule __pycache__/  [6]	tools/__pycache__/mocap_skin.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\tools\__pycache__\mocap_skin.cpython-314.pyc	0	0
+F	LIB_MOCAP#2	rule __pycache__/  [6]	tools/__pycache__/wif.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\tools\__pycache__\wif.cpython-314.pyc	0	0
+F	LIB_MOCAP#2	rule __pycache__/  [6]	tools/__pycache__/wif_check.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\tools\__pycache__\wif_check.cpython-314.pyc	0	0
+F	LIB_MOCAP#2	rule __pycache__/  [6]	tools/__pycache__/wtf_anim.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\tools\__pycache__\wtf_anim.cpython-314.pyc	0	0
+F	LIB_MOCAP#2	rule input/*  [3]	input/obj/bvh_wtf.obj	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\input\obj\bvh_wtf.obj	0	0
+F	LIB_MOCAP#2	rule input/*  [3]	input/obj/bvhjacky_wtf.obj	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\input\obj\bvhjacky_wtf.obj	0	0
+F	LIB_MOCAP#2	rule input/*  [3]	input/obj/these_May_Just_Be_Conversions_from_WTF_With_skeleton.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\input\obj\these_May_Just_Be_Conversions_from_WTF_With_skeleton.txt	0	0
+F	LIB_MOCAP#2	rule library/*/*_skinned.glb  [1]	library/FreeBVH_wall/FreeBVH_wall_skinned.glb	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\FreeBVH_wall\FreeBVH_wall_skinned.glb	0	0
+F	LIB_MOCAP#2	rule library/*/*_clip.txt  [1]	library/Video_To_Mocap_Example_1/Video_To_Mocap_Example_1_clip.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Video_To_Mocap_Example_1\Video_To_Mocap_Example_1_clip.txt	0	0
+P	LIB_RAYGUI	part	1110	260	280	52	LIB_RAYGUI	Repository
+C	LIB_RAYGUI#1	LIB_RAYGUI	has	18	58	262	23	3 files on git (17 KB)
+P	LIB_SCRIPTBLOCKS	part	1110	379	280	52	LIB_SCRIPTBLOCKS	Repository
+C	LIB_SCRIPTBLOCKS#1	LIB_SCRIPTBLOCKS	has	18	58	262	23	6 files on git (25 KB)
+C	LIB_SCRIPTBLOCKS#2	LIB_SCRIPTBLOCKS	ignored	18	85	262	38	1 file hidden by .gitignore (15 KB): __pycache__/ - click to list them
+F	LIB_SCRIPTBLOCKS#2	rule __pycache__/  [1]	tools/__pycache__/harvest_blocks.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SCRIPTBLOCKS\tools\__pycache__\harvest_blocks.cpython-314.pyc	0	0
+P	LIB_THEME	part	1110	540	280	52	LIB_THEME	Repository
+C	LIB_THEME#1	LIB_THEME	has	18	58	262	23	6 files on git (25 KB)
+C	LIB_THEME#2	LIB_THEME	ignored	18	85	262	38	1 file hidden by .gitignore (19 KB): *_dev_* - click to list them
+F	LIB_THEME#2	rule *_dev_*  [1]	Theme_Studio_dev_20261115_133543.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_THEME\Theme_Studio_dev_20261115_133543.oxtstack	0	0
+P	LIB_TOOLBAR	part	1110	701	280	52	LIB_TOOLBAR	Repository
+C	LIB_TOOLBAR#1	LIB_TOOLBAR	has	18	58	262	23	3 files on git (16 KB)
+P	LIB_TRACE	part	1110	820	280	52	LIB_TRACE	Repository
+C	LIB_TRACE#1	LIB_TRACE	has	18	58	262	23	5 files on git (11 KB)
+P	LIB_XTJSON	part	1110	939	280	52	LIB_XTJSON	Repository
+C	LIB_XTJSON#1	LIB_XTJSON	has	18	58	262	23	21 files on git (189 KB)
+C	LIB_XTJSON#2	LIB_XTJSON	ignored	18	85	262	38	3 files hidden by .gitignore (60 KB): __pycache__/ - click to list them
+F	LIB_XTJSON#2	rule __pycache__/  [3]	mcp/__pycache__/xtjson_tools.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_XTJSON\mcp\__pycache__\xtjson_tools.cpython-314.pyc	0	0
+F	LIB_XTJSON#2	rule __pycache__/  [3]	python/__pycache__/xtjson_diff.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_XTJSON\python\__pycache__\xtjson_diff.cpython-314.pyc	0	0
+F	LIB_XTJSON#2	rule __pycache__/  [3]	python/__pycache__/xtjson_harvest.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_XTJSON\python\__pycache__\xtjson_harvest.cpython-314.pyc	0	0
+P	LIB_BIN	part	1500	260	280	52	LIB_BIN	Repository
+C	LIB_BIN#1	LIB_BIN	has	18	58	262	23	10 files on git (10 KB)
+C	LIB_BIN#2	LIB_BIN	ignored	18	85	262	38	238 files hidden by .gitignore (92 MB): * - click to list them
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/emitters/oldEmitters/  [21 files, 5 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\emitters\oldEmitters	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/  [18 files, 6.0 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/emitters/oldEmitters/More Emitters/  [18 files, 4 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\emitters\oldEmitters\More Emitters	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/emitters/  [17 files, 4 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\emitters	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/  [16 files, 17 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/WTF/fighter/  [11 files, 25 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\WTF\fighter	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/FontPngs/  [8 files, 34 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\FontPngs	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/WTF/  [7 files, 396 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\WTF	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Images/  [6 files, 126 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Images	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/OBJs/  [6 files, 409 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\OBJs	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Scripts/LuaSocket/socket/  [5 files, 41 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Scripts\LuaSocket\socket	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/iGame3D Player051507.app/Contents/Frameworks/OpenAL.framework/Versions/A/Headers/  [5 files, 32 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\iGame3D Player051507.app\Contents\Frameworks\OpenAL.framework\Versions\A\Headers	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Scripts/LuaSocket/  [4 files, 20 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Scripts\LuaSocket	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Shaders/spotlight/  [4 files, 2 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Shaders\spotlight	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/emitters/oldEmitters/Blast/  [4 files, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\emitters\oldEmitters\Blast	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/emitters/oldEmitters/FireBalls/  [4 files, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\emitters\oldEmitters\FireBalls	1	0
+F	LIB_BIN#2	rule *  [238]	livecode-server/7.1.4-win-x86/drivers/  [4 files, 1.5 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\livecode-server\7.1.4-win-x86\drivers	1	0
+F	LIB_BIN#2	rule *  [238]	livecode-server/9.6.3-linux-x64/drivers/  [4 files, 3.8 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\livecode-server\9.6.3-linux-x64\drivers	1	0
+F	LIB_BIN#2	rule *  [238]	livecode-server/9.6.3-win-x64/drivers/  [4 files, 2.5 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\livecode-server\9.6.3-win-x64\drivers	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Shaders/awesome/  [3 files, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Shaders\awesome	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Shaders/bump Kopie/  [3 files, 2 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Shaders\bump Kopie	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Shaders/bump/  [3 files, 2 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Shaders\bump	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Shaders/light/  [3 files, 2 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Shaders\light	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Shaders/light_radius/  [3 files, 2 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Shaders\light_radius	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Shaders/radius/  [3 files, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Shaders\radius	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/emitters/oldEmitters/Glo/  [3 files, 798 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\emitters\oldEmitters\Glo	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/old scripts/  [3 files, 2 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\old scripts	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/iGame3D Player051507.app/Contents/Frameworks/Ogg.framework/  [3 files, 70 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\iGame3D Player051507.app\Contents\Frameworks\Ogg.framework	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/iGame3D Player051507.app/Contents/Frameworks/Ogg.framework/Versions/A/Headers/  [3 files, 11 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\iGame3D Player051507.app\Contents\Frameworks\Ogg.framework\Versions\A\Headers	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/iGame3D Player051507.app/Contents/Frameworks/OpenAL.framework/  [3 files, 73 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\iGame3D Player051507.app\Contents\Frameworks\OpenAL.framework	1	0
+F	LIB_BIN#2	rule *  [238]	livecode-server/7.1.4-win-x86/externals/  [3 files, 1.7 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\livecode-server\7.1.4-win-x86\externals	1	0
+F	LIB_BIN#2	rule *  [238]	livecode-server/9.6.3-linux-x64/externals/  [3 files, 3.4 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\livecode-server\9.6.3-linux-x64\externals	1	0
+F	LIB_BIN#2	rule *  [238]	livecode-server/9.6.3-win-x64/externals/  [3 files, 2.3 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\livecode-server\9.6.3-win-x64\externals	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Levels/TurretTest/  [2 files, 920 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Levels\TurretTest	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Scripts/Airforce/  [2 files, 6 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Scripts\Airforce	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Scripts/  [2 files, 12 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Scripts	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/emitters/oldEmitters/Star/  [2 files, 578 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\emitters\oldEmitters\Star	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/iGame3D Player051507.app/Contents/  [2 files, 658 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\iGame3D Player051507.app\Contents	1	0
+F	LIB_BIN#2	rule *  [238]	livecode-server/9.6.3-linux-x64/  [2 files, 23 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\livecode-server\9.6.3-linux-x64	1	0
+F	LIB_BIN#2	rule *  [238]	livecode-server/9.6.3-win-x64/  [2 files, 17 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\livecode-server\9.6.3-win-x64	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Levels/Briefing/  [1 file, 4 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Levels\Briefing	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Levels/ChatServer/  [1 file, 2 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Levels\ChatServer	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Levels/Client/  [1 file, 17 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Levels\Client	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Levels/Controls/  [1 file, 5 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Levels\Controls	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Levels/EnterName/  [1 file, 2 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Levels\EnterName	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Levels/GUI/  [1 file, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Levels\GUI	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Levels/Options/  [1 file, 3 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Levels\Options	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Levels/Quit/  [1 file, 6 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Levels\Quit	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Levels/Server/  [1 file, 14 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Levels\Server	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/Data/Levels/Success/  [1 file, 4 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\Data\Levels\Success	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/iGame3D Player051507.app/Contents/Frameworks/Ogg.framework/Versions/A/  [1 file, 108 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\iGame3D Player051507.app\Contents\Frameworks\Ogg.framework\Versions\A	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/iGame3D Player051507.app/Contents/Frameworks/Ogg.framework/Versions/A/Resources/  [1 file, 943 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\iGame3D Player051507.app\Contents\Frameworks\Ogg.framework\Versions\A\Resources	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/iGame3D Player051507.app/Contents/Frameworks/Ogg.framework/Versions/  [1 file, 1 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\iGame3D Player051507.app\Contents\Frameworks\Ogg.framework\Versions	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/iGame3D Player051507.app/Contents/Frameworks/OpenAL.framework/Versions/A/  [1 file, 403 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\iGame3D Player051507.app\Contents\Frameworks\OpenAL.framework\Versions\A	1	0
+F	LIB_BIN#2	rule *  [238]	igame3d_last_working_Livecode_6_version/iGame3D Player051507.app/Contents/Frameworks/OpenAL.framework/Versions/  [1 file, 1 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\igame3d_last_working_Livecode_6_version\iGame3D Player051507.app\Contents\Frameworks\OpenAL.framework\Versions	1	0
+F	LIB_BIN#2	rule *  [238]	livecode-server/7.1.4-win-x86/  [1 file, 10 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\livecode-server\7.1.4-win-x86	1	0
+C	LIB_BIN#3	LIB_BIN	demo	18	127	262	53	big, on this disk only: livecode-server/ 66 MB - click to list them
+F	LIB_BIN#3	LIB_BIN	livecode-server	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\livecode-server	1	0
+P	LIB_BUILD	part	1500	478	280	52	LIB_BUILD	Repository
+C	LIB_BUILD#1	LIB_BUILD	has	18	58	262	23	5 files on git (12 KB)
+C	LIB_BUILD#2	LIB_BUILD	ignored	18	85	262	53	3,177 files hidden by .gitignore (311 MB): Vibecodext3d_Build_*/ - click to list them
+F	LIB_BUILD#2	rule Vibecodext3d_Build_*/  [3177]	Vibecodext3d_Build_11142026/  [3,177 files, 311 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BUILD\Vibecodext3d_Build_11142026	1	0
+C	LIB_BUILD#3	LIB_BUILD	demo	18	142	262	53	big, on this disk only: Vibecodext3d_Build_11142026/ 311 MB - click to list them
+F	LIB_BUILD#3	LIB_BUILD	Vibecodext3d_Build_11142026	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BUILD\Vibecodext3d_Build_11142026	1	0
+P	LIB_COMFY	part	1500	711	280	52	LIB_COMFY	Repository
+C	LIB_COMFY#1	LIB_COMFY	has	18	58	262	53	22 files on git (64 KB), branch comfy-vector-pong checked out, not main
+C	LIB_COMFY#2	LIB_COMFY	review	18	115	262	38	branch comfy-vector-pong not merged into main
+C	LIB_COMFY#3	LIB_COMFY	ignored	18	157	262	38	6 files hidden by .gitignore (82 KB): __pycache__/ - click to list them
+F	LIB_COMFY#3	rule __pycache__/  [6]	ComfyUI-Vibecode3D/__pycache__/__init__.cpython-313.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_COMFY\ComfyUI-Vibecode3D\__pycache__\__init__.cpython-313.pyc	0	0
+F	LIB_COMFY#3	rule __pycache__/  [6]	ComfyUI-Vibecode3D/__pycache__/__init__.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_COMFY\ComfyUI-Vibecode3D\__pycache__\__init__.cpython-314.pyc	0	0
+F	LIB_COMFY#3	rule __pycache__/  [6]	ComfyUI-Vibecode3D/__pycache__/assemble.cpython-313.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_COMFY\ComfyUI-Vibecode3D\__pycache__\assemble.cpython-313.pyc	0	0
+F	LIB_COMFY#3	rule __pycache__/  [6]	ComfyUI-Vibecode3D/__pycache__/assemble.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_COMFY\ComfyUI-Vibecode3D\__pycache__\assemble.cpython-314.pyc	0	0
+F	LIB_COMFY#3	rule __pycache__/  [6]	ComfyUI-Vibecode3D/__pycache__/preview.cpython-313.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_COMFY\ComfyUI-Vibecode3D\__pycache__\preview.cpython-313.pyc	0	0
+F	LIB_COMFY#3	rule __pycache__/  [6]	ComfyUI-Vibecode3D/__pycache__/preview.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_COMFY\ComfyUI-Vibecode3D\__pycache__\preview.cpython-314.pyc	0	0
+P	LIB_DEV	part	1500	944	280	52	LIB_DEV	Repository
+C	LIB_DEV#1	LIB_DEV	has	18	58	262	38	33 files on git (526 KB), branch on-git-or-not checked out, not main
+C	LIB_DEV#2	LIB_DEV	review	18	100	262	53	6 loose files (3 new, 3 changed, 205 KB): not on git, not ignored - click to list them
+F	LIB_DEV#2	LIB_DEV	.gitignore	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\.gitignore	0	0
+F	LIB_DEV#2	LIB_DEV	OnGitOrNot/OnGitOrNot.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\OnGitOrNot\OnGitOrNot.oxtstack	0	0
+F	LIB_DEV#2	LIB_DEV	OnGitOrNot/map_data.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\OnGitOrNot\map_data.txt	0	0
+F	LIB_DEV#2	LIB_DEV	OnGitOrNot/tools/git_map.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\OnGitOrNot\tools\git_map.py	0	0
+F	LIB_DEV#2	LIB_DEV	jectMap/livecode/project_map.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\jectMap\livecode\project_map.livecodescript	0	0
+F	LIB_DEV#2	LIB_DEV	livecode/board_canvas.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\board_canvas.livecodescript	0	0
+C	LIB_DEV#3	LIB_DEV	ignored	18	157	262	53	8 files hidden by .gitignore (63 MB): *.exe, __pycache__/ - click to list them
+F	LIB_DEV#3	rule *.exe  [4]	Game_Browser.exe	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Game_Browser.exe	0	0
+F	LIB_DEV#3	rule *.exe  [4]	Game_Player/Game_Player.exe	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Game_Player\Game_Player.exe	0	0
+F	LIB_DEV#3	rule *.exe  [4]	Status_Browser.exe	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Status_Browser.exe	0	0
+F	LIB_DEV#3	rule *.exe  [4]	Status_Browser_Launcher.exe	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Status_Browser_Launcher.exe	0	0
+F	LIB_DEV#3	rule __pycache__/  [4]	ProjectMap/tools/__pycache__/make_map.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\tools\__pycache__\make_map.cpython-314.pyc	0	0
+F	LIB_DEV#3	rule __pycache__/  [4]	tools/__pycache__/for_review.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\tools\__pycache__\for_review.cpython-314.pyc	0	0
+F	LIB_DEV#3	rule __pycache__/  [4]	tools/__pycache__/help_audit.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\tools\__pycache__\help_audit.cpython-314.pyc	0	0
+F	LIB_DEV#3	rule __pycache__/  [4]	tools/__pycache__/rename_in_handlers.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\tools\__pycache__\rename_in_handlers.cpython-314.pyc	0	0
+P	LIB_EDITOR	core	1500	1192	280	52	LIB_EDITOR	Repository
+C	LIB_EDITOR#1	LIB_EDITOR	has	18	58	262	23	321 files on git (2.8 MB)
+C	LIB_EDITOR#2	LIB_EDITOR	review	18	85	262	38	branch release-checklist not merged into main
+C	LIB_EDITOR#3	LIB_EDITOR	ignored	18	127	262	38	1 file hidden by .gitignore (2 KB): tests/_* - click to list them
+F	LIB_EDITOR#3	rule tests/_*  [1]	tests/_engine_stubs.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR\tests\_engine_stubs.livecodescript	0	0
+P	LIB_ig3d	core	1500	1395	280	52	LIB_ig3d	Repository
+C	LIB_ig3d#1	LIB_ig3d	has	18	58	262	23	17 files on git (565 KB)
+C	LIB_ig3d#2	LIB_ig3d	review	18	85	262	38	branch release-checklist not merged into main
+P	LIB_MCP	part	1830	260	280	52	LIB_MCP	Repository
+C	LIB_MCP#1	LIB_MCP	has	18	58	262	23	23 files on git (204 KB)
+C	LIB_MCP#2	LIB_MCP	ignored	18	85	262	53	6 files hidden by .gitignore (15 MB): __pycache__/, standalone/*/ - click to list them
+F	LIB_MCP#2	rule __pycache__/  [5]	python/lib_mcp/__pycache__/__init__.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MCP\python\lib_mcp\__pycache__\__init__.cpython-314.pyc	0	0
+F	LIB_MCP#2	rule __pycache__/  [5]	python/lib_mcp/__pycache__/cli.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MCP\python\lib_mcp\__pycache__\cli.cpython-314.pyc	0	0
+F	LIB_MCP#2	rule __pycache__/  [5]	python/lib_mcp/__pycache__/client.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MCP\python\lib_mcp\__pycache__\client.cpython-314.pyc	0	0
+F	LIB_MCP#2	rule __pycache__/  [5]	python/lib_mcp/__pycache__/compile_headless.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MCP\python\lib_mcp\__pycache__\compile_headless.cpython-314.pyc	0	0
+F	LIB_MCP#2	rule __pycache__/  [5]	python/lib_mcp/__pycache__/lint.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MCP\python\lib_mcp\__pycache__\lint.cpython-314.pyc	0	0
+F	LIB_MCP#2	rule standalone/*/  [1]	standalone/xt3d_MCP/Windows x86-64/xt3d_MCP.exe	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MCP\standalone\xt3d_MCP\Windows x86-64\xt3d_MCP.exe	0	0
+P	LIB_SPARK	part	1830	436	280	52	LIB_SPARK	Repository
+C	LIB_SPARK#1	LIB_SPARK	has	18	58	262	23	686 files on git (1.3 MB)
+C	LIB_SPARK#2	LIB_SPARK	ignored	18	85	262	53	5 files hidden by .gitignore (99 KB): __pycache__/, arcade/out/.work_clock - click to list them
+F	LIB_SPARK#2	rule __pycache__/  [4]	arcade/__pycache__/run_arcade.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SPARK\arcade\__pycache__\run_arcade.cpython-314.pyc	0	0
+F	LIB_SPARK#2	rule __pycache__/  [4]	entities/__pycache__/entity.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SPARK\entities\__pycache__\entity.cpython-314.pyc	0	0
+F	LIB_SPARK#2	rule __pycache__/  [4]	entities/__pycache__/run_entities.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SPARK\entities\__pycache__\run_entities.cpython-314.pyc	0	0
+F	LIB_SPARK#2	rule __pycache__/  [4]	howto/__pycache__/run_howto.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SPARK\howto\__pycache__\run_howto.cpython-314.pyc	0	0
+F	LIB_SPARK#2	rule arcade/out/.work_clock  [1]	arcade/out/.work_clock	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SPARK\arcade\out\.work_clock	0	0
+P	LIB_TEST	part	1830	612	280	52	LIB_TEST	Repository
+C	LIB_TEST#1	LIB_TEST	has	18	58	262	23	12 files on git (147 KB)
+P	LIB_UPBGE	part	1830	731	280	52	LIB_UPBGE	Repository
+C	LIB_UPBGE#1	LIB_UPBGE	has	18	58	262	23	25 files on git (341 KB)
+C	LIB_UPBGE#2	LIB_UPBGE	ignored	18	85	262	38	72 files hidden by .gitignore (44 MB): templates/ - click to list them
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/3rd_Person_follow_camera_01.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\3rd_Person_follow_camera_01.blend	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/CUBE_INVADERS.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\CUBE_INVADERS.blend	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/Dodge_Tunnel.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\Dodge_Tunnel.blend	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/FPS+Enemies+WallRun.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\FPS+Enemies+WallRun.blend	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/MakeHumanLady_walkin.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\MakeHumanLady_walkin.blend	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/Mouse_Tracker_01.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\Mouse_Tracker_01.blend	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/Mouse_Tracker_Grid.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\Mouse_Tracker_Grid.blend	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/Mouse_Tracker_RTS.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\Mouse_Tracker_RTS.blend	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/Pits_Vines_Ladders.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\Pits_Vines_Ladders.blend	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/Rotation_Shooter.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\Rotation_Shooter.blend	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/SideScroll_Shooter.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\SideScroll_Shooter.blend	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/Sigils_01.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\Sigils_01.blend	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/Sigils_02.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\Sigils_02.blend	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/Simple_Player_Maze.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\Simple_Player_Maze.blend	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/Simple_Player_Maze_Waypoints.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\Simple_Player_Maze_Waypoints.blend	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/TextReader_filepath.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\TextReader_filepath.blend	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/TextReader_textBlock.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\TextReader_textBlock.blend	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/TextScroll2.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\TextScroll2.blend	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/TrenchRun_Torus_IV.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\TrenchRun_Torus_IV.blend	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/bgelogic/NLPathFinding.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\bgelogic\NLPathFinding.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/bgelogic/__init__.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\bgelogic\__init__.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/breakout_like.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\breakout_like.blend	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/dir.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\dir.txt	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/path_to_scripts.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\path_to_scripts.blend	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/pong.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\pong.blend	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/test.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\test.txt	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/LICENSE	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\LICENSE	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Previews/3rd_Person_follow_camera.png	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Previews\3rd_Person_follow_camera.png	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Previews/8Bit_Characters.png	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Previews\8Bit_Characters.png	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Previews/Cube_Invaders.png	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Previews\Cube_Invaders.png	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Previews/Dodge_tunnel.png	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Previews\Dodge_tunnel.png	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Previews/FPS_Enemies_WallRun.png	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Previews\FPS_Enemies_WallRun.png	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Previews/Mouse_Tracker_01.png	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Previews\Mouse_Tracker_01.png	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Previews/Mouse_Tracker_GRID.png	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Previews\Mouse_Tracker_GRID.png	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Previews/Mouse_Tracker_RTS.png	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Previews\Mouse_Tracker_RTS.png	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Previews/PONG.png	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Previews\PONG.png	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Previews/Pits_vines_Ladders.png	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Previews\Pits_vines_Ladders.png	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Previews/ReadText_textBlock.png	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Previews\ReadText_textBlock.png	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Previews/Rotation_Shooter.png	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Previews\Rotation_Shooter.png	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Previews/SideScroll_Shooter.png	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Previews\SideScroll_Shooter.png	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Previews/Sigils_01.png	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Previews\Sigils_01.png	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Previews/Sigils_02.png	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Previews\Sigils_02.png	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Previews/Simple_Player_Maze.png	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Previews\Simple_Player_Maze.png	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Previews/Simple_Player_WayPoints.png	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Previews\Simple_Player_WayPoints.png	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Previews/TextScroll2.png	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Previews\TextScroll2.png	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Previews/TrenchRun_Torus.png	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Previews\TrenchRun_Torus.png	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Previews/breakkout-like.png	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Previews\breakkout-like.png	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\README.md	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/8Bit_Characters_Binary.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\8Bit_Characters_Binary.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/BallReset.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\BallReset.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/MousePaddle_L_R.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\MousePaddle_L_R.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/MouseTracker_L_R.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\MouseTracker_L_R.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/TranslateUV.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\TranslateUV.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/TranslateUV1.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\TranslateUV1.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/Warp_L_R.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\Warp_L_R.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/changeFont.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\changeFont.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/changeFont_interactive.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\changeFont_interactive.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/explode_sphere.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\explode_sphere.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/fix_ball.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\fix_ball.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/incoming_ICBM.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\incoming_ICBM.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/mouse_tracker.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\mouse_tracker.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/mouse_tracker_Grid.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\mouse_tracker_Grid.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/mouse_tracker_RTS.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\mouse_tracker_RTS.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/mousemargins.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\mousemargins.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/mousetracker_crosshair.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\mousetracker_crosshair.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/target_lock.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\target_lock.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/target_me.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\target_me.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/test.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\test.txt	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/textRead_filepath.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\textRead_filepath.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/textRead_localpath.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\textRead_localpath.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/textRead_textBlock.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\textRead_textBlock.py	0	0
+F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/waypoints.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\waypoints.py	0	0
+P	OXT-BEYOND	part	1830	892	280	52	OXT-BEYOND	Not a repository
+C	OXT-BEYOND#1	OXT-BEYOND	block	18	58	262	53	owner: not a repository, nothing here is on git (60 files, 212 KB) - click to list them
+F	OXT-BEYOND#1	OXT-BEYOND	tests/  [49 files, 192 KB]	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\tests	1	0
+F	OXT-BEYOND#1	OXT-BEYOND	sessions/  [5 files, 9 KB]	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\sessions	1	0
+F	OXT-BEYOND#1	OXT-BEYOND	README.md  [1 file, 5 KB]	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\README.md	0	0
+F	OXT-BEYOND#1	OXT-BEYOND	Keep_Notes_for_Seth_Morrow_Here.txt  [1 file, 3 KB]	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\Keep_Notes_for_Seth_Morrow_Here.txt	0	0
+F	OXT-BEYOND#1	OXT-BEYOND	OXT-LInks/  [3 files, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\OXT-LInks	1	0
+F	OXT-BEYOND#1	OXT-BEYOND	OXT-Beyond-0.2.7 - Shortcut.lnk  [1 file, 925 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\OXT-Beyond-0.2.7 - Shortcut.lnk	0	0
+P	LIB_LLMIN	part	2220	260	280	52	LIB_LLMIN	Repository
+C	LIB_LLMIN#1	LIB_LLMIN	has	18	58	262	23	4 files on git (3 KB)
+C	LIB_LLMIN#2	LIB_LLMIN	ignored	18	85	262	38	669 files hidden by .gitignore (67 MB): /* - click to list them
+F	LIB_LLMIN#2	rule /*  [669]	LIB_DEE/Enochian_Tablet_Sigils_X_Y_Locations/  [99 files, 4 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_DEE\Enochian_Tablet_Sigils_X_Y_Locations	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_BAT/AUDIT/projects_Lists/  [98 files, 2.4 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_BAT\AUDIT\projects_Lists	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_DEE/Enochian_Senators_Map_Coordinates/  [98 files, 4 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_DEE\Enochian_Senators_Map_Coordinates	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_DEE/Git-Ignore_These/enochian-web-main/24_Seniors_16Bit_Binary_Text/  [98 files, 27 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_DEE\Git-Ignore_These\enochian-web-main\24_Seniors_16Bit_Binary_Text	1	0
+F	LIB_LLMIN#2	rule /*  [669]	FOR_MUCH_LATER/Box2Dxt-Alpha-Demo-v7/Spritesheets/  [55 files, 1.7 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\FOR_MUCH_LATER\Box2Dxt-Alpha-Demo-v7\Spritesheets	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_DEE/  [26 files, 393 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_DEE	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_DEE/Git-Ignore_These/enochian-web-main/  [26 files, 27 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_DEE\Git-Ignore_These\enochian-web-main	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/hooks/  [14 files, 25 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\hooks	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_DEE/Enochian_Governor_Sigils_Perhaps_X_Y_Array/  [13 files, 693 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_DEE\Enochian_Governor_Sigils_Perhaps_X_Y_Array	1	0
+F	LIB_LLMIN#2	rule /*  [669]	FOR_MUCH_LATER/Box2Dxt-Alpha-Demo-v7/  [9 files, 4.4 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\FOR_MUCH_LATER\Box2Dxt-Alpha-Demo-v7	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_BAT/  [9 files, 8 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_BAT	1	0
+F	LIB_LLMIN#2	rule /*  [669]	FOR_MUCH_LATER/Box2Dxt-Alpha-Demo-v7/docs/  [8 files, 213 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\FOR_MUCH_LATER\Box2Dxt-Alpha-Demo-v7\docs	1	0
+F	LIB_LLMIN#2	rule /*  [669]	FOR_MUCH_LATER/Box2Dxt-Alpha-Demo-v7/src/  [8 files, 1.5 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\FOR_MUCH_LATER\Box2Dxt-Alpha-Demo-v7\src	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_DEE/BitFontMaker2_Reader_Python/  [7 files, 59 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_DEE\BitFontMaker2_Reader_Python	1	0
+F	LIB_LLMIN#2	rule /*  [669]	FOR_MUCH_LATER/Box2Dxt-Alpha-Demo-v7/examples/  [6 files, 2.0 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\FOR_MUCH_LATER\Box2Dxt-Alpha-Demo-v7\examples	1	0
+F	LIB_LLMIN#2	rule /*  [669]	FOR_MUCH_LATER/Box2Dxt-Alpha-Demo-v7/prebuilt/  [6 files, 2.2 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\FOR_MUCH_LATER\Box2Dxt-Alpha-Demo-v7\prebuilt	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_DEV/  [6 files, 24 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_DEV	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_XTJSON/OLD_TO_DELETE/txt/  [6 files, 450 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_XTJSON\OLD_TO_DELETE\txt	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_DEE/Git-Ignore_These/  [5 files, 627 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_DEE\Git-Ignore_These	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/  [5 files, 552 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git	1	0
+F	LIB_LLMIN#2	rule /*  [669]	FOR_MUCH_LATER/Box2Dxt-Alpha-Demo-v7/tools/  [4 files, 22 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\FOR_MUCH_LATER\Box2Dxt-Alpha-Demo-v7\tools	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_XTJSON/livecode/  [4 files, 4.8 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_XTJSON\livecode	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_MOCAP/  [3 files, 709 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_MOCAP	1	0
+F	LIB_LLMIN#2	rule /*  [669]	Example_Built_by_script/  [2 files, 299 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\Example_Built_by_script	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_GAMES/  [2 files, 5 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_GAMES	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_SCRIPT/  [2 files, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_SCRIPT	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_SCRIPT/livecodescript/  [2 files, 13 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_SCRIPT\livecodescript	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_XTJSON/  [2 files, 148 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_XTJSON	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/objects/23/  [2 files, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\objects\23	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/objects/25/  [2 files, 521 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\objects\25	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/objects/3a/  [2 files, 8 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\objects\3a	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/objects/66/  [2 files, 7 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\objects\66	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/  [2 files, 2 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete	1	0
+F	LIB_LLMIN#2	rule /*  [669]	./  [1 file, 2 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\.	1	0
+F	LIB_LLMIN#2	rule /*  [669]	FOR_MUCH_LATER/Box2Dxt-Alpha-Demo-v7/.github/workflows/  [1 file, 7 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\FOR_MUCH_LATER\Box2Dxt-Alpha-Demo-v7\.github\workflows	1	0
+F	LIB_LLMIN#2	rule /*  [669]	FOR_MUCH_LATER/Box2Dxt-Alpha-Demo-v7/dist/  [1 file, 4 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\FOR_MUCH_LATER\Box2Dxt-Alpha-Demo-v7\dist	1	0
+F	LIB_LLMIN#2	rule /*  [669]	FOR_MUCH_LATER/Box2Dxt-Alpha-Demo-v7/src/code/universal-mac/  [1 file, 696 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\FOR_MUCH_LATER\Box2Dxt-Alpha-Demo-v7\src\code\universal-mac	1	0
+F	LIB_LLMIN#2	rule /*  [669]	FOR_MUCH_LATER/Box2Dxt-Alpha-Demo-v7/src/code/x86-linux/  [1 file, 505 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\FOR_MUCH_LATER\Box2Dxt-Alpha-Demo-v7\src\code\x86-linux	1	0
+F	LIB_LLMIN#2	rule /*  [669]	FOR_MUCH_LATER/Box2Dxt-Alpha-Demo-v7/src/code/x86-win32/  [1 file, 294 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\FOR_MUCH_LATER\Box2Dxt-Alpha-Demo-v7\src\code\x86-win32	1	0
+F	LIB_LLMIN#2	rule /*  [669]	FOR_MUCH_LATER/Box2Dxt-Alpha-Demo-v7/src/code/x86_64-linux/  [1 file, 465 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\FOR_MUCH_LATER\Box2Dxt-Alpha-Demo-v7\src\code\x86_64-linux	1	0
+F	LIB_LLMIN#2	rule /*  [669]	FOR_MUCH_LATER/Box2Dxt-Alpha-Demo-v7/src/code/x86_64-win32/  [1 file, 329 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\FOR_MUCH_LATER\Box2Dxt-Alpha-Demo-v7\src\code\x86_64-win32	1	0
+F	LIB_LLMIN#2	rule /*  [669]	FOR_MUCH_LATER/Box2Dxt-Alpha-Demo-v7/tests/  [1 file, 18 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\FOR_MUCH_LATER\Box2Dxt-Alpha-Demo-v7\tests	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_BIT/  [1 file, 9 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_BIT	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_DEV/Status_Browser/  [1 file, 15 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_DEV\Status_Browser	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_SPARK/read/  [1 file, 45 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_SPARK\read	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_UNICODE/  [1 file, 474 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_UNICODE	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_UPBGE/  [1 file, 183 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_UPBGE	1	0
+F	LIB_LLMIN#2	rule /*  [669]	LIB_XTJSON/Identifier/  [1 file, 150 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_XTJSON\Identifier	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/info/  [1 file, 240 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\info	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/logs/  [1 file, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\logs	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/logs/refs/heads/  [1 file, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\logs\refs\heads	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/objects/08/  [1 file, 369 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\objects\08	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/objects/16/  [1 file, 82 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\objects\16	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/objects/1e/  [1 file, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\objects\1e	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/objects/28/  [1 file, 280 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\objects\28	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/objects/40/  [1 file, 7 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\objects\40	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/objects/42/  [1 file, 125 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\objects\42	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/objects/47/  [1 file, 48 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\objects\47	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/objects/58/  [1 file, 238 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\objects\58	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/objects/5f/  [1 file, 52 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\objects\5f	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/objects/75/  [1 file, 8 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\objects\75	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/objects/82/  [1 file, 125 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\objects\82	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/objects/b7/  [1 file, 79 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\objects\b7	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/objects/cc/  [1 file, 278 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\objects\cc	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/objects/da/  [1 file, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\objects\da	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/objects/f9/  [1 file, 88 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\objects\f9	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/objects/fb/  [1 file, 52 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\objects\fb	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_delete/.git/refs/heads/  [1 file, 41 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE\PROMPT_GLAZE_acidentai_lgit_copy_to_delete\.git\refs\heads	1	0
+F	LIB_LLMIN#2	rule /*  [669]	PROMPT_GLAZE/  [1 file, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\PROMPT_GLAZE	1	0
+P	LIB_LLMOUT	part	2220	421	280	52	LIB_LLMOUT	Repository
+C	LIB_LLMOUT#1	LIB_LLMOUT	has	18	58	262	23	2 files on git (729 bytes)
+C	LIB_LLMOUT#2	LIB_LLMOUT	review	18	85	262	38	2 loose files (2 new, 3 KB): not on git, not ignored - click to list them
+F	LIB_LLMOUT#2	LIB_LLMOUT	Read/LIB_PUBLIC/loose_copies_before_merge_16Nov/install/README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\Read\LIB_PUBLIC\loose_copies_before_merge_16Nov\install\README.md	0	0
+F	LIB_LLMOUT#2	LIB_LLMOUT	Read/LIB_XTJSON/XTJSON_batch_11_13_2026/README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\Read\LIB_XTJSON\XTJSON_batch_11_13_2026\README.md	0	0
+C	LIB_LLMOUT#3	LIB_LLMOUT	ignored	18	127	262	38	6,543 files hidden by .gitignore (93 MB): * - click to list them
+F	LIB_LLMOUT#3	rule *  [6543]	Read/  [6,510 files, 92 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\Read	1	0
+F	LIB_LLMOUT#3	rule *  [6543]	LIB_EDITOR/  [9 files, 522 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_EDITOR	1	0
+F	LIB_LLMOUT#3	rule *  [6543]	LIB_DEV/  [5 files, 64 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_DEV	1	0
+F	LIB_LLMOUT#3	rule *  [6543]	LIB_GAMES/  [5 files, 38 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_GAMES	1	0
+F	LIB_LLMOUT#3	rule *  [6543]	./  [3 files, 46 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\.	1	0
+F	LIB_LLMOUT#3	rule *  [6543]	LIB_BIT/  [2 files, 4 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_BIT	1	0
+F	LIB_LLMOUT#3	rule *  [6543]	LIB_MOCAP/  [2 files, 363 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_MOCAP	1	0
+F	LIB_LLMOUT#3	rule *  [6543]	LIB_SPARK/  [2 files, 8 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_SPARK	1	0
+F	LIB_LLMOUT#3	rule *  [6543]	release-checklist/  [2 files, 37 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\release-checklist	1	0
+F	LIB_LLMOUT#3	rule *  [6543]	LIB_GLOBALS/  [1 file, 5 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_GLOBALS	1	0
+F	LIB_LLMOUT#3	rule *  [6543]	LIB_USERS/  [1 file, 13 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_USERS	1	0
+F	LIB_LLMOUT#3	rule *  [6543]	LIB_ig3d/  [1 file, 9 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_ig3d	1	0
+C	LIB_LLMOUT#4	LIB_LLMOUT	private	18	169	262	38	private, never on git: 2 files (13 KB) by * - click to list them
+F	LIB_LLMOUT#4	rule *  [2]	Read/Vector Toss/TRON_JaiAlai_Flynn_vs_CROM_From_the_Film.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\Read\Vector Toss\TRON_JaiAlai_Flynn_vs_CROM_From_the_Film.txt	0	0
+F	LIB_LLMOUT#4	rule *  [2]	Read/Vector Toss/Tron_by_Brian_Daley_Based_on_Steven_Lisberger_excerpt_JaiAlaiArena_Chapter_7.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\Read\Vector Toss\Tron_by_Brian_Daley_Based_on_Steven_Lisberger_excerpt_JaiAlaiArena_Chapter_7.txt	0	0
+C	LIB_LLMOUT#5	LIB_LLMOUT	demo	18	211	262	38	big, on this disk only: Read/ 92 MB - click to list them
+F	LIB_LLMOUT#5	LIB_LLMOUT	Read	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\Read	1	0
+P	LIB_PUBLIC	part	2220	708	280	52	LIB_PUBLIC	Repository
+C	LIB_PUBLIC#1	LIB_PUBLIC	has	18	58	262	23	24 files on git (882 KB)
+C	LIB_PUBLIC#2	LIB_PUBLIC	ignored	18	85	262	38	2 files hidden by .gitignore (29 MB): build/ - click to list them
+F	LIB_PUBLIC#2	rule build/  [2]	launcher/build/Vibecode3D Library/Windows x86-64/Vibecode3D Library.exe	\\wsl$\Ubuntu\home\igame3d\projects\LIB_PUBLIC\launcher\build\Vibecode3D Library\Windows x86-64\Vibecode3D Library.exe	0	0
+F	LIB_PUBLIC#2	rule build/  [2]	launcher/build/Vibecode3D Library/Windows/Vibecode3D Library.exe	\\wsl$\Ubuntu\home\igame3d\projects\LIB_PUBLIC\launcher\build\Vibecode3D Library\Windows\Vibecode3D Library.exe	0	0
+P	LIB_SYSTEM	core	2220	869	280	52	LIB_SYSTEM	Repository
+C	LIB_SYSTEM#1	LIB_SYSTEM	has	18	58	262	23	23 files on git (299 KB)
+C	LIB_SYSTEM#2	LIB_SYSTEM	review	18	85	262	38	2 loose files (2 new, 29 KB): not on git, not ignored - click to list them
+F	LIB_SYSTEM#2	LIB_SYSTEM	tools/__pycache__/progress.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SYSTEM\tools\__pycache__\progress.cpython-314.pyc	0	0
+F	LIB_SYSTEM#2	LIB_SYSTEM	tools/__pycache__/provenance.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SYSTEM\tools\__pycache__\provenance.cpython-314.pyc	0	0
+P	LIB_USERS	part	2220	1030	280	52	LIB_USERS	Repository
+C	LIB_USERS#1	LIB_USERS	has	18	58	262	23	6 files on git (17 KB)
+C	LIB_USERS#2	LIB_USERS	review	18	85	262	38	branch library-plans not merged into main
+C	LIB_USERS#3	LIB_USERS	private	18	127	262	38	private, never on git: 2 files (6 KB) by BILL/ - click to list them
+F	LIB_USERS#3	rule BILL/  [2]	BILL/Bills_Situation_11_13_2026.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_USERS\BILL\Bills_Situation_11_13_2026.txt	0	0
+F	LIB_USERS#3	rule BILL/  [2]	BILL/CLAUDE_OBSERVATIONS.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_USERS\BILL\CLAUDE_OBSERVATIONS.md	0	0
+P	LIB_ARRAY	part	2610	260	280	52	LIB_ARRAY	Repository
+C	LIB_ARRAY#1	LIB_ARRAY	has	18	58	262	23	5 files on git (10 KB)
+P	LIB_COMPANY	part	2610	379	280	52	LIB_COMPANY	Not a repository
+C	LIB_COMPANY#1	LIB_COMPANY	block	18	58	262	53	owner: not a repository, nothing here is on git (6 files, 168 bytes) - click to list them
+F	LIB_COMPANY#1	LIB_COMPANY	copilot_suggeted_these_.txt  [1 file, 134 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_COMPANY\copilot_suggeted_these_.txt	0	0
+F	LIB_COMPANY#1	LIB_COMPANY	Company_Standards/  [5 files, 34 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_COMPANY\Company_Standards	1	0
+P	LIB_FACE	part	2610	528	280	52	LIB_FACE	Not a repository
+C	LIB_FACE#1	LIB_FACE	block	18	58	262	53	owner: not a repository, nothing here is on git (1 file, 0 bytes) - click to list them
+F	LIB_FACE#1	LIB_FACE	About_LIB_FACE.txt  [1 file, 0 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_FACE\About_LIB_FACE.txt	0	0
+P	LIB_LUA	part	2610	677	280	52	LIB_LUA	Not a repository
+C	LIB_LUA#1	LIB_LUA	block	18	58	262	53	owner: not a repository, nothing here is on git (2 files, 389 KB) - click to list them
+F	LIB_LUA#1	LIB_LUA	lua-5.5.1.tar.gz  [1 file, 389 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LUA\lua-5.5.1.tar.gz	0	0
+F	LIB_LUA#1	LIB_LUA	lua-5.5.1.tar.gz:Zone.Identifier  [1 file, 123 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LUA\lua-5.5.1.tar.gz:Zone.Identifier	0	0
+P	LIB_OMEGA	part	2610	826	280	52	LIB_OMEGA	Not a repository
+C	LIB_OMEGA#1	LIB_OMEGA	block	18	58	262	38	owner: not a repository, nothing here is on git (empty folder)
+P	logs	part	2610	960	280	52	logs	Not a repository
+C	logs#1	logs	block	18	58	262	53	owner: not a repository, nothing here is on git (empty folder) - click to list them
+F	logs#1	logs	Read/  [0 files, 0 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\logs\Read	1	0
+P	Next_Steps_With_Claude	part	2610	1109	280	52	Next_Steps_With_Claude	Not a repository
+C	Next_Steps_With_Claude#1	Next_Steps_With_Claude	block	18	58	262	53	owner: not a repository, nothing here is on git (15 files, 80 KB) - click to list them
+F	Next_Steps_With_Claude#1	Next_Steps_With_Claude	previous_steps/  [11 files, 66 KB]	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\previous_steps	1	0
+F	Next_Steps_With_Claude#1	Next_Steps_With_Claude	WHEN_WE_RESUME_11_17_2026.md  [1 file, 5 KB]	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\WHEN_WE_RESUME_11_17_2026.md	0	0
+F	Next_Steps_With_Claude#1	Next_Steps_With_Claude	FABLE_1_MAP_FORMAT_11_16_2026.md  [1 file, 3 KB]	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\FABLE_1_MAP_FORMAT_11_16_2026.md	0	0
+F	Next_Steps_With_Claude#1	Next_Steps_With_Claude	FABLE_2_ENGINE_CONTRACT_11_16_2026.md  [1 file, 2 KB]	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\FABLE_2_ENGINE_CONTRACT_11_16_2026.md	0	0
+F	Next_Steps_With_Claude#1	Next_Steps_With_Claude	FABLE_3_RELEASE_CHECKLIST_11_16_2026.md  [1 file, 2 KB]	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\FABLE_3_RELEASE_CHECKLIST_11_16_2026.md	0	0
+P	TO_REMOVE	part	2610	1258	280	52	TO_REMOVE	Not a repository
+C	TO_REMOVE#1	TO_REMOVE	block	18	58	262	53	owner: not a repository, nothing here is on git (3,491 files, 286 MB) - click to list them
+F	TO_REMOVE#1	TO_REMOVE	iGame3d_To_Recreate/  [3,385 files, 285 MB]	\\wsl$\Ubuntu\home\igame3d\projects\TO_REMOVE\iGame3d_To_Recreate	1	0
+F	TO_REMOVE#1	TO_REMOVE	old_igame3d_REDUNDANT_TO_REMOVE/  [105 files, 550 KB]	\\wsl$\Ubuntu\home\igame3d\projects\TO_REMOVE\old_igame3d_REDUNDANT_TO_REMOVE	1	0
+F	TO_REMOVE#1	TO_REMOVE	Galactica Game.gad4.json  [1 file, 511 KB]	\\wsl$\Ubuntu\home\igame3d\projects\TO_REMOVE\Galactica Game.gad4.json	0	0
+F	TO_REMOVE#1	TO_REMOVE	DATA/  [0 files, 0 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\TO_REMOVE\DATA	1	0
+P	XTJSON	part	2610	1407	280	52	XTJSON	Not a repository
+C	XTJSON#1	XTJSON	block	18	58	262	53	owner: not a repository, nothing here is on git (284 files, 3.0 MB) - click to list them
+F	XTJSON#1	XTJSON	XtRedeemer_FIRST_SUCCESS/  [167 files, 1.8 MB]	\\wsl$\Ubuntu\home\igame3d\projects\XTJSON\XtRedeemer_FIRST_SUCCESS	1	0
+F	XTJSON#1	XTJSON	Source_Stack_Stack_Script/  [2 files, 587 KB]	\\wsl$\Ubuntu\home\igame3d\projects\XTJSON\Source_Stack_Stack_Script	1	0
+F	XTJSON#1	XTJSON	GAD_WORKING_03_16_2026/  [104 files, 585 KB]	\\wsl$\Ubuntu\home\igame3d\projects\XTJSON\GAD_WORKING_03_16_2026	1	0
+F	XTJSON#1	XTJSON	xtjson/  [6 files, 92 KB]	\\wsl$\Ubuntu\home\igame3d\projects\XTJSON\xtjson	1	0
+F	XTJSON#1	XTJSON	docs/  [3 files, 25 KB]	\\wsl$\Ubuntu\home\igame3d\projects\XTJSON\docs	1	0
+F	XTJSON#1	XTJSON	CLAUDE_harvest_section.md  [1 file, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\XTJSON\CLAUDE_harvest_section.md	0	0
+F	XTJSON#1	XTJSON	README_batch_moved.md  [1 file, 163 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\XTJSON\README_batch_moved.md	0	0
+P	ON GIT	core	735	-51	280	52	ON GIT	What git keeps on this machine
+C	ON GIT#1	ON GIT	has	18	58	262	23	2,341 files in 40 repositories (52 MB)
+C	ON GIT#2	ON GIT	next	18	85	262	38	No repository has a remote yet: remote locations and backups come later
+C	ON GIT#3	ON GIT	review	18	127	262	23	5 branches not merged into main
+P	NOT ON GIT	core	1215	-51	280	52	NOT ON GIT	Everything git does not keep, and why
+C	NOT ON GIT#1	NOT ON GIT	review	18	58	262	38	15 loose files (334 KB): nobody committed or ignored them
+C	NOT ON GIT#2	NOT ON GIT	block	18	100	262	38	10 folders not a repository: 4,474 files (339 MB)
+C	NOT ON GIT#3	NOT ON GIT	ignored	18	142	262	38	11,231 files hidden by .gitignore rules (847 MB)
+C	NOT ON GIT#4	NOT ON GIT	private	18	184	262	23	4 files private, never on git (19 KB)
+P	YOU	core	1695	-51	280	67	YOU	The owner: red strings end here (a decision only you can make)
+C	YOU#1	YOU	next	18	73	262	53	Click a chip to see its files and open them in Explorer; R rebuilds, T tells Claude
+C	YOU#2	YOU	next	18	130	262	53	Next build: Commit / Ignore / Delete / Leave on each loose thing (written for Claude to carry out)
+E	iGame3D_2026_CLAUDE#1	YOU	red
+E	OXT-BEYOND#1	YOU	red
+E	LIB_COMPANY#1	YOU	red
+E	LIB_FACE#1	YOU	red
+E	LIB_LUA#1	YOU	red
+E	LIB_OMEGA#1	YOU	red
+E	logs#1	YOU	red
+E	Next_Steps_With_Claude#1	YOU	red
+E	TO_REMOVE#1	YOU	red
+E	XTJSON#1	YOU	red
+L	LIB_DEV#2
+L	LIB_GAMES#3
+L	xt3D_Raylib_Livecode_Bridge#2
+L	LIB_SYSTEM#2
+L	LIB_LLMOUT#2
+L	TO_REMOVE#1
+L	iGame3D_2026_CLAUDE#1
+L	XTJSON#1
+L	LIB_LUA#1
+L	OXT-BEYOND#1
+L	Next_Steps_With_Claude#1
+L	LIB_COMPANY#1
+L	logs#1
+L	LIB_OMEGA#1
+L	LIB_FACE#1
+L	LIB_BUILD#2
+L	LIB_LLMOUT#3
+L	LIB_BIN#2
+L	xt3D_Raylib_Livecode_Bridge#3
+L	LIB_LLMIN#2
+L	LIB_DEV#3
+L	Vibecode3D#2
+L	LIB_UPBGE#2
+L	LIB_PUBLIC#2
+L	LIB_MCP#2
+L	LIB_MOCAP#2
+L	LIB_GAMES#4
+L	LIB_TTRPG#2
+L	LIB_BIT#2
+L	LIB_SPARK#2
+L	LIB_COMFY#3
+L	LIB_GLOBALS#2
+L	LIB_XTJSON#2
+L	xtalk_py#2
+L	LIB_GENERICA#2
+L	LIB_THEME#2
+L	LIB_SCRIPTBLOCKS#2
+L	LIB_EDITOR#3

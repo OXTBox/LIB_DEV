@@ -86,3 +86,11 @@ The right panel lists every loose thing, biggest first; click to fly there (Proj
 3. `OnGitOrNot` stack on the shared canvas; look at it with the owner.
 4. Decisions file + Claude's handling (CLAUDE.md note, `for_review.py feedback` prints GIT_DECISIONS).
 5. Then the owner's answers to section 5.
+
+## 7. Progress (17 Nov, evening)
+
+- Steps 1-3 done on branch `on-git-or-not`: the canvas is one shared script,
+  `LIB_DEV/livecode/board_canvas.livecodescript` (kept the `pm` prefix; a board's differences come in
+  B/L rows of its map_data, not a library), both stacks run it; `tools/git_map.py` matches the survey;
+  `OnGitOrNot.oxtstack` opened in OXT-Beyond. Headless: OXT-BEYOND/tests/t39_board_canvas.txt (16 checks).
+- Next: step 4 (decisions popup + GIT_DECISIONS.txt), then the owner's answers to section 5.

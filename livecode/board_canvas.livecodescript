@@ -1,7 +1,12 @@
-script "project_map"
--- Project Map: the whole project as a board of cards and strings on a black, zoomable canvas.
--- Where we are (NOW), where we are going (GOAL), what stops each part (red, strings to YOU).
--- Data: map_data.txt next to the stack (made by tools/make_map.py from board.txt + counted facts).
+script "board_canvas"
+-- The board canvas: cards and strings on a black, zoomable canvas. ONE script for every board stack
+-- (applied as the stack script of LIB_DEV/ProjectMap/ProjectMap.oxtstack and
+-- LIB_DEV/OnGitOrNot/OnGitOrNot.oxtstack); what differs comes in the data's B rows.
+-- Project Map: where we are (NOW), where we are going (GOAL), what stops each part (red, strings to YOU).
+-- On Git or Not: every folder of the project on one side, ON GIT or NOT ON GIT.
+-- Data: map_data.txt next to the stack (made by the board's tool, tools/make_map.py by default).
+--   B key value   board settings: title, bar, help, tool, panel, bkinds, legend (fill|ink|text, one a row)
+--   L chipId      the right panel's lines in this order (else: the red chips, YOU's first)
 -- Moved boxes are kept in positions.txt next to the stack.
 --
 -- Mouse: wheel zooms at the pointer; drag the black to pan; drag a part's header to move it with its
@@ -22,6 +27,8 @@ local sFocus, sBlockersOnly
 local sBlockList -- control names in the panel's order
 local sMenuMap   -- popup item -> Windows path & tab & 1 when a folder (for the open popup)
 local sMenuChip  -- the chip whose popup is open
+local sConf      -- board settings from the B rows (legend: one line each)
+local sPanelOrder -- chip names from the L rows, one a line
 
 constant kTop = 44
 constant kPanelW = 330
@@ -30,7 +37,6 @@ constant kMaxZoom = 3
 
 ---------------------------------------------------------------- opening and closing
 on preOpenStack
-   set the title of this stack to "FOR OWNER | Project Map"
    set the resizable of this stack to true
    set the backgroundColor of this stack to "10,10,14"
    set the minWidth of this stack to 640
@@ -78,10 +84,22 @@ command pmBuild pKeepView
    put empty into sEdges
    put empty into sFocus
    put false into sBlockersOnly
+   put empty into sConf
+   put empty into sPanelOrder
    put pmReadPositions() into tPos
    set the itemDelimiter to tab
    repeat for each line tLine in tData
       switch item 1 of tLine
+         case "B"
+            if item 2 of tLine is "legend" then
+               put item 3 of tLine & return after sConf["legend"]
+            else
+               put item 3 of tLine into sConf[item 2 of tLine]
+            end if
+            break
+         case "L"
+            put "C:" & item 2 of tLine & return after sPanelOrder
+            break
          case "Z"
             pmMakeZone tLine
             break
@@ -99,6 +117,7 @@ command pmBuild pKeepView
    repeat for each line tLine in tData
       if item 1 of tLine is "E" then pmMakeEdge tLine
    end repeat
+   set the title of this stack to pmConf("title", "FOR OWNER | Project Map")
    -- each chip keeps its own files (group, label, Windows path, folder flag), so a click never searches the disk
    repeat for each key tName in tFiles
       if there is a field tName then set the cFiles of field tName to tFiles[tName]
@@ -115,6 +134,12 @@ command pmBuild pKeepView
    end if
    unlock screen
 end pmBuild
+
+-- a board setting from the data's B rows, or pDefault
+function pmConf pKey, pDefault
+   if sConf[pKey] is empty then return pDefault
+   return sConf[pKey]
+end pmConf
 
 command pmClear
    local i, tName
@@ -198,6 +223,12 @@ command pmMakeChip pLine
       case "review"
          pmStyleField tName, "215,35,140", "255,120,200", "255,255,255", 1
          break
+      case "ignored"
+         pmStyleField tName, "70,70,80", "130,130,142", "225,225,230", 1
+         break
+      case "private"
+         pmStyleField tName, "20,20,24", "70,70,82", "150,150,165", 1
+         break
       default
          pmStyleField tName, "38,38,46", "120,120,132", "255,255,255", 1
    end switch
@@ -280,11 +311,11 @@ command pmMakeHud
    pmStyleField "HUD_Bar", "22,22,28", "22,22,28", "235,235,235", 0
    set the textStyle of field "HUD_Bar" to "bold"
    set the textSize of field "HUD_Bar" to 15
-   put "PROJECT MAP" into field "HUD_Bar"
+   put pmConf("bar", "PROJECT MAP") into field "HUD_Bar"
    create field "HUD_Help"
    pmStyleField "HUD_Help", "22,22,28", "22,22,28", "160,160,175", 0
    set the textSize of field "HUD_Help" to 11
-   put "wheel zoom | drag black to pan | drag a header to move | click to focus | F fit  B blockers  R rebuild  T tell Claude  0 100%" into field "HUD_Help"
+   put pmConf("help", "wheel zoom | drag black to pan | drag a header to move | click to focus | F fit  B blockers  R rebuild  T tell Claude  0 100%") into field "HUD_Help"
    create field "HUD_Legend"
    pmStyleField "HUD_Legend", "22,22,28", "60,60,70", "235,235,235", 1
    set the textSize of field "HUD_Legend" to 11
@@ -302,8 +333,16 @@ command pmMakeHud
 end pmMakeHud
 
 command pmFillLegend
-   local tH
+   local tH, tLine
    put "<p>" into tH
+   if sConf["legend"] is not empty then
+      set the itemDelimiter to "|"
+      repeat for each line tLine in sConf["legend"]
+         put pmSwatch(item 1 of tLine, item 2 of tLine, item 3 of tLine) after tH
+      end repeat
+      set the htmlText of field "HUD_Legend" to tH & "</p>"
+      exit pmFillLegend
+   end if
    put pmSwatch("88,40,140", "255,222,60", "core") after tH
    put pmSwatch("38,38,46", "255,255,255", "part") after tH
    put pmSwatch("26,110,52", "255,255,255", "works") after tH
@@ -329,8 +368,8 @@ command pmLayoutHud
    if there is not a field "HUD_Bar" then exit pmLayoutHud
    put the width of this card into tW
    put the height of this card into tH
-   set the rect of field "HUD_Bar" to 0, 0, 150, kTop
-   set the rect of field "HUD_Help" to 150, 0, tW, kTop
+   set the rect of field "HUD_Bar" to 0, 0, 170, kTop
+   set the rect of field "HUD_Help" to 170, 0, tW, kTop
    set the rect of field "HUD_Legend" to 0, tH - 26, tW - kPanelW, tH
    set the rect of field "HUD_Blockers" to tW - kPanelW, kTop, tW, tH
    set the layer of field "HUD_Bar" to top
@@ -343,6 +382,20 @@ end pmLayoutHud
 command pmFillBlockers
    local tName, tOwner, tOther, tH, tLine
    put empty into sBlockList
+   if sPanelOrder is not empty then
+      -- the board gave its own list (L rows), in its own order
+      put "<p><font size=16><b>" & pmHtml(pmConf("panel", "THE LIST")) & "</b></font></p><p></p>" into tH
+      put "-" & return & "-" & return after sBlockList
+      repeat for each line tName in sPanelOrder
+         if there is not a field tName then next repeat
+         put pmShort(tName) & tab & tName & return after tLine
+      end repeat
+      pmAddPanelLines tLine, tH
+      put "<p></p><p><font color=" & quote & "#8888A0" & quote & ">Click a line to fly there.</font></p>" after tH
+      set the htmlText of field "HUD_Blockers" to tH
+      set the dontWrap of field "HUD_Blockers" to false
+      exit pmFillBlockers
+   end if
    repeat for each key tName in sKind
       if sKind[tName] is "block" then
          put pmShort(tName) & tab & tName into tLine
@@ -381,6 +434,7 @@ function pmShort pChip
    local tText
    put line 1 of field pChip into tText
    if tText begins with "owner:" then delete char 1 to 7 of tText
+   if tText ends with " - click to list them" then delete char -21 to -1 of tText
    return char 3 to -1 of sPartOf[pChip] & ": " & tText
 end pmShort
 
@@ -523,7 +577,7 @@ command pmFocus pName
    repeat for each key tName in sKind
       if sKind[tName] is "zone" then next repeat
       if pName is empty then
-         put not sBlockersOnly or sKind[tName] is among the items of "block,review" into tOn
+         put not sBlockersOnly or sKind[tName] is among the items of pmConf("bkinds", "block,review") into tOn
       else
          put tName is among the lines of tLit into tOn
       end if
@@ -553,7 +607,7 @@ end pmToggleBlockers
 
 command pmRebuild
    local tCmd, tOut, tPath
-   put pmFolder() & "/tools/make_map.py" into tPath
+   put pmFolder() & "/" & pmConf("tool", "tools/make_map.py") into tPath
    if tPath begins with "//wsl$/Ubuntu" or tPath begins with "//wsl.localhost/Ubuntu" then
       set the itemDelimiter to "/"
       put "/" & item 5 to -1 of tPath into tPath
@@ -710,14 +764,22 @@ end pmPopupFiles
 
 -- the popup's text for a chip's files; fills sMenuMap for menuPick
 function pmFilesMenu pChip
-   local tFiles, tLine, tGroups, tGroup, tMenu, tLabel, tCount
+   local tFiles, tLine, tGroups, tGroup, tMenu, tLabel, tCount, tReview
    put the cFiles of field pChip into tFiles
    put empty into sMenuMap
    set the itemDelimiter to tab
    repeat for each line tLine in tFiles
       if item 1 of tLine is not among the lines of tGroups then put item 1 of tLine & return after tGroups
    end repeat
-   put "(" & the number of lines of tFiles && "files: open one, or mark it Reviewed / give Feedback" & return & "-" & return into tMenu
+   put false into tReview
+   repeat for each line tLine in tFiles
+      if item 5 of tLine is 1 then put true into tReview
+   end repeat
+   if tReview then
+      put "(" & the number of lines of tFiles && "files: open one, or mark it Reviewed / give Feedback" & return & "-" & return into tMenu
+   else
+      put "(" & the number of lines of tFiles && "lines: pick one to see it in Explorer" & return & "-" & return into tMenu
+   end if
    if the number of lines of tGroups > 1 then
       repeat for each line tGroup in tGroups
          put empty into tCount
@@ -763,7 +825,7 @@ end pmMenuItem
 -- menu text treats ( ! - / & and | as commands: keep them out of labels
 function pmMenuSafe pText
    replace "&" with "+" in pText
-   replace "/" with "-" in pText
+   replace "/" with numToCodepoint(8725) in pText -- a division slash: looks like / but is no menu command
    replace "|" with "-" in pText
    replace tab with " " in pText
    if char 1 of pText is among the items of "(,!,-" then put " " before pText
@@ -842,7 +904,7 @@ command pmFeedback pWinPath
 end pmFeedback
 
 command pmTellClaude
-   pmAppendLine "TELL_CLAUDE.txt", the short date && the long time & tab & "tell" & tab & "from the Project Map"
+   pmAppendLine "TELL_CLAUDE.txt", the short date && the long time & tab & "tell" & tab & "from the" && pmConf("bar", "PROJECT MAP")
    put "Told Claude" && the short time into field "HUD_Help"
 end pmTellClaude
 

@@ -54,4 +54,4 @@ Keys: **F** fit all, **B** blockers only (red and pink), **R** rebuild, **T** te
 - `tools/make_map.py` adds the counted half each rebuild: handlers per part, files waiting on the
   Status Browser, branches not merged, loose files, and a red string when a review waits over 2 days.
 - `map_data.txt` is what the stack draws (made by make_map.py; do not edit).
-- Code: `livecode/project_map.livecodescript` (the stack script; apply from the file).
+- Code: `../livecode/board_canvas.livecodescript`, the stack script shared with the On Git or Not board (apply from the file; headless checks: OXT-BEYOND/tests/t39_board_canvas.txt).
