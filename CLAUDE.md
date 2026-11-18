@@ -19,3 +19,4 @@
   LIB_LLMIN/LIB_DEV/PRIORITY_ORDER.txt. **Work from the top.** Size every new bubble (comments, next
   steps) in PriorityTube/claude_sizes.txt (id, Claude minutes, kind, why): `tools/tube_items.py` lists
   the unsized ones. Never reorder bubbles the owner placed.
+  Bubbles he takes off the tube (Delete) are listed in LIB_LLMIN/LIB_DEV/TUBE_REMOVED.txt: never work on them.

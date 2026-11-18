@@ -20,6 +20,7 @@ COMMENTS = os.path.join(PROJECTS, "LIB_LLMIN", "LIB_DEV", "BOARD_COMMENTS.txt")
 BOARD = os.path.join(LIB_DEV, "ProjectMap", "board.txt")
 SIZES = os.path.join(HERE, "claude_sizes.txt")
 OUT = os.path.join(HERE, "items.txt")
+REMOVED = os.path.join(PROJECTS, "LIB_LLMIN", "LIB_DEV", "TUBE_REMOVED.txt")  # the owner took these off the tube
 FACTOR = {"fun": 0.75, "utility": 0.85}
 SKIP_PARTS = ("GOAL", "YOU")
 
@@ -71,8 +72,18 @@ def sizes():
     return s
 
 
+def removed():
+    """ids the owner took off the tube (Delete in the tube): kept in items.txt so U can bring them back,
+    but never listed as work or as unsized"""
+    if not os.path.exists(REMOVED):
+        return set()
+    with open(REMOVED, encoding="utf-8") as f:
+        return {ln.split("\t")[1] for ln in f if ln.strip() and not ln.startswith("#") and "\t" in ln}
+
+
 def main():
     sz = sizes()
+    gone = removed()
     rows, unsized = [], []
     for iid, source, title, detail in comments() + next_steps():
         if iid in sz:
@@ -80,13 +91,15 @@ def main():
             score = round(float(minutes) * FACTOR.get(kind, 1.0), 1)
         else:
             minutes, kind, why, score = "?", "unsized", "Claude has not sized it yet", 99999
-            unsized.append(f"{iid}\t\t\t# {source}: {title}")
+            if iid not in gone:
+                unsized.append(f"{iid}\t\t\t# {source}: {title}")
         rows.append([iid, source, minutes, kind, score, title, detail, clean(why)])
     rows.sort(key=lambda r: (r[4], r[5].lower()))
     with open(OUT, "w", encoding="utf-8", newline="\n") as f:
         for r in rows:
             f.write("\t".join(str(c) for c in r) + "\n")
-    print(f"{OUT}: {len(rows)} bubbles, {len(unsized)} not sized by Claude yet")
+    print(f"{OUT}: {len(rows) - len(gone & {r[0] for r in rows})} bubbles, {len(unsized)} not sized by Claude yet, "
+          f"{len(gone)} removed by the owner")
     for u in unsized:
         print("  unsized:", u)
     return 0

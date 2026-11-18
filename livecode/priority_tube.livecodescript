@@ -6,7 +6,11 @@ script "priority_tube"
 -- slot in by Claude's rule around it.
 -- Data: items.txt beside the stack (tools/tube_items.py: board comments + the Project Map's next steps,
 -- with Claude's sizes from claude_sizes.txt). The order: LIB_LLMIN/LIB_DEV/PRIORITY_ORDER.txt.
--- Keys: arrows move the selected bubble, wheel scrolls, R reload, T tell Claude, Esc deselect.
+-- Remove: select a bubble, then Delete (or Backspace, or the panel's "Remove from the tube"): it leaves
+-- the tube for good, written to LIB_LLMIN/LIB_DEV/TUBE_REMOVED.txt (Claude does not work on it). U brings
+-- back the last one removed.
+-- Keys: arrows move the selected bubble, wheel scrolls, Delete removes, U undoes a removal, R reload,
+-- T tell Claude, Esc deselect.
 
 local sIds      -- the ids, top first, one a line
 local sItem     -- id -> its items.txt line: id source minutes kind score title detail why
@@ -16,6 +20,7 @@ local sHOf      -- id -> its height
 local sSel      -- the selected id
 local sDrag, sGrab, sDragFrom
 local sScroll   -- how far the tube is scrolled
+local sRemoved  -- the ids taken off the tube (TUBE_REMOVED.txt), one a line
 
 constant kTop = 44
 constant kPanelW = 380
@@ -66,10 +71,16 @@ command ptBuild
    put empty into sPlaced
    put empty into sIds
    put empty into sScroll
-   put ptRead(ptFolder() & "/items.txt") into tItems
+   put empty into sRemoved
    set the itemDelimiter to tab
+   repeat for each line tLine in ptRead(ptInboxFile("TUBE_REMOVED.txt"))
+      if char 1 of tLine is "#" or tLine is empty then next repeat
+      put item 2 of tLine & return after sRemoved
+   end repeat
+   put ptRead(ptFolder() & "/items.txt") into tItems
    repeat for each line tLine in tItems
       if tLine is empty then next repeat
+      if item 1 of tLine is among the lines of sRemoved then next repeat
       put tLine into sItem[item 1 of tLine]
       put item 1 of tLine & return after tNew -- in Claude's order (items.txt is sorted)
    end repeat
@@ -136,7 +147,7 @@ command ptMakeControls
    create field "Bar"
    ptStyle "Bar", "22,22,28", "235,235,235"
    set the textSize of field "Bar" to 13
-   set the htmlText of field "Bar" to "<p><b>PRIORITY TUBE</b>&nbsp;&nbsp;&nbsp;<font color=" & quote & "#A0A0B4" & quote & ">top = done first | drag a bubble to move it (dragging selects) | up / down arrows move the selected one, Shift = to the top / bottom | wheel scrolls | R reload | T tell Claude</font></p>"
+   set the htmlText of field "Bar" to "<p><b>PRIORITY TUBE</b>&nbsp;&nbsp;&nbsp;<font color=" & quote & "#A0A0B4" & quote & ">top = done first | drag a bubble to move it (dragging selects) | up / down arrows move the selected one, Shift = to the top / bottom | wheel scrolls  | Delete removes the selected | U brings it back | R reload | T tell Claude</font></p>"
    create graphic "Tube"
    set the style of graphic "Tube" to "roundrect"
    set the roundRadius of graphic "Tube" to 46
@@ -324,6 +335,10 @@ command ptFillPanel
          put "<p><font bgcolor=" & quote & ptHex(ptColour(tId)) & quote & ">&nbsp;&nbsp;" & tId & "&nbsp;&nbsp;</font></p>" after tH
       end repeat
       put "<p></p><p><font color=" & quote & "#8888A0" & quote & ">" & the number of lines of sIds && "bubbles. The order is saved for Claude in LIB_LLMIN/LIB_DEV/PRIORITY_ORDER.txt at every move.</font></p>" after tH
+      put "<p></p><p><b>To take a bubble off the tube for good:</b> select it, then Delete (or its Remove line here). U brings back the last one removed.</p>" after tH
+      if sRemoved is not empty then
+         put "<p><font color=" & quote & "#8888A0" & quote & ">" & the number of lines of sRemoved && "removed so far (LIB_LLMIN/LIB_DEV/TUBE_REMOVED.txt).</font></p>" after tH
+      end if
    else
       put "<p><font size=15><b>" & ptHtml(ptItem(tId, 6)) & "</b></font></p><p></p>" after tH
       put "<p><b>Number</b> " & lineOffset(tId, sIds) && "of" && the number of lines of sIds & "</p>" after tH
@@ -332,7 +347,8 @@ command ptFillPanel
       put "<p><b>Placed by</b> " & ptPlacedWords(tId) & "</p><p></p>" after tH
       put "<p><b>From</b> " & ptHtml(ptItem(tId, 2)) & "</p>" after tH
       put "<p><font color=" & quote & "#C8C8D8" & quote & ">" & ptHtml(ptItem(tId, 7)) & "</font></p><p></p>" after tH
-      put "<p><font color=" & quote & "#8888A0" & quote & ">Up / down arrows move it, Shift to the top / bottom. Esc or a click on the black deselects.</font></p>" after tH
+      put "<p><font color=" & quote & "#8888A0" & quote & ">Up / down arrows move it, Shift to the top / bottom. Esc or a click on the black deselects.</font></p><p></p>" after tH
+      put "<p><font color=" & quote & "#FF8C8C" & quote & "><a href=" & quote & "remove" & quote & ">Remove from the tube</a></font><font color=" & quote & "#8888A0" & quote & ">&nbsp;&nbsp;(Delete key; U brings it back)</font></p>" after tH
    end if
    set the htmlText of field "Panel" to tH
 end ptFillPanel
@@ -487,6 +503,9 @@ on keyDown pChar
       case "t"
          ptTell
          break
+      case "u"
+         ptUnremove
+         break
       default
          pass keyDown
    end switch
@@ -495,6 +514,80 @@ end keyDown
 on escapeKey
    ptSelect empty
 end escapeKey
+
+---------------------------------------------------------------- removing bubbles
+-- take a bubble off the tube for good: a line in LIB_LLMIN/LIB_DEV/TUBE_REMOVED.txt
+command ptRemove pId
+   local tFile, tText, tAt, tNext, tScroll
+   if pId is empty or pId is not among the lines of sIds then exit ptRemove
+   put lineOffset(pId, sIds) into tAt
+   put ptInboxFile("TUBE_REMOVED.txt") into tFile
+   put ptRead(tFile) into tText
+   if tText is empty then
+      put "# Bubbles the owner took off the Priority Tube: Claude does not work on them. U in the tube brings back the last." & return into tText
+      put "# date time, id, title" & return after tText
+   end if
+   if the last char of tText is not return then put return after tText
+   put the short date && the long time & tab & pId & tab & ptItem(pId, 6) & return after tText
+   put textEncode(tText, "UTF-8") into URL ("binfile:" & tFile)
+   put sScroll into tScroll
+   ptBuild
+   put tScroll into sScroll
+   -- the bubble that took its place is selected, so Delete can go on down the tube
+   put line min(tAt, the number of lines of sIds) of sIds into tNext
+   ptSelect tNext
+   ptLayout
+   set the htmlText of field "Bar" to "<p><b>PRIORITY TUBE</b>&nbsp;&nbsp;&nbsp;<font color=" & quote & "#FFE88C" & quote & ">Removed:" && ptHtml(ptRemovedTitle(pId)) & "&nbsp;&nbsp;&nbsp;U brings it back</font></p>"
+end ptRemove
+
+-- bring back the last bubble removed (it slots in again by Claude's rule)
+command ptUnremove
+   local tFile, tText, tLine, tId, tScroll, i
+   put ptInboxFile("TUBE_REMOVED.txt") into tFile
+   put ptRead(tFile) into tText
+   repeat with i = the number of lines of tText down to 1
+      put line i of tText into tLine
+      if char 1 of tLine is "#" or tLine is empty then next repeat
+      set the itemDelimiter to tab
+      put item 2 of tLine into tId
+      delete line i of tText
+      exit repeat
+   end repeat
+   if tId is empty then exit ptUnremove
+   put textEncode(tText, "UTF-8") into URL ("binfile:" & tFile)
+   put sScroll into tScroll
+   ptBuild
+   put tScroll into sScroll
+   if tId is among the lines of sIds then
+      ptSelect tId
+      ptLayout
+      ptShow tId
+   end if
+   set the htmlText of field "Bar" to "<p><b>PRIORITY TUBE</b>&nbsp;&nbsp;&nbsp;<font color=" & quote & "#FFE88C" & quote & ">Brought back:" && ptHtml(ptItem(tId, 6)) & "</font></p>"
+end ptUnremove
+
+function ptRemovedTitle pId
+   local tLine
+   set the itemDelimiter to tab
+   repeat for each line tLine in ptRead(ptInboxFile("TUBE_REMOVED.txt"))
+      if item 2 of tLine is pId then return item 3 of tLine
+   end repeat
+   return pId
+end ptRemovedTitle
+
+on deleteKey
+   if sSel is empty then pass deleteKey
+   ptRemove sSel
+end deleteKey
+
+on backspaceKey
+   if sSel is empty then pass backspaceKey
+   ptRemove sSel
+end backspaceKey
+
+on linkClicked pLink
+   if pLink is "remove" and sSel is not empty then ptRemove sSel
+end linkClicked
 
 ---------------------------------------------------------------- reload and tell
 command ptReload
