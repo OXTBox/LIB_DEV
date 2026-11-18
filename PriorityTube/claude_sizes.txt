@@ -25,3 +25,5 @@ c1794977779027	40	utility	"Leave comment" and "Explore here..." on every right-c
 c1794978427043	15	plan	The boards as the way into the files (they show relationships Explorer cannot): goes with the LIB_MENU bubble, best done together
 n-48f7ab7f	40	utility	Ten scripts in seven projects ask Users.Title instead of writing their own title (and the real name leaves those titles)
 n-863388af	90	utility	Resizing by stick= and four more widget kinds for LIB_GUI; best after you have looked at notes.gui
+n-28c49a0c	60	utility	The boards' menu code becomes Menu.* in LIB_MENU with a test; the boards then call it
+n-987a959f	45	fun	A menu is a small text file anyone can edit: add a line, get a menu item, no script needed

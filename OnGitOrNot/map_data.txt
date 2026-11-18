@@ -1,4 +1,4 @@
-# map_data.txt made 2026-11-17 22:28 by OnGitOrNot/tools/git_map.py; do not edit
+# map_data.txt made 2026-11-17 22:52 by OnGitOrNot/tools/git_map.py; do not edit
 B	title	FOR OWNER | On Git or Not
 B	bar	ON GIT OR NOT
 B	help	wheel zoom | drag black to pan | drag a header to move | click a box for its menu | right-click anything to comment | F fit  B not-on-git only  R rebuild  T tell Claude  0 100%
@@ -113,125 +113,130 @@ F	LIB_GAMES#4	rule __pycache__/  [2]	tools/__pycache__/udg_to_udead.cpython-314.
 P	LIB_HOWTO	part	390	669	280	52	LIB_HOWTO	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_HOWTO
 C	LIB_HOWTO#1	LIB_HOWTO	has	18	58	262	23	7 files on git (4 KB)
 P	LIB_RTS	part	390	788	280	52	LIB_RTS	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_RTS
-C	LIB_RTS#1	LIB_RTS	has	18	58	262	23	7 files on git (97 KB)
-P	LIB_TTRPG	part	390	907	280	52	LIB_TTRPG	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG
-C	LIB_TTRPG#1	LIB_TTRPG	has	18	58	262	23	38 files on git (392 KB)
-C	LIB_TTRPG#2	LIB_TTRPG	ignored	18	85	262	53	78 files hidden by .gitignore (1.2 MB): work/, *_dev_*, __pycache__/ - click to list them
-F	LIB_TTRPG#2	rule work/  [75]	work/data/characters/player.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\data\characters\player.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/data/logs/2026-11-15_103551_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\data\logs\2026-11-15_103551_session.jsonl	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/data/logs/2026-11-15_111057_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\data\logs\2026-11-15_111057_session.jsonl	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/data/logs/2026-11-15_111906_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\data\logs\2026-11-15_111906_session.jsonl	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/data/scenes/2026-11-15_103555_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\data\scenes\2026-11-15_103555_flooded_crypt.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/data/scenes/2026-11-15_111102_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\data\scenes\2026-11-15_111102_flooded_crypt.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/data/scenes/2026-11-15_111910_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\data\scenes\2026-11-15_111910_flooded_crypt.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/live_lc/characters/eliana.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\characters\eliana.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/live_lc/characters/player.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\characters\player.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/live_lc/logs/2026-11-15_100628_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\logs\2026-11-15_100628_session.jsonl	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/live_lc/logs/2026-11-15_100653_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\logs\2026-11-15_100653_session.jsonl	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/live_lc/logs/2026-11-15_100720_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\logs\2026-11-15_100720_session.jsonl	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/live_lc/scenes/2026-11-15_100633_the_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\scenes\2026-11-15_100633_the_flooded_crypt.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/live_lc/scenes/2026-11-15_100706_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\scenes\2026-11-15_100706_flooded_crypt.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/live_lc/scenes/2026-11-15_100725_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\scenes\2026-11-15_100725_flooded_crypt.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/selfplay/2026-11-15_103630_flooded_crypt.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\selfplay\2026-11-15_103630_flooded_crypt.txt	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/selfplay/2026-11-15_111147_flooded_crypt.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\selfplay\2026-11-15_111147_flooded_crypt.txt	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/selfplay_skills_run.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\selfplay_skills_run.txt	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/characters/player.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\characters\player.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/logs/2026-11-15_100825_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\logs\2026-11-15_100825_session.jsonl	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/logs/2026-11-15_101109_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\logs\2026-11-15_101109_session.jsonl	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/logs/2026-11-15_101346_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\logs\2026-11-15_101346_session.jsonl	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100829_a_faded_tomb.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100829_a_faded_tomb.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100836_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100836_goblin_toll_bridge.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100843_the_vanished_keeper.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100843_the_vanished_keeper.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100849_cursed_masks.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100849_cursed_masks.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100855_the_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100855_the_flooded_crypt.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100901_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100901_goblin_toll_bridge.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100908_flood_stained_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100908_flood_stained_crypt.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100918_the_flood_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100918_the_flood_crypt.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100926_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100926_goblin_toll_bridge.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100934_the_vanishing_keeper.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100934_the_vanishing_keeper.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100943_cursed_masks.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100943_cursed_masks.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100951_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100951_flooded_crypt.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101000_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101000_goblin_toll_bridge.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101012_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101012_flooded_crypt.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101019_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101019_goblin_toll_bridge.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101026_the_vanishing_keeper.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101026_the_vanishing_keeper.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101033_cursed_masks.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101033_cursed_masks.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101040_crypt_of_echoes.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101040_crypt_of_echoes.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101048_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101048_goblin_toll_bridge.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101114_the_frigid_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101114_the_frigid_crypt.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101126_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101126_goblin_toll_bridge.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101138_the_lighthouse_keeper.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101138_the_lighthouse_keeper.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101157_cursed_masks.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101157_cursed_masks.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101220_the_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101220_the_flooded_crypt.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101245_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101245_goblin_toll_bridge.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101320_the_vanishing_lightkeeper.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101320_the_vanishing_lightkeeper.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101338_cursed_masks.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101338_cursed_masks.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101351_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101351_flooded_crypt.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/characters/player.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\characters\player.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/logs/2026-11-15_101422_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\logs\2026-11-15_101422_session.jsonl	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101439_flooded_crypt_under_a_chapel.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101439_flooded_crypt_under_a_chapel.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101506_toll_bridge_run_by_goblins.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101506_toll_bridge_run_by_goblins.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101534_vanished_lighthouse_keeper.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101534_vanished_lighthouse_keeper.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101600_the_market_stall_of_cursed_masks.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101600_the_market_stall_of_cursed_masks.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101624_the_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101624_the_flooded_crypt.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101647_toll_bridge_run_by_goblins.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101647_toll_bridge_run_by_goblins.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101714_flooded_crypt_beneath_the_chapel.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101714_flooded_crypt_beneath_the_chapel.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101740_flooded_crypt_scene.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101740_flooded_crypt_scene.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101829_toll_bridge_run_by_goblins.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101829_toll_bridge_run_by_goblins.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101916_the_mysterious_lighthouse.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101916_the_mysterious_lighthouse.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102002_the_cursed_mask_market_stalls.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102002_the_cursed_mask_market_stalls.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102049_the_flooded_crypt_under_the_chapel.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102049_the_flooded_crypt_under_the_chapel.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102138_toll_bridge_run_by_goblins.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102138_toll_bridge_run_by_goblins.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102227_flooded_crypt_under_a_chapel.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102227_flooded_crypt_under_a_chapel.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102246_toll_bridge_run_by_goblins.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102246_toll_bridge_run_by_goblins.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102306_the_vanishing_lighthouse_keeper.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102306_the_vanishing_lighthouse_keeper.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102324_cursed_masks.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102324_cursed_masks.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102345_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102345_flooded_crypt.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102405_toll_bridge_run_by_goblins.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102405_toll_bridge_run_by_goblins.json	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune_gemma.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune_gemma.txt	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune_gemma_w2.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune_gemma_w2.txt	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune_gemma_w3.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune_gemma_w3.txt	0	0
-F	LIB_TTRPG#2	rule work/  [75]	work/tune_qwen.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune_qwen.txt	0	0
-F	LIB_TTRPG#2	rule *_dev_*  [2]	client/TTRPG_Client_dev_20261115_131247.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\client\TTRPG_Client_dev_20261115_131247.oxtstack	0	0
-F	LIB_TTRPG#2	rule *_dev_*  [2]	client/TTRPG_Client_dev_20261115_131905.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\client\TTRPG_Client_dev_20261115_131905.oxtstack	0	0
-F	LIB_TTRPG#2	rule __pycache__/  [1]	ref/__pycache__/ttrpg_ref.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\ref\__pycache__\ttrpg_ref.cpython-314.pyc	0	0
-P	PROMPT_GLAZE	core	390	1083	280	52	PROMPT_GLAZE	Repository	\\wsl$\Ubuntu\home\igame3d\projects\PROMPT_GLAZE
+C	LIB_RTS#1	LIB_RTS	has	18	58	262	38	7 files on git (97 KB), branch users-title checked out, not main
+C	LIB_RTS#2	LIB_RTS	review	18	100	262	38	branch users-title not merged into main
+P	LIB_TTRPG	part	390	964	280	52	LIB_TTRPG	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG
+C	LIB_TTRPG#1	LIB_TTRPG	has	18	58	262	38	38 files on git (392 KB), branch users-title checked out, not main
+C	LIB_TTRPG#2	LIB_TTRPG	review	18	100	262	38	branch users-title not merged into main
+C	LIB_TTRPG#3	LIB_TTRPG	ignored	18	142	262	53	78 files hidden by .gitignore (1.2 MB): work/, *_dev_*, __pycache__/ - click to list them
+F	LIB_TTRPG#3	rule work/  [75]	work/data/characters/player.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\data\characters\player.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/data/logs/2026-11-15_103551_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\data\logs\2026-11-15_103551_session.jsonl	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/data/logs/2026-11-15_111057_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\data\logs\2026-11-15_111057_session.jsonl	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/data/logs/2026-11-15_111906_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\data\logs\2026-11-15_111906_session.jsonl	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/data/scenes/2026-11-15_103555_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\data\scenes\2026-11-15_103555_flooded_crypt.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/data/scenes/2026-11-15_111102_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\data\scenes\2026-11-15_111102_flooded_crypt.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/data/scenes/2026-11-15_111910_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\data\scenes\2026-11-15_111910_flooded_crypt.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/live_lc/characters/eliana.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\characters\eliana.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/live_lc/characters/player.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\characters\player.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/live_lc/logs/2026-11-15_100628_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\logs\2026-11-15_100628_session.jsonl	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/live_lc/logs/2026-11-15_100653_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\logs\2026-11-15_100653_session.jsonl	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/live_lc/logs/2026-11-15_100720_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\logs\2026-11-15_100720_session.jsonl	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/live_lc/scenes/2026-11-15_100633_the_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\scenes\2026-11-15_100633_the_flooded_crypt.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/live_lc/scenes/2026-11-15_100706_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\scenes\2026-11-15_100706_flooded_crypt.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/live_lc/scenes/2026-11-15_100725_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\live_lc\scenes\2026-11-15_100725_flooded_crypt.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/selfplay/2026-11-15_103630_flooded_crypt.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\selfplay\2026-11-15_103630_flooded_crypt.txt	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/selfplay/2026-11-15_111147_flooded_crypt.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\selfplay\2026-11-15_111147_flooded_crypt.txt	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/selfplay_skills_run.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\selfplay_skills_run.txt	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/characters/player.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\characters\player.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/logs/2026-11-15_100825_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\logs\2026-11-15_100825_session.jsonl	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/logs/2026-11-15_101109_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\logs\2026-11-15_101109_session.jsonl	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/logs/2026-11-15_101346_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\logs\2026-11-15_101346_session.jsonl	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100829_a_faded_tomb.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100829_a_faded_tomb.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100836_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100836_goblin_toll_bridge.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100843_the_vanished_keeper.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100843_the_vanished_keeper.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100849_cursed_masks.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100849_cursed_masks.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100855_the_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100855_the_flooded_crypt.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100901_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100901_goblin_toll_bridge.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100908_flood_stained_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100908_flood_stained_crypt.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100918_the_flood_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100918_the_flood_crypt.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100926_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100926_goblin_toll_bridge.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100934_the_vanishing_keeper.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100934_the_vanishing_keeper.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100943_cursed_masks.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100943_cursed_masks.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_100951_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_100951_flooded_crypt.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101000_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101000_goblin_toll_bridge.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101012_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101012_flooded_crypt.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101019_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101019_goblin_toll_bridge.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101026_the_vanishing_keeper.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101026_the_vanishing_keeper.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101033_cursed_masks.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101033_cursed_masks.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101040_crypt_of_echoes.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101040_crypt_of_echoes.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101048_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101048_goblin_toll_bridge.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101114_the_frigid_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101114_the_frigid_crypt.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101126_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101126_goblin_toll_bridge.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101138_the_lighthouse_keeper.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101138_the_lighthouse_keeper.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101157_cursed_masks.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101157_cursed_masks.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101220_the_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101220_the_flooded_crypt.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101245_goblin_toll_bridge.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101245_goblin_toll_bridge.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101320_the_vanishing_lightkeeper.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101320_the_vanishing_lightkeeper.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101338_cursed_masks.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101338_cursed_masks.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/gemma-2-2b-it-abliterated/scenes/2026-11-15_101351_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\gemma-2-2b-it-abliterated\scenes\2026-11-15_101351_flooded_crypt.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/characters/player.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\characters\player.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/logs/2026-11-15_101422_session.jsonl	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\logs\2026-11-15_101422_session.jsonl	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101439_flooded_crypt_under_a_chapel.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101439_flooded_crypt_under_a_chapel.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101506_toll_bridge_run_by_goblins.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101506_toll_bridge_run_by_goblins.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101534_vanished_lighthouse_keeper.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101534_vanished_lighthouse_keeper.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101600_the_market_stall_of_cursed_masks.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101600_the_market_stall_of_cursed_masks.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101624_the_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101624_the_flooded_crypt.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101647_toll_bridge_run_by_goblins.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101647_toll_bridge_run_by_goblins.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101714_flooded_crypt_beneath_the_chapel.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101714_flooded_crypt_beneath_the_chapel.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101740_flooded_crypt_scene.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101740_flooded_crypt_scene.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101829_toll_bridge_run_by_goblins.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101829_toll_bridge_run_by_goblins.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_101916_the_mysterious_lighthouse.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_101916_the_mysterious_lighthouse.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102002_the_cursed_mask_market_stalls.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102002_the_cursed_mask_market_stalls.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102049_the_flooded_crypt_under_the_chapel.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102049_the_flooded_crypt_under_the_chapel.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102138_toll_bridge_run_by_goblins.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102138_toll_bridge_run_by_goblins.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102227_flooded_crypt_under_a_chapel.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102227_flooded_crypt_under_a_chapel.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102246_toll_bridge_run_by_goblins.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102246_toll_bridge_run_by_goblins.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102306_the_vanishing_lighthouse_keeper.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102306_the_vanishing_lighthouse_keeper.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102324_cursed_masks.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102324_cursed_masks.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102345_flooded_crypt.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102345_flooded_crypt.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune/qwen2.5-7b-instruct-1m/scenes/2026-11-15_102405_toll_bridge_run_by_goblins.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune\qwen2.5-7b-instruct-1m\scenes\2026-11-15_102405_toll_bridge_run_by_goblins.json	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune_gemma.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune_gemma.txt	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune_gemma_w2.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune_gemma_w2.txt	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune_gemma_w3.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune_gemma_w3.txt	0	0
+F	LIB_TTRPG#3	rule work/  [75]	work/tune_qwen.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\work\tune_qwen.txt	0	0
+F	LIB_TTRPG#3	rule *_dev_*  [2]	client/TTRPG_Client_dev_20261115_131247.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\client\TTRPG_Client_dev_20261115_131247.oxtstack	0	0
+F	LIB_TTRPG#3	rule *_dev_*  [2]	client/TTRPG_Client_dev_20261115_131905.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\client\TTRPG_Client_dev_20261115_131905.oxtstack	0	0
+F	LIB_TTRPG#3	rule __pycache__/  [1]	ref/__pycache__/ttrpg_ref.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TTRPG\ref\__pycache__\ttrpg_ref.cpython-314.pyc	0	0
+P	PROMPT_GLAZE	core	390	1197	280	52	PROMPT_GLAZE	Repository	\\wsl$\Ubuntu\home\igame3d\projects\PROMPT_GLAZE
 C	PROMPT_GLAZE#1	PROMPT_GLAZE	has	18	58	262	23	2 files on git (2 KB)
 P	LIB_BIT	core	780	260	280	52	LIB_BIT	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT
-C	LIB_BIT#1	LIB_BIT	has	18	58	262	23	58 files on git (1.1 MB)
-C	LIB_BIT#2	LIB_BIT	ignored	18	85	262	53	9 files hidden by .gitignore (184 KB): tests/_*, __pycache__/ - click to list them
-F	LIB_BIT#2	rule tests/_*  [8]	editor/tests/_py_pick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_pick.txt	0	0
-F	LIB_BIT#2	rule tests/_*  [8]	editor/tests/_py_segments.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_segments.txt	0	0
-F	LIB_BIT#2	rule tests/_*  [8]	editor/tests/_py_segments_glyph.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_segments_glyph.txt	0	0
-F	LIB_BIT#2	rule tests/_*  [8]	editor/tests/_py_upgraded.cellmap	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_upgraded.cellmap	0	0
-F	LIB_BIT#2	rule tests/_*  [8]	editor/tests/_py_walk.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_walk.txt	0	0
-F	LIB_BIT#2	rule tests/_*  [8]	editor/tests/_py_walk_glyph.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_walk_glyph.txt	0	0
-F	LIB_BIT#2	rule tests/_*  [8]	editor/tests/_test_heights.cellmap	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_test_heights.cellmap	0	0
-F	LIB_BIT#2	rule tests/_*  [8]	editor/tests/_test_saved.cellmap	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_test_saved.cellmap	0	0
-F	LIB_BIT#2	rule __pycache__/  [1]	editor/python/__pycache__/cellmap.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\python\__pycache__\cellmap.cpython-314.pyc	0	0
-P	LIB_BVH	part	780	436	280	52	LIB_BVH	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BVH
+C	LIB_BIT#1	LIB_BIT	has	18	58	262	38	58 files on git (1.1 MB), branch users-title checked out, not main
+C	LIB_BIT#2	LIB_BIT	review	18	100	262	38	branch users-title not merged into main
+C	LIB_BIT#3	LIB_BIT	ignored	18	142	262	53	9 files hidden by .gitignore (184 KB): tests/_*, __pycache__/ - click to list them
+F	LIB_BIT#3	rule tests/_*  [8]	editor/tests/_py_pick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_pick.txt	0	0
+F	LIB_BIT#3	rule tests/_*  [8]	editor/tests/_py_segments.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_segments.txt	0	0
+F	LIB_BIT#3	rule tests/_*  [8]	editor/tests/_py_segments_glyph.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_segments_glyph.txt	0	0
+F	LIB_BIT#3	rule tests/_*  [8]	editor/tests/_py_upgraded.cellmap	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_upgraded.cellmap	0	0
+F	LIB_BIT#3	rule tests/_*  [8]	editor/tests/_py_walk.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_walk.txt	0	0
+F	LIB_BIT#3	rule tests/_*  [8]	editor/tests/_py_walk_glyph.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_walk_glyph.txt	0	0
+F	LIB_BIT#3	rule tests/_*  [8]	editor/tests/_test_heights.cellmap	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_test_heights.cellmap	0	0
+F	LIB_BIT#3	rule tests/_*  [8]	editor/tests/_test_saved.cellmap	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_test_saved.cellmap	0	0
+F	LIB_BIT#3	rule __pycache__/  [1]	editor/python/__pycache__/cellmap.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\python\__pycache__\cellmap.cpython-314.pyc	0	0
+P	LIB_BVH	part	780	493	280	52	LIB_BVH	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BVH
 C	LIB_BVH#1	LIB_BVH	has	18	58	262	23	74 files on git (18 MB)
 C	LIB_BVH#2	LIB_BVH	private	18	85	262	38	private: BVH clips: rights not settled, kept on this machine
-P	LIB_DATA	part	780	597	280	52	LIB_DATA	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DATA
+P	LIB_DATA	part	780	654	280	52	LIB_DATA	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DATA
 C	LIB_DATA#1	LIB_DATA	has	18	58	262	23	6 files on git (25 KB)
-P	LIB_GENERICA	part	780	716	280	52	LIB_GENERICA	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GENERICA
+P	LIB_GENERICA	part	780	773	280	52	LIB_GENERICA	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GENERICA
 C	LIB_GENERICA#1	LIB_GENERICA	has	18	58	262	23	160 files on git (669 KB)
 C	LIB_GENERICA#2	LIB_GENERICA	ignored	18	85	262	38	2 files hidden by .gitignore (20 KB): __pycache__/ - click to list them
 F	LIB_GENERICA#2	rule __pycache__/  [2]	python/__pycache__/generica.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GENERICA\python\__pycache__\generica.cpython-314.pyc	0	0
 F	LIB_GENERICA#2	rule __pycache__/  [2]	tools/__pycache__/extract_script_examples.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GENERICA\tools\__pycache__\extract_script_examples.cpython-314.pyc	0	0
-P	LIB_GLOBALS	part	780	877	280	52	LIB_GLOBALS	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GLOBALS
+P	LIB_GLOBALS	part	780	934	280	52	LIB_GLOBALS	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GLOBALS
 C	LIB_GLOBALS#1	LIB_GLOBALS	has	18	58	262	23	9 files on git (501 KB)
 C	LIB_GLOBALS#2	LIB_GLOBALS	ignored	18	85	262	38	2 files hidden by .gitignore (64 KB): __pycache__/ - click to list them
 F	LIB_GLOBALS#2	rule __pycache__/  [2]	python/__pycache__/lib_globals.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GLOBALS\python\__pycache__\lib_globals.cpython-314.pyc	0	0
 F	LIB_GLOBALS#2	rule __pycache__/  [2]	tools/__pycache__/globals_census.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GLOBALS\tools\__pycache__\globals_census.cpython-314.pyc	0	0
-P	LIB_GUI	part	780	1038	280	52	LIB_GUI	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI
+P	LIB_GUI	part	780	1095	280	52	LIB_GUI	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI
 C	LIB_GUI#1	LIB_GUI	has	18	58	262	38	7 files on git (51 KB), branch gui-step1 checked out, not main
 C	LIB_GUI#2	LIB_GUI	review	18	100	262	23	branch gui-step1 not merged into main
-P	LIB_LISTS	part	780	1199	280	52	LIB_LISTS	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LISTS
+P	LIB_LISTS	part	780	1256	280	52	LIB_LISTS	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LISTS
 C	LIB_LISTS#1	LIB_LISTS	has	18	58	262	23	290 files on git (882 KB)
-P	LIB_MAP	part	780	1318	280	52	LIB_MAP	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MAP
+P	LIB_MAP	part	780	1375	280	52	LIB_MAP	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MAP
 C	LIB_MAP#1	LIB_MAP	has	18	58	262	23	7 files on git (36 KB)
-P	LIB_MOCAP	part	780	1437	280	52	LIB_MOCAP	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP
+P	LIB_MENU	part	780	1494	280	52	LIB_MENU	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MENU
+C	LIB_MENU#1	LIB_MENU	has	18	58	262	23	3 files on git (4 KB)
+P	LIB_MOCAP	part	1110	260	280	52	LIB_MOCAP	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP
 C	LIB_MOCAP#1	LIB_MOCAP	has	18	58	262	23	157 files on git (2.4 MB)
 C	LIB_MOCAP#2	LIB_MOCAP	ignored	18	85	262	83	71 files hidden by .gitignore (9.2 MB): library/*/*_stick.txt, __pycache__/, input/*, library/*/*_skinned.glb - click to list them
 F	LIB_MOCAP#2	rule library/*/*_stick.txt  [60]	library/Animazoo_Dancing_-_Break_Dancing/Animazoo_Dancing_-_Break_Dancing_stick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Animazoo_Dancing_-_Break_Dancing\Animazoo_Dancing_-_Break_Dancing_stick.txt	0	0
@@ -305,21 +310,22 @@ F	LIB_MOCAP#2	rule input/*  [3]	input/obj/bvhjacky_wtf.obj	\\wsl$\Ubuntu\home\ig
 F	LIB_MOCAP#2	rule input/*  [3]	input/obj/these_May_Just_Be_Conversions_from_WTF_With_skeleton.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\input\obj\these_May_Just_Be_Conversions_from_WTF_With_skeleton.txt	0	0
 F	LIB_MOCAP#2	rule library/*/*_skinned.glb  [1]	library/FreeBVH_wall/FreeBVH_wall_skinned.glb	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\FreeBVH_wall\FreeBVH_wall_skinned.glb	0	0
 F	LIB_MOCAP#2	rule library/*/*_clip.txt  [1]	library/Video_To_Mocap_Example_1/Video_To_Mocap_Example_1_clip.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\library\Video_To_Mocap_Example_1\Video_To_Mocap_Example_1_clip.txt	0	0
-P	LIB_RAYGUI	part	1110	260	280	52	LIB_RAYGUI	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_RAYGUI
+P	LIB_RAYGUI	part	1110	466	280	52	LIB_RAYGUI	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_RAYGUI
 C	LIB_RAYGUI#1	LIB_RAYGUI	has	18	58	262	23	3 files on git (17 KB)
-P	LIB_SCRIPTBLOCKS	part	1110	379	280	52	LIB_SCRIPTBLOCKS	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SCRIPTBLOCKS
-C	LIB_SCRIPTBLOCKS#1	LIB_SCRIPTBLOCKS	has	18	58	262	23	6 files on git (25 KB)
-C	LIB_SCRIPTBLOCKS#2	LIB_SCRIPTBLOCKS	ignored	18	85	262	38	1 file hidden by .gitignore (15 KB): __pycache__/ - click to list them
-F	LIB_SCRIPTBLOCKS#2	rule __pycache__/  [1]	tools/__pycache__/harvest_blocks.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SCRIPTBLOCKS\tools\__pycache__\harvest_blocks.cpython-314.pyc	0	0
-P	LIB_THEME	part	1110	540	280	52	LIB_THEME	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_THEME
+P	LIB_SCRIPTBLOCKS	part	1110	585	280	52	LIB_SCRIPTBLOCKS	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SCRIPTBLOCKS
+C	LIB_SCRIPTBLOCKS#1	LIB_SCRIPTBLOCKS	has	18	58	262	38	6 files on git (25 KB), branch users-title checked out, not main
+C	LIB_SCRIPTBLOCKS#2	LIB_SCRIPTBLOCKS	review	18	100	262	38	branch users-title not merged into main
+C	LIB_SCRIPTBLOCKS#3	LIB_SCRIPTBLOCKS	ignored	18	142	262	38	1 file hidden by .gitignore (15 KB): __pycache__/ - click to list them
+F	LIB_SCRIPTBLOCKS#3	rule __pycache__/  [1]	tools/__pycache__/harvest_blocks.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SCRIPTBLOCKS\tools\__pycache__\harvest_blocks.cpython-314.pyc	0	0
+P	LIB_THEME	part	1110	803	280	52	LIB_THEME	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_THEME
 C	LIB_THEME#1	LIB_THEME	has	18	58	262	23	6 files on git (25 KB)
 C	LIB_THEME#2	LIB_THEME	ignored	18	85	262	38	1 file hidden by .gitignore (19 KB): *_dev_* - click to list them
 F	LIB_THEME#2	rule *_dev_*  [1]	Theme_Studio_dev_20261115_133543.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_THEME\Theme_Studio_dev_20261115_133543.oxtstack	0	0
-P	LIB_TOOLBAR	part	1110	701	280	52	LIB_TOOLBAR	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TOOLBAR
+P	LIB_TOOLBAR	part	1110	964	280	52	LIB_TOOLBAR	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TOOLBAR
 C	LIB_TOOLBAR#1	LIB_TOOLBAR	has	18	58	262	23	3 files on git (16 KB)
-P	LIB_TRACE	part	1110	820	280	52	LIB_TRACE	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TRACE
+P	LIB_TRACE	part	1110	1083	280	52	LIB_TRACE	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TRACE
 C	LIB_TRACE#1	LIB_TRACE	has	18	58	262	23	5 files on git (11 KB)
-P	LIB_XTJSON	part	1110	939	280	52	LIB_XTJSON	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_XTJSON
+P	LIB_XTJSON	part	1110	1202	280	52	LIB_XTJSON	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_XTJSON
 C	LIB_XTJSON#1	LIB_XTJSON	has	18	58	262	23	21 files on git (189 KB)
 C	LIB_XTJSON#2	LIB_XTJSON	ignored	18	85	262	38	3 files hidden by .gitignore (60 KB): __pycache__/ - click to list them
 F	LIB_XTJSON#2	rule __pycache__/  [3]	mcp/__pycache__/xtjson_tools.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_XTJSON\mcp\__pycache__\xtjson_tools.cpython-314.pyc	0	0
@@ -387,12 +393,13 @@ F	LIB_BIN#2	rule *  [238]	livecode-server/7.1.4-win-x86/  [1 file, 10 MB]	\\wsl$
 C	LIB_BIN#3	LIB_BIN	demo	18	127	262	53	big, on this disk only: livecode-server/ 66 MB - click to list them
 F	LIB_BIN#3	LIB_BIN	livecode-server	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIN\livecode-server	1	0
 P	LIB_BUILD	part	1500	478	280	52	LIB_BUILD	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BUILD
-C	LIB_BUILD#1	LIB_BUILD	has	18	58	262	23	5 files on git (12 KB)
-C	LIB_BUILD#2	LIB_BUILD	ignored	18	85	262	53	3,177 files hidden by .gitignore (311 MB): Vibecodext3d_Build_*/ - click to list them
-F	LIB_BUILD#2	rule Vibecodext3d_Build_*/  [3177]	Vibecodext3d_Build_11142026/  [3,177 files, 311 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BUILD\Vibecodext3d_Build_11142026	1	0
-C	LIB_BUILD#3	LIB_BUILD	demo	18	142	262	53	big, on this disk only: Vibecodext3d_Build_11142026/ 311 MB - click to list them
-F	LIB_BUILD#3	LIB_BUILD	Vibecodext3d_Build_11142026	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BUILD\Vibecodext3d_Build_11142026	1	0
-P	LIB_COMFY	part	1500	711	280	52	LIB_COMFY	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_COMFY
+C	LIB_BUILD#1	LIB_BUILD	has	18	58	262	38	5 files on git (12 KB), branch users-title checked out, not main
+C	LIB_BUILD#2	LIB_BUILD	review	18	100	262	38	branch users-title not merged into main
+C	LIB_BUILD#3	LIB_BUILD	ignored	18	142	262	53	3,177 files hidden by .gitignore (311 MB): Vibecodext3d_Build_*/ - click to list them
+F	LIB_BUILD#3	rule Vibecodext3d_Build_*/  [3177]	Vibecodext3d_Build_11142026/  [3,177 files, 311 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BUILD\Vibecodext3d_Build_11142026	1	0
+C	LIB_BUILD#4	LIB_BUILD	demo	18	199	262	53	big, on this disk only: Vibecodext3d_Build_11142026/ 311 MB - click to list them
+F	LIB_BUILD#4	LIB_BUILD	Vibecodext3d_Build_11142026	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BUILD\Vibecodext3d_Build_11142026	1	0
+P	LIB_COMFY	part	1500	768	280	52	LIB_COMFY	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_COMFY
 C	LIB_COMFY#1	LIB_COMFY	has	18	58	262	53	22 files on git (64 KB), branch comfy-vector-pong checked out, not main
 C	LIB_COMFY#2	LIB_COMFY	review	18	115	262	38	branch comfy-vector-pong not merged into main
 C	LIB_COMFY#3	LIB_COMFY	ignored	18	157	262	38	6 files hidden by .gitignore (82 KB): __pycache__/ - click to list them
@@ -402,23 +409,15 @@ F	LIB_COMFY#3	rule __pycache__/  [6]	ComfyUI-Vibecode3D/__pycache__/assemble.cpy
 F	LIB_COMFY#3	rule __pycache__/  [6]	ComfyUI-Vibecode3D/__pycache__/assemble.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_COMFY\ComfyUI-Vibecode3D\__pycache__\assemble.cpython-314.pyc	0	0
 F	LIB_COMFY#3	rule __pycache__/  [6]	ComfyUI-Vibecode3D/__pycache__/preview.cpython-313.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_COMFY\ComfyUI-Vibecode3D\__pycache__\preview.cpython-313.pyc	0	0
 F	LIB_COMFY#3	rule __pycache__/  [6]	ComfyUI-Vibecode3D/__pycache__/preview.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_COMFY\ComfyUI-Vibecode3D\__pycache__\preview.cpython-314.pyc	0	0
-P	LIB_DEV	part	1500	944	280	52	LIB_DEV	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV
-C	LIB_DEV#1	LIB_DEV	has	18	58	262	38	45 files on git (989 KB), branch on-git-or-not checked out, not main
+P	LIB_DEV	part	1500	1001	280	52	LIB_DEV	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV
+C	LIB_DEV#1	LIB_DEV	has	18	58	262	38	46 files on git (1010 KB), branch on-git-or-not checked out, not main
 C	LIB_DEV#2	LIB_DEV	review	18	100	262	38	branch on-git-or-not not merged into main
-C	LIB_DEV#3	LIB_DEV	review	18	142	262	53	13 loose files (1 new, 12 changed, 321 KB): not on git, not ignored - click to list them
-F	LIB_DEV#3	LIB_DEV	CLAUDE.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\CLAUDE.md	0	decide
+C	LIB_DEV#3	LIB_DEV	review	18	142	262	53	5 loose files (5 changed, 85 KB): not on git, not ignored - click to list them
 F	LIB_DEV#3	LIB_DEV	LIB_MENU_PLAN.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\LIB_MENU_PLAN.md	0	decide
-F	LIB_DEV#3	LIB_DEV	OnGitOrNot/PLAN.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\OnGitOrNot\PLAN.md	0	decide
-F	LIB_DEV#3	LIB_DEV	OnGitOrNot/README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\OnGitOrNot\README.md	0	decide
-F	LIB_DEV#3	LIB_DEV	OnGitOrNot/map_data.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\OnGitOrNot\map_data.txt	0	decide
-F	LIB_DEV#3	LIB_DEV	OnGitOrNot/tools/git_map.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\OnGitOrNot\tools\git_map.py	0	decide
+F	LIB_DEV#3	LIB_DEV	PriorityTube/claude_sizes.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\PriorityTube\claude_sizes.txt	0	decide
 F	LIB_DEV#3	LIB_DEV	PriorityTube/items.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\PriorityTube\items.txt	0	decide
-F	LIB_DEV#3	LIB_DEV	ProjectMap/README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\README.md	0	decide
 F	LIB_DEV#3	LIB_DEV	ProjectMap/board.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\board.txt	0	decide
 F	LIB_DEV#3	LIB_DEV	ProjectMap/map_data.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\map_data.txt	0	decide
-F	LIB_DEV#3	LIB_DEV	ProjectMap/tools/make_map.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\tools\make_map.py	0	decide
-F	LIB_DEV#3	LIB_DEV	livecode/board_canvas.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\board_canvas.livecodescript	0	decide
-F	LIB_DEV#3	LIB_DEV	tools/for_review.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\tools\for_review.py	0	decide
 C	LIB_DEV#4	LIB_DEV	ignored	18	199	262	53	8 files hidden by .gitignore (63 MB): *.exe, __pycache__/ - click to list them
 F	LIB_DEV#4	rule *.exe  [4]	Game_Browser.exe	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Game_Browser.exe	0	0
 F	LIB_DEV#4	rule *.exe  [4]	Game_Player/Game_Player.exe	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Game_Player\Game_Player.exe	0	0
@@ -428,12 +427,12 @@ F	LIB_DEV#4	rule __pycache__/  [4]	ProjectMap/tools/__pycache__/make_map.cpython
 F	LIB_DEV#4	rule __pycache__/  [4]	tools/__pycache__/for_review.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\tools\__pycache__\for_review.cpython-314.pyc	0	0
 F	LIB_DEV#4	rule __pycache__/  [4]	tools/__pycache__/help_audit.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\tools\__pycache__\help_audit.cpython-314.pyc	0	0
 F	LIB_DEV#4	rule __pycache__/  [4]	tools/__pycache__/rename_in_handlers.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\tools\__pycache__\rename_in_handlers.cpython-314.pyc	0	0
-P	LIB_EDITOR	core	1500	1234	280	52	LIB_EDITOR	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR
+P	LIB_EDITOR	core	1500	1291	280	52	LIB_EDITOR	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR
 C	LIB_EDITOR#1	LIB_EDITOR	has	18	58	262	23	321 files on git (2.8 MB)
 C	LIB_EDITOR#2	LIB_EDITOR	review	18	85	262	38	branch release-checklist not merged into main
 C	LIB_EDITOR#3	LIB_EDITOR	ignored	18	127	262	38	1 file hidden by .gitignore (2 KB): tests/_* - click to list them
 F	LIB_EDITOR#3	rule tests/_*  [1]	tests/_engine_stubs.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR\tests\_engine_stubs.livecodescript	0	0
-P	LIB_ig3d	core	1500	1437	280	52	LIB_ig3d	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d
+P	LIB_ig3d	core	1500	1494	280	52	LIB_ig3d	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d
 C	LIB_ig3d#1	LIB_ig3d	has	18	58	262	23	17 files on git (567 KB)
 C	LIB_ig3d#2	LIB_ig3d	review	18	85	262	38	branch release-checklist not merged into main
 P	LIB_MCP	part	1830	260	280	52	LIB_MCP	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MCP
@@ -531,8 +530,8 @@ F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main
 F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/textRead_textBlock.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\textRead_textBlock.py	0	0
 F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/waypoints.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\waypoints.py	0	0
 P	OXT-BEYOND	part	1830	892	280	52	OXT-BEYOND	Not a repository	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND
-C	OXT-BEYOND#1	OXT-BEYOND	block	18	58	262	53	owner: not a repository, nothing here is on git (63 files, 245 KB) - click to list them
-F	OXT-BEYOND#1	OXT-BEYOND	tests/  [52 files, 225 KB]	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\tests	1	0
+C	OXT-BEYOND#1	OXT-BEYOND	block	18	58	262	53	owner: not a repository, nothing here is on git (66 files, 246 KB) - click to list them
+F	OXT-BEYOND#1	OXT-BEYOND	tests/  [55 files, 227 KB]	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\tests	1	0
 F	OXT-BEYOND#1	OXT-BEYOND	sessions/  [5 files, 9 KB]	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\sessions	1	0
 F	OXT-BEYOND#1	OXT-BEYOND	README.md  [1 file, 5 KB]	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\README.md	0	0
 F	OXT-BEYOND#1	OXT-BEYOND	Keep_Notes_for_Seth_Morrow_Here.txt  [1 file, 3 KB]	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\Keep_Notes_for_Seth_Morrow_Here.txt	0	0
@@ -565,7 +564,7 @@ F	LIB_LLMIN#2	rule /*  [671]	FOR_MUCH_LATER/Box2Dxt-Alpha-Demo-v7/tools/  [4 fil
 F	LIB_LLMIN#2	rule /*  [671]	LIB_XTJSON/livecode/  [4 files, 4.8 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_XTJSON\livecode	1	0
 F	LIB_LLMIN#2	rule /*  [671]	LIB_MOCAP/  [3 files, 709 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_MOCAP	1	0
 F	LIB_LLMIN#2	rule /*  [671]	Example_Built_by_script/  [2 files, 299 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\Example_Built_by_script	1	0
-F	LIB_LLMIN#2	rule /*  [671]	LIB_GAMES/  [2 files, 6 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_GAMES	1	0
+F	LIB_LLMIN#2	rule /*  [671]	LIB_GAMES/  [2 files, 7 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_GAMES	1	0
 F	LIB_LLMIN#2	rule /*  [671]	LIB_SCRIPT/  [2 files, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_SCRIPT	1	0
 F	LIB_LLMIN#2	rule /*  [671]	LIB_SCRIPT/livecodescript/  [2 files, 13 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_SCRIPT\livecodescript	1	0
 F	LIB_LLMIN#2	rule /*  [671]	LIB_XTJSON/  [2 files, 148 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_XTJSON	1	0
@@ -617,8 +616,8 @@ F	LIB_LLMOUT#2	LIB_LLMOUT	Read/LIB_XTJSON/XTJSON_batch_11_13_2026/README.md	\\ws
 C	LIB_LLMOUT#3	LIB_LLMOUT	ignored	18	127	262	38	6,546 files hidden by .gitignore (93 MB): * - click to list them
 F	LIB_LLMOUT#3	rule *  [6546]	Read/  [6,511 files, 92 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\Read	1	0
 F	LIB_LLMOUT#3	rule *  [6546]	LIB_EDITOR/  [9 files, 522 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_EDITOR	1	0
-F	LIB_LLMOUT#3	rule *  [6546]	./  [5 files, 57 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\.	1	0
-F	LIB_LLMOUT#3	rule *  [6546]	LIB_DEV/  [5 files, 66 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_DEV	1	0
+F	LIB_LLMOUT#3	rule *  [6546]	./  [5 files, 59 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\.	1	0
+F	LIB_LLMOUT#3	rule *  [6546]	LIB_DEV/  [5 files, 68 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_DEV	1	0
 F	LIB_LLMOUT#3	rule *  [6546]	LIB_GAMES/  [5 files, 38 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_GAMES	1	0
 F	LIB_LLMOUT#3	rule *  [6546]	LIB_BIT/  [2 files, 4 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_BIT	1	0
 F	LIB_LLMOUT#3	rule *  [6546]	LIB_MOCAP/  [2 files, 363 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_MOCAP	1	0
@@ -643,7 +642,7 @@ C	LIB_SYSTEM#2	LIB_SYSTEM	review	18	85	262	38	2 loose files (2 new, 29 KB): not 
 F	LIB_SYSTEM#2	LIB_SYSTEM	tools/__pycache__/progress.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SYSTEM\tools\__pycache__\progress.cpython-314.pyc	0	decide
 F	LIB_SYSTEM#2	LIB_SYSTEM	tools/__pycache__/provenance.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SYSTEM\tools\__pycache__\provenance.cpython-314.pyc	0	decide
 P	LIB_USERS	part	2220	1030	280	52	LIB_USERS	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_USERS
-C	LIB_USERS#1	LIB_USERS	has	18	58	262	38	9 files on git (27 KB), branch users-title checked out, not main
+C	LIB_USERS#1	LIB_USERS	has	18	58	262	38	9 files on git (29 KB), branch users-title checked out, not main
 C	LIB_USERS#2	LIB_USERS	review	18	100	262	38	branch library-plans not merged into main
 C	LIB_USERS#3	LIB_USERS	review	18	142	262	38	branch users-title not merged into main
 C	LIB_USERS#4	LIB_USERS	private	18	184	262	38	private, never on git: 2 files (6 KB) by BILL/ - click to list them
@@ -682,12 +681,12 @@ F	XTJSON#1	XTJSON	xtjson/  [6 files, 92 KB]	\\wsl$\Ubuntu\home\igame3d\projects\
 F	XTJSON#1	XTJSON	docs/  [3 files, 25 KB]	\\wsl$\Ubuntu\home\igame3d\projects\XTJSON\docs	1	0
 F	XTJSON#1	XTJSON	README_batch_moved.md  [1 file, 163 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\XTJSON\README_batch_moved.md	0	0
 P	ON GIT	core	735	-51	280	52	ON GIT	What git keeps on this machine	
-C	ON GIT#1	ON GIT	has	18	58	262	23	2,362 files in 40 repositories (52 MB)
+C	ON GIT#1	ON GIT	has	18	58	262	23	2,366 files in 41 repositories (52 MB)
 C	ON GIT#2	ON GIT	next	18	85	262	38	No repository has a remote yet: remote locations and backups come later
-C	ON GIT#3	ON GIT	review	18	127	262	23	8 branches not merged into main
+C	ON GIT#3	ON GIT	review	18	127	262	23	13 branches not merged into main
 P	NOT ON GIT	core	1215	-51	280	52	NOT ON GIT	Everything git does not keep, and why	
-C	NOT ON GIT#1	NOT ON GIT	review	18	58	262	38	20 loose files (418 KB): nobody committed or ignored them
-C	NOT ON GIT#2	NOT ON GIT	block	18	100	262	38	10 folders not a repository: 985 files (52 MB)
+C	NOT ON GIT#1	NOT ON GIT	review	18	58	262	38	12 loose files (182 KB): nobody committed or ignored them
+C	NOT ON GIT#2	NOT ON GIT	block	18	100	262	38	10 folders not a repository: 988 files (52 MB)
 C	NOT ON GIT#3	NOT ON GIT	ignored	18	142	262	38	11,236 files hidden by .gitignore rules (847 MB)
 C	NOT ON GIT#4	NOT ON GIT	private	18	184	262	23	4 files private, never on git (19 KB)
 P	YOU	core	1695	-51	280	67	YOU	The owner: red strings end here (a decision only you can make)	
@@ -718,7 +717,7 @@ L	logs#1
 L	TO_REMOVE#1
 L	LIB_OMEGA#1
 L	LIB_FACE#1
-L	LIB_BUILD#2
+L	LIB_BUILD#3
 L	LIB_LLMOUT#3
 L	LIB_BIN#2
 L	xt3D_Raylib_Livecode_Bridge#3
@@ -730,8 +729,8 @@ L	LIB_PUBLIC#2
 L	LIB_MCP#2
 L	LIB_MOCAP#2
 L	LIB_GAMES#4
-L	LIB_TTRPG#2
-L	LIB_BIT#2
+L	LIB_TTRPG#3
+L	LIB_BIT#3
 L	LIB_SPARK#2
 L	LIB_COMFY#3
 L	LIB_GLOBALS#2
@@ -739,5 +738,5 @@ L	LIB_XTJSON#2
 L	xtalk_py#2
 L	LIB_GENERICA#2
 L	LIB_THEME#2
-L	LIB_SCRIPTBLOCKS#2
+L	LIB_SCRIPTBLOCKS#3
 L	LIB_EDITOR#3

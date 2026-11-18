@@ -194,6 +194,13 @@ done: Plan by Fable (16 Nov)
 block: Plan only, no code yet
 link: xt3d
 
+== LIB_MENU | BLOCKS
+what: Menus everywhere, one way: crafty, reusable, user-hackable procedural menu tricks
+done: Its own LIB, README + PLAN (17 Nov)
+next: LIB_MENU step 1: move the boards' menu code into lib_menu (Menu.*) with a test
+next: LIB_MENU step 2: menus from a text file a user can edit
+link: LIB_GUI, LIB_DEV
+
 == LIB_TOOLBAR | BLOCKS
 what: One-stop floating launcher of buttons for every LIB
 done: Plan by Fable from your O-8 answer
