@@ -3,3 +3,5 @@ __pycache__/
 *:Zone.Identifier
 *.exe
 Externals/
+*_dev_*
+ProjectMap/positions.txt
