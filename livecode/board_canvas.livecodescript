@@ -813,6 +813,15 @@ end pmPanelClick
 
 on rawKeyDown pKey
    if the short name of the target is "HUD_CmtBox" then pass rawKeyDown
+   -- Shift + wheel scales the whole window (mouseWheelScroll, below); the plain wheel as before
+   if the shiftKey is down and (pKey is 65309 or pKey is 65308) then
+      if pKey is 65309 then
+         mouseWheelScroll "up"
+      else
+         mouseWheelScroll "down"
+      end if
+      exit rawKeyDown
+   end if
    -- the wheel: 65308 down (out), 65309 up (in)
    if pKey is 65309 then
       pmZoomAt 1.15, item 1 of the mouseLoc, item 2 of the mouseLoc
@@ -1658,3 +1667,26 @@ command pmMarkDecided pChip
       set the borderWidth of field pChip to 3
    end if
 end pmMarkDecided
+
+-------------------------------------------------------------------- window zoom
+-- Shift + mouse wheel scales the whole window (the owner's handlers from Status_Browser.livecode,
+-- 15 Nov: "Scroll wheel w/ shift key scale factor adjust"). 0.02 a notch, from 0.1 to 2.
+on mouseWheelScroll tDir
+   local sf, TL
+   lock screen
+   put the scaleFactor of stack (the mainStack of this stack) into sf
+   switch tDir
+      case "up"
+         if sf < 2 then add 0.02 to sf
+         break
+      case "down"
+         if sf > 0.1 then subtract 0.02 from sf
+         break
+   end switch
+   set the scaleFactor of stack (the mainStack of this stack) to sf
+   put the topleft of stack (the mainStack of this stack) into TL
+   add sf to item 1 of TL
+   add sf to item 2 of TL
+   set the topleft of stack (the mainStack of this stack) to TL
+   unlock screen
+end mouseWheelScroll

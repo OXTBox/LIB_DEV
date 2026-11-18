@@ -382,3 +382,39 @@ end SB.CommentWrite
 function SB.State
    return sCount & " files|current " & sCurrent & "|" & line 1 of field "Scrolling List Field"
 end SB.State
+
+-------------------------------------------------------------------- window zoom
+-- Shift + mouse wheel scales the whole window (the owner's handlers from Status_Browser.livecode,
+-- 15 Nov: "Scroll wheel w/ shift key scale factor adjust"). 0.02 a notch, from 0.1 to 2.
+on mouseWheelScroll tDir
+   local sf, TL
+   lock screen
+   put the scaleFactor of stack (the mainStack of this stack) into sf
+   switch tDir
+      case "up"
+         if sf < 2 then add 0.02 to sf
+         break
+      case "down"
+         if sf > 0.1 then subtract 0.02 from sf
+         break
+   end switch
+   set the scaleFactor of stack (the mainStack of this stack) to sf
+   put the topleft of stack (the mainStack of this stack) into TL
+   add sf to item 1 of TL
+   add sf to item 2 of TL
+   set the topleft of stack (the mainStack of this stack) to TL
+   unlock screen
+end mouseWheelScroll
+
+on rawKeyDown tKey
+   if the tool is not "browse tool" then pass rawKeyDown
+   switch tKey
+      case 65309 -- upscroll
+         if the shiftKey is down then mouseWheelScroll "up"
+         break
+      case 65308 -- downscroll
+         if the shiftKey is down then mouseWheelScroll "down"
+         break
+   end switch
+   pass rawKeyDown
+end rawKeyDown
