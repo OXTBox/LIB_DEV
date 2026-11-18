@@ -31,10 +31,17 @@ A listed file that has since moved shows `[moved]` and opens where it is now (fo
 rebuild; a common name like README.md must also share a folder name with the old path); one
 that is gone shows `[gone]` and opens the nearest folder that still exists.
 
+## Reviewing from the map
+Each file in a review popup has a small menu: **Open in Explorer**, **Reviewed**, **Feedback...**.
+They write the Status Browser's own files (`LIB_LLMIN/LIB_DEV/REVIEW_STATE.txt`,
+`REVIEW_FEEDBACK.txt`, same formats), so a review counts the same from either tool, and the AI
+reads them at every session start. Reviewed rebuilds the map, so the file leaves the pink count
+at once. **T** = Tell Claude (a line in `TELL_CLAUDE.txt`, which wakes a waiting session).
+
 ## Using it
 wheel = zoom at the pointer, drag the black = pan, drag a header = move a part with its chips
 (kept in `positions.txt`), click a box = focus (its strings and neighbours stay lit), click the black = clear.
-Keys: **F** fit all, **B** blockers only (red and pink), **R** rebuild, **0** 100%.
+Keys: **F** fit all, **B** blockers only (red and pink), **R** rebuild, **T** tell Claude, **0** 100%.
 
 ## Keeping it true
 - `board.txt` is the hand-kept half: edit it in any text editor (the format is at its top), then press R.

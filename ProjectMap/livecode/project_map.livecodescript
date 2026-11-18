@@ -62,7 +62,7 @@ function pmReadText pFile
 end pmReadText
 
 ---------------------------------------------------------------- building
-command pmBuild
+command pmBuild pKeepView
    local tData, tLine, tName, tPos, tFiles
    put pmReadText("map_data.txt") into tData
    lock screen
@@ -91,7 +91,7 @@ command pmBuild
             pmMakeChip tLine
             break
          case "F"
-            put item 3 to 6 of tLine & return after tFiles["C:" & item 2 of tLine]
+            put item 3 to 7 of tLine & return after tFiles["C:" & item 2 of tLine]
             break
       end switch
    end repeat
@@ -106,7 +106,12 @@ command pmBuild
    unlock messages
    if tData is empty then put "No map_data.txt beside the stack: press R to rebuild." into field "HUD_Help"
    pmFillBlockers
-   pmFit
+   if pKeepView is true and sZoom is a number then
+      pmFocus empty
+      pmDraw
+   else
+      pmFit
+   end if
    unlock screen
 end pmBuild
 
@@ -278,7 +283,7 @@ command pmMakeHud
    create field "HUD_Help"
    pmStyleField "HUD_Help", "22,22,28", "22,22,28", "160,160,175", 0
    set the textSize of field "HUD_Help" to 11
-   put "wheel zoom | drag black to pan | drag a header to move | click to focus | F fit  B blockers  R rebuild  0 100%" into field "HUD_Help"
+   put "wheel zoom | drag black to pan | drag a header to move | click to focus | F fit  B blockers  R rebuild  T tell Claude  0 100%" into field "HUD_Help"
    create field "HUD_Legend"
    pmStyleField "HUD_Legend", "22,22,28", "60,60,70", "235,235,235", 1
    set the textSize of field "HUD_Legend" to 11
@@ -557,7 +562,7 @@ command pmRebuild
    end if
    put "Rebuilding..." into field "HUD_Help"
    put shell(tCmd) into tOut
-   pmBuild
+   pmBuild true
    put "Rebuilt:" && line 1 of tOut into field "HUD_Help"
 end pmRebuild
 
@@ -681,6 +686,9 @@ on keyDown pChar
       case "r"
          pmRebuild
          break
+      case "t"
+         pmTellClaude
+         break
       case "0"
          pmZoomAt 1 / sZoom, (the width of this card - kPanelW) / 2, (the height of this card) / 2
          break
@@ -705,7 +713,7 @@ function pmFilesMenu pChip
    repeat for each line tLine in tFiles
       if item 1 of tLine is not among the lines of tGroups then put item 1 of tLine & return after tGroups
    end repeat
-   put "(" & the number of lines of tFiles && "files: pick one to show it in Explorer" & return & "-" & return into tMenu
+   put "(" & the number of lines of tFiles && "files: open one, or mark it Reviewed / give Feedback" & return & "-" & return into tMenu
    if the number of lines of tGroups > 1 then
       repeat for each line tGroup in tGroups
          put empty into tCount
@@ -715,20 +723,21 @@ function pmFilesMenu pChip
          put pmMenuSafe(tGroup) && "[" & tCount & "]" into tLabel
          put tLabel & return after tMenu
          repeat for each line tLine in tFiles
-            if item 1 of tLine is tGroup then put tab & pmMenuItem(tLabel & "|", tLine) & return after tMenu
+            if item 1 of tLine is tGroup then put pmMenuItem(tLabel & "|", tLine, tab) after tMenu
          end repeat
       end repeat
    else
       repeat for each line tLine in tFiles
-         put pmMenuItem(empty, tLine) & return after tMenu
+         put pmMenuItem(empty, tLine, empty) after tMenu
       end repeat
    end if
    return tMenu
 end pmFilesMenu
 
--- one menu line; remembers its path under the name menuPick will give back
-function pmMenuItem pParent, pLine
-   local tLabel, tN
+-- one file's menu lines (each ends in return). A file on the review list gets a submenu
+-- (Open in Explorer / Reviewed / Feedback...); a loose file opens at once. pIndent = the tabs before it.
+function pmMenuItem pParent, pLine, pIndent
+   local tLabel, tN, tOut, tAction
    set the itemDelimiter to tab
    put pmMenuSafe(item 2 of pLine) into tLabel
    if item 4 of pLine is 1 then put tLabel && "[folder]" into tLabel
@@ -737,8 +746,14 @@ function pmMenuItem pParent, pLine
       add 1 to tN
       put pmMenuSafe(item 2 of pLine) && "#" & tN into tLabel
    end repeat
-   put item 3 of pLine & tab & item 4 of pLine into sMenuMap[pParent & tLabel]
-   return tLabel
+   put item 3 of pLine & tab & item 4 of pLine & tab & item 5 of pLine into sMenuMap[pParent & tLabel]
+   put pIndent & tLabel & return into tOut
+   if item 5 of pLine is 1 then
+      repeat for each line tAction in ("Open in Explorer" & return & "Reviewed" & return & "Feedback...")
+         put pIndent & tab & tAction & return after tOut
+      end repeat
+   end if
+   return tOut
 end pmMenuItem
 
 -- menu text treats ( ! - / & and | as commands: keep them out of labels
@@ -752,12 +767,77 @@ function pmMenuSafe pText
 end pmMenuSafe
 
 on menuPick pItem
-   local tHit
+   local tHit, tAction, tKey
    if the short name of the target is not "HUD_Popup" then pass menuPick
    put sMenuMap[pItem] into tHit
+   put "Open in Explorer" into tAction
+   if tHit is empty then
+      -- a file's submenu: "...|file|Action"
+      set the itemDelimiter to "|"
+      put item -1 of pItem into tAction
+      put item 1 to -2 of pItem into tKey
+      put sMenuMap[tKey] into tHit
+   end if
+   if tHit is empty then exit menuPick
    set the itemDelimiter to tab
-   if tHit is not empty then pmExplore item 1 of tHit, item 2 of tHit
+   switch tAction
+      case "Reviewed"
+         pmMarkReviewed item 1 of tHit
+         break
+      case "Feedback..."
+         pmFeedback item 1 of tHit
+         break
+      default
+         pmExplore item 1 of tHit, item 2 of tHit
+   end switch
 end menuPick
+
+---------------------------------------------------------------- reviews (the Status Browser's own files and formats)
+-- LIB_LLMIN/LIB_DEV: REVIEW_STATE.txt  <path> TAB reviewed TAB date time
+--                    REVIEW_FEEDBACK.txt  date time TAB <path> TAB feedback (one line)
+--                    TELL_CLAUDE.txt  date time TAB tell TAB note (wakes the AI)
+function pmInboxFile pName
+   local tPath
+   put pmFolder() into tPath
+   set the itemDelimiter to "/"
+   return item 1 to -3 of tPath & "/LIB_LLMIN/LIB_DEV/" & pName
+end pmInboxFile
+
+command pmAppendLine pFile, pLine
+   local tText
+   put pmInboxFile(pFile) into pFile
+   if there is a file pFile then put textDecode(URL ("binfile:" & pFile), "UTF-8") into tText
+   if tText is not empty and the last char of tText is not return then put return after tText
+   put pLine & return after tText
+   put textEncode(tText, "UTF-8") into URL ("binfile:" & pFile)
+end pmAppendLine
+
+command pmMarkReviewed pWinPath
+   pmAppendLine "REVIEW_STATE.txt", pWinPath & tab & "reviewed" & tab & the short date && the long time
+   pmRebuild
+   put "Reviewed:" && pmLastPart(pWinPath) & "   (T tells Claude)" into field "HUD_Help"
+end pmMarkReviewed
+
+command pmFeedback pWinPath
+   local tText
+   ask "Feedback on" && pmLastPart(pWinPath) & ":"
+   if the result is "Cancel" or it is empty then exit pmFeedback
+   put it into tText
+   replace return with " " in tText
+   replace tab with " " in tText
+   pmAppendLine "REVIEW_FEEDBACK.txt", the short date && the long time & tab & pWinPath & tab & tText
+   put "Feedback saved:" && pmLastPart(pWinPath) & "   (T tells Claude)" into field "HUD_Help"
+end pmFeedback
+
+command pmTellClaude
+   pmAppendLine "TELL_CLAUDE.txt", the short date && the long time & tab & "tell" & tab & "from the Project Map"
+   put "Told Claude" && the short time into field "HUD_Help"
+end pmTellClaude
+
+function pmLastPart pWinPath
+   set the itemDelimiter to "\"
+   return item -1 of pWinPath
+end pmLastPart
 
 -- Explorer with the file selected (a folder opens itself). "start" returns at once, so the
 -- map never waits on the WSL bridge; nothing on the disk is checked here (the folder flag came with the data)

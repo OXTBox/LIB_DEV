@@ -17,6 +17,7 @@ map_data.txt, tab separated, one record a line:
   P  partId  core|part  x  y  w  h  title  what        a part's header box (x,y = default place)
   C  chipId  partId  kind  dx  dy  w  h  text          a chip under its part (offset from the part)
   E  fromId  toId  grey|red                            a string between two boxes
+  F  chipId  group  label  windowsPath  isFolder  onReviewList   a file a chip lists (popup)
 Kinds: has (green), demo (lavender), done (gold list), next (white outline), block (red), review (pink).
 """
 import collections, datetime, math, os, re, subprocess, sys
@@ -213,8 +214,9 @@ def block_of(p):
         cid = f"{p['name']}#{i}"
         h = LINE_H * n + PAD + (4 if k == "done" else 0)
         rows.append(["C", cid, p["name"], k, CHIP_IN, dy, CHIP_W, h, t])
-        for g, label, win, isdir, _ in files:
-            rows.append(["F", cid, g, label, win, isdir])
+        for g, label, win, isdir, date in files:
+            # the last column: 1 = on the review list (the popup offers Reviewed / Feedback), 0 = a loose file
+            rows.append(["F", cid, g, label, win, isdir, 1 if date else 0])
         if k == "block" and t.lower().startswith("owner:") and p["name"] != "YOU":
             edges.append(["E", cid, "YOU", "red"])
         dy += h + 4
