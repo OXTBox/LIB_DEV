@@ -11,7 +11,7 @@ a loop, not a build:
    still unsized). Tell him to press R in the tube; the bubble slots in by Claude's rule.
 3. **Work from the top** of PRIORITY_ORDER.txt. Never reorder a bubble he placed ("owner").
 4. **A comment done:** append its line again to BOARD_COMMENTS.txt with state `done` (the last line of an
-   id wins; boards and the tube show only `open`). Log it in LIB_LLMOUT/Read/LIB_DEV/FEEDBACK_HANDLED.txt.
+   id wins; boards and the tube show only `open`). Log it in LIB_LLMOUT/LIB_DEV/FEEDBACK_HANDLED.txt.
    A `next:` step done: change it in ProjectMap/board.txt (done: line), so its bubble leaves the tube.
 5. **Watch and write down** what happens with the tube in use (he said "there's something there"; it
    echoes the old post-Antack T3D game menu). Change little until he asks; collect his reactions in
