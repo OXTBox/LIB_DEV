@@ -21,7 +21,8 @@ script "board_canvas"
 -- is only touched when the owner picks a line (the WSL bridge is slow). Rules: LIB_MENU/PLAN.md.
 -- LIB_MENU: the board loads ~/projects/LIB_MENU/livecode/lib_menu.livecodescript itself (pmUseMenu,
 -- at every build: two folders above the board's stack, then LIB_MENU/livecode); without it the board
--- draws, but its menus say in the help bar that LIB_MENU is missing.
+-- works: plain menus without the ending, records written by the board itself, and the help bar
+-- says LIB_MENU is missing.
 -- Decisions (On Git or Not): a loose file's lines (F rows flagged "decide") offer Commit / Ignore /
 -- Delete / Leave; a pick appends a line to LIB_LLMIN/LIB_DEV/GIT_DECISIONS.txt for Claude to carry
 -- out (the board runs no git and deletes nothing); decided files are marked on their chip and line.
@@ -175,9 +176,15 @@ command pmUseMenu
    end if
 end pmUseMenu
 
--- true when LIB_MENU is in use; else the help bar says where it was looked for
+-- true when LIB_MENU is in use (every call into Menu.* is guarded by this: without the library
+-- the board still works, with plain menus that have no ending)
+function pmMenuOn
+   return "LIB_MENU" is among the lines of the stacksInUse
+end pmMenuOn
+
+-- pmMenuOn, and when it is false the help bar says where LIB_MENU was looked for
 function pmMenuReady
-   if "LIB_MENU" is among the lines of the stacksInUse then return true
+   if pmMenuOn() then return true
    pmSay "Menus need LIB_MENU: not found at" && pmProjects() & "/LIB_MENU/livecode/lib_menu.livecodescript"
    return false
 end pmMenuReady
@@ -917,16 +924,25 @@ end pmMenuItem
 
 -- menu text treats ( ! - / & and | as commands: keep them out of labels (LIB_MENU's Menu.Safe)
 function pmMenuSafe pText
-   return Menu.Safe(pText)
+   if pmMenuOn() then return Menu.Safe(pText)
+   replace "&" with "+" in pText
+   replace "/" with numToCodepoint(8725) in pText
+   replace "|" with "-" in pText
+   replace tab with " " in pText
+   if char 1 of pText is among the items of "(,!,-" then put " " before pText
+   return pText
 end pmMenuSafe
 
 on menuPick pItem
    local tHit, tAction, tKey
    if the short name of the target is not "HUD_Popup" then pass menuPick
-   if Menu.IsEnd(pItem) then
-      -- LIB_MENU sends it back as menuLeaveComment / menuExploreHere
-      Menu.EndPick pItem, sMenuChip, the long id of this stack
-      exit menuPick
+   -- a guard in its own if: OpenXTalk evaluates both sides of "and"
+   if pmMenuOn() then
+      if Menu.IsEnd(pItem) then
+         -- LIB_MENU sends it back as menuLeaveComment / menuExploreHere
+         Menu.EndPick pItem, sMenuChip, the long id of this stack
+         exit menuPick
+      end if
    end if
    if pItem is "Edit this comment..." then
       pmCommentEdit sMenuChip
@@ -988,7 +1004,20 @@ end pmInboxFile
 
 -- one record line in LIB_LLMIN/LIB_DEV/pFile (LIB_MENU's Menu.AppendLine); a new file starts with pHeader
 command pmAppendLine pFile, pLine, pHeader
-   Menu.AppendLine pmInboxFile(pFile), pLine, pHeader
+   local tText
+   put pmInboxFile(pFile) into pFile
+   if pmMenuOn() then
+      Menu.AppendLine pFile, pLine, pHeader
+      exit pmAppendLine
+   end if
+   if there is a file pFile then
+      put textDecode(URL ("binfile:" & pFile), "UTF-8") into tText
+   else
+      put pHeader into tText
+   end if
+   if tText is not empty and the last char of tText is not return then put return after tText
+   put pLine & return after tText
+   put textEncode(tText, "UTF-8") into URL ("binfile:" & pFile)
 end pmAppendLine
 
 command pmMarkReviewed pWinPath
@@ -1021,8 +1050,12 @@ end pmLastPart
 -- Explorer with the file selected (a folder opens itself). "start" returns at once, so the
 -- map never waits on the WSL bridge; nothing on the disk is checked here (the folder flag came with the data)
 command pmExplore pWinPath, pIsFolder
-   Menu.Explore pWinPath, pIsFolder
-   pmSay the result
+   if pmMenuOn() then
+      Menu.Explore pWinPath, pIsFolder
+      pmSay the result
+   else
+      pmSay "Path:" && pmWinPath(pWinPath) & "   (Explorer needs LIB_MENU)"
+   end if
 end pmExplore
 
 ---------------------------------------------------------------- red chips: feedback and files on a blocker
@@ -1473,17 +1506,23 @@ end pmTextOf
 -- a new menu calls pmPopupMenu and gets them; menuPick hands them to Menu.EndPick, which sends
 -- menuLeaveComment / menuExploreHere back here. Nothing on the disk is touched until the owner picks a line.
 function pmMenuEnd
-   return Menu.End()
+   if pmMenuOn() then return Menu.End()
+   return empty
 end pmMenuEnd
 
 -- fill the one popup button with a menu and the ending, for menuPick (headless tests stop here)
 command pmMenuSet pTarget, pMenu
    put pTarget into sMenuChip
-   set the text of button "HUD_Popup" to Menu.WithEnd(pMenu)
+   if pmMenuOn() then
+      set the text of button "HUD_Popup" to Menu.WithEnd(pMenu)
+   else
+      -- without LIB_MENU: the plain menu, no ending
+      set the text of button "HUD_Popup" to pMenu
+   end if
 end pmMenuSet
 
 command pmPopupMenu pTarget, pMenu
-   if not pmMenuReady() then exit pmPopupMenu
+   get pmMenuReady()
    pmMenuSet pTarget, pMenu
    popup button "HUD_Popup" at the mouseLoc
 end pmPopupMenu
@@ -1558,7 +1597,8 @@ function pmProjects
 end pmProjects
 
 function pmWinPath pPath
-   return Menu.WinPath(pPath)
+   replace "/" with "\" in pPath
+   return pPath
 end pmWinPath
 
 ---------------------------------------------------------------- decisions on loose files (On Git or Not, PLAN.md step 4)
