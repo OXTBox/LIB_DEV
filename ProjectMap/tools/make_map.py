@@ -3,6 +3,9 @@
 
     python3 -I tools/make_map.py            writes ../map_data.txt and prints a summary
 
+Each rebuild first runs for_review.relink: listed files that moved get their new path in
+LIB_LLMOUT/FOR_REVIEW.txt (so the Status Browser opens them too).
+
 Counted facts, per part (folder = the part's name, xt3d = xt3D_Raylib_Livecode_Bridge):
   - handlers in .livecodescript files                    -> green  "N handlers in M scripts"
   - files on LIB_LLMOUT/FOR_REVIEW.txt not yet reviewed  -> pink   "N files wait your review"
@@ -19,6 +22,8 @@ Kinds: has (green), demo (lavender), done (gold list), next (white outline), blo
 import collections, datetime, math, os, re, subprocess, sys
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(os.path.dirname(HERE), "tools"))
+import for_review  # noqa: E402  (LIB_DEV/tools: the review list's own tool)
 PROJECTS = os.path.dirname(os.path.dirname(HERE))
 BOARD = os.path.join(HERE, "board.txt")
 OUT = os.path.join(HERE, "map_data.txt")
@@ -111,22 +116,6 @@ def to_win(linux):
     return "\\\\wsl$\\Ubuntu" + linux.replace("/", "\\")
 
 
-_NAMES = None
-
-
-def find_by_name(name):
-    """where a moved file lives now: every path under ~/projects with that name, newest first
-    (one walk a rebuild, on the Linux side, so the stack never searches)"""
-    global _NAMES
-    if _NAMES is None:
-        _NAMES = collections.defaultdict(list)
-        for root, dirs, files in os.walk(PROJECTS):
-            dirs[:] = [d for d in dirs if d not in (".git", "__pycache__", "node_modules")]
-            for f in files:
-                _NAMES[f].append(os.path.join(root, f))
-    return sorted(_NAMES.get(name, []), key=lambda q: -os.path.getmtime(q))
-
-
 def file_entry(group, win, date, note):
     """one file for a pink chip's popup: group, label, Windows path, 1 when it is a folder.
     A file that has moved points to where it is now ([moved]); one that is gone opens the
@@ -136,14 +125,9 @@ def file_entry(group, win, date, note):
     label = (date[5:] + "  " if date else "") + name
     path = to_linux(win)
     if path.startswith("/") and not os.path.exists(path):
-        found = find_by_name(name)
-        if len(found) > 1:
-            # a common name (README.md): keep only places that share a folder name with the old path
-            old = set(path.split("/")[:-1]) - {"", "home", "igame3d", "projects"}
-            best = max(len(old & set(q.split("/")[:-1])) for q in found)
-            found = [q for q in found if best and len(old & set(q.split("/")[:-1])) == best]
+        found = for_review.find_moved(path)
         if found:
-            return [group, label + " [moved]", to_win(found[0]), 0, date]
+            return [group, label + " [moved]", to_win(found), 0, date]
         while path not in ("", "/") and not os.path.isdir(path):
             path = os.path.dirname(path)
         return [group, label + " [gone]", to_win(path), 1, date]
@@ -284,6 +268,9 @@ def place(out, edges, p, block, x, y):
 
 
 def main():
+    moved = for_review.relink(quiet=True)   # keep FOR_REVIEW.txt current: moved files point to where they are now
+    if moved:
+        print(f"relinked {len(moved)} moved files on the review list")
     parts = add_counted(read_board())
     rows = layout(parts)
     with open(OUT, "w", encoding="utf-8", newline="\n") as f:

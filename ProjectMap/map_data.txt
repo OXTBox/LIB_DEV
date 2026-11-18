@@ -1,4 +1,4 @@
-# map_data.txt made 2026-11-17 19:30 by tools/make_map.py; do not edit (edit board.txt)
+# map_data.txt made 2026-11-17 19:34 by tools/make_map.py; do not edit (edit board.txt)
 Z	ENGINES	ENGINES	0	184	300
 Z	GAMES	GAMES	390	184	630
 Z	BLOCKS	BUILDING BLOCKS	1110	184	960
@@ -42,7 +42,7 @@ F	LIB_GAMES#9	LIB_GAMES	Vibecode3D_Play_ComfyPong1.livecodescript	\\wsl$\Ubuntu\
 F	LIB_GAMES#9	LIB_GAMES	Vibecode3D_Play_ComfyPong2.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_ComfyPong2.livecodescript	0
 F	LIB_GAMES#9	LIB_GAMES	Vibecode3D_Play_ComfyPong2102167373.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_ComfyPong2102167373.livecodescript	0
 F	LIB_GAMES#9	LIB_GAMES	Vibecode3D_Play_ComfyPong3.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_ComfyPong3.livecodescript	0
-C	LIB_GAMES#10	LIB_GAMES	review	18	500	262	38	24 files wait your review (oldest 2026-11-14) - click to list them
+C	LIB_GAMES#10	LIB_GAMES	review	18	500	262	38	22 files wait your review (oldest 2026-11-14) - click to list them
 F	LIB_GAMES#10	LIB_GAMES	11-14  Vibecode3D_Play_InterceptorRun.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_InterceptorRun.livecodescript	0
 F	LIB_GAMES#10	LIB_GAMES	11-14  Vibecode3D_Play_FareDash.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_FareDash.livecodescript	0
 F	LIB_GAMES#10	LIB_GAMES	11-14  Vibecode3D_Play_BlockCityHustle.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_BlockCityHustle.livecodescript	0
@@ -59,8 +59,6 @@ F	LIB_GAMES#10	LIB_GAMES	11-15  Vibecode3D_Play_uDead.livecodescript	\\wsl$\Ubun
 F	LIB_GAMES#10	LIB_GAMES	11-15  Vibecode3D_Play_Thrmnlra.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Thrmnlra.livecodescript	0
 F	LIB_GAMES#10	LIB_GAMES	11-15  Vibecode3D_Play_Face.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Face.livecodescript	0
 F	LIB_GAMES#10	LIB_GAMES	11-15  Vibecode3D_Play_Amazing_Couple.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Amazing_Couple.livecodescript	0
-F	LIB_GAMES#10	LIB_GAMES	11-15  Vibecode3D_Play_GeneticAnomaly.livecodescript [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BUILD\Vibecodext3d_Build_11142026\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_GeneticAnomaly.livecodescript	0
-F	LIB_GAMES#10	LIB_GAMES	11-15  Vibecode3D_Play_Ig3dEditor.livecodescript [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BUILD\Vibecodext3d_Build_11142026\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Ig3dEditor.livecodescript	0
 F	LIB_GAMES#10	LIB_GAMES	11-16  Vibecode3D_Play_DeadDays.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_DeadDays.livecodescript	0
 F	LIB_GAMES#10	LIB_GAMES	11-16  engine_stubs.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\tools\engine_stubs.livecodescript	0
 F	LIB_GAMES#10	LIB_GAMES	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\README.md	0
@@ -79,7 +77,8 @@ C	LIB_GAD#4	LIB_GAD	demo	18	169	262	23	GeneticAnomaly prototype (ga-turns)
 C	LIB_GAD#5	LIB_GAD	next	18	196	262	38	Battles step 1: one-page plan (Bases map turn -> LIB_RTS fight -> back)
 C	LIB_GAD#6	LIB_GAD	next	18	238	262	38	Battles step 2: smallest loop (two Bases, one anomaly, one fight)
 C	LIB_GAD#7	LIB_GAD	block	18	280	262	38	owner: say yes or no to the one-page battle plan before any code
-C	LIB_GAD#8	LIB_GAD	review	18	322	262	38	1 file waits your review (oldest 2026-11-16) - click to list them
+C	LIB_GAD#8	LIB_GAD	review	18	322	262	38	2 files wait your review (oldest 2026-11-15) - click to list them
+F	LIB_GAD#8	LIB_GAD	11-15  Vibecode3D_Play_GeneticAnomaly.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\GeneticAnomaly\Vibecode3D_Play_GeneticAnomaly.livecodescript	0
 F	LIB_GAD#8	LIB_GAD	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\GeneticAnomaly\README.md	0
 P	LIB_RTS	part	720	260	280	82	LIB_RTS	The 2008 RTS system rebuilt in xTalk: select, command, the living and the dead
 C	LIB_RTS#1	LIB_RTS	has	18	88	262	23	119 handlers in 2 scripts
@@ -234,9 +233,10 @@ C	LIB_DEV#2	LIB_DEV	has	18	100	262	23	Status Browser + Tell Claude button
 C	LIB_DEV#3	LIB_DEV	has	18	127	262	38	Dev.NewVersion (one dev stack per iteration)
 C	LIB_DEV#4	LIB_DEV	demo	18	169	262	23	Project Map (this stack)
 C	LIB_DEV#5	LIB_DEV	review	18	196	262	23	branch project-map not merged
-C	LIB_DEV#6	LIB_DEV	review	18	223	262	38	2 loose files not committed - click to list them
+C	LIB_DEV#6	LIB_DEV	review	18	223	262	38	3 loose files not committed - click to list them
 F	LIB_DEV#6	LIB_DEV	map_data.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\map_data.txt	0
 F	LIB_DEV#6	LIB_DEV	make_map.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\tools\make_map.py	0
+F	LIB_DEV#6	LIB_DEV	for_review.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\tools\for_review.py	0
 C	LIB_DEV#7	LIB_DEV	review	18	265	262	38	11 files wait your review (oldest 2026-11-14) - click to list them
 F	LIB_DEV#7	LIB_DEV	11-14  Status_Browser.livecode	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Status_Browser.livecode	0
 F	LIB_DEV#7	LIB_DEV	11-14  Status_Browser_Launcher.livecode	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Status_Browser_Launcher.livecode	0
@@ -324,7 +324,7 @@ C	GOAL#1	GOAL	next	18	58	262	23	iGame3D XT on itch.io (handle xAction)
 C	GOAL#2	GOAL	next	18	85	262	53	"Does it stand alone, and is it easy and enjoyable enough to put away the old IDE?"
 C	GOAL#3	GOAL	next	18	142	262	38	GAD = Generic Any Data; Genetic Anomaly Detector as the long game
 P	YOU	core	1830	-69	280	67	YOU	The owner: red strings end here when only you can unblock them
-C	YOU#1	YOU	block	18	73	262	53	owner: 136 files wait your review in all (Status Browser) - click to list them
+C	YOU#1	YOU	block	18	73	262	53	owner: 135 files wait your review in all (Status Browser) - click to list them
 F	YOU#1	LIB_BIT	11-16  lib_cellmap.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\livecode\lib_cellmap.livecodescript	0
 F	YOU#1	LIB_COMFY	11-17  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_COMFY\README.md	0
 F	YOU#1	LIB_COMFY	11-17  vector_pong_variants.json	\\wsl$\Ubuntu\home\igame3d\projects\LIB_COMFY\workflows\vector_pong_variants.json	0
@@ -347,6 +347,7 @@ F	YOU#1	LIB_DEV	11-17  ProjectMap.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\L
 F	YOU#1	LIB_EDITOR	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR\iGame3D_XT\README.md	0
 F	YOU#1	LIB_EDITOR	11-16  Vibecode3D_Play_Ig3dEditor.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR\iGame3D_XT\Vibecode3D_Play_Ig3dEditor.livecodescript	0
 F	YOU#1	LIB_EDITOR	11-16  window_shape.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR\iGame3D_XT\Tools\window_shape.livecodescript	0
+F	YOU#1	LIB_GAD	11-15  Vibecode3D_Play_GeneticAnomaly.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\GeneticAnomaly\Vibecode3D_Play_GeneticAnomaly.livecodescript	0
 F	YOU#1	LIB_GAD	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\GeneticAnomaly\README.md	0
 F	YOU#1	LIB_GAMES	11-14  Vibecode3D_Play_InterceptorRun.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_InterceptorRun.livecodescript	0
 F	YOU#1	LIB_GAMES	11-14  Vibecode3D_Play_FareDash.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_FareDash.livecodescript	0
@@ -364,8 +365,6 @@ F	YOU#1	LIB_GAMES	11-15  Vibecode3D_Play_uDead.livecodescript	\\wsl$\Ubuntu\home
 F	YOU#1	LIB_GAMES	11-15  Vibecode3D_Play_Thrmnlra.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Thrmnlra.livecodescript	0
 F	YOU#1	LIB_GAMES	11-15  Vibecode3D_Play_Face.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Face.livecodescript	0
 F	YOU#1	LIB_GAMES	11-15  Vibecode3D_Play_Amazing_Couple.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Amazing_Couple.livecodescript	0
-F	YOU#1	LIB_GAMES	11-15  Vibecode3D_Play_GeneticAnomaly.livecodescript [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BUILD\Vibecodext3d_Build_11142026\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_GeneticAnomaly.livecodescript	0
-F	YOU#1	LIB_GAMES	11-15  Vibecode3D_Play_Ig3dEditor.livecodescript [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BUILD\Vibecodext3d_Build_11142026\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Ig3dEditor.livecodescript	0
 F	YOU#1	LIB_GAMES	11-16  Vibecode3D_Play_DeadDays.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_DeadDays.livecodescript	0
 F	YOU#1	LIB_GAMES	11-16  engine_stubs.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\tools\engine_stubs.livecodescript	0
 F	YOU#1	LIB_GAMES	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\README.md	0
@@ -376,18 +375,18 @@ F	YOU#1	LIB_GLOBALS	11-15  GLOBALS.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GL
 F	YOU#1	LIB_GUI	11-16  PLAN.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\PLAN.md	0
 F	YOU#1	LIB_GUI	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\README.md	0
 F	YOU#1	LIB_LISTS	11-17  CATALOG.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LISTS\CATALOG.md	0
-F	YOU#1	LIB_LLMOUT	11-15  GAME_NOTES_handled.txt [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_GAMES\GAME_NOTES_handled.txt	0
-F	YOU#1	LIB_LLMOUT	11-16  CELLMAP_V3.md [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_BIT\FOR_REVIEW_cellmap_v3_kept_11_17\CELLMAP_V3.md	0
-F	YOU#1	LIB_LLMOUT	11-16  two_rooms.cellpack [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_BIT\FOR_REVIEW_cellmap_v3_kept_11_17\two_rooms\two_rooms.cellpack	0
-F	YOU#1	LIB_LLMOUT	11-16  py_v3_test.py [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_BIT\FOR_REVIEW_cellmap_v3_kept_11_17\tests\py_v3_test.py	0
-F	YOU#1	LIB_LLMOUT	11-16  ENGINE_CONTRACT.md [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_ig3d\engine-contract_kept_11_17\ENGINE_CONTRACT.md	0
-F	YOU#1	LIB_LLMOUT	11-16  contract_check.py [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_ig3d\engine-contract_kept_11_17\contract_check.py	0
-F	YOU#1	LIB_LLMOUT	11-16  test_contract_check.py [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_ig3d\engine-contract_kept_11_17\test_contract_check.py	0
-F	YOU#1	LIB_LLMOUT	11-16  engine_stubs_NEW.livecodescript [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_ig3d\engine-contract_kept_11_17\engine_stubs_NEW.livecodescript	0
+F	YOU#1	LIB_LLMOUT	11-15  GAME_NOTES_handled.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_GAMES\GAME_NOTES_handled.txt	0
+F	YOU#1	LIB_LLMOUT	11-16  CELLMAP_V3.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_BIT\FOR_REVIEW_cellmap_v3_kept_11_17\CELLMAP_V3.md	0
+F	YOU#1	LIB_LLMOUT	11-16  two_rooms.cellpack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_BIT\FOR_REVIEW_cellmap_v3_kept_11_17\two_rooms\two_rooms.cellpack	0
+F	YOU#1	LIB_LLMOUT	11-16  py_v3_test.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_BIT\FOR_REVIEW_cellmap_v3_kept_11_17\tests\py_v3_test.py	0
+F	YOU#1	LIB_LLMOUT	11-16  ENGINE_CONTRACT.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_ig3d\engine-contract_kept_11_17\ENGINE_CONTRACT.md	0
+F	YOU#1	LIB_LLMOUT	11-16  contract_check.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_ig3d\engine-contract_kept_11_17\contract_check.py	0
+F	YOU#1	LIB_LLMOUT	11-16  test_contract_check.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_ig3d\engine-contract_kept_11_17\test_contract_check.py	0
+F	YOU#1	LIB_LLMOUT	11-16  engine_stubs_NEW.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_ig3d\engine-contract_kept_11_17\engine_stubs_NEW.livecodescript	0
 F	YOU#1	LIB_LLMOUT	11-16  RELEASE_CHECKLIST.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\release-checklist\RELEASE_CHECKLIST.md	0
 F	YOU#1	LIB_LLMOUT	11-16  LIB_ig3d_README_NEW.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\release-checklist\LIB_ig3d_README_NEW.md	0
-F	YOU#1	LIB_LLMOUT	11-16  LIB_USERS_PLAN.md [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_USERS\library-plans_kept_11_17\LIB_USERS_PLAN.md	0
-F	YOU#1	LIB_LLMOUT	11-17  README.md [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_XTJSON\XTJSON_batch_11_13_2026\README.md	0
+F	YOU#1	LIB_LLMOUT	11-16  LIB_USERS_PLAN.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_USERS\library-plans_kept_11_17\LIB_USERS_PLAN.md	0
+F	YOU#1	LIB_LLMOUT	11-17  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_XTJSON\XTJSON_batch_11_13_2026\README.md	0
 F	YOU#1	LIB_MOCAP	11-15  anim_list.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\livecode\anim_list.livecodescript	0
 F	YOU#1	LIB_PUBLIC	11-15  catalog.tsv	\\wsl$\Ubuntu\home\igame3d\projects\LIB_PUBLIC\install\catalog.tsv	0
 F	YOU#1	LIB_PUBLIC	11-15  Vibecode3D_Launcher.livecode	\\wsl$\Ubuntu\home\igame3d\projects\LIB_PUBLIC\launcher\Vibecode3D_Launcher.livecode	0
@@ -431,12 +430,12 @@ F	YOU#1	LIB_ig3d	11-15  v3d_inspector.livecodescript	\\wsl$\Ubuntu\home\igame3d\
 F	YOU#1	LIB_ig3d	11-15  v3d_skins.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\livecode\v3d_skins.livecodescript	0
 F	YOU#1	LIB_ig3d	11-15  v3d_models.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\livecode\v3d_models.livecodescript	0
 F	YOU#1	LIB_ig3d	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\README.md	0
-F	YOU#1	Next_Steps_With_Claude	11-14  MERGE_PLAN_11_14_2026.md [moved]	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\previous_steps\MERGE_PLAN_11_14_2026.md	0
-F	YOU#1	Next_Steps_With_Claude	11-16  FABLE_DAY_11_16_2026.md [moved]	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\previous_steps\FABLE_DAY_11_16_2026.md	0
+F	YOU#1	Next_Steps_With_Claude	11-14  MERGE_PLAN_11_14_2026.md	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\previous_steps\MERGE_PLAN_11_14_2026.md	0
+F	YOU#1	Next_Steps_With_Claude	11-16  FABLE_DAY_11_16_2026.md	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\previous_steps\FABLE_DAY_11_16_2026.md	0
 F	YOU#1	Next_Steps_With_Claude	11-16  FABLE_1_MAP_FORMAT_11_16_2026.md	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\FABLE_1_MAP_FORMAT_11_16_2026.md	0
 F	YOU#1	Next_Steps_With_Claude	11-16  FABLE_2_ENGINE_CONTRACT_11_16_2026.md	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\FABLE_2_ENGINE_CONTRACT_11_16_2026.md	0
 F	YOU#1	Next_Steps_With_Claude	11-16  FABLE_3_RELEASE_CHECKLIST_11_16_2026.md	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\FABLE_3_RELEASE_CHECKLIST_11_16_2026.md	0
-F	YOU#1	Next_Steps_With_Claude	11-16  MERGE_RECORD_11_16_2026.md [moved]	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\previous_steps\MERGE_RECORD_11_16_2026.md	0
+F	YOU#1	Next_Steps_With_Claude	11-16  MERGE_RECORD_11_16_2026.md	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\previous_steps\MERGE_RECORD_11_16_2026.md	0
 F	YOU#1	Next_Steps_With_Claude	11-17  WHEN_WE_RESUME_11_17_2026.md	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\WHEN_WE_RESUME_11_17_2026.md	0
 F	YOU#1	OXT-BEYOND	11-15  README.md	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\README.md	0
 F	YOU#1	OXT-BEYOND	11-15  Keep_Notes_for_Seth_Morrow_Here.txt	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\Keep_Notes_for_Seth_Morrow_Here.txt	0
@@ -463,25 +462,25 @@ F	YOU#1	OXT-BEYOND	11-16  t38_window_shape.txt	\\wsl$\Ubuntu\home\igame3d\projec
 F	YOU#1	xt3D_Raylib_Livecode_Bridge	11-15  vibe_xt3d_overrides.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\testbench\vibe_xt3d_overrides.livecodescript	0
 C	YOU#2	YOU	next	18	130	262	38	New tasks go in one file: LIB_LLMIN/LIB_SYSTEM/NEW_TASKS.txt
 C	YOU#3	YOU	review	18	172	262	53	19 more wait your review in LIB_LLMOUT, Next_Steps_With_Claude - click to list them
-F	YOU#3	Next_Steps_With_Claude	11-14  MERGE_PLAN_11_14_2026.md [moved]	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\previous_steps\MERGE_PLAN_11_14_2026.md	0
-F	YOU#3	Next_Steps_With_Claude	11-16  FABLE_DAY_11_16_2026.md [moved]	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\previous_steps\FABLE_DAY_11_16_2026.md	0
+F	YOU#3	Next_Steps_With_Claude	11-14  MERGE_PLAN_11_14_2026.md	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\previous_steps\MERGE_PLAN_11_14_2026.md	0
+F	YOU#3	Next_Steps_With_Claude	11-16  FABLE_DAY_11_16_2026.md	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\previous_steps\FABLE_DAY_11_16_2026.md	0
 F	YOU#3	Next_Steps_With_Claude	11-16  FABLE_1_MAP_FORMAT_11_16_2026.md	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\FABLE_1_MAP_FORMAT_11_16_2026.md	0
 F	YOU#3	Next_Steps_With_Claude	11-16  FABLE_2_ENGINE_CONTRACT_11_16_2026.md	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\FABLE_2_ENGINE_CONTRACT_11_16_2026.md	0
 F	YOU#3	Next_Steps_With_Claude	11-16  FABLE_3_RELEASE_CHECKLIST_11_16_2026.md	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\FABLE_3_RELEASE_CHECKLIST_11_16_2026.md	0
-F	YOU#3	Next_Steps_With_Claude	11-16  MERGE_RECORD_11_16_2026.md [moved]	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\previous_steps\MERGE_RECORD_11_16_2026.md	0
+F	YOU#3	Next_Steps_With_Claude	11-16  MERGE_RECORD_11_16_2026.md	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\previous_steps\MERGE_RECORD_11_16_2026.md	0
 F	YOU#3	Next_Steps_With_Claude	11-17  WHEN_WE_RESUME_11_17_2026.md	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\WHEN_WE_RESUME_11_17_2026.md	0
-F	YOU#3	LIB_LLMOUT	11-15  GAME_NOTES_handled.txt [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_GAMES\GAME_NOTES_handled.txt	0
-F	YOU#3	LIB_LLMOUT	11-16  CELLMAP_V3.md [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_BIT\FOR_REVIEW_cellmap_v3_kept_11_17\CELLMAP_V3.md	0
-F	YOU#3	LIB_LLMOUT	11-16  two_rooms.cellpack [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_BIT\FOR_REVIEW_cellmap_v3_kept_11_17\two_rooms\two_rooms.cellpack	0
-F	YOU#3	LIB_LLMOUT	11-16  py_v3_test.py [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_BIT\FOR_REVIEW_cellmap_v3_kept_11_17\tests\py_v3_test.py	0
-F	YOU#3	LIB_LLMOUT	11-16  ENGINE_CONTRACT.md [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_ig3d\engine-contract_kept_11_17\ENGINE_CONTRACT.md	0
-F	YOU#3	LIB_LLMOUT	11-16  contract_check.py [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_ig3d\engine-contract_kept_11_17\contract_check.py	0
-F	YOU#3	LIB_LLMOUT	11-16  test_contract_check.py [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_ig3d\engine-contract_kept_11_17\test_contract_check.py	0
-F	YOU#3	LIB_LLMOUT	11-16  engine_stubs_NEW.livecodescript [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_ig3d\engine-contract_kept_11_17\engine_stubs_NEW.livecodescript	0
+F	YOU#3	LIB_LLMOUT	11-15  GAME_NOTES_handled.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_GAMES\GAME_NOTES_handled.txt	0
+F	YOU#3	LIB_LLMOUT	11-16  CELLMAP_V3.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_BIT\FOR_REVIEW_cellmap_v3_kept_11_17\CELLMAP_V3.md	0
+F	YOU#3	LIB_LLMOUT	11-16  two_rooms.cellpack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_BIT\FOR_REVIEW_cellmap_v3_kept_11_17\two_rooms\two_rooms.cellpack	0
+F	YOU#3	LIB_LLMOUT	11-16  py_v3_test.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_BIT\FOR_REVIEW_cellmap_v3_kept_11_17\tests\py_v3_test.py	0
+F	YOU#3	LIB_LLMOUT	11-16  ENGINE_CONTRACT.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_ig3d\engine-contract_kept_11_17\ENGINE_CONTRACT.md	0
+F	YOU#3	LIB_LLMOUT	11-16  contract_check.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_ig3d\engine-contract_kept_11_17\contract_check.py	0
+F	YOU#3	LIB_LLMOUT	11-16  test_contract_check.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_ig3d\engine-contract_kept_11_17\test_contract_check.py	0
+F	YOU#3	LIB_LLMOUT	11-16  engine_stubs_NEW.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_ig3d\engine-contract_kept_11_17\engine_stubs_NEW.livecodescript	0
 F	YOU#3	LIB_LLMOUT	11-16  RELEASE_CHECKLIST.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\release-checklist\RELEASE_CHECKLIST.md	0
 F	YOU#3	LIB_LLMOUT	11-16  LIB_ig3d_README_NEW.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\release-checklist\LIB_ig3d_README_NEW.md	0
-F	YOU#3	LIB_LLMOUT	11-16  LIB_USERS_PLAN.md [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_USERS\library-plans_kept_11_17\LIB_USERS_PLAN.md	0
-F	YOU#3	LIB_LLMOUT	11-17  README.md [moved]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_XTJSON\XTJSON_batch_11_13_2026\README.md	0
+F	YOU#3	LIB_LLMOUT	11-16  LIB_USERS_PLAN.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_USERS\library-plans_kept_11_17\LIB_USERS_PLAN.md	0
+F	YOU#3	LIB_LLMOUT	11-17  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_XTJSON\XTJSON_batch_11_13_2026\README.md	0
 E	Vibecode3D	LIB_GAMES	grey
 E	Vibecode3D	LIB_BIT	grey
 E	Vibecode3D	LIB_BUILD	grey
