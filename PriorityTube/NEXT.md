@@ -17,7 +17,14 @@ a loop, not a build:
    echoes the old post-Antack T3D game menu). Change little until he asks; collect his reactions in
    PLAN.md section 5.
 
-## FOR THE NEXT SESSION (written 18 Nov, ~00:00 WSL clock; the long session was making the laptop hot)
+## FOR THE NEXT SESSION (18 Nov, midday, before a /clear)
+Done this session: LIB_SYSTEM notes (STATUS archived, operating prompt draft 2, DONE list), LIB_GUI popup
+kind, Users.Title for built apps, battles plan (LIB_GAD `gad-battles`, step 2 waits for the owner's go).
+Owner's tube rule: "We'll pile up big jobs until we can't find any old small ones left to push through":
+take small/old bubbles first. Tube questions answered in chat: cellmap v3 tools are Opus work, not Fable;
+Step 9 = TTRPG world code (keep or drop: no answer yet).
+
+## Earlier (written 18 Nov, ~00:00 WSL clock; the long session was making the laptop hot)
 Start a FRESH session (not --continue). Then:
 1. **LIB_GUI popup kind** (owner: "yes we need a pop up kind of menu, but in a new session"): a `popup`
    widget kind in .gui (right-click menus, the LIB_MENU ending), and Gui.FromStack reading popups
