@@ -20,7 +20,7 @@ what: Where we are, 17 Nov 2026
 has: Opus alone from here (no Fable time): big things start as a one-page plan
 has: Every branch merged 16 Nov; main is the truth in every repository
 has: Rename Day merged 18 Nov: every contract call is Group.Verb; old names live until release
-next: The contract's new calls (Camera.SetLook, Entity.Set/Get/SetMesh, Scene.Objects ...)
+has: The contract's new calls written, waiting on your merge (contract-calls)
 next: Move the games to the new names (666 places in 54 scripts)
 next: Your 16 Nov game notes (GridSprint, InterceptorRun, DeadDays)
 
@@ -246,7 +246,7 @@ has: iGame3D external API documented (123 commands, 53 functions)
 done: GLOSSARY.md
 done: PROCEDURES.md
 done: Rename Day merged (18 Nov): 24 calls renamed, 22 aliases, Camera. group; checker 65/65, t45 t46 pass
-next: The contract's new calls under the final names (A-93, A-96)
+done: The contract's new calls (18 Nov, branch contract-calls in 4 repos): t49 54 checks on both engines, tried in the xRay bench
 next: rename_day.py, then move the games: 666 places in 54 scripts
 review: owner: which face for the suggestion list next: in-game command line or OXT-Beyond script editor?
 block: owner: say keep / change / later on RELEASE_CHECKLIST.md
