@@ -94,8 +94,8 @@ has: Self-writing script system mapped (5 bugs found)
 demo: GeneticAnomaly prototype (ga-turns)
 done: Battles step 1: one-page plan (18 Nov, LIB_GAD branch gad-battles; copy in LIB_LLMOUT/LIB_GAD)
 review: Battles plan: say yes (or change) before step 2; 4 questions at its end
-done: Battles step 2: smallest loop built (18 Nov, branch gad-battles, 74 checks pass)
-review: owner: play LIB_GAD/battles/GAD_Battles.oxtstack in OXT-Beyond (U = X, click Base then target, ENTER = turn)
+done: Battles step 2: smallest loop built (18 Nov, 73 checks pass)
+done: You played it: "working great"; merged to main 18 Nov
 block: owner: say yes or no to the one-page battle plan before any code
 link: LIB_RTS, LIB_GENERICA, LIB_LISTS, LIB_SCRIPTBLOCKS
 

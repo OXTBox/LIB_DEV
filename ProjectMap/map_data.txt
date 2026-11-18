@@ -1,4 +1,4 @@
-# map_data.txt made 2026-11-18 12:20 by tools/make_map.py; do not edit (edit board.txt)
+# map_data.txt made 2026-11-18 12:51 by tools/make_map.py; do not edit (edit board.txt)
 Z	ENGINES	ENGINES	0	184	300
 Z	GAMES	GAMES	390	184	630
 Z	BLOCKS	BUILDING BLOCKS	1110	184	960
@@ -81,22 +81,20 @@ C	LIB_GAD#1	LIB_GAD	has	18	73	262	23	324 handlers in 28 scripts
 C	LIB_GAD#2	LIB_GAD	has	18	100	262	23	GAD essence and variable inventory
 C	LIB_GAD#3	LIB_GAD	has	18	127	262	38	Self-writing script system mapped (5 bugs found)
 C	LIB_GAD#4	LIB_GAD	demo	18	169	262	23	GeneticAnomaly prototype (ga-turns)
-C	LIB_GAD#5	LIB_GAD	done	18	196	262	57	DONE\n- Battles step 1: one-page plan (18 Nov, LIB_GAD branch gad-battles; copy in LIB_LLMOUT/LIB_GAD)\n- Battles step 2: smallest loop built (18 Nov, branch gad-battles, 74 checks pass)
-C	LIB_GAD#6	LIB_GAD	review	18	257	262	38	Battles plan: say yes (or change) before step 2; 4 questions at its end
-C	LIB_GAD#7	LIB_GAD	review	18	299	262	68	owner: play LIB_GAD/battles/GAD_Battles.oxtstack in OXT-Beyond (U = X, click Base then target, ENTER = turn)
-C	LIB_GAD#8	LIB_GAD	block	18	371	262	38	owner: say yes or no to the one-page battle plan before any code
-C	LIB_GAD#9	LIB_GAD	review	18	413	262	23	branch gad-battles not merged
-C	LIB_GAD#10	LIB_GAD	review	18	440	262	38	9 files wait your review (oldest 2026-11-15) - click to list them
-F	LIB_GAD#10	LIB_GAD	11-15  Vibecode3D_Play_GeneticAnomaly.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\GeneticAnomaly\Vibecode3D_Play_GeneticAnomaly.livecodescript	0	1
-F	LIB_GAD#10	LIB_GAD	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\GeneticAnomaly\README.md	0	1
-F	LIB_GAD#10	LIB_GAD	11-18  GAD_Battles.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\GAD_Battles.oxtstack	0	1
-F	LIB_GAD#10	LIB_GAD	11-18  gad_battles_rules.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\gad_battles_rules.livecodescript	0	1
-F	LIB_GAD#10	LIB_GAD	11-18  gad_battles_ui.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\gad_battles_ui.livecodescript	0	1
-F	LIB_GAD#10	LIB_GAD	11-18  gad_battles_stack.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\gad_battles_stack.livecodescript	0	1
-F	LIB_GAD#10	LIB_GAD	11-18  t_gad_battles.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\tests\t_gad_battles.txt	0	1
-F	LIB_GAD#10	LIB_GAD	11-18  build_stack.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\tools\build_stack.txt	0	1
-F	LIB_GAD#10	LIB_GAD	11-18  NEXT.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\NEXT.md	0	1
-P	LIB_RTS	part	390	1585	280	82	LIB_RTS	The 2008 RTS system rebuilt in xTalk: select, command, the living and the dead	\\wsl$\Ubuntu\home\igame3d\projects\LIB_RTS
+C	LIB_GAD#5	LIB_GAD	done	18	196	262	72	DONE\n- Battles step 1: one-page plan (18 Nov, LIB_GAD branch gad-battles; copy in LIB_LLMOUT/LIB_GAD)\n- Battles step 2: smallest loop built (18 Nov, 73 checks pass)\n- You played it: "working great"; merged to main 18 Nov
+C	LIB_GAD#6	LIB_GAD	review	18	272	262	38	Battles plan: say yes (or change) before step 2; 4 questions at its end
+C	LIB_GAD#7	LIB_GAD	block	18	314	262	38	owner: say yes or no to the one-page battle plan before any code
+C	LIB_GAD#8	LIB_GAD	review	18	356	262	38	9 files wait your review (oldest 2026-11-15) - click to list them
+F	LIB_GAD#8	LIB_GAD	11-15  Vibecode3D_Play_GeneticAnomaly.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\GeneticAnomaly\Vibecode3D_Play_GeneticAnomaly.livecodescript	0	1
+F	LIB_GAD#8	LIB_GAD	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\GeneticAnomaly\README.md	0	1
+F	LIB_GAD#8	LIB_GAD	11-18  GAD_Battles.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\GAD_Battles.oxtstack	0	1
+F	LIB_GAD#8	LIB_GAD	11-18  gad_battles_rules.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\gad_battles_rules.livecodescript	0	1
+F	LIB_GAD#8	LIB_GAD	11-18  gad_battles_ui.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\gad_battles_ui.livecodescript	0	1
+F	LIB_GAD#8	LIB_GAD	11-18  gad_battles_stack.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\gad_battles_stack.livecodescript	0	1
+F	LIB_GAD#8	LIB_GAD	11-18  t_gad_battles.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\tests\t_gad_battles.txt	0	1
+F	LIB_GAD#8	LIB_GAD	11-18  build_stack.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\tools\build_stack.txt	0	1
+F	LIB_GAD#8	LIB_GAD	11-18  NEXT.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\NEXT.md	0	1
+P	LIB_RTS	part	390	1501	280	82	LIB_RTS	The 2008 RTS system rebuilt in xTalk: select, command, the living and the dead	\\wsl$\Ubuntu\home\igame3d\projects\LIB_RTS
 C	LIB_RTS#1	LIB_RTS	has	18	88	262	23	119 handlers in 2 scripts
 C	LIB_RTS#2	LIB_RTS	demo	18	115	262	23	RTS_Demo
 C	LIB_RTS#3	LIB_RTS	block	18	142	262	38	owner: play RTS_Demo two minutes and say whether it was fun
@@ -323,9 +321,8 @@ C	LIB_DEV#5	LIB_DEV	done	18	211	262	87	DONE\n- Status Browser + review list\n- P
 C	LIB_DEV#6	LIB_DEV	next	18	302	262	23	Your next input on the Project Map
 C	LIB_DEV#7	LIB_DEV	review	18	329	262	23	branch on-git-or-not not merged
 C	LIB_DEV#8	LIB_DEV	review	18	356	262	23	branch window-zoom not merged
-C	LIB_DEV#9	LIB_DEV	review	18	383	262	38	5 loose files not committed - click to list them
+C	LIB_DEV#9	LIB_DEV	review	18	383	262	38	4 loose files not committed - click to list them
 F	LIB_DEV#9	LIB_DEV	board.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\board.txt	0	0
-F	LIB_DEV#9	LIB_DEV	map_data.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\map_data.txt	0	0
 F	LIB_DEV#9	LIB_DEV	game_player.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\game_player.livecodescript	0	0
 F	LIB_DEV#9	LIB_DEV	GAME_Browser.exe - Shortcut.lnk	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\GAME_Browser.exe - Shortcut.lnk	0	0
 F	LIB_DEV#9	LIB_DEV	bug_hunt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\bug_hunt	1	0
@@ -631,7 +628,7 @@ E	LIB_GAMES	LIB_SPARK	grey
 E	LIB_GAMES	LIB_COMFY	grey
 E	PROMPT_GLAZE	LIB_GAMES	grey
 E	PROMPT_GLAZE	LIB_GAD	grey
-E	LIB_GAD#8	YOU	red
+E	LIB_GAD#7	YOU	red
 E	LIB_GAD	YOU	red
 E	LIB_GAD	LIB_RTS	grey
 E	LIB_GAD	LIB_GENERICA	grey
