@@ -23,3 +23,4 @@ n-dda4604e	20	utility	Window titles from Users.Title in each stack: small and me
 c1794977086199	10	fix	The comment window says what you clicked on (box, words, board) so you know where you are after a break
 c1794977779027	40	utility	"Leave comment" and "Explore here..." on every right-click menu, plus a one-page LIB_MENU plan (rules for menus everywhere)
 c1794978427043	15	plan	The boards as the way into the files (they show relationships Explorer cannot): goes with the LIB_MENU bubble, best done together
+n-48f7ab7f	40	utility	Ten scripts in seven projects ask Users.Title instead of writing their own title (and the real name leaves those titles)
