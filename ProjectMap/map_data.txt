@@ -1,4 +1,4 @@
-# map_data.txt made 2026-11-18 02:14 by tools/make_map.py; do not edit (edit board.txt)
+# map_data.txt made 2026-11-18 02:17 by tools/make_map.py; do not edit (edit board.txt)
 Z	ENGINES	ENGINES	0	184	300
 Z	GAMES	GAMES	390	184	630
 Z	BLOCKS	BUILDING BLOCKS	1110	184	960
@@ -17,16 +17,15 @@ C	xt3d#3	xt3d	has	18	142	262	38	Box2DXT physics works outside the IDE (could rep
 C	xt3d#4	xt3d	next	18	184	262	38	E13 Walk The Map in the xt3d games bench
 C	xt3d#5	xt3d	done	18	226	262	42	DONE\n- Engine made again with the contract aliases (18 Nov, Rename Day; t18 t22 t45 pass)
 C	xt3d#6	xt3d	review	18	272	262	53	owner: play one game on the new generated engine in a window (nobody has yet)
-C	xt3d#7	xt3d	review	18	329	262	23	branch contract-calls not merged
-C	xt3d#8	xt3d	review	18	356	262	38	1 loose file not committed - click to list them
-F	xt3d#8	xt3D_Raylib_Livecode_Bridge	__pycache__	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\__pycache__	1	0
-C	xt3d#9	xt3d	review	18	398	262	38	2 files wait your review (oldest 2026-11-15) - click to list them
-F	xt3d#9	xt3D_Raylib_Livecode_Bridge	11-15  vibe_xt3d_overrides.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\testbench\vibe_xt3d_overrides.livecodescript	0	1
-F	xt3d#9	xt3D_Raylib_Livecode_Bridge	11-18  make_vibe_xt3d.py	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\tools\make_vibe_xt3d.py	0	1
-P	iGame3D_2026_CLAUDE	part	0	1085	280	67	iGame3D_2026_CLAUDE	Writable copy of the 2008 iGame3D (Lua) for real-engine tests	\\wsl$\Ubuntu\home\igame3d\projects\iGame3D_2026_CLAUDE
+C	xt3d#7	xt3d	review	18	329	262	38	1 loose file not committed - click to list them
+F	xt3d#7	xt3D_Raylib_Livecode_Bridge	__pycache__	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\__pycache__	1	0
+C	xt3d#8	xt3d	review	18	371	262	38	2 files wait your review (oldest 2026-11-15) - click to list them
+F	xt3d#8	xt3D_Raylib_Livecode_Bridge	11-15  vibe_xt3d_overrides.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\testbench\vibe_xt3d_overrides.livecodescript	0	1
+F	xt3d#8	xt3D_Raylib_Livecode_Bridge	11-18  make_vibe_xt3d.py	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\tools\make_vibe_xt3d.py	0	1
+P	iGame3D_2026_CLAUDE	part	0	1058	280	67	iGame3D_2026_CLAUDE	Writable copy of the 2008 iGame3D (Lua) for real-engine tests	\\wsl$\Ubuntu\home\igame3d\projects\iGame3D_2026_CLAUDE
 C	iGame3D_2026_CLAUDE#1	iGame3D_2026_CLAUDE	has	18	73	262	38	2007 Pro external loads in 7.1.4 32-bit, runs Lua
 C	iGame3D_2026_CLAUDE#2	iGame3D_2026_CLAUDE	block	18	115	262	23	Physics broken: faked in our games
-P	xtalk_py	part	0	1261	280	67	xtalk_py	xTalk runtime in Python + the script corpus	\\wsl$\Ubuntu\home\igame3d\projects\xtalk_py
+P	xtalk_py	part	0	1234	280	67	xtalk_py	xTalk runtime in Python + the script corpus	\\wsl$\Ubuntu\home\igame3d\projects\xtalk_py
 C	xtalk_py#1	xtalk_py	has	18	73	262	23	798 handlers in 29 scripts
 C	xtalk_py#2	xtalk_py	has	18	100	262	38	Script corpus with INDEX.md (toCorpus / fromXJSON)
 C	xtalk_py#3	xtalk_py	next	18	142	262	38	Pythonizing day (later, by the owner's word)
@@ -38,43 +37,42 @@ C	LIB_GAMES#4	LIB_GAMES	demo	18	169	262	38	Vector Toss (branch vector-toss-dangl
 C	LIB_GAMES#5	LIB_GAMES	done	18	211	262	87	DONE\n- Round one games\n- Round two games (owner concepts)\n- Spark road trip: 15 games played on the real engine\n- Owner's 15 Nov notes (LTA camera, SquadBuggy snipers)
 C	LIB_GAMES#6	LIB_GAMES	next	18	302	262	68	16 Nov notes: GridSprint crash box + traffic, InterceptorRun homing + rotor + zoom, DeadDays sparks + mouse look + Shift
 C	LIB_GAMES#7	LIB_GAMES	block	18	374	262	53	Engine contract (cellmap v3 follow-ups A-92..A-95) before games move to xRay / Box2DXT
-C	LIB_GAMES#8	LIB_GAMES	review	18	431	262	23	branch contract-calls not merged
-C	LIB_GAMES#9	LIB_GAMES	review	18	458	262	23	branch vector-toss-dangle not merged
-C	LIB_GAMES#10	LIB_GAMES	review	18	485	262	38	4 loose files not committed - click to list them
-F	LIB_GAMES#10	LIB_GAMES	Vibecode3D_Play_Hunter.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Hunter.livecodescript	0	0
-F	LIB_GAMES#10	LIB_GAMES	engine_stubs.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\tools\engine_stubs.livecodescript	0	0
-F	LIB_GAMES#10	LIB_GAMES	Vibecode3D_Play_Hunter.input.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Hunter.input.txt	0	0
-F	LIB_GAMES#10	LIB_GAMES	poor_quality	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\poor_quality	1	0
-C	LIB_GAMES#11	LIB_GAMES	review	18	527	262	38	24 files wait your review (oldest 2026-11-14) - click to list them
-F	LIB_GAMES#11	LIB_GAMES	11-14  Vibecode3D_Play_InterceptorRun.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_InterceptorRun.livecodescript	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-14  Vibecode3D_Play_FareDash.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_FareDash.livecodescript	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-14  Vibecode3D_Play_TabletopRacers.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_TabletopRacers.livecodescript	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-14  Vibecode3D_Play_WreckRing.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_WreckRing.livecodescript	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-14  Vibecode3D_Play_RampRider.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_RampRider.livecodescript	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-15  banter.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\VectorToss\banter.txt	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-15  Vibecode3D_Play_AntackFresh.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_AntackFresh.livecodescript	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-15  GameNotes.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\tools\GameNotes.livecodescript	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-15  Vibecode3D_Play_LightTrailArena.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_LightTrailArena.livecodescript	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-15  Vibecode3D_Play_SquadBuggy.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_SquadBuggy.livecodescript	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-15  Vibecode3D_Play_Antack.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Antack.livecodescript	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-15  Vibecode3D_Play_uDead.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_uDead.livecodescript	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-15  Vibecode3D_Play_Thrmnlra.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Thrmnlra.livecodescript	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-15  Vibecode3D_Play_Face.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Face.livecodescript	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-15  Vibecode3D_Play_Amazing_Couple.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Amazing_Couple.livecodescript	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-16  Vibecode3D_Play_DeadDays.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_DeadDays.livecodescript	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-16  engine_stubs.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\tools\engine_stubs.livecodescript	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\README.md	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-17  Vibecode3D_Play_VectorToss.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_VectorToss.livecodescript	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-17  Vibecode3D_Play_ComfyPong2.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\poor_quality\Vibecode3D_Play_ComfyPong2.livecodescript	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-17  Vibecode3D_Play_ComfyPong3.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\poor_quality\Vibecode3D_Play_ComfyPong3.livecodescript	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-17  Vibecode3D_Play_BlockCityHustle.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_BlockCityHustle.livecodescript	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-18  Vibecode3D_Play_Hunter.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Hunter.livecodescript	0	1
-F	LIB_GAMES#11	LIB_GAMES	11-18  Vibecode3D_Play_Hunter.input.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Hunter.input.txt	0	1
-P	PROMPT_GLAZE	core	390	863	280	67	PROMPT_GLAZE	The umbrella game: two vector heroes dropped into every game we build	\\wsl$\Ubuntu\home\igame3d\projects\PROMPT_GLAZE
+C	LIB_GAMES#8	LIB_GAMES	review	18	431	262	23	branch vector-toss-dangle not merged
+C	LIB_GAMES#9	LIB_GAMES	review	18	458	262	38	4 loose files not committed - click to list them
+F	LIB_GAMES#9	LIB_GAMES	Vibecode3D_Play_Hunter.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Hunter.livecodescript	0	0
+F	LIB_GAMES#9	LIB_GAMES	engine_stubs.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\tools\engine_stubs.livecodescript	0	0
+F	LIB_GAMES#9	LIB_GAMES	Vibecode3D_Play_Hunter.input.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Hunter.input.txt	0	0
+F	LIB_GAMES#9	LIB_GAMES	poor_quality	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\poor_quality	1	0
+C	LIB_GAMES#10	LIB_GAMES	review	18	500	262	38	24 files wait your review (oldest 2026-11-14) - click to list them
+F	LIB_GAMES#10	LIB_GAMES	11-14  Vibecode3D_Play_InterceptorRun.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_InterceptorRun.livecodescript	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-14  Vibecode3D_Play_FareDash.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_FareDash.livecodescript	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-14  Vibecode3D_Play_TabletopRacers.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_TabletopRacers.livecodescript	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-14  Vibecode3D_Play_WreckRing.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_WreckRing.livecodescript	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-14  Vibecode3D_Play_RampRider.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_RampRider.livecodescript	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-15  banter.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\VectorToss\banter.txt	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-15  Vibecode3D_Play_AntackFresh.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_AntackFresh.livecodescript	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-15  GameNotes.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\tools\GameNotes.livecodescript	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-15  Vibecode3D_Play_LightTrailArena.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_LightTrailArena.livecodescript	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-15  Vibecode3D_Play_SquadBuggy.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_SquadBuggy.livecodescript	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-15  Vibecode3D_Play_Antack.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Antack.livecodescript	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-15  Vibecode3D_Play_uDead.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_uDead.livecodescript	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-15  Vibecode3D_Play_Thrmnlra.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Thrmnlra.livecodescript	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-15  Vibecode3D_Play_Face.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Face.livecodescript	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-15  Vibecode3D_Play_Amazing_Couple.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Amazing_Couple.livecodescript	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-16  Vibecode3D_Play_DeadDays.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_DeadDays.livecodescript	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-16  engine_stubs.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\tools\engine_stubs.livecodescript	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\README.md	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-17  Vibecode3D_Play_VectorToss.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_VectorToss.livecodescript	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-17  Vibecode3D_Play_ComfyPong2.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\poor_quality\Vibecode3D_Play_ComfyPong2.livecodescript	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-17  Vibecode3D_Play_ComfyPong3.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\poor_quality\Vibecode3D_Play_ComfyPong3.livecodescript	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-17  Vibecode3D_Play_BlockCityHustle.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_BlockCityHustle.livecodescript	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-18  Vibecode3D_Play_Hunter.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Hunter.livecodescript	0	1
+F	LIB_GAMES#10	LIB_GAMES	11-18  Vibecode3D_Play_Hunter.input.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_Hunter.input.txt	0	1
+P	PROMPT_GLAZE	core	390	836	280	67	PROMPT_GLAZE	The umbrella game: two vector heroes dropped into every game we build	\\wsl$\Ubuntu\home\igame3d\projects\PROMPT_GLAZE
 C	PROMPT_GLAZE#1	PROMPT_GLAZE	has	18	73	262	38	Banter / glossary work feeds GAD tropes
 C	PROMPT_GLAZE#2	PROMPT_GLAZE	next	18	115	262	38	Vector Toss Stamina rules (HANG TIME) when its work resumes
 C	PROMPT_GLAZE#3	PROMPT_GLAZE	block	18	157	262	38	Waits on LIB_GAMES games settling (not now, by plan)
-P	LIB_GAD	core	390	1096	280	67	LIB_GAD	Generic Any Data + our Genetic Anomaly Detector (Galactica-4 as reference)	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD
+P	LIB_GAD	core	390	1069	280	67	LIB_GAD	Generic Any Data + our Genetic Anomaly Detector (Galactica-4 as reference)	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD
 C	LIB_GAD#1	LIB_GAD	has	18	73	262	23	106 handlers in 22 scripts
 C	LIB_GAD#2	LIB_GAD	has	18	100	262	23	GAD essence and variable inventory
 C	LIB_GAD#3	LIB_GAD	has	18	127	262	38	Self-writing script system mapped (5 bugs found)
@@ -85,7 +83,7 @@ C	LIB_GAD#7	LIB_GAD	block	18	280	262	38	owner: say yes or no to the one-page bat
 C	LIB_GAD#8	LIB_GAD	review	18	322	262	38	2 files wait your review (oldest 2026-11-15) - click to list them
 F	LIB_GAD#8	LIB_GAD	11-15  Vibecode3D_Play_GeneticAnomaly.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\GeneticAnomaly\Vibecode3D_Play_GeneticAnomaly.livecodescript	0	1
 F	LIB_GAD#8	LIB_GAD	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\GeneticAnomaly\README.md	0	1
-P	LIB_RTS	part	390	1494	280	82	LIB_RTS	The 2008 RTS system rebuilt in xTalk: select, command, the living and the dead	\\wsl$\Ubuntu\home\igame3d\projects\LIB_RTS
+P	LIB_RTS	part	390	1467	280	82	LIB_RTS	The 2008 RTS system rebuilt in xTalk: select, command, the living and the dead	\\wsl$\Ubuntu\home\igame3d\projects\LIB_RTS
 C	LIB_RTS#1	LIB_RTS	has	18	88	262	23	119 handlers in 2 scripts
 C	LIB_RTS#2	LIB_RTS	demo	18	115	262	23	RTS_Demo
 C	LIB_RTS#3	LIB_RTS	block	18	142	262	38	owner: play RTS_Demo two minutes and say whether it was fun
@@ -266,28 +264,27 @@ F	LIB_EDITOR#8	LIB_EDITOR	11-17  e13_headless.txt	\\wsl$\Ubuntu\home\igame3d\pro
 P	LIB_ig3d	core	2160	643	280	67	LIB_ig3d	Where the worlds converge: glossary, procedures, engine categories	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d
 C	LIB_ig3d#1	LIB_ig3d	has	18	73	262	23	452 handlers in 8 scripts
 C	LIB_ig3d#2	LIB_ig3d	has	18	100	262	38	iGame3D external API documented (123 commands, 53 functions)
-C	LIB_ig3d#3	LIB_ig3d	done	18	142	262	87	DONE\n- GLOSSARY.md\n- PROCEDURES.md\n- Rename Day merged (18 Nov): 24 calls renamed, 22 aliases, Camera. group; checker 65/65, t45 t46 pass\n- The contract's new calls (18 Nov, branch contract-calls in 4 repos): t49 54 checks on both engines, tried in the xRay bench
+C	LIB_ig3d#3	LIB_ig3d	done	18	142	262	87	DONE\n- GLOSSARY.md\n- PROCEDURES.md\n- Rename Day merged (18 Nov): 24 calls renamed, 22 aliases, Camera. group; checker 65/65, t45 t46 pass\n- The contract's new calls merged (18 Nov): t49 54 checks on both engines, tried in the xRay bench
 C	LIB_ig3d#4	LIB_ig3d	next	18	233	262	38	rename_day.py, then move the games: 666 places in 54 scripts
 C	LIB_ig3d#5	LIB_ig3d	review	18	275	262	53	owner: which face for the suggestion list next: in-game command line or OXT-Beyond script editor?
 C	LIB_ig3d#6	LIB_ig3d	block	18	332	262	38	owner: say keep / change / later on RELEASE_CHECKLIST.md
-C	LIB_ig3d#7	LIB_ig3d	review	18	374	262	23	branch contract-calls not merged
-C	LIB_ig3d#8	LIB_ig3d	review	18	401	262	23	branch release-checklist not merged
-C	LIB_ig3d#9	LIB_ig3d	review	18	428	262	38	14 files wait your review (oldest 2026-11-14) - click to list them
-F	LIB_ig3d#9	LIB_ig3d	11-14  MAIN_UI_REUSE.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\MAIN_UI_REUSE.md	0	1
-F	LIB_ig3d#9	LIB_ig3d	11-15  GDD_OUTLINE_A88.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\GDD_OUTLINE_A88.md	0	1
-F	LIB_ig3d#9	LIB_ig3d	11-15  v3d_inspector.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\livecode\v3d_inspector.livecodescript	0	1
-F	LIB_ig3d#9	LIB_ig3d	11-15  v3d_skins.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\livecode\v3d_skins.livecodescript	0	1
-F	LIB_ig3d#9	LIB_ig3d	11-15  v3d_models.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\livecode\v3d_models.livecodescript	0	1
-F	LIB_ig3d#9	LIB_ig3d	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\README.md	0	1
-F	LIB_ig3d#9	LIB_ig3d	11-16  test_contract_check.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\tools\test_contract_check.py	0	1
-F	LIB_ig3d#9	LIB_ig3d	11-18  RENAME_DAY.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\RENAME_DAY.md	0	1
-F	LIB_ig3d#9	LIB_ig3d	11-18  make_names.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\tools\make_names.py	0	1
-F	LIB_ig3d#9	LIB_ig3d	11-18  contract_check.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\tools\contract_check.py	0	1
-F	LIB_ig3d#9	LIB_ig3d	11-18  contract_aliases.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\livecode\contract_aliases.livecodescript	0	1
-F	LIB_ig3d#9	LIB_ig3d	11-18  lib_suggest.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\livecode\lib_suggest.livecodescript	0	1
-F	LIB_ig3d#9	LIB_ig3d	11-18  suggest_window.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\livecode\suggest_window.livecodescript	0	1
-F	LIB_ig3d#9	LIB_ig3d	11-18  ENGINE_CONTRACT.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\ENGINE_CONTRACT.md	0	1
-P	OXT-BEYOND	part	2160	1147	280	67	OXT-BEYOND	The new xTalk IDE (Seth Morrow); MCP bridge lets Claude drive it	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND
+C	LIB_ig3d#7	LIB_ig3d	review	18	374	262	23	branch release-checklist not merged
+C	LIB_ig3d#8	LIB_ig3d	review	18	401	262	38	14 files wait your review (oldest 2026-11-14) - click to list them
+F	LIB_ig3d#8	LIB_ig3d	11-14  MAIN_UI_REUSE.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\MAIN_UI_REUSE.md	0	1
+F	LIB_ig3d#8	LIB_ig3d	11-15  GDD_OUTLINE_A88.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\GDD_OUTLINE_A88.md	0	1
+F	LIB_ig3d#8	LIB_ig3d	11-15  v3d_inspector.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\livecode\v3d_inspector.livecodescript	0	1
+F	LIB_ig3d#8	LIB_ig3d	11-15  v3d_skins.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\livecode\v3d_skins.livecodescript	0	1
+F	LIB_ig3d#8	LIB_ig3d	11-15  v3d_models.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\livecode\v3d_models.livecodescript	0	1
+F	LIB_ig3d#8	LIB_ig3d	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\README.md	0	1
+F	LIB_ig3d#8	LIB_ig3d	11-16  test_contract_check.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\tools\test_contract_check.py	0	1
+F	LIB_ig3d#8	LIB_ig3d	11-18  RENAME_DAY.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\RENAME_DAY.md	0	1
+F	LIB_ig3d#8	LIB_ig3d	11-18  make_names.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\tools\make_names.py	0	1
+F	LIB_ig3d#8	LIB_ig3d	11-18  contract_check.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\tools\contract_check.py	0	1
+F	LIB_ig3d#8	LIB_ig3d	11-18  contract_aliases.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\livecode\contract_aliases.livecodescript	0	1
+F	LIB_ig3d#8	LIB_ig3d	11-18  lib_suggest.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\livecode\lib_suggest.livecodescript	0	1
+F	LIB_ig3d#8	LIB_ig3d	11-18  suggest_window.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\livecode\suggest_window.livecodescript	0	1
+F	LIB_ig3d#8	LIB_ig3d	11-18  ENGINE_CONTRACT.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\ENGINE_CONTRACT.md	0	1
+P	OXT-BEYOND	part	2160	1120	280	67	OXT-BEYOND	The new xTalk IDE (Seth Morrow); MCP bridge lets Claude drive it	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND
 C	OXT-BEYOND#1	OXT-BEYOND	has	18	73	262	23	4 handlers in 2 scripts
 C	OXT-BEYOND#2	OXT-BEYOND	has	18	100	262	38	Headless runner: 138 checks pass, sockets and processes work
 C	OXT-BEYOND#3	OXT-BEYOND	has	18	142	262	23	MCP bridge connected
@@ -324,7 +321,7 @@ F	OXT-BEYOND#4	OXT-BEYOND	11-18  t46_suggest.txt	\\wsl$\Ubuntu\home\igame3d\proj
 F	OXT-BEYOND#4	OXT-BEYOND	11-18  t47_window_zoom.txt	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\tests\t47_window_zoom.txt	0	1
 F	OXT-BEYOND#4	OXT-BEYOND	11-18  t43_lib_menu.txt	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\tests\t43_lib_menu.txt	0	1
 F	OXT-BEYOND#4	OXT-BEYOND	11-18  t48_lib_input.txt	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\tests\t48_lib_input.txt	0	1
-P	LIB_DEV	part	2160	1392	280	67	LIB_DEV	Where the developer's needs are met: Status Browser, Game Browser, this map	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV
+P	LIB_DEV	part	2160	1365	280	67	LIB_DEV	Where the developer's needs are met: Status Browser, Game Browser, this map	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV
 C	LIB_DEV#1	LIB_DEV	has	18	73	262	23	313 handlers in 11 scripts
 C	LIB_DEV#2	LIB_DEV	has	18	100	262	23	Status Browser + Tell Claude button
 C	LIB_DEV#3	LIB_DEV	has	18	127	262	38	Dev.NewVersion (one dev stack per iteration)
@@ -332,42 +329,40 @@ C	LIB_DEV#4	LIB_DEV	has	18	169	262	38	Project Map (this stack): reviews and bloc
 C	LIB_DEV#5	LIB_DEV	done	18	211	262	72	DONE\n- Status Browser + review list\n- Project Map merged (17 Nov)\n- On Git or Not step 4: Commit / Ignore / Delete / Leave on each loose thing
 C	LIB_DEV#6	LIB_DEV	next	18	287	262	23	Your next input on the Project Map
 C	LIB_DEV#7	LIB_DEV	next	18	314	262	68	Status Browser: copy your wheel-zoom (scaleFactor) handlers from the stack into its script file, then load the new menu
-C	LIB_DEV#8	LIB_DEV	review	18	386	262	23	branch contract-calls not merged
-C	LIB_DEV#9	LIB_DEV	review	18	413	262	23	branch on-git-or-not not merged
-C	LIB_DEV#10	LIB_DEV	review	18	440	262	23	branch window-zoom not merged
-C	LIB_DEV#11	LIB_DEV	review	18	467	262	38	4 loose files not committed - click to list them
-F	LIB_DEV#11	LIB_DEV	items.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\PriorityTube\items.txt	0	0
-F	LIB_DEV#11	LIB_DEV	board.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\board.txt	0	0
-F	LIB_DEV#11	LIB_DEV	map_data.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\map_data.txt	0	0
-F	LIB_DEV#11	LIB_DEV	game_player.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\game_player.livecodescript	0	0
-C	LIB_DEV#12	LIB_DEV	review	18	509	262	38	27 files wait your review (oldest 2026-11-14) - click to list them
-F	LIB_DEV#12	LIB_DEV	11-14  Status_Browser.livecode	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Status_Browser.livecode	0	1
-F	LIB_DEV#12	LIB_DEV	11-14  Status_Browser_Launcher.livecode	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Status_Browser_Launcher.livecode	0	1
-F	LIB_DEV#12	LIB_DEV	11-14  Game_Player_Launcher.livecode	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Game_Player_Launcher.livecode	0	1
-F	LIB_DEV#12	LIB_DEV	11-16  window_shape.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\window_shape.livecodescript	0	1
-F	LIB_DEV#12	LIB_DEV	11-17  audit.sh	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\bash\audit.sh	0	1
-F	LIB_DEV#12	LIB_DEV	11-17  ProjectMap.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\ProjectMap.oxtstack	0	1
-F	LIB_DEV#12	LIB_DEV	11-17  OnGitOrNot.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\OnGitOrNot\OnGitOrNot.oxtstack	0	1
-F	LIB_DEV#12	LIB_DEV	11-17  PriorityTube.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\PriorityTube\PriorityTube.oxtstack	0	1
-F	LIB_DEV#12	LIB_DEV	11-17  PLAN.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\PriorityTube\PLAN.md	0	1
-F	LIB_DEV#12	LIB_DEV	11-17  claude_sizes.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\PriorityTube\claude_sizes.txt	0	1
-F	LIB_DEV#12	LIB_DEV	11-17  LIB_MENU_PLAN.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\LIB_MENU_PLAN.md	0	1
-F	LIB_DEV#12	LIB_DEV	11-17  git_map.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\OnGitOrNot\tools\git_map.py	0	1
-F	LIB_DEV#12	LIB_DEV	11-17  make_map.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\tools\make_map.py	0	1
-F	LIB_DEV#12	LIB_DEV	11-17  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\OnGitOrNot\README.md	0	1
-F	LIB_DEV#12	LIB_DEV	11-17  PLAN.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\OnGitOrNot\PLAN.md	0	1
-F	LIB_DEV#12	LIB_DEV	11-17  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\README.md	0	1
-F	LIB_DEV#12	LIB_DEV	11-17  for_review.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\tools\for_review.py	0	1
-F	LIB_DEV#12	LIB_DEV	11-17  game_launch.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\game_launch.livecodescript	0	1
-F	LIB_DEV#12	LIB_DEV	11-17  dev_version.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\tools\xtalk\dev_version.livecodescript	0	1
-F	LIB_DEV#12	LIB_DEV	11-17  window_shape_lab.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\window_shape_lab.livecodescript	0	1
-F	LIB_DEV#12	LIB_DEV	11-17  board.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\board.txt	0	1
-F	LIB_DEV#12	LIB_DEV	11-17  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\PriorityTube\README.md	0	1
-F	LIB_DEV#12	LIB_DEV	11-17  CLAUDE.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\CLAUDE.md	0	1
-F	LIB_DEV#12	LIB_DEV	11-18  status_browser.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\status_browser.livecodescript	0	1
-F	LIB_DEV#12	LIB_DEV	11-18  priority_tube.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\priority_tube.livecodescript	0	1
-F	LIB_DEV#12	LIB_DEV	11-18  board_canvas.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\board_canvas.livecodescript	0	1
-F	LIB_DEV#12	LIB_DEV	11-18  game_player.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\game_player.livecodescript	0	1
+C	LIB_DEV#8	LIB_DEV	review	18	386	262	23	branch on-git-or-not not merged
+C	LIB_DEV#9	LIB_DEV	review	18	413	262	23	branch window-zoom not merged
+C	LIB_DEV#10	LIB_DEV	review	18	440	262	38	3 loose files not committed - click to list them
+F	LIB_DEV#10	LIB_DEV	items.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\PriorityTube\items.txt	0	0
+F	LIB_DEV#10	LIB_DEV	board.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\board.txt	0	0
+F	LIB_DEV#10	LIB_DEV	game_player.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\game_player.livecodescript	0	0
+C	LIB_DEV#11	LIB_DEV	review	18	482	262	38	27 files wait your review (oldest 2026-11-14) - click to list them
+F	LIB_DEV#11	LIB_DEV	11-14  Status_Browser.livecode	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Status_Browser.livecode	0	1
+F	LIB_DEV#11	LIB_DEV	11-14  Status_Browser_Launcher.livecode	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Status_Browser_Launcher.livecode	0	1
+F	LIB_DEV#11	LIB_DEV	11-14  Game_Player_Launcher.livecode	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Game_Player_Launcher.livecode	0	1
+F	LIB_DEV#11	LIB_DEV	11-16  window_shape.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\window_shape.livecodescript	0	1
+F	LIB_DEV#11	LIB_DEV	11-17  audit.sh	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\bash\audit.sh	0	1
+F	LIB_DEV#11	LIB_DEV	11-17  ProjectMap.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\ProjectMap.oxtstack	0	1
+F	LIB_DEV#11	LIB_DEV	11-17  OnGitOrNot.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\OnGitOrNot\OnGitOrNot.oxtstack	0	1
+F	LIB_DEV#11	LIB_DEV	11-17  PriorityTube.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\PriorityTube\PriorityTube.oxtstack	0	1
+F	LIB_DEV#11	LIB_DEV	11-17  PLAN.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\PriorityTube\PLAN.md	0	1
+F	LIB_DEV#11	LIB_DEV	11-17  claude_sizes.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\PriorityTube\claude_sizes.txt	0	1
+F	LIB_DEV#11	LIB_DEV	11-17  LIB_MENU_PLAN.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\LIB_MENU_PLAN.md	0	1
+F	LIB_DEV#11	LIB_DEV	11-17  git_map.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\OnGitOrNot\tools\git_map.py	0	1
+F	LIB_DEV#11	LIB_DEV	11-17  make_map.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\tools\make_map.py	0	1
+F	LIB_DEV#11	LIB_DEV	11-17  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\OnGitOrNot\README.md	0	1
+F	LIB_DEV#11	LIB_DEV	11-17  PLAN.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\OnGitOrNot\PLAN.md	0	1
+F	LIB_DEV#11	LIB_DEV	11-17  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\README.md	0	1
+F	LIB_DEV#11	LIB_DEV	11-17  for_review.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\tools\for_review.py	0	1
+F	LIB_DEV#11	LIB_DEV	11-17  game_launch.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\game_launch.livecodescript	0	1
+F	LIB_DEV#11	LIB_DEV	11-17  dev_version.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\tools\xtalk\dev_version.livecodescript	0	1
+F	LIB_DEV#11	LIB_DEV	11-17  window_shape_lab.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\window_shape_lab.livecodescript	0	1
+F	LIB_DEV#11	LIB_DEV	11-17  board.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\board.txt	0	1
+F	LIB_DEV#11	LIB_DEV	11-17  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\PriorityTube\README.md	0	1
+F	LIB_DEV#11	LIB_DEV	11-17  CLAUDE.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\CLAUDE.md	0	1
+F	LIB_DEV#11	LIB_DEV	11-18  status_browser.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\status_browser.livecodescript	0	1
+F	LIB_DEV#11	LIB_DEV	11-18  priority_tube.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\priority_tube.livecodescript	0	1
+F	LIB_DEV#11	LIB_DEV	11-18  board_canvas.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\board_canvas.livecodescript	0	1
+F	LIB_DEV#11	LIB_DEV	11-18  game_player.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\game_player.livecodescript	0	1
 P	LIB_MCP	part	2490	260	280	67	LIB_MCP	Lets Claude, a local model or any tool drive a running engine	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MCP
 C	LIB_MCP#1	LIB_MCP	has	18	73	262	23	24 handlers in 2 scripts
 P	LIB_COMFY	part	2490	394	280	67	LIB_COMFY	ComfyUI as a Blueprint-style node editor for Vibecode3D games	\\wsl$\Ubuntu\home\igame3d\projects\LIB_COMFY
@@ -444,7 +439,7 @@ P	NOW	core	870	-165	280	52	NOW	Where we are, 17 Nov 2026
 C	NOW#1	NOW	has	18	58	262	38	Opus alone from here (no Fable time): big things start as a one-page plan
 C	NOW#2	NOW	has	18	100	262	38	Every branch merged 16 Nov; main is the truth in every repository
 C	NOW#3	NOW	has	18	142	262	53	Rename Day merged 18 Nov: every contract call is Group.Verb; old names live until release
-C	NOW#4	NOW	has	18	199	262	38	The contract's new calls written, waiting on your merge (contract-calls)
+C	NOW#4	NOW	has	18	199	262	38	The contract's new calls merged 18 Nov (XT and xRay)
 C	NOW#5	NOW	next	18	241	262	38	Move the games to the new names (666 places in 54 scripts)
 C	NOW#6	NOW	next	18	283	262	38	Your 16 Nov game notes (GridSprint, InterceptorRun, DeadDays)
 P	GOAL	core	1350	-165	280	52	GOAL	Where we are going	
