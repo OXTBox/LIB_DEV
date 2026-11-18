@@ -1,4 +1,4 @@
-# map_data.txt made 2026-11-18 12:06 by tools/make_map.py; do not edit (edit board.txt)
+# map_data.txt made 2026-11-18 12:20 by tools/make_map.py; do not edit (edit board.txt)
 Z	ENGINES	ENGINES	0	184	300
 Z	GAMES	GAMES	390	184	630
 Z	BLOCKS	BUILDING BLOCKS	1110	184	960
@@ -77,19 +77,26 @@ C	PROMPT_GLAZE#1	PROMPT_GLAZE	has	18	73	262	38	Banter / glossary work feeds GAD 
 C	PROMPT_GLAZE#2	PROMPT_GLAZE	next	18	115	262	38	Vector Toss Stamina rules (HANG TIME) when its work resumes
 C	PROMPT_GLAZE#3	PROMPT_GLAZE	block	18	157	262	38	Waits on LIB_GAMES games settling (not now, by plan)
 P	LIB_GAD	core	390	1069	280	67	LIB_GAD	Generic Any Data + our Genetic Anomaly Detector (Galactica-4 as reference)	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD
-C	LIB_GAD#1	LIB_GAD	has	18	73	262	23	106 handlers in 22 scripts
+C	LIB_GAD#1	LIB_GAD	has	18	73	262	23	324 handlers in 28 scripts
 C	LIB_GAD#2	LIB_GAD	has	18	100	262	23	GAD essence and variable inventory
 C	LIB_GAD#3	LIB_GAD	has	18	127	262	38	Self-writing script system mapped (5 bugs found)
 C	LIB_GAD#4	LIB_GAD	demo	18	169	262	23	GeneticAnomaly prototype (ga-turns)
-C	LIB_GAD#5	LIB_GAD	done	18	196	262	42	DONE\n- Battles step 1: one-page plan (18 Nov, LIB_GAD branch gad-battles; copy in LIB_LLMOUT/LIB_GAD)
-C	LIB_GAD#6	LIB_GAD	review	18	242	262	38	Battles plan: say yes (or change) before step 2; 4 questions at its end
-C	LIB_GAD#7	LIB_GAD	next	18	284	262	38	Battles step 2: smallest loop (two Bases, one anomaly, one fight)
-C	LIB_GAD#8	LIB_GAD	block	18	326	262	38	owner: say yes or no to the one-page battle plan before any code
-C	LIB_GAD#9	LIB_GAD	review	18	368	262	23	branch gad-battles not merged
-C	LIB_GAD#10	LIB_GAD	review	18	395	262	38	2 files wait your review (oldest 2026-11-15) - click to list them
+C	LIB_GAD#5	LIB_GAD	done	18	196	262	57	DONE\n- Battles step 1: one-page plan (18 Nov, LIB_GAD branch gad-battles; copy in LIB_LLMOUT/LIB_GAD)\n- Battles step 2: smallest loop built (18 Nov, branch gad-battles, 74 checks pass)
+C	LIB_GAD#6	LIB_GAD	review	18	257	262	38	Battles plan: say yes (or change) before step 2; 4 questions at its end
+C	LIB_GAD#7	LIB_GAD	review	18	299	262	68	owner: play LIB_GAD/battles/GAD_Battles.oxtstack in OXT-Beyond (U = X, click Base then target, ENTER = turn)
+C	LIB_GAD#8	LIB_GAD	block	18	371	262	38	owner: say yes or no to the one-page battle plan before any code
+C	LIB_GAD#9	LIB_GAD	review	18	413	262	23	branch gad-battles not merged
+C	LIB_GAD#10	LIB_GAD	review	18	440	262	38	9 files wait your review (oldest 2026-11-15) - click to list them
 F	LIB_GAD#10	LIB_GAD	11-15  Vibecode3D_Play_GeneticAnomaly.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\GeneticAnomaly\Vibecode3D_Play_GeneticAnomaly.livecodescript	0	1
 F	LIB_GAD#10	LIB_GAD	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\GeneticAnomaly\README.md	0	1
-P	LIB_RTS	part	390	1540	280	82	LIB_RTS	The 2008 RTS system rebuilt in xTalk: select, command, the living and the dead	\\wsl$\Ubuntu\home\igame3d\projects\LIB_RTS
+F	LIB_GAD#10	LIB_GAD	11-18  GAD_Battles.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\GAD_Battles.oxtstack	0	1
+F	LIB_GAD#10	LIB_GAD	11-18  gad_battles_rules.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\gad_battles_rules.livecodescript	0	1
+F	LIB_GAD#10	LIB_GAD	11-18  gad_battles_ui.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\gad_battles_ui.livecodescript	0	1
+F	LIB_GAD#10	LIB_GAD	11-18  gad_battles_stack.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\gad_battles_stack.livecodescript	0	1
+F	LIB_GAD#10	LIB_GAD	11-18  t_gad_battles.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\tests\t_gad_battles.txt	0	1
+F	LIB_GAD#10	LIB_GAD	11-18  build_stack.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\tools\build_stack.txt	0	1
+F	LIB_GAD#10	LIB_GAD	11-18  NEXT.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\NEXT.md	0	1
+P	LIB_RTS	part	390	1585	280	82	LIB_RTS	The 2008 RTS system rebuilt in xTalk: select, command, the living and the dead	\\wsl$\Ubuntu\home\igame3d\projects\LIB_RTS
 C	LIB_RTS#1	LIB_RTS	has	18	88	262	23	119 handlers in 2 scripts
 C	LIB_RTS#2	LIB_RTS	demo	18	115	262	23	RTS_Demo
 C	LIB_RTS#3	LIB_RTS	block	18	142	262	38	owner: play RTS_Demo two minutes and say whether it was fun
@@ -129,36 +136,26 @@ C	LIB_BIT#7	LIB_BIT	block	18	344	262	38	owner: test the BitEditor Heights tab (F
 C	LIB_BIT#8	LIB_BIT	review	18	386	262	23	branch cellmap-v3-checker not merged
 C	LIB_BIT#9	LIB_BIT	review	18	413	262	23	branch cellmap-v3-followups not merged
 C	LIB_BIT#10	LIB_BIT	review	18	440	262	23	branch users-title not merged
-C	LIB_BIT#11	LIB_BIT	review	18	467	262	38	9 files wait your review (oldest 2026-11-16) - click to list them
-F	LIB_BIT#11	LIB_BIT	11-16  two_rooms.cellpack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\maps\two_rooms\two_rooms.cellpack	0	1
-F	LIB_BIT#11	LIB_BIT	11-17  build_editor.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\livecode\build_editor.livecodescript	0	1
-F	LIB_BIT#11	LIB_BIT	11-17  lc_v3_test.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\lc_v3_test.txt	0	1
-F	LIB_BIT#11	LIB_BIT	11-17  py_v3_test.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\py_v3_test.py	0	1
-F	LIB_BIT#11	LIB_BIT	11-18  lib_cellmap.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\livecode\lib_cellmap.livecodescript	0	1
-F	LIB_BIT#11	LIB_BIT	11-18  cellmap.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\python\cellmap.py	0	1
-F	LIB_BIT#11	LIB_BIT	11-18  py_check_test.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\py_check_test.py	0	1
-F	LIB_BIT#11	LIB_BIT	11-18  lc_check_test.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\lc_check_test.txt	0	1
-F	LIB_BIT#11	LIB_BIT	11-18  CELLMAP_V3.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\CELLMAP_V3.md	0	1
-P	LIB_MAP	part	1110	803	280	67	LIB_MAP	Levels from 1-bit grids for both engines	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MAP
+P	LIB_MAP	part	1110	761	280	67	LIB_MAP	Levels from 1-bit grids for both engines	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MAP
 C	LIB_MAP#1	LIB_MAP	has	18	73	262	23	17 handlers in 1 scripts
-P	LIB_TRACE	part	1110	937	280	52	LIB_TRACE	Bitmap -> shapes	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TRACE
+P	LIB_TRACE	part	1110	895	280	52	LIB_TRACE	Bitmap -> shapes	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TRACE
 C	LIB_TRACE#1	LIB_TRACE	has	18	58	262	23	6 handlers in 1 scripts
-P	LIB_GENERICA	part	1110	1056	280	67	LIB_GENERICA	A game's words as plain label files: retheme by editing labels	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GENERICA
+P	LIB_GENERICA	part	1110	1014	280	67	LIB_GENERICA	A game's words as plain label files: retheme by editing labels	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GENERICA
 C	LIB_GENERICA#1	LIB_GENERICA	has	18	73	262	23	10 handlers in 1 scripts
 C	LIB_GENERICA#2	LIB_GENERICA	has	18	100	262	23	Galactica set: 49 lists, 533 labels
 C	LIB_GENERICA#3	LIB_GENERICA	has	18	127	262	23	Sequencer {@list:n}
 C	LIB_GENERICA#4	LIB_GENERICA	review	18	154	262	23	genetic_anomaly overlay is a DRAFT
-P	LIB_LISTS	part	1110	1271	280	52	LIB_LISTS	Game word lists by name (CATALOG.md)	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LISTS
+P	LIB_LISTS	part	1110	1229	280	52	LIB_LISTS	Game word lists by name (CATALOG.md)	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LISTS
 C	LIB_LISTS#1	LIB_LISTS	has	18	58	262	38	Star names (155) and street, city, people lists
 C	LIB_LISTS#2	LIB_LISTS	review	18	100	262	38	1 file waits your review (oldest 2026-11-17) - click to list them
 F	LIB_LISTS#2	LIB_LISTS	11-17  CATALOG.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LISTS\CATALOG.md	0	1
-P	LIB_SCRIPTBLOCKS	part	1110	1447	280	67	LIB_SCRIPTBLOCKS	Harvest, manage and export script blocks (GAD's code palette)	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SCRIPTBLOCKS
+P	LIB_SCRIPTBLOCKS	part	1110	1405	280	67	LIB_SCRIPTBLOCKS	Harvest, manage and export script blocks (GAD's code palette)	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SCRIPTBLOCKS
 C	LIB_SCRIPTBLOCKS#1	LIB_SCRIPTBLOCKS	has	18	73	262	23	20 handlers in 1 scripts
 C	LIB_SCRIPTBLOCKS#2	LIB_SCRIPTBLOCKS	has	18	100	262	38	24 blocks, 351 handlers of GAD_WORKING + Generica
 C	LIB_SCRIPTBLOCKS#3	LIB_SCRIPTBLOCKS	review	18	142	262	23	branch users-title not merged
 C	LIB_SCRIPTBLOCKS#4	LIB_SCRIPTBLOCKS	review	18	169	262	38	1 file waits your review (oldest 2026-11-17) - click to list them
 F	LIB_SCRIPTBLOCKS#4	LIB_SCRIPTBLOCKS	11-17  ScriptBlocks.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SCRIPTBLOCKS\livecode\ScriptBlocks.livecodescript	0	1
-P	LIB_XTJSON	part	1110	1692	280	67	LIB_XTJSON	Stacks <-> JSON: harvest, rebuild, batch app	\\wsl$\Ubuntu\home\igame3d\projects\LIB_XTJSON
+P	LIB_XTJSON	part	1110	1650	280	67	LIB_XTJSON	Stacks <-> JSON: harvest, rebuild, batch app	\\wsl$\Ubuntu\home\igame3d\projects\LIB_XTJSON
 C	LIB_XTJSON#1	LIB_XTJSON	has	18	73	262	23	70 handlers in 5 scripts
 C	LIB_XTJSON#2	LIB_XTJSON	has	18	100	262	38	113 of 115 stacks harvested, nested-group bug fixed
 C	LIB_XTJSON#3	LIB_XTJSON	block	18	142	262	38	Web_Collector_Watcher stack crashes the engine (A-11)
@@ -326,10 +323,7 @@ C	LIB_DEV#5	LIB_DEV	done	18	211	262	87	DONE\n- Status Browser + review list\n- P
 C	LIB_DEV#6	LIB_DEV	next	18	302	262	23	Your next input on the Project Map
 C	LIB_DEV#7	LIB_DEV	review	18	329	262	23	branch on-git-or-not not merged
 C	LIB_DEV#8	LIB_DEV	review	18	356	262	23	branch window-zoom not merged
-C	LIB_DEV#9	LIB_DEV	review	18	383	262	38	8 loose files not committed - click to list them
-F	LIB_DEV#9	LIB_DEV	map_data.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\OnGitOrNot\map_data.txt	0	0
-F	LIB_DEV#9	LIB_DEV	claude_sizes.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\PriorityTube\claude_sizes.txt	0	0
-F	LIB_DEV#9	LIB_DEV	items.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\PriorityTube\items.txt	0	0
+C	LIB_DEV#9	LIB_DEV	review	18	383	262	38	5 loose files not committed - click to list them
 F	LIB_DEV#9	LIB_DEV	board.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\board.txt	0	0
 F	LIB_DEV#9	LIB_DEV	map_data.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\map_data.txt	0	0
 F	LIB_DEV#9	LIB_DEV	game_player.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\game_player.livecodescript	0	0
@@ -422,16 +416,7 @@ C	GOAL#1	GOAL	next	18	58	262	23	iGame3D XT on itch.io (handle xAction)
 C	GOAL#2	GOAL	next	18	85	262	53	"Does it stand alone, and is it easy and enjoyable enough to put away the old IDE?"
 C	GOAL#3	GOAL	next	18	142	262	38	GAD = Generic Any Data; Genetic Anomaly Detector as the long game
 P	YOU	core	1830	-226	280	67	YOU	The owner: red strings end here when only you can unblock them	
-C	YOU#1	YOU	block	18	73	262	53	owner: 180 files wait your review in all (Status Browser) - click to list them
-F	YOU#1	LIB_BIT	11-16  two_rooms.cellpack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\maps\two_rooms\two_rooms.cellpack	0	1
-F	YOU#1	LIB_BIT	11-17  build_editor.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\livecode\build_editor.livecodescript	0	1
-F	YOU#1	LIB_BIT	11-17  lc_v3_test.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\lc_v3_test.txt	0	1
-F	YOU#1	LIB_BIT	11-17  py_v3_test.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\py_v3_test.py	0	1
-F	YOU#1	LIB_BIT	11-18  lib_cellmap.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\livecode\lib_cellmap.livecodescript	0	1
-F	YOU#1	LIB_BIT	11-18  cellmap.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\python\cellmap.py	0	1
-F	YOU#1	LIB_BIT	11-18  py_check_test.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\py_check_test.py	0	1
-F	YOU#1	LIB_BIT	11-18  lc_check_test.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\lc_check_test.txt	0	1
-F	YOU#1	LIB_BIT	11-18  CELLMAP_V3.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\CELLMAP_V3.md	0	1
+C	YOU#1	YOU	block	18	73	262	53	owner: 178 files wait your review in all (Status Browser) - click to list them
 F	YOU#1	LIB_BUILD	11-17  collector.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BUILD\collector.livecodescript	0	1
 F	YOU#1	LIB_DATA	11-15  lib_data.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DATA\livecode\lib_data.livecodescript	0	1
 F	YOU#1	LIB_DATA	11-15  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DATA\README.md	0	1
@@ -466,6 +451,13 @@ F	YOU#1	LIB_EDITOR	11-17  E13_WalkTheMap.livecodescript	\\wsl$\Ubuntu\home\igame
 F	YOU#1	LIB_EDITOR	11-17  e13_headless.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR\tests\e13_headless.txt	0	1
 F	YOU#1	LIB_GAD	11-15  Vibecode3D_Play_GeneticAnomaly.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\GeneticAnomaly\Vibecode3D_Play_GeneticAnomaly.livecodescript	0	1
 F	YOU#1	LIB_GAD	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\GeneticAnomaly\README.md	0	1
+F	YOU#1	LIB_GAD	11-18  GAD_Battles.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\GAD_Battles.oxtstack	0	1
+F	YOU#1	LIB_GAD	11-18  gad_battles_rules.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\gad_battles_rules.livecodescript	0	1
+F	YOU#1	LIB_GAD	11-18  gad_battles_ui.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\gad_battles_ui.livecodescript	0	1
+F	YOU#1	LIB_GAD	11-18  gad_battles_stack.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\gad_battles_stack.livecodescript	0	1
+F	YOU#1	LIB_GAD	11-18  t_gad_battles.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\tests\t_gad_battles.txt	0	1
+F	YOU#1	LIB_GAD	11-18  build_stack.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\tools\build_stack.txt	0	1
+F	YOU#1	LIB_GAD	11-18  NEXT.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAD\battles\NEXT.md	0	1
 F	YOU#1	LIB_GAMES	11-14  Vibecode3D_Play_InterceptorRun.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_InterceptorRun.livecodescript	0	1
 F	YOU#1	LIB_GAMES	11-14  Vibecode3D_Play_FareDash.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_FareDash.livecodescript	0	1
 F	YOU#1	LIB_GAMES	11-14  Vibecode3D_Play_TabletopRacers.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GAMES\Vibecode3D_Games\Vibecode3D_Play_TabletopRacers.livecodescript	0	1
