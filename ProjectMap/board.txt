@@ -210,7 +210,10 @@ what: Menus everywhere, one way: crafty, reusable, user-hackable procedural menu
 done: Its own LIB, README + PLAN (17 Nov)
 done: Step 1: the boards' menus run on Menu.* (18 Nov, branch menu-steps)
 done: Step 2: menu files, your iGame3D way: Default set + yours in Data, folder-filled menus (18 Nov)
-review: owner: is Library.txt how a menu file should read? (LIB_MENU/Menus/Default)
+done: Merged to main 18 Nov (owner: "MERGE!")
+next: Menu folders your way: Data/Default/<game or app>/Menus/ + Menus/Functions/ callbacks
+next: A Library menu in a real stack (Status Browser or a game's developer pause menu)
+next: A Menus kind in LIB_DATA
 done: The Priority Tube and the Status Browser use Menu.* too (18 Nov)
 link: LIB_GUI, LIB_DEV
 
