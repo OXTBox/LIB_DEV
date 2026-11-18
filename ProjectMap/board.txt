@@ -204,7 +204,7 @@ done: Its own LIB, README + PLAN (17 Nov)
 done: Step 1: the boards' menus run on Menu.* (18 Nov, branch menu-steps)
 done: Step 2: menu files, your iGame3D way: Default set + yours in Data, folder-filled menus (18 Nov)
 review: owner: is Library.txt how a menu file should read? (LIB_MENU/Menus/Default)
-next: LIB_MENU: the Priority Tube and the Status Browser use Menu.* too
+done: The Priority Tube and the Status Browser use Menu.* too (18 Nov)
 link: LIB_GUI, LIB_DEV
 
 == LIB_TOOLBAR | BLOCKS
@@ -242,6 +242,7 @@ done: Status Browser + review list
 done: Project Map merged (17 Nov)
 next: Your next input on the Project Map
 done: On Git or Not step 4: Commit / Ignore / Delete / Leave on each loose thing
+next: Status Browser: copy your wheel-zoom (scaleFactor) handlers from the stack into its script file, then load the new menu
 link: LIB_THEME
 
 == LIB_MCP | TOOLS

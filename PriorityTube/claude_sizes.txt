@@ -31,3 +31,4 @@ n-3c595c1a	25	fix	Four small look fixes in the native face (text colours on choi
 n-2b27d15a	60	utility	Your IDE layouts become .gui files (the plan keeps your hand-laid windows as the source); then the old XTJSON windows can follow
 n-c4ebc5ff	45	utility	The tube and the Status Browser get the same menu ending (Leave comment / Explore here) from LIB_MENU
 n-c8710ff2	90	utility	The rest of A-92: a Slope tool in the BitEditor, a pack panel, and the E12 checker; slopes also drawn solid
+n-7bcf81f6	20	fix	Your Status Browser stack holds wheel-zoom handlers its script file lacks: copy them in first so nothing of yours is lost, then reload
