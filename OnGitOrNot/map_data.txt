@@ -1,4 +1,4 @@
-# map_data.txt made 2026-11-17 22:52 by OnGitOrNot/tools/git_map.py; do not edit
+# map_data.txt made 2026-11-18 00:29 by OnGitOrNot/tools/git_map.py; do not edit
 B	title	FOR OWNER | On Git or Not
 B	bar	ON GIT OR NOT
 B	help	wheel zoom | drag black to pan | drag a header to move | click a box for its menu | right-click anything to comment | F fit  B not-on-git only  R rebuild  T tell Claude  0 100%
@@ -50,29 +50,32 @@ F	Vibecode3D#2	rule LIB_XTJSON.livecodescript  [1]	Archive/WHAT_CAN_WE_CLEAN/LIB
 F	Vibecode3D#2	rule livecode/LCHarvest2.livecodescript  [1]	livecode/LCHarvest2.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\Vibecode3D\livecode\LCHarvest2.livecodescript	0	0
 P	xt3D_Raylib_Livecode_Bridge	core	0	615	280	52	xt3D_Raylib_Livecode_Bridge	Repository	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge
 C	xt3D_Raylib_Livecode_Bridge#1	xt3D_Raylib_Livecode_Bridge	has	18	58	262	23	55 files on git (12 MB)
-C	xt3D_Raylib_Livecode_Bridge#2	xt3D_Raylib_Livecode_Bridge	review	18	85	262	38	1 loose file (1 new, 30 KB): not on git, not ignored - click to list them
-F	xt3D_Raylib_Livecode_Bridge#2	xt3D_Raylib_Livecode_Bridge	__pycache__/gen_xt3d.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\__pycache__\gen_xt3d.cpython-314.pyc	0	decide
-C	xt3D_Raylib_Livecode_Bridge#3	xt3D_Raylib_Livecode_Bridge	ignored	18	127	262	83	111 files hidden by .gitignore (68 MB): 3DModels/, standalone/xt3d_Bench_LibMCP/, *:Zone.Identifier, /api.lcdoc - click to list them
-F	xt3D_Raylib_Livecode_Bridge#3	rule 3DModels/  [101]	3DModels/obj/  [36 files, 21 MB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\obj	1	0
-F	xt3D_Raylib_Livecode_Bridge#3	rule 3DModels/  [101]	3DModels/glb/virtualcityglTF/  [22 files, 3.3 MB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\glb\virtualcityglTF	1	0
-F	xt3D_Raylib_Livecode_Bridge#3	rule 3DModels/  [101]	3DModels/off/  [21 files, 955 KB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\off	1	0
-F	xt3D_Raylib_Livecode_Bridge#3	rule 3DModels/  [101]	3DModels/gltf/  [11 files, 200 KB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\gltf	1	0
-F	xt3D_Raylib_Livecode_Bridge#3	rule 3DModels/  [101]	3DModels/glb/  [4 files, 6.6 MB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\glb	1	0
-F	xt3D_Raylib_Livecode_Bridge#3	rule 3DModels/  [101]	3DModels/fbx/  [3 files, 4.0 MB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\fbx	1	0
-F	xt3D_Raylib_Livecode_Bridge#3	rule 3DModels/  [101]	3DModels/ply/  [2 files, 333 KB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\ply	1	0
-F	xt3D_Raylib_Livecode_Bridge#3	rule 3DModels/  [101]	3DModels/  [1 file, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels	1	0
-F	xt3D_Raylib_Livecode_Bridge#3	rule 3DModels/  [101]	3DModels/wtf/  [1 file, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\wtf	1	0
-F	xt3D_Raylib_Livecode_Bridge#3	rule standalone/xt3d_Bench_LibMCP/  [2]	standalone/xt3d_Bench_LibMCP/xt3d_Bench_LibMCP.exe	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\standalone\xt3d_Bench_LibMCP\xt3d_Bench_LibMCP.exe	0	0
-F	xt3D_Raylib_Livecode_Bridge#3	rule standalone/xt3d_Bench_LibMCP/  [2]	standalone/xt3d_Bench_LibMCP/xt3d_Bench_LibMCP.exe - Shortcut.lnk	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\standalone\xt3d_Bench_LibMCP\xt3d_Bench_LibMCP.exe - Shortcut.lnk	0	0
-F	xt3D_Raylib_Livecode_Bridge#3	rule *:Zone.Identifier  [1]	LCHarvest2.livecodescript:Zone.Identifier	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\LCHarvest2.livecodescript:Zone.Identifier	0	0
-F	xt3D_Raylib_Livecode_Bridge#3	rule /api.lcdoc  [1]	api.lcdoc	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\api.lcdoc	0	0
-F	xt3D_Raylib_Livecode_Bridge#3	rule /manifest.xml  [1]	manifest.xml	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\manifest.xml	0	0
-F	xt3D_Raylib_Livecode_Bridge#3	rule /module.2.lcm  [1]	module.2.lcm	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\module.2.lcm	0	0
-F	xt3D_Raylib_Livecode_Bridge#3	rule /org.xtalk.xtbridge.0.1.0.lce  [1]	org.xtalk.xtbridge.0.1.0.lce	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\org.xtalk.xtbridge.0.1.0.lce	0	0
-F	xt3D_Raylib_Livecode_Bridge#3	rule /org.xtalk.xtbridge.lci  [1]	org.xtalk.xtbridge.lci	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\org.xtalk.xtbridge.lci	0	0
-F	xt3D_Raylib_Livecode_Bridge#3	rule standalone/xt3d_Bench/  [1]	standalone/xt3d_Bench/xt3d_Bench.exe	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\standalone\xt3d_Bench\xt3d_Bench.exe	0	0
-F	xt3D_Raylib_Livecode_Bridge#3	rule *.lnk  [1]	tools/start_claude_LITE.bat - Shortcut.lnk	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\tools\start_claude_LITE.bat - Shortcut.lnk	0	0
-P	xtalk_py	part	0	863	280	52	xtalk_py	Repository	\\wsl$\Ubuntu\home\igame3d\projects\xtalk_py
+C	xt3D_Raylib_Livecode_Bridge#2	xt3D_Raylib_Livecode_Bridge	review	18	85	262	38	branch rename-day not merged into master
+C	xt3D_Raylib_Livecode_Bridge#3	xt3D_Raylib_Livecode_Bridge	review	18	127	262	53	3 loose files (1 new, 2 changed, 338 KB): not on git, not ignored - click to list them
+F	xt3D_Raylib_Livecode_Bridge#3	xt3D_Raylib_Livecode_Bridge	__pycache__/gen_xt3d.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\__pycache__\gen_xt3d.cpython-314.pyc	0	decide
+F	xt3D_Raylib_Livecode_Bridge#3	xt3D_Raylib_Livecode_Bridge	testbench/vibe_engine_xt3d.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\testbench\vibe_engine_xt3d.livecodescript	0	decide
+F	xt3D_Raylib_Livecode_Bridge#3	xt3D_Raylib_Livecode_Bridge	tools/make_vibe_xt3d.py	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\tools\make_vibe_xt3d.py	0	decide
+C	xt3D_Raylib_Livecode_Bridge#4	xt3D_Raylib_Livecode_Bridge	ignored	18	184	262	83	111 files hidden by .gitignore (68 MB): 3DModels/, standalone/xt3d_Bench_LibMCP/, *:Zone.Identifier, /api.lcdoc - click to list them
+F	xt3D_Raylib_Livecode_Bridge#4	rule 3DModels/  [101]	3DModels/obj/  [36 files, 21 MB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\obj	1	0
+F	xt3D_Raylib_Livecode_Bridge#4	rule 3DModels/  [101]	3DModels/glb/virtualcityglTF/  [22 files, 3.3 MB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\glb\virtualcityglTF	1	0
+F	xt3D_Raylib_Livecode_Bridge#4	rule 3DModels/  [101]	3DModels/off/  [21 files, 955 KB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\off	1	0
+F	xt3D_Raylib_Livecode_Bridge#4	rule 3DModels/  [101]	3DModels/gltf/  [11 files, 200 KB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\gltf	1	0
+F	xt3D_Raylib_Livecode_Bridge#4	rule 3DModels/  [101]	3DModels/glb/  [4 files, 6.6 MB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\glb	1	0
+F	xt3D_Raylib_Livecode_Bridge#4	rule 3DModels/  [101]	3DModels/fbx/  [3 files, 4.0 MB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\fbx	1	0
+F	xt3D_Raylib_Livecode_Bridge#4	rule 3DModels/  [101]	3DModels/ply/  [2 files, 333 KB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\ply	1	0
+F	xt3D_Raylib_Livecode_Bridge#4	rule 3DModels/  [101]	3DModels/  [1 file, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels	1	0
+F	xt3D_Raylib_Livecode_Bridge#4	rule 3DModels/  [101]	3DModels/wtf/  [1 file, 1 KB]	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\3DModels\wtf	1	0
+F	xt3D_Raylib_Livecode_Bridge#4	rule standalone/xt3d_Bench_LibMCP/  [2]	standalone/xt3d_Bench_LibMCP/xt3d_Bench_LibMCP.exe	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\standalone\xt3d_Bench_LibMCP\xt3d_Bench_LibMCP.exe	0	0
+F	xt3D_Raylib_Livecode_Bridge#4	rule standalone/xt3d_Bench_LibMCP/  [2]	standalone/xt3d_Bench_LibMCP/xt3d_Bench_LibMCP.exe - Shortcut.lnk	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\standalone\xt3d_Bench_LibMCP\xt3d_Bench_LibMCP.exe - Shortcut.lnk	0	0
+F	xt3D_Raylib_Livecode_Bridge#4	rule *:Zone.Identifier  [1]	LCHarvest2.livecodescript:Zone.Identifier	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\LCHarvest2.livecodescript:Zone.Identifier	0	0
+F	xt3D_Raylib_Livecode_Bridge#4	rule /api.lcdoc  [1]	api.lcdoc	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\api.lcdoc	0	0
+F	xt3D_Raylib_Livecode_Bridge#4	rule /manifest.xml  [1]	manifest.xml	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\manifest.xml	0	0
+F	xt3D_Raylib_Livecode_Bridge#4	rule /module.2.lcm  [1]	module.2.lcm	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\module.2.lcm	0	0
+F	xt3D_Raylib_Livecode_Bridge#4	rule /org.xtalk.xtbridge.0.1.0.lce  [1]	org.xtalk.xtbridge.0.1.0.lce	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\org.xtalk.xtbridge.0.1.0.lce	0	0
+F	xt3D_Raylib_Livecode_Bridge#4	rule /org.xtalk.xtbridge.lci  [1]	org.xtalk.xtbridge.lci	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\org.xtalk.xtbridge.lci	0	0
+F	xt3D_Raylib_Livecode_Bridge#4	rule standalone/xt3d_Bench/  [1]	standalone/xt3d_Bench/xt3d_Bench.exe	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\standalone\xt3d_Bench\xt3d_Bench.exe	0	0
+F	xt3D_Raylib_Livecode_Bridge#4	rule *.lnk  [1]	tools/start_claude_LITE.bat - Shortcut.lnk	\\wsl$\Ubuntu\home\igame3d\projects\xt3D_Raylib_Livecode_Bridge\tools\start_claude_LITE.bat - Shortcut.lnk	0	0
+P	xtalk_py	part	0	920	280	52	xtalk_py	Repository	\\wsl$\Ubuntu\home\igame3d\projects\xtalk_py
 C	xtalk_py#1	xtalk_py	has	18	58	262	23	50 files on git (1.1 MB)
 C	xtalk_py#2	xtalk_py	ignored	18	85	262	38	2 files hidden by .gitignore (26 KB): __pycache__/ - click to list them
 F	xtalk_py#2	rule __pycache__/  [2]	tools/__pycache__/glossary_census.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\xtalk_py\tools\__pycache__\glossary_census.cpython-314.pyc	0	0
@@ -200,42 +203,46 @@ F	LIB_TTRPG#3	rule __pycache__/  [1]	ref/__pycache__/ttrpg_ref.cpython-314.pyc	\
 P	PROMPT_GLAZE	core	390	1197	280	52	PROMPT_GLAZE	Repository	\\wsl$\Ubuntu\home\igame3d\projects\PROMPT_GLAZE
 C	PROMPT_GLAZE#1	PROMPT_GLAZE	has	18	58	262	23	2 files on git (2 KB)
 P	LIB_BIT	core	780	260	280	52	LIB_BIT	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT
-C	LIB_BIT#1	LIB_BIT	has	18	58	262	38	58 files on git (1.1 MB), branch users-title checked out, not main
-C	LIB_BIT#2	LIB_BIT	review	18	100	262	38	branch users-title not merged into main
-C	LIB_BIT#3	LIB_BIT	ignored	18	142	262	53	9 files hidden by .gitignore (184 KB): tests/_*, __pycache__/ - click to list them
-F	LIB_BIT#3	rule tests/_*  [8]	editor/tests/_py_pick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_pick.txt	0	0
-F	LIB_BIT#3	rule tests/_*  [8]	editor/tests/_py_segments.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_segments.txt	0	0
-F	LIB_BIT#3	rule tests/_*  [8]	editor/tests/_py_segments_glyph.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_segments_glyph.txt	0	0
-F	LIB_BIT#3	rule tests/_*  [8]	editor/tests/_py_upgraded.cellmap	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_upgraded.cellmap	0	0
-F	LIB_BIT#3	rule tests/_*  [8]	editor/tests/_py_walk.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_walk.txt	0	0
-F	LIB_BIT#3	rule tests/_*  [8]	editor/tests/_py_walk_glyph.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_walk_glyph.txt	0	0
-F	LIB_BIT#3	rule tests/_*  [8]	editor/tests/_test_heights.cellmap	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_test_heights.cellmap	0	0
-F	LIB_BIT#3	rule tests/_*  [8]	editor/tests/_test_saved.cellmap	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_test_saved.cellmap	0	0
-F	LIB_BIT#3	rule __pycache__/  [1]	editor/python/__pycache__/cellmap.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\python\__pycache__\cellmap.cpython-314.pyc	0	0
-P	LIB_BVH	part	780	493	280	52	LIB_BVH	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BVH
+C	LIB_BIT#1	LIB_BIT	has	18	58	262	53	58 files on git (1.2 MB), branch cellmap-v3-followups checked out, not main
+C	LIB_BIT#2	LIB_BIT	review	18	115	262	38	branch cellmap-v3-followups not merged into main
+C	LIB_BIT#3	LIB_BIT	review	18	157	262	38	branch users-title not merged into main
+C	LIB_BIT#4	LIB_BIT	ignored	18	199	262	53	11 files hidden by .gitignore (229 KB): tests/_*, __pycache__/ - click to list them
+F	LIB_BIT#4	rule tests/_*  [10]	editor/tests/_py_pick.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_pick.txt	0	0
+F	LIB_BIT#4	rule tests/_*  [10]	editor/tests/_py_segments.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_segments.txt	0	0
+F	LIB_BIT#4	rule tests/_*  [10]	editor/tests/_py_segments_glyph.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_segments_glyph.txt	0	0
+F	LIB_BIT#4	rule tests/_*  [10]	editor/tests/_py_upgraded.cellmap	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_upgraded.cellmap	0	0
+F	LIB_BIT#4	rule tests/_*  [10]	editor/tests/_py_v3_segments.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_v3_segments.txt	0	0
+F	LIB_BIT#4	rule tests/_*  [10]	editor/tests/_py_v3_walk.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_v3_walk.txt	0	0
+F	LIB_BIT#4	rule tests/_*  [10]	editor/tests/_py_walk.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_walk.txt	0	0
+F	LIB_BIT#4	rule tests/_*  [10]	editor/tests/_py_walk_glyph.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_py_walk_glyph.txt	0	0
+F	LIB_BIT#4	rule tests/_*  [10]	editor/tests/_test_heights.cellmap	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_test_heights.cellmap	0	0
+F	LIB_BIT#4	rule tests/_*  [10]	editor/tests/_test_saved.cellmap	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\_test_saved.cellmap	0	0
+F	LIB_BIT#4	rule __pycache__/  [1]	editor/python/__pycache__/cellmap.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\python\__pycache__\cellmap.cpython-314.pyc	0	0
+P	LIB_BVH	part	780	550	280	52	LIB_BVH	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BVH
 C	LIB_BVH#1	LIB_BVH	has	18	58	262	23	74 files on git (18 MB)
 C	LIB_BVH#2	LIB_BVH	private	18	85	262	38	private: BVH clips: rights not settled, kept on this machine
-P	LIB_DATA	part	780	654	280	52	LIB_DATA	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DATA
+P	LIB_DATA	part	780	711	280	52	LIB_DATA	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DATA
 C	LIB_DATA#1	LIB_DATA	has	18	58	262	23	6 files on git (25 KB)
-P	LIB_GENERICA	part	780	773	280	52	LIB_GENERICA	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GENERICA
+P	LIB_GENERICA	part	780	830	280	52	LIB_GENERICA	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GENERICA
 C	LIB_GENERICA#1	LIB_GENERICA	has	18	58	262	23	160 files on git (669 KB)
 C	LIB_GENERICA#2	LIB_GENERICA	ignored	18	85	262	38	2 files hidden by .gitignore (20 KB): __pycache__/ - click to list them
 F	LIB_GENERICA#2	rule __pycache__/  [2]	python/__pycache__/generica.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GENERICA\python\__pycache__\generica.cpython-314.pyc	0	0
 F	LIB_GENERICA#2	rule __pycache__/  [2]	tools/__pycache__/extract_script_examples.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GENERICA\tools\__pycache__\extract_script_examples.cpython-314.pyc	0	0
-P	LIB_GLOBALS	part	780	934	280	52	LIB_GLOBALS	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GLOBALS
+P	LIB_GLOBALS	part	780	991	280	52	LIB_GLOBALS	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GLOBALS
 C	LIB_GLOBALS#1	LIB_GLOBALS	has	18	58	262	23	9 files on git (501 KB)
 C	LIB_GLOBALS#2	LIB_GLOBALS	ignored	18	85	262	38	2 files hidden by .gitignore (64 KB): __pycache__/ - click to list them
 F	LIB_GLOBALS#2	rule __pycache__/  [2]	python/__pycache__/lib_globals.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GLOBALS\python\__pycache__\lib_globals.cpython-314.pyc	0	0
 F	LIB_GLOBALS#2	rule __pycache__/  [2]	tools/__pycache__/globals_census.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GLOBALS\tools\__pycache__\globals_census.cpython-314.pyc	0	0
-P	LIB_GUI	part	780	1095	280	52	LIB_GUI	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI
-C	LIB_GUI#1	LIB_GUI	has	18	58	262	38	7 files on git (51 KB), branch gui-step1 checked out, not main
+P	LIB_GUI	part	780	1152	280	52	LIB_GUI	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI
+C	LIB_GUI#1	LIB_GUI	has	18	58	262	38	9 files on git (106 KB), branch gui-step1 checked out, not main
 C	LIB_GUI#2	LIB_GUI	review	18	100	262	23	branch gui-step1 not merged into main
-P	LIB_LISTS	part	780	1256	280	52	LIB_LISTS	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LISTS
+P	LIB_LISTS	part	780	1313	280	52	LIB_LISTS	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LISTS
 C	LIB_LISTS#1	LIB_LISTS	has	18	58	262	23	290 files on git (882 KB)
-P	LIB_MAP	part	780	1375	280	52	LIB_MAP	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MAP
+P	LIB_MAP	part	780	1432	280	52	LIB_MAP	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MAP
 C	LIB_MAP#1	LIB_MAP	has	18	58	262	23	7 files on git (36 KB)
-P	LIB_MENU	part	780	1494	280	52	LIB_MENU	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MENU
-C	LIB_MENU#1	LIB_MENU	has	18	58	262	23	3 files on git (4 KB)
+P	LIB_MENU	part	780	1551	280	52	LIB_MENU	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MENU
+C	LIB_MENU#1	LIB_MENU	has	18	58	262	38	6 files on git (28 KB), branch menu-steps checked out, not main
+C	LIB_MENU#2	LIB_MENU	review	18	100	262	23	branch menu-steps not merged into main
 P	LIB_MOCAP	part	1110	260	280	52	LIB_MOCAP	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP
 C	LIB_MOCAP#1	LIB_MOCAP	has	18	58	262	23	157 files on git (2.4 MB)
 C	LIB_MOCAP#2	LIB_MOCAP	ignored	18	85	262	83	71 files hidden by .gitignore (9.2 MB): library/*/*_stick.txt, __pycache__/, input/*, library/*/*_skinned.glb - click to list them
@@ -410,13 +417,10 @@ F	LIB_COMFY#3	rule __pycache__/  [6]	ComfyUI-Vibecode3D/__pycache__/assemble.cpy
 F	LIB_COMFY#3	rule __pycache__/  [6]	ComfyUI-Vibecode3D/__pycache__/preview.cpython-313.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_COMFY\ComfyUI-Vibecode3D\__pycache__\preview.cpython-313.pyc	0	0
 F	LIB_COMFY#3	rule __pycache__/  [6]	ComfyUI-Vibecode3D/__pycache__/preview.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_COMFY\ComfyUI-Vibecode3D\__pycache__\preview.cpython-314.pyc	0	0
 P	LIB_DEV	part	1500	1001	280	52	LIB_DEV	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV
-C	LIB_DEV#1	LIB_DEV	has	18	58	262	38	46 files on git (1010 KB), branch on-git-or-not checked out, not main
+C	LIB_DEV#1	LIB_DEV	has	18	58	262	38	46 files on git (1.0 MB), branch on-git-or-not checked out, not main
 C	LIB_DEV#2	LIB_DEV	review	18	100	262	38	branch on-git-or-not not merged into main
-C	LIB_DEV#3	LIB_DEV	review	18	142	262	53	5 loose files (5 changed, 85 KB): not on git, not ignored - click to list them
-F	LIB_DEV#3	LIB_DEV	LIB_MENU_PLAN.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\LIB_MENU_PLAN.md	0	decide
-F	LIB_DEV#3	LIB_DEV	PriorityTube/claude_sizes.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\PriorityTube\claude_sizes.txt	0	decide
-F	LIB_DEV#3	LIB_DEV	PriorityTube/items.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\PriorityTube\items.txt	0	decide
-F	LIB_DEV#3	LIB_DEV	ProjectMap/board.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\board.txt	0	decide
+C	LIB_DEV#3	LIB_DEV	review	18	142	262	53	2 loose files (2 changed, 197 KB): not on git, not ignored - click to list them
+F	LIB_DEV#3	LIB_DEV	OnGitOrNot/map_data.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\OnGitOrNot\map_data.txt	0	decide
 F	LIB_DEV#3	LIB_DEV	ProjectMap/map_data.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\map_data.txt	0	decide
 C	LIB_DEV#4	LIB_DEV	ignored	18	199	262	53	8 files hidden by .gitignore (63 MB): *.exe, __pycache__/ - click to list them
 F	LIB_DEV#4	rule *.exe  [4]	Game_Browser.exe	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Game_Browser.exe	0	0
@@ -428,14 +432,35 @@ F	LIB_DEV#4	rule __pycache__/  [4]	tools/__pycache__/for_review.cpython-314.pyc	
 F	LIB_DEV#4	rule __pycache__/  [4]	tools/__pycache__/help_audit.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\tools\__pycache__\help_audit.cpython-314.pyc	0	0
 F	LIB_DEV#4	rule __pycache__/  [4]	tools/__pycache__/rename_in_handlers.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\tools\__pycache__\rename_in_handlers.cpython-314.pyc	0	0
 P	LIB_EDITOR	core	1500	1291	280	52	LIB_EDITOR	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR
-C	LIB_EDITOR#1	LIB_EDITOR	has	18	58	262	23	321 files on git (2.8 MB)
-C	LIB_EDITOR#2	LIB_EDITOR	review	18	85	262	38	branch release-checklist not merged into main
-C	LIB_EDITOR#3	LIB_EDITOR	ignored	18	127	262	38	1 file hidden by .gitignore (2 KB): tests/_* - click to list them
-F	LIB_EDITOR#3	rule tests/_*  [1]	tests/_engine_stubs.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR\tests\_engine_stubs.livecodescript	0	0
-P	LIB_ig3d	core	1500	1494	280	52	LIB_ig3d	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d
-C	LIB_ig3d#1	LIB_ig3d	has	18	58	262	23	17 files on git (567 KB)
+C	LIB_EDITOR#1	LIB_EDITOR	has	18	58	262	38	333 files on git (2.9 MB), branch editor-cards checked out, not main
+C	LIB_EDITOR#2	LIB_EDITOR	review	18	100	262	38	branch cellmap-v3-followups not merged into main
+C	LIB_EDITOR#3	LIB_EDITOR	review	18	142	262	38	branch editor-cards not merged into main
+C	LIB_EDITOR#4	LIB_EDITOR	review	18	184	262	38	branch release-checklist not merged into main
+C	LIB_EDITOR#5	LIB_EDITOR	review	18	226	262	53	5 loose files (3 new, 2 changed, 26 KB): not on git, not ignored - click to list them
+F	LIB_EDITOR#5	LIB_EDITOR	examples/E07_PadOpensDoor.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR\examples\E07_PadOpensDoor.livecodescript	0	decide
+F	LIB_EDITOR#5	LIB_EDITOR	maps/cards_yard.cellmap	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR\maps\cards_yard.cellmap	0	decide
+F	LIB_EDITOR#5	LIB_EDITOR	tests/_engine_stubs.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR\tests\_engine_stubs.livecodescript	0	decide
+F	LIB_EDITOR#5	LIB_EDITOR	tests/e07_headless.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR\tests\e07_headless.txt	0	decide
+F	LIB_EDITOR#5	LIB_EDITOR	tools/make_card_maps.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_EDITOR\tools\make_card_maps.py	0	decide
+P	LIB_ig3d	core	1830	260	280	52	LIB_ig3d	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d
+C	LIB_ig3d#1	LIB_ig3d	has	18	58	262	23	17 files on git (577 KB)
 C	LIB_ig3d#2	LIB_ig3d	review	18	85	262	38	branch release-checklist not merged into main
-P	LIB_MCP	part	1830	260	280	52	LIB_MCP	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MCP
+C	LIB_ig3d#3	LIB_ig3d	review	18	127	262	23	branch rename-day not merged into main
+C	LIB_ig3d#4	LIB_ig3d	review	18	154	262	53	10 loose files (7 new, 3 changed, 126 KB): not on git, not ignored - click to list them
+F	LIB_ig3d#4	LIB_ig3d	Data/Menus/Contract.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\Data\Menus\Contract.txt	0	decide
+F	LIB_ig3d#4	LIB_ig3d	Data/contract_words.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\Data\contract_words.txt	0	decide
+F	LIB_ig3d#4	LIB_ig3d	ENGINE_CONTRACT.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\ENGINE_CONTRACT.md	0	decide
+F	LIB_ig3d#4	LIB_ig3d	RENAME_DAY.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\RENAME_DAY.md	0	decide
+F	LIB_ig3d#4	LIB_ig3d	livecode/contract_aliases.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\livecode\contract_aliases.livecodescript	0	decide
+F	LIB_ig3d#4	LIB_ig3d	livecode/lib_suggest.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\livecode\lib_suggest.livecodescript	0	decide
+F	LIB_ig3d#4	LIB_ig3d	livecode/suggest_window.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\livecode\suggest_window.livecodescript	0	decide
+F	LIB_ig3d#4	LIB_ig3d	tools/contract_check.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\tools\contract_check.py	0	decide
+F	LIB_ig3d#4	LIB_ig3d	tools/make_names.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\tools\make_names.py	0	decide
+F	LIB_ig3d#4	LIB_ig3d	tools/test_contract_check.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\tools\test_contract_check.py	0	decide
+C	LIB_ig3d#5	LIB_ig3d	ignored	18	211	262	38	2 files hidden by .gitignore (45 KB): __pycache__/ - click to list them
+F	LIB_ig3d#5	rule __pycache__/  [2]	tools/__pycache__/contract_check.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\tools\__pycache__\contract_check.cpython-314.pyc	0	0
+F	LIB_ig3d#5	rule __pycache__/  [2]	tools/__pycache__/make_names.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_ig3d\tools\__pycache__\make_names.cpython-314.pyc	0	0
+P	LIB_MCP	part	1830	547	280	52	LIB_MCP	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MCP
 C	LIB_MCP#1	LIB_MCP	has	18	58	262	23	23 files on git (204 KB)
 C	LIB_MCP#2	LIB_MCP	ignored	18	85	262	53	6 files hidden by .gitignore (15 MB): __pycache__/, standalone/*/ - click to list them
 F	LIB_MCP#2	rule __pycache__/  [5]	python/lib_mcp/__pycache__/__init__.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MCP\python\lib_mcp\__pycache__\__init__.cpython-314.pyc	0	0
@@ -444,7 +469,7 @@ F	LIB_MCP#2	rule __pycache__/  [5]	python/lib_mcp/__pycache__/client.cpython-314
 F	LIB_MCP#2	rule __pycache__/  [5]	python/lib_mcp/__pycache__/compile_headless.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MCP\python\lib_mcp\__pycache__\compile_headless.cpython-314.pyc	0	0
 F	LIB_MCP#2	rule __pycache__/  [5]	python/lib_mcp/__pycache__/lint.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MCP\python\lib_mcp\__pycache__\lint.cpython-314.pyc	0	0
 F	LIB_MCP#2	rule standalone/*/  [1]	standalone/xt3d_MCP/Windows x86-64/xt3d_MCP.exe	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MCP\standalone\xt3d_MCP\Windows x86-64\xt3d_MCP.exe	0	0
-P	LIB_SPARK	part	1830	436	280	52	LIB_SPARK	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SPARK
+P	LIB_SPARK	part	1830	723	280	52	LIB_SPARK	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SPARK
 C	LIB_SPARK#1	LIB_SPARK	has	18	58	262	23	686 files on git (1.3 MB)
 C	LIB_SPARK#2	LIB_SPARK	ignored	18	85	262	53	5 files hidden by .gitignore (99 KB): __pycache__/, arcade/out/.work_clock - click to list them
 F	LIB_SPARK#2	rule __pycache__/  [4]	arcade/__pycache__/run_arcade.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SPARK\arcade\__pycache__\run_arcade.cpython-314.pyc	0	0
@@ -452,9 +477,9 @@ F	LIB_SPARK#2	rule __pycache__/  [4]	entities/__pycache__/entity.cpython-314.pyc
 F	LIB_SPARK#2	rule __pycache__/  [4]	entities/__pycache__/run_entities.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SPARK\entities\__pycache__\run_entities.cpython-314.pyc	0	0
 F	LIB_SPARK#2	rule __pycache__/  [4]	howto/__pycache__/run_howto.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SPARK\howto\__pycache__\run_howto.cpython-314.pyc	0	0
 F	LIB_SPARK#2	rule arcade/out/.work_clock  [1]	arcade/out/.work_clock	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SPARK\arcade\out\.work_clock	0	0
-P	LIB_TEST	part	1830	612	280	52	LIB_TEST	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TEST
+P	LIB_TEST	part	1830	899	280	52	LIB_TEST	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TEST
 C	LIB_TEST#1	LIB_TEST	has	18	58	262	23	12 files on git (147 KB)
-P	LIB_UPBGE	part	1830	731	280	52	LIB_UPBGE	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE
+P	LIB_UPBGE	part	1830	1018	280	52	LIB_UPBGE	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE
 C	LIB_UPBGE#1	LIB_UPBGE	has	18	58	262	23	25 files on git (341 KB)
 C	LIB_UPBGE#2	LIB_UPBGE	ignored	18	85	262	38	72 files hidden by .gitignore (44 MB): templates/ - click to list them
 F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Blender_files/3rd_Person_follow_camera_01.blend	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Blender_files\3rd_Person_follow_camera_01.blend	0	0
@@ -529,9 +554,9 @@ F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main
 F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/textRead_localpath.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\textRead_localpath.py	0	0
 F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/textRead_textBlock.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\textRead_textBlock.py	0	0
 F	LIB_UPBGE#2	rule templates/  [72]	templates/Blender-Game-Engine-Templates-main/Scripts/waypoints.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_UPBGE\templates\Blender-Game-Engine-Templates-main\Scripts\waypoints.py	0	0
-P	OXT-BEYOND	part	1830	892	280	52	OXT-BEYOND	Not a repository	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND
-C	OXT-BEYOND#1	OXT-BEYOND	block	18	58	262	53	owner: not a repository, nothing here is on git (66 files, 246 KB) - click to list them
-F	OXT-BEYOND#1	OXT-BEYOND	tests/  [55 files, 227 KB]	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\tests	1	0
+P	OXT-BEYOND	part	1830	1179	280	52	OXT-BEYOND	Not a repository	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND
+C	OXT-BEYOND#1	OXT-BEYOND	block	18	58	262	53	owner: not a repository, nothing here is on git (77 files, 508 KB) - click to list them
+F	OXT-BEYOND#1	OXT-BEYOND	tests/  [66 files, 488 KB]	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\tests	1	0
 F	OXT-BEYOND#1	OXT-BEYOND	sessions/  [5 files, 9 KB]	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\sessions	1	0
 F	OXT-BEYOND#1	OXT-BEYOND	README.md  [1 file, 5 KB]	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\README.md	0	0
 F	OXT-BEYOND#1	OXT-BEYOND	Keep_Notes_for_Seth_Morrow_Here.txt  [1 file, 3 KB]	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\Keep_Notes_for_Seth_Morrow_Here.txt	0	0
@@ -551,7 +576,7 @@ F	LIB_LLMIN#2	rule /*  [671]	PROMPT_GLAZE/PROMPT_GLAZE_acidentai_lgit_copy_to_de
 F	LIB_LLMIN#2	rule /*  [671]	LIB_DEE/Enochian_Governor_Sigils_Perhaps_X_Y_Array/  [13 files, 693 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_DEE\Enochian_Governor_Sigils_Perhaps_X_Y_Array	1	0
 F	LIB_LLMIN#2	rule /*  [671]	FOR_MUCH_LATER/Box2Dxt-Alpha-Demo-v7/  [9 files, 4.4 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\FOR_MUCH_LATER\Box2Dxt-Alpha-Demo-v7	1	0
 F	LIB_LLMIN#2	rule /*  [671]	LIB_BAT/  [9 files, 8 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_BAT	1	0
-F	LIB_LLMIN#2	rule /*  [671]	LIB_DEV/  [9 files, 28 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_DEV	1	0
+F	LIB_LLMIN#2	rule /*  [671]	LIB_DEV/  [9 files, 29 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_DEV	1	0
 F	LIB_LLMIN#2	rule /*  [671]	FOR_MUCH_LATER/Box2Dxt-Alpha-Demo-v7/docs/  [8 files, 213 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\FOR_MUCH_LATER\Box2Dxt-Alpha-Demo-v7\docs	1	0
 F	LIB_LLMIN#2	rule /*  [671]	FOR_MUCH_LATER/Box2Dxt-Alpha-Demo-v7/src/  [8 files, 1.5 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\FOR_MUCH_LATER\Box2Dxt-Alpha-Demo-v7\src	1	0
 F	LIB_LLMIN#2	rule /*  [671]	LIB_DEE/BitFontMaker2_Reader_Python/  [7 files, 59 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMIN\LIB_DEE\BitFontMaker2_Reader_Python	1	0
@@ -616,8 +641,8 @@ F	LIB_LLMOUT#2	LIB_LLMOUT	Read/LIB_XTJSON/XTJSON_batch_11_13_2026/README.md	\\ws
 C	LIB_LLMOUT#3	LIB_LLMOUT	ignored	18	127	262	38	6,546 files hidden by .gitignore (93 MB): * - click to list them
 F	LIB_LLMOUT#3	rule *  [6546]	Read/  [6,511 files, 92 MB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\Read	1	0
 F	LIB_LLMOUT#3	rule *  [6546]	LIB_EDITOR/  [9 files, 522 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_EDITOR	1	0
-F	LIB_LLMOUT#3	rule *  [6546]	./  [5 files, 59 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\.	1	0
-F	LIB_LLMOUT#3	rule *  [6546]	LIB_DEV/  [5 files, 68 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_DEV	1	0
+F	LIB_LLMOUT#3	rule *  [6546]	./  [5 files, 65 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\.	1	0
+F	LIB_LLMOUT#3	rule *  [6546]	LIB_DEV/  [5 files, 71 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_DEV	1	0
 F	LIB_LLMOUT#3	rule *  [6546]	LIB_GAMES/  [5 files, 38 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_GAMES	1	0
 F	LIB_LLMOUT#3	rule *  [6546]	LIB_BIT/  [2 files, 4 KB]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_BIT	1	0
 F	LIB_LLMOUT#3	rule *  [6546]	LIB_MOCAP/  [2 files, 363 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_MOCAP	1	0
@@ -637,7 +662,7 @@ C	LIB_PUBLIC#2	LIB_PUBLIC	ignored	18	85	262	38	2 files hidden by .gitignore (29 
 F	LIB_PUBLIC#2	rule build/  [2]	launcher/build/Vibecode3D Library/Windows x86-64/Vibecode3D Library.exe	\\wsl$\Ubuntu\home\igame3d\projects\LIB_PUBLIC\launcher\build\Vibecode3D Library\Windows x86-64\Vibecode3D Library.exe	0	0
 F	LIB_PUBLIC#2	rule build/  [2]	launcher/build/Vibecode3D Library/Windows/Vibecode3D Library.exe	\\wsl$\Ubuntu\home\igame3d\projects\LIB_PUBLIC\launcher\build\Vibecode3D Library\Windows\Vibecode3D Library.exe	0	0
 P	LIB_SYSTEM	core	2220	869	280	52	LIB_SYSTEM	Repository	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SYSTEM
-C	LIB_SYSTEM#1	LIB_SYSTEM	has	18	58	262	23	23 files on git (300 KB)
+C	LIB_SYSTEM#1	LIB_SYSTEM	has	18	58	262	23	23 files on git (301 KB)
 C	LIB_SYSTEM#2	LIB_SYSTEM	review	18	85	262	38	2 loose files (2 new, 29 KB): not on git, not ignored - click to list them
 F	LIB_SYSTEM#2	LIB_SYSTEM	tools/__pycache__/progress.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SYSTEM\tools\__pycache__\progress.cpython-314.pyc	0	decide
 F	LIB_SYSTEM#2	LIB_SYSTEM	tools/__pycache__/provenance.cpython-314.pyc	\\wsl$\Ubuntu\home\igame3d\projects\LIB_SYSTEM\tools\__pycache__\provenance.cpython-314.pyc	0	decide
@@ -667,9 +692,13 @@ P	logs	part	2610	960	280	52	logs	Not a repository	\\wsl$\Ubuntu\home\igame3d\pro
 C	logs#1	logs	block	18	58	262	53	owner: not a repository, nothing here is on git (empty folder) - click to list them
 F	logs#1	logs	Read/  [0 files, 0 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\logs\Read	1	0
 P	Next_Steps_With_Claude	part	2610	1109	280	52	Next_Steps_With_Claude	Not a repository	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude
-C	Next_Steps_With_Claude#1	Next_Steps_With_Claude	block	18	58	262	53	owner: not a repository, nothing here is on git (15 files, 80 KB) - click to list them
+C	Next_Steps_With_Claude#1	Next_Steps_With_Claude	block	18	58	262	53	owner: not a repository, nothing here is on git (19 files, 98 KB) - click to list them
 F	Next_Steps_With_Claude#1	Next_Steps_With_Claude	previous_steps/  [14 files, 75 KB]	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\previous_steps	1	0
+F	Next_Steps_With_Claude#1	Next_Steps_With_Claude	FABLE_DAY_11_18_2026.md  [1 file, 8 KB]	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\FABLE_DAY_11_18_2026.md	0	0
 F	Next_Steps_With_Claude#1	Next_Steps_With_Claude	WHEN_WE_RESUME_11_17_2026.md  [1 file, 5 KB]	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\WHEN_WE_RESUME_11_17_2026.md	0	0
+F	Next_Steps_With_Claude#1	Next_Steps_With_Claude	FABLE_JOB_1_GAD_BATTLES.md  [1 file, 3 KB]	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\FABLE_JOB_1_GAD_BATTLES.md	0	0
+F	Next_Steps_With_Claude#1	Next_Steps_With_Claude	FABLE_JOB_2_RENAME_DAY.md  [1 file, 3 KB]	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\FABLE_JOB_2_RENAME_DAY.md	0	0
+F	Next_Steps_With_Claude#1	Next_Steps_With_Claude	FABLE_JOB_3_CONTRACT_CALLS.md  [1 file, 2 KB]	\\wsl$\Ubuntu\home\igame3d\projects\Next_Steps_With_Claude\FABLE_JOB_3_CONTRACT_CALLS.md	0	0
 P	TO_REMOVE	part	2610	1258	280	52	TO_REMOVE	Not a repository	\\wsl$\Ubuntu\home\igame3d\projects\TO_REMOVE
 C	TO_REMOVE#1	TO_REMOVE	block	18	58	262	38	owner: not a repository, nothing here is on git (empty folder)
 P	XTJSON	part	2610	1392	280	52	XTJSON	Not a repository	\\wsl$\Ubuntu\home\igame3d\projects\XTJSON
@@ -681,13 +710,13 @@ F	XTJSON#1	XTJSON	xtjson/  [6 files, 92 KB]	\\wsl$\Ubuntu\home\igame3d\projects\
 F	XTJSON#1	XTJSON	docs/  [3 files, 25 KB]	\\wsl$\Ubuntu\home\igame3d\projects\XTJSON\docs	1	0
 F	XTJSON#1	XTJSON	README_batch_moved.md  [1 file, 163 bytes]	\\wsl$\Ubuntu\home\igame3d\projects\XTJSON\README_batch_moved.md	0	0
 P	ON GIT	core	735	-51	280	52	ON GIT	What git keeps on this machine	
-C	ON GIT#1	ON GIT	has	18	58	262	23	2,366 files in 41 repositories (52 MB)
+C	ON GIT#1	ON GIT	has	18	58	262	23	2,383 files in 41 repositories (52 MB)
 C	ON GIT#2	ON GIT	next	18	85	262	38	No repository has a remote yet: remote locations and backups come later
-C	ON GIT#3	ON GIT	review	18	127	262	23	13 branches not merged into main
+C	ON GIT#3	ON GIT	review	18	127	262	23	19 branches not merged into main
 P	NOT ON GIT	core	1215	-51	280	52	NOT ON GIT	Everything git does not keep, and why	
-C	NOT ON GIT#1	NOT ON GIT	review	18	58	262	38	12 loose files (182 KB): nobody committed or ignored them
-C	NOT ON GIT#2	NOT ON GIT	block	18	100	262	38	10 folders not a repository: 988 files (52 MB)
-C	NOT ON GIT#3	NOT ON GIT	ignored	18	142	262	38	11,236 files hidden by .gitignore rules (847 MB)
+C	NOT ON GIT#1	NOT ON GIT	review	18	58	262	38	26 loose files (756 KB): nobody committed or ignored them
+C	NOT ON GIT#2	NOT ON GIT	block	18	100	262	38	10 folders not a repository: 1,003 files (53 MB)
+C	NOT ON GIT#3	NOT ON GIT	ignored	18	142	262	38	11,239 files hidden by .gitignore rules (847 MB)
 C	NOT ON GIT#4	NOT ON GIT	private	18	184	262	23	4 files private, never on git (19 KB)
 P	YOU	core	1695	-51	280	67	YOU	The owner: red strings end here (a decision only you can make)	
 C	YOU#1	YOU	next	18	73	262	53	Click a chip to see its files and open them in Explorer; R rebuilds, T tells Claude
@@ -702,15 +731,17 @@ E	logs#1	YOU	red
 E	Next_Steps_With_Claude#1	YOU	red
 E	TO_REMOVE#1	YOU	red
 E	XTJSON#1	YOU	red
+L	xt3D_Raylib_Livecode_Bridge#3
 L	LIB_DEV#3
+L	LIB_ig3d#4
 L	LIB_GAMES#3
-L	xt3D_Raylib_Livecode_Bridge#2
 L	LIB_SYSTEM#2
+L	LIB_EDITOR#5
 L	LIB_LLMOUT#2
 L	iGame3D_2026_CLAUDE#1
 L	XTJSON#1
-L	LIB_LUA#1
 L	OXT-BEYOND#1
+L	LIB_LUA#1
 L	Next_Steps_With_Claude#1
 L	LIB_COMPANY#1
 L	logs#1
@@ -720,7 +751,7 @@ L	LIB_FACE#1
 L	LIB_BUILD#3
 L	LIB_LLMOUT#3
 L	LIB_BIN#2
-L	xt3D_Raylib_Livecode_Bridge#3
+L	xt3D_Raylib_Livecode_Bridge#4
 L	LIB_LLMIN#2
 L	LIB_DEV#4
 L	Vibecode3D#2
@@ -730,13 +761,13 @@ L	LIB_MCP#2
 L	LIB_MOCAP#2
 L	LIB_GAMES#4
 L	LIB_TTRPG#3
-L	LIB_BIT#3
+L	LIB_BIT#4
 L	LIB_SPARK#2
 L	LIB_COMFY#3
 L	LIB_GLOBALS#2
 L	LIB_XTJSON#2
+L	LIB_ig3d#5
 L	xtalk_py#2
 L	LIB_GENERICA#2
 L	LIB_THEME#2
 L	LIB_SCRIPTBLOCKS#3
-L	LIB_EDITOR#3

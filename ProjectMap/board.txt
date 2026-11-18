@@ -19,7 +19,9 @@
 what: Where we are, 17 Nov 2026
 has: Opus alone from here (no Fable time): big things start as a one-page plan
 has: Every branch merged 16 Nov; main is the truth in every repository
-next: GAD battles: one-page plan, then the smallest playable loop
+has: Rename Day merged 18 Nov: every contract call is Group.Verb; old names live until release
+next: The contract's new calls (Camera.SetLook, Entity.Set/Get/SetMesh, Scene.Objects ...)
+next: Move the games to the new names (666 places in 54 scripts)
 next: Your 16 Nov game notes (GridSprint, InterceptorRun, DeadDays)
 
 == GOAL | TOP | core
@@ -47,6 +49,8 @@ what: xt3D_Raylib_Livecode_Bridge: xTalk drives raylib 3D (xRay)
 has: Games bench runs Thrmnlra unchanged (27 fps)
 has: Box2DXT physics works outside the IDE (could replace faked physics)
 next: E13 Walk The Map in the xt3d games bench
+done: Engine made again with the contract aliases (18 Nov, Rename Day; t18 t22 t45 pass)
+review: owner: play one game on the new generated engine in a window (nobody has yet)
 link: LIB_GAMES, LIB_RAYGUI, LIB_BIT
 
 == iGame3D_2026_CLAUDE | ENGINES
@@ -208,6 +212,22 @@ review: owner: is Library.txt how a menu file should read? (LIB_MENU/Menus/Defau
 done: The Priority Tube and the Status Browser use Menu.* too (18 Nov)
 link: LIB_GUI, LIB_DEV
 
+== LIB_INPUT | BLOCKS
+what: Mouse, keyboard and game controller as named actions, with presets and profiles; two settings faces
+done: Library, presets, profiles, app face and developer face (18 Nov, branch input-steps, t48 113 checks)
+done: Game Player: ... > Controls... for a game with an actions file; Hunter is the first (18 Nov)
+review: owner: try Hunter > ... > Controls...; is the app face what "only the required inputs" meant?
+block: Controller written but never tried with a real one (needs the xt3d bridge and a pad)
+link: LIB_GUI, LIB_DATA, LIB_GAMES, xt3d
+
+== LIB_SFX | BLOCKS
+what: Game sound effects from numbers: xTalk drives rfxgen (sfxr) through its own small DLL; no raylib
+done: xtsfx.dll + Sfx. library, 8 presets, .rfx/.wav, demo; 30 checks pass (18 Nov, Fable)
+has: Owner heard it: "Works, sounds good!" (18 Nov)
+done: Several sounds at once through xt3d: 8 at once + overlapping copies (18 Nov, demos/sfx_xt3d_cacophony)
+review: owner: how did the cacophony sound?
+link: xt3d, LIB_GAMES
+
 == LIB_TOOLBAR | BLOCKS
 what: One-stop floating launcher of buttons for every LIB
 done: Plan by Fable from your O-8 answer
@@ -225,6 +245,10 @@ what: Where the worlds converge: glossary, procedures, engine categories
 has: iGame3D external API documented (123 commands, 53 functions)
 done: GLOSSARY.md
 done: PROCEDURES.md
+done: Rename Day merged (18 Nov): 24 calls renamed, 22 aliases, Camera. group; checker 65/65, t45 t46 pass
+next: The contract's new calls under the final names (A-93, A-96)
+next: rename_day.py, then move the games: 666 places in 54 scripts
+review: owner: which face for the suggestion list next: in-game command line or OXT-Beyond script editor?
 block: owner: say keep / change / later on RELEASE_CHECKLIST.md
 link: LIB_EDITOR, LIB_PUBLIC
 
