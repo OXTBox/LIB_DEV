@@ -15,3 +15,7 @@
   LIB_LLMIN/LIB_DEV/BOARD_COMMENTS.txt (id, date, board, target, words, open|deleted, where, text; the
   last line of an id wins). `feedback` prints it. The order of comments is NOT their priority. Act on open
   comments; log what you did in LIB_LLMOUT/Read/LIB_DEV/FEEDBACK_HANDLED.txt.
+- Priority Tube (PriorityTube/): the owner's order of everything to do, top first; `feedback` prints
+  LIB_LLMIN/LIB_DEV/PRIORITY_ORDER.txt. **Work from the top.** Size every new bubble (comments, next
+  steps) in PriorityTube/claude_sizes.txt (id, Claude minutes, kind, why): `tools/tube_items.py` lists
+  the unsized ones. Never reorder bubbles the owner placed.

@@ -1,0 +1,22 @@
+# Claude's sizes for the Priority Tube, hand-kept by Claude: id TAB minutes of Claude's work TAB kind TAB why
+# kind: utility | fun | fix | plan | big | note.  The owner's order (LIB_LLMIN/LIB_DEV/PRIORITY_ORDER.txt) always wins.
+c1794976319901	1	note	Your first comment, a thumbs-up for the box: nothing to do, delete it when you like
+c1794976332099	1	note	A thumbs-up that comments work: nothing to do, delete it when you like
+n-dd63cd27	25	plan	A one-page plan from LIB_GAD's notes and LIB_RTS; the playable loop is its own bubble (GAD step 2)
+n-9775a310	90	fun	Three games, a handful of changes each, then a play test on the real engine
+n-47c7ec91	60	fun	The cellmap walker exists (E13 in Vibecode3D); porting it to the xt3d bench is mostly glue
+n-f59d34e9	480	big	A whole day by your word: xTalk tools moved to Python where handy
+n-09d8095c	90	fun	Same work as NOW's game-notes bubble (GridSprint, InterceptorRun, DeadDays)
+n-df980b7d	45	fun	Rules are written; waits on the Vector Toss work resuming
+n-4e648256	25	plan	One page: Bases map turn, LIB_RTS fight, back to the map
+n-a5b302f3	120	fun	Two Bases, one anomaly, one fight, playable; needs the step 1 plan first
+n-b3296cad	180	big	Read the old studio's world code and carry it over (later, by your word)
+n-1cb5d94e	60	utility	Step code for the outlines Spark has written; you review the outline first
+n-50a06ce7	90	utility	Four follow-ups to cellmap v3 (A-92..A-95) that the engine contract waits on
+n-247c3efb	40	fun	Cut one BVH take into three clips and hook them to DeadDays
+n-db89ab02	120	utility	LIB_GUI's PLAN.md is written; build the first pieces from it
+n-699218f7	300	utility	Twelve editor example cards on the cellmap format, about 25 minutes each
+n-e32fb2eb	1	note	Your input, not Claude's work: nothing to do until you write it
+n-4999f456	45	utility	A popup on each loose thing writing GIT_DECISIONS.txt, and Claude carrying the lines out
+n-9662240e	240	big	ComfyUI as a node editor for the games, deeper: open ended
+n-dda4604e	20	utility	Window titles from Users.Title in each stack: small and mechanical
