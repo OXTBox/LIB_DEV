@@ -121,7 +121,9 @@ has: cellmap v2 (five heights a cell), Python + xTalk give identical answers
 has: BitEditor Heights tab
 done: cellmap v2 format
 done: cellmap v3 plan KEPT (stacked maps, packs, slopes)
-next: cellmap v3 follow-ups A-92..A-95
+done: cellmap v3: slopes + packs drawn, E13 walks two_rooms; three failing game tests fixed or explained (18 Nov, branch cellmap-v3-followups)
+review: owner: play E13 -> M twice -> two_rooms, and Block City
+next: cellmap v3: BitEditor Slope tool, pack panel, E12 checker (A-92 3-5)
 block: owner: test the BitEditor Heights tab (F-3), never seen on a screen
 link: LIB_MAP, LIB_EDITOR, Vibecode3D, xt3d
 
@@ -165,7 +167,7 @@ link: LIB_BVH
 what: The BVH motion library (local only: rights unsettled)
 has: Animazoo, FreeBVH, iGame3D, Harold Lloyd clips
 next: Cut the Harold Lloyd take into climb / hang / recover for DeadDays
-block: owner: check the film title for the credit ("Safety Last!", 1923?)
+done: Film title checked by you: "Safety Last!" (1923), credit in the header
 link: LIB_GAMES
 
 == LIB_DATA | BLOCKS
