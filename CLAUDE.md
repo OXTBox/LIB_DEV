@@ -20,3 +20,11 @@
   steps) in PriorityTube/claude_sizes.txt (id, Claude minutes, kind, why): `tools/tube_items.py` lists
   the unsized ones. Never reorder bubbles the owner placed.
   Bubbles he takes off the tube (Delete) are listed in LIB_LLMIN/LIB_DEV/TUBE_REMOVED.txt: never work on them.
+- On Git or Not decisions: a loose file's menu offers Commit / Ignore / Delete / Leave; each pick appends
+  `date time, folder, Windows path, commit|ignore|delete|leave` to LIB_LLMIN/LIB_DEV/GIT_DECISIONS.txt
+  (the last line of a path wins; `feedback` prints it). Claude carries them out: commit (on the repo's
+  branch rules), add a .gitignore rule, delete (never inside LIB_LLMIN, LIB_LLMOUT/FOR_REVIEW or the
+  owner's private folders; ask when unsure), leave = nothing; then rebuild the board (git_map.py) and log
+  it in LIB_LLMOUT/LIB_DEV/FEEDBACK_HANDLED.txt. The board itself runs no git.
+- Menus on the boards: every menu ends with "Leave comment..." and "Explore here..." (one handler,
+  pmMenuEnd); rules in LIB_MENU_PLAN.md.

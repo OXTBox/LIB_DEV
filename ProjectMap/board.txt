@@ -228,7 +228,7 @@ has: Project Map (this stack): reviews and blocker notes from the map
 done: Status Browser + review list
 done: Project Map merged (17 Nov)
 next: Your next input on the Project Map
-next: On Git or Not step 4: Commit / Ignore / Delete / Leave on each loose thing
+done: On Git or Not step 4: Commit / Ignore / Delete / Leave on each loose thing
 link: LIB_THEME
 
 == LIB_MCP | TOOLS

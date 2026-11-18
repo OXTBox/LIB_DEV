@@ -7,7 +7,8 @@
                                                    and MAP_NOTES.txt: his feedback and files on the Project Map's red blockers,
                                                    and BOARD_COMMENTS.txt: his right-click comments on the boards
                                                    (order written is NOT priority; the last line of an id wins),
-                                                   and PRIORITY_ORDER.txt: the Priority Tube's order (work from the top)
+                                                   and PRIORITY_ORDER.txt: the Priority Tube's order (work from the top),
+                                                   and GIT_DECISIONS.txt: Commit / Ignore / Delete / Leave picked on On Git or Not
     python3 -I tools/for_review.py relink          listed files that moved: point their lines to where they are now
                                                    (the Project Map runs it on every rebuild)
 
@@ -169,7 +170,7 @@ def main(a):
     elif a[:1] == ['list']:
         print(open(LIST, encoding='utf-8').read() if os.path.exists(LIST) else '(empty)')
     elif a[:1] == ['feedback']:
-        for f in ('REVIEW_STATE.txt', 'REVIEW_FEEDBACK.txt', 'MAP_NOTES.txt', 'BOARD_COMMENTS.txt', 'PRIORITY_ORDER.txt'):
+        for f in ('REVIEW_STATE.txt', 'REVIEW_FEEDBACK.txt', 'MAP_NOTES.txt', 'BOARD_COMMENTS.txt', 'PRIORITY_ORDER.txt', 'GIT_DECISIONS.txt'):
             p = os.path.join(INBOX, f)
             print('==', f)
             print(open(p, encoding='utf-8').read() if os.path.exists(p) else '(none yet)')

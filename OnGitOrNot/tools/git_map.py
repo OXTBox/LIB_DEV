@@ -87,11 +87,12 @@ def top_of(rel):
     return rel.split("/", 1)[0] if "/" in rel else ""
 
 
-def grouped(folder, rels, group):
-    """F entries for a chip: one per file when few, else one per top folder with its count and size"""
+def grouped(folder, rels, group, flag=""):
+    """F entries for a chip: one per file when few, else one per top folder with its count and size.
+    flag "decide": the board offers Commit / Ignore / Delete / Leave on each line (GIT_DECISIONS.txt)"""
     rels = sorted(rels)
     if len(rels) <= MAX_FILES:
-        return [[group, r, win(os.path.join(folder, r)), 0, ""] for r in rels]
+        return [[group, r, win(os.path.join(folder, r)), 0, flag] for r in rels]
     by = collections.defaultdict(list)
     for r in rels:
         by[os.path.dirname(r) or "."].append(r)
@@ -102,7 +103,7 @@ def grouped(folder, rels, group):
     out = []
     for d, rs in sorted(by.items(), key=lambda kv: -len(kv[1])):
         sz = sum(size_of(os.path.join(folder, r)) for r in rs)
-        out.append([group, f"{d}/  [{plural(len(rs), 'file')}, {mb(sz)}]", win(os.path.join(folder, d)), 1, ""])
+        out.append([group, f"{d}/  [{plural(len(rs), 'file')}, {mb(sz)}]", win(os.path.join(folder, d)), 1, flag])
     return out
 
 
@@ -266,7 +267,7 @@ def parts_of(facts, loose_top):
             if f["changed"]:
                 words.append(f"{len(f['changed'])} changed")
             p["chips"].append(["review", f"{plural(len(loose), 'loose file')} ({', '.join(words)}, {mb(sz)}): not on git, not ignored",
-                               grouped(folder, loose, name)])
+                               grouped(folder, loose, name, "decide")])
             panel.append((2, sz, name, len(p["chips"])))
             tot["loose"] += len(loose)
             tot["loose_size"] += sz
@@ -316,7 +317,7 @@ def parts_of(facts, loose_top):
     you = {"name": "YOU", "zone": "TOP", "core": True, "what": "The owner: red strings end here (a decision only you can make)",
            "links": [], "stale": False,
            "chips": [["next", "Click a chip to see its files and open them in Explorer; R rebuilds, T tells Claude"],
-                     ["next", "Next build: Commit / Ignore / Delete / Leave on each loose thing (written for Claude to carry out)"]]}
+                     ["next", "Click a loose file: Commit / Ignore / Delete / Leave, written for Claude to carry out (T tells Claude)"]]}
     return [top_on, off, you] + parts, panel, tot
 
 
@@ -332,7 +333,7 @@ def main():
     rows = make_map.layout(parts)
     rows = [["B", "title", "FOR OWNER | On Git or Not"],
             ["B", "bar", "ON GIT OR NOT"],
-            ["B", "help", "wheel zoom | drag black to pan | drag a header to move | click a chip for its files | right-click anything to comment | F fit  B not-on-git only  R rebuild  T tell Claude  0 100%"],
+            ["B", "help", "wheel zoom | drag black to pan | drag a header to move | click a box for its menu | right-click anything to comment | F fit  B not-on-git only  R rebuild  T tell Claude  0 100%"],
             ["B", "tool", "tools/git_map.py"],
             ["B", "panel", "NOT ON GIT: loose files, then folders not on git, then .gitignore (biggest first)"],
             ["B", "legend", "26,110,52|255,255,255|on git"],

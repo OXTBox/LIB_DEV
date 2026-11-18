@@ -16,6 +16,12 @@ script "board_canvas"
 -- cards; click a box to focus it (its strings and neighbours stay lit), click the black to clear.
 -- Keys: F fit all, B blockers only (red and pink), R rebuild (runs make_map.py), 0 zoom 100%.
 -- The right panel lists what is stopping us; click a line to fly there.
+-- Menus: every menu (a box's click menu, a chip's files, a red blocker, a note) ends with the same
+-- lines, made by ONE handler (pmMenuEnd): "Leave comment..." and "Explore here...". Explorer is only
+-- touched when the owner picks a line (the WSL bridge is slow). Rules: LIB_DEV/LIB_MENU_PLAN.md.
+-- Decisions (On Git or Not): a loose file's lines (F rows flagged "decide") offer Commit / Ignore /
+-- Delete / Leave; a pick appends a line to LIB_LLMIN/LIB_DEV/GIT_DECISIONS.txt for Claude to carry
+-- out (the board runs no git and deletes nothing); decided files are marked on their chip and line.
 
 local sRect      -- world rect of each box: left,top,width,height (by control name)
 local sOff       -- chip offset from its part: dx,dy
@@ -29,7 +35,9 @@ local sDrag, sDragFrom, sDragStart
 local sFocus, sBlockersOnly
 local sBlockList -- control names in the panel's order
 local sMenuMap   -- popup item -> Windows path & tab & 1 when a folder (for the open popup)
-local sMenuChip  -- the chip whose popup is open
+local sMenuChip  -- the box (part, chip or note) whose popup is open
+local sFolder    -- part name -> its folder as a Windows path (P rows, item 10), for "Explore here..."
+local sDecided   -- Windows path -> the owner's last decision on it (GIT_DECISIONS.txt)
 local sConf      -- board settings from the B rows (legend: one line each)
 local sPanelOrder -- chip names from the L rows, one a line
 local sCmt       -- the comment being written: target, words, id, where, text
@@ -75,7 +83,7 @@ end pmReadText
 
 ---------------------------------------------------------------- building
 command pmBuild pKeepView
-   local tData, tLine, tName, tPos, tFiles
+   local tData, tLine, tName, tPos, tFiles, tDecide
    put pmReadText("map_data.txt") into tData
    lock screen
    lock messages
@@ -91,6 +99,8 @@ command pmBuild pKeepView
    put false into sBlockersOnly
    put empty into sConf
    put empty into sPanelOrder
+   put empty into sFolder
+   put empty into sDecided
    put pmReadPositions() into tPos
    set the itemDelimiter to tab
    repeat for each line tLine in tData
@@ -116,6 +126,7 @@ command pmBuild pKeepView
             break
          case "F"
             put item 3 to 7 of tLine & return after tFiles["C:" & item 2 of tLine]
+            if item 7 of tLine is "decide" then put true into tDecide
             break
       end switch
    end repeat
@@ -129,6 +140,13 @@ command pmBuild pKeepView
    repeat for each key tName in tFiles
       if there is a field tName then set the cFiles of field tName to tFiles[tName]
    end repeat
+   -- only a board with loose files to decide reads the decisions file
+   if tDecide is true then
+      pmReadDecisions
+      repeat for each key tName in tFiles
+         if there is a field tName then pmMarkDecided tName
+      end repeat
+   end if
    pmMakeHud
    unlock messages
    if tData is empty then put "No map_data.txt beside the stack: press R to rebuild." into field "HUD_Help"
@@ -202,6 +220,7 @@ command pmMakePart pLine, pPos
    end if
    set the htmlText of field tName to "<p><b>" & pmHtml(item 8 of pLine) & "</b></p><p>" & pmHtml(item 9 of pLine) & "</p>"
    put tXY & "," & item 6 of pLine & "," & item 7 of pLine into sRect[tName]
+   put item 10 of pLine into sFolder[tName]
 end pmMakePart
 
 command pmMakeChip pLine
@@ -329,7 +348,7 @@ command pmMakeHud
    create field "HUD_Help"
    pmStyleField "HUD_Help", "22,22,28", "22,22,28", "160,160,175", 0
    set the textSize of field "HUD_Help" to 11
-   pmSay pmConf("help", "wheel zoom | drag black to pan | drag a header to move | click to focus | right-click anything to comment | F fit  B blockers  R rebuild  T tell Claude  0 100%")
+   pmSay pmConf("help", "wheel zoom | drag black to pan | drag a header to move | click a box for its menu | right-click anything to comment | F fit  B blockers  R rebuild  T tell Claude  0 100%")
    create field "HUD_Legend"
    pmStyleField "HUD_Legend", "22,22,28", "60,60,70", "235,235,235", 1
    set the textSize of field "HUD_Legend" to 11
@@ -718,9 +737,12 @@ on mouseUp pButton
          pmPopupBlock word 2 to -1 of tWas
       else if the cFiles of field (word 2 to -1 of tWas) is not empty then
          pmPopupFiles word 2 to -1 of tWas
+      else
+         pmPopupBox word 2 to -1 of tWas
       end if
    else
       pmFocus tWas
+      pmPopupBox tWas
    end if
 end mouseUp
 
@@ -798,9 +820,7 @@ end keyDown
 ---------------------------------------------------------------- the files of a pink (or red) chip
 -- a popup of the chip's files (by LIB when they come from more than one); a pick shows it in Explorer
 command pmPopupFiles pChip
-   put pChip into sMenuChip
-   set the text of button "HUD_Popup" to pmFilesMenu(pChip)
-   popup button "HUD_Popup" at the mouseLoc
+   pmPopupMenu pChip, pmFilesMenu(pChip)
 end pmPopupFiles
 
 -- the popup's text for a chip's files; fills sMenuMap for menuPick
@@ -815,8 +835,11 @@ function pmFilesMenu pChip
    put false into tReview
    repeat for each line tLine in tFiles
       if item 5 of tLine is 1 then put true into tReview
+      if item 5 of tLine is "decide" then put "decide" into tReview
    end repeat
-   if tReview then
+   if tReview is "decide" then
+      put "(" & the number of lines of tFiles && "loose: Commit, Ignore, Delete or Leave each (for Claude), or see it in Explorer" & return & "-" & return into tMenu
+   else if tReview then
       put "(" & the number of lines of tFiles && "files: open one, or mark it Reviewed / give Feedback" & return & "-" & return into tMenu
    else
       put "(" & the number of lines of tFiles && "lines: pick one to see it in Explorer" & return & "-" & return into tMenu
@@ -842,24 +865,31 @@ function pmFilesMenu pChip
 end pmFilesMenu
 
 -- one file's menu lines (each ends in return). A file on the review list gets a submenu
--- (Open in Explorer / Reviewed / Feedback...); a loose file opens at once. pIndent = the tabs before it.
+-- (Open in Explorer / Reviewed / Feedback...), a loose file to decide another (Open in Explorer /
+-- Commit / Ignore / Delete / Leave, its decision shown after its name); others open at once.
+-- pIndent = the tabs before it.
 function pmMenuItem pParent, pLine, pIndent
-   local tLabel, tN, tOut, tAction
+   local tLabel, tN, tOut, tAction, tMark, tActions
    set the itemDelimiter to tab
-   put pmMenuSafe(item 2 of pLine) into tLabel
-   if item 4 of pLine is 1 then put tLabel && "[folder]" into tLabel
+   put empty into tMark
+   if item 4 of pLine is 1 then put " [folder]" into tMark
+   if item 5 of pLine is "decide" and sDecided[item 3 of pLine] is not empty then
+      put tMark && "=" && toUpper(sDecided[item 3 of pLine]) into tMark
+   end if
+   put pmMenuSafe(item 2 of pLine) & tMark into tLabel
    put 1 into tN
    repeat while sMenuMap[pParent & tLabel] is not empty
       add 1 to tN
-      put pmMenuSafe(item 2 of pLine) && "#" & tN into tLabel
+      put pmMenuSafe(item 2 of pLine) && "#" & tN & tMark into tLabel
    end repeat
    put item 3 of pLine & tab & item 4 of pLine & tab & item 5 of pLine into sMenuMap[pParent & tLabel]
    put pIndent & tLabel & return into tOut
-   if item 5 of pLine is 1 then
-      repeat for each line tAction in ("Open in Explorer" & return & "Reviewed" & return & "Feedback...")
-         put pIndent & tab & tAction & return after tOut
-      end repeat
-   end if
+   put empty into tActions
+   if item 5 of pLine is 1 then put "Open in Explorer" & return & "Reviewed" & return & "Feedback..." into tActions
+   if item 5 of pLine is "decide" then put "Open in Explorer" & return & "-" & return & "Commit" & return & "Ignore" & return & "Delete" & return & "Leave" into tActions
+   repeat for each line tAction in tActions
+      put pIndent & tab & tAction & return after tOut
+   end repeat
    return tOut
 end pmMenuItem
 
@@ -876,6 +906,10 @@ end pmMenuSafe
 on menuPick pItem
    local tHit, tAction, tKey
    if the short name of the target is not "HUD_Popup" then pass menuPick
+   if pItem is among the lines of pmMenuEnd() then
+      pmMenuEndPick pItem, sMenuChip
+      exit menuPick
+   end if
    if pItem is "Edit this comment..." then
       pmCommentEdit sMenuChip
       exit menuPick
@@ -911,6 +945,12 @@ on menuPick pItem
          break
       case "Feedback..."
          pmFeedback item 1 of tHit
+         break
+      case "Commit"
+      case "Ignore"
+      case "Delete"
+      case "Leave"
+         pmDecide sMenuChip, item 1 of tHit, tAction
          break
       default
          pmExplore item 1 of tHit, item 2 of tHit
@@ -987,14 +1027,16 @@ end pmExplore
 --   date time TAB part TAB the blocker's words TAB feedback|file TAB the text, or a file's Windows path
 -- for_review.py feedback prints it at every session start.
 command pmPopupBlock pChip
+   pmPopupMenu pChip, pmBlockMenu(pChip)
+end pmPopupBlock
+
+function pmBlockMenu pChip
    local tMenu
    put empty into sMenuMap
-   put pChip into sMenuChip
    put "(About this blocker" & return & "Feedback on this blocker..." & return & "Select file(s) for Claude..." & return into tMenu
    if the cFiles of field pChip is not empty then put "-" & return & pmFilesMenu(pChip) after tMenu
-   set the text of button "HUD_Popup" to tMenu
-   popup button "HUD_Popup" at the mouseLoc
-end pmPopupBlock
+   return tMenu
+end pmBlockMenu
 
 command pmBlockFeedback pChip
    local tText
@@ -1386,10 +1428,12 @@ command pmNoteMoved pNote
 end pmNoteMoved
 
 command pmPopupNote pNote
-   put pNote into sMenuChip
-   set the text of button "HUD_Popup" to "(" & pmMenuSafe(pmNoteItem(pNote, 5)) & return & "Edit this comment..." & return & "Delete this comment"
-   popup button "HUD_Popup" at the mouseLoc
+   pmPopupMenu pNote, pmNoteMenu(pNote)
 end pmPopupNote
+
+function pmNoteMenu pNote
+   return "(" & pmMenuSafe(pmNoteItem(pNote, 5)) & return & "Edit this comment..." & return & "Delete this comment" & return
+end pmNoteMenu
 
 command pmCommentEdit pNote
    local tText
@@ -1423,3 +1467,160 @@ function pmTextOf pNote
    replace "\n" with return in tText
    return tText
 end pmTextOf
+
+---------------------------------------------------------------- menus: one ending for every menu
+-- Every menu of every board ends with the same lines (LIB_DEV/LIB_MENU_PLAN.md): a new menu calls
+-- pmPopupMenu and gets them; menuPick sends them to pmMenuEndPick. Nothing on the disk is touched
+-- until the owner picks a line.
+function pmMenuEnd
+   return "-" & return & "Leave comment..." & return & "Explore here..."
+end pmMenuEnd
+
+-- fill the one popup button with a menu and the ending, for menuPick (headless tests stop here)
+command pmMenuSet pTarget, pMenu
+   put pTarget into sMenuChip
+   if pMenu is not empty and the last char of pMenu is not return then put return after pMenu
+   set the text of button "HUD_Popup" to pMenu & pmMenuEnd()
+end pmMenuSet
+
+command pmPopupMenu pTarget, pMenu
+   pmMenuSet pTarget, pMenu
+   popup button "HUD_Popup" at the mouseLoc
+end pmPopupMenu
+
+-- a click on a part, or on a chip without files: its name, then the ending
+command pmPopupBox pBox
+   pmPopupMenu pBox, pmBoxMenu(pBox)
+end pmPopupBox
+
+function pmBoxMenu pBox
+   if char 1 to 2 of pBox is "P:" then return "(part" && pmMenuSafe(char 3 to -1 of pBox) & return
+   return "(" & pmMenuSafe(pmWords(pBox)) & return
+end pmBoxMenu
+
+command pmMenuEndPick pItem, pTarget
+   switch pItem
+      case "Leave comment..."
+         pmCommentOn pTarget
+         break
+      case "Explore here..."
+         pmExploreHere pTarget
+         break
+   end switch
+end pmMenuEndPick
+
+-- a new comment on the box (on a note: on what the note is about), as a right-click would
+command pmCommentOn pTarget
+   if char 1 to 2 of pTarget is "N:" then
+      pmCommentOpen pmNoteItem(pTarget, 4), pmNoteItem(pTarget, 5), empty, empty
+   else
+      pmRightClick pTarget
+   end if
+end pmCommentOn
+
+-- Explorer at the box's place: a chip of one file selects that file, a part (or a chip of many
+-- files) opens the part's folder, a note goes where its box is; anything else: the projects folder
+command pmExploreHere pTarget
+   local tWhere
+   put pmExplorePath(pTarget) into tWhere
+   set the itemDelimiter to tab
+   pmExplore item 1 of tWhere, item 2 of tWhere
+end pmExploreHere
+
+function pmExplorePath pTarget
+   local tFiles, tPath
+   if char 1 to 2 of pTarget is "N:" then
+      put pmAnchorOf(pmNoteItem(pTarget, 4), pmNoteItem(pTarget, 5)) into pTarget
+   end if
+   if char 1 to 2 of pTarget is "C:" then
+      if there is a field pTarget then
+         put the cFiles of field pTarget into tFiles
+      end if
+      if the number of lines of tFiles is 1 then
+         set the itemDelimiter to tab
+         return item 3 of tFiles & tab & item 4 of tFiles
+      end if
+      put sPartOf[pTarget] into pTarget
+   end if
+   if char 1 to 2 of pTarget is "P:" then
+      if sFolder[pTarget] is not empty then return sFolder[pTarget] & tab & 1
+      -- map data from before the folder column: look for it now (the owner picked this line)
+      put pmProjects() & "/" & char 3 to -1 of pTarget into tPath
+      if there is a folder tPath then return pmWinPath(tPath) & tab & 1
+   end if
+   return pmWinPath(pmProjects()) & tab & 1
+end pmExplorePath
+
+-- ~/projects as the stack sees it (two folders above the board's stack)
+function pmProjects
+   local tPath
+   put pmFolder() into tPath
+   set the itemDelimiter to "/"
+   return item 1 to -3 of tPath
+end pmProjects
+
+function pmWinPath pPath
+   replace "/" with "\" in pPath
+   return pPath
+end pmWinPath
+
+---------------------------------------------------------------- decisions on loose files (On Git or Not, PLAN.md step 4)
+-- LIB_LLMIN/LIB_DEV/GIT_DECISIONS.txt, one line each; the last line of a path wins:
+--   date time TAB folder TAB Windows path TAB commit|ignore|delete|leave
+-- Claude carries them out (commit it, add a .gitignore rule, delete it, or leave it loose) and
+-- rebuilds; the board itself runs no git and deletes nothing.
+constant kDecFile = "GIT_DECISIONS.txt"
+
+command pmDecide pChip, pWinPath, pAction
+   local tFile
+   put toLower(pAction) into pAction
+   put pmInboxFile(kDecFile) into tFile
+   if there is not a file tFile then
+      put textEncode("# Decisions from the On Git or Not board, one a line; the last line of a path wins." & return & \
+            "# Claude carries them out (commit, ignore, delete, leave) and rebuilds; the board runs no git." & return & \
+            "# date time, folder, Windows path, commit|ignore|delete|leave" & return, "UTF-8") into URL ("binfile:" & tFile)
+   end if
+   pmAppendLine kDecFile, the short date && the long time & tab & char 3 to -1 of sPartOf[pChip] & tab & pWinPath & tab & pAction
+   put pAction into sDecided[pWinPath]
+   pmMarkDecided pChip
+   pmSay toUpper(char 1 of pAction) & char 2 to -1 of pAction & ":" && pmLastPart(pWinPath) & "   (written for Claude; T tells Claude)"
+end pmDecide
+
+command pmReadDecisions
+   local tFile, tText, tLine
+   put empty into sDecided
+   put pmInboxFile(kDecFile) into tFile
+   if there is not a file tFile then exit pmReadDecisions
+   put textDecode(URL ("binfile:" & tFile), "UTF-8") into tText
+   set the itemDelimiter to tab
+   repeat for each line tLine in tText
+      if char 1 of tLine is "#" or the number of items of tLine < 4 then next repeat
+      put item 4 of tLine into sDecided[item 3 of tLine]
+   end repeat
+end pmReadDecisions
+
+-- a chip of loose files says how many are decided; all of them decided = a white border
+command pmMarkDecided pChip
+   local tFiles, tLine, tAll, tDone, tText
+   put the cFiles of field pChip into tFiles
+   put 0 into tAll
+   put 0 into tDone
+   set the itemDelimiter to tab
+   repeat for each line tLine in tFiles
+      if item 5 of tLine is not "decide" then next repeat
+      add 1 to tAll
+      if sDecided[item 3 of tLine] is not empty then add 1 to tDone
+   end repeat
+   if tAll is 0 then exit pmMarkDecided
+   if the cText of field pChip is empty then set the cText of field pChip to field pChip
+   put the cText of field pChip into tText
+   if tDone > 0 then
+      if tText ends with " - click to list them" then delete char -21 to -1 of tText
+      put tText & " - " & tDone && "of" && tAll && "decided" into tText
+   end if
+   put tText into field pChip
+   if tDone = tAll then
+      set the borderColor of field pChip to "255,255,255"
+      set the borderWidth of field pChip to 3
+   end if
+end pmMarkDecided

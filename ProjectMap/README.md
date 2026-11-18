@@ -44,6 +44,12 @@ Claude...** (pick one or more files; only their paths are passed, Claude reads t
 `LIB_LLMIN/LIB_DEV/MAP_NOTES.txt` with the part and the blocker's words; press **T** to wake Claude.
 A red chip that has files (YOU's review total) still lists them under these two.
 
+## Menus
+Every menu (a part's card, a chip's files, a red blocker, a yellow note) ends with **Leave comment...**
+and **Explore here...** (Explorer at that thing's folder, or its file when it has one). A click on a
+part's card (without dragging) focuses it and opens its menu. Nothing on the disk is touched until you
+pick. The rules: `../LIB_MENU_PLAN.md`.
+
 ## Using it
 wheel = zoom at the pointer, drag the black = pan, drag a header = move a part with its chips
 (kept in `positions.txt`), click a box = focus (its strings and neighbours stay lit), click the black = clear.

@@ -215,8 +215,9 @@ def block_of(p):
         h = LINE_H * n + PAD + (4 if k == "done" else 0)
         rows.append(["C", cid, p["name"], k, CHIP_IN, dy, CHIP_W, h, t])
         for g, label, win, isdir, date in files:
-            # the last column: 1 = on the review list (the popup offers Reviewed / Feedback), 0 = a loose file
-            rows.append(["F", cid, g, label, win, isdir, 1 if date else 0])
+            # the last column: 1 = on the review list (the popup offers Reviewed / Feedback), 0 = a loose file,
+            # "decide" = a loose file to decide on (On Git or Not: Commit / Ignore / Delete / Leave)
+            rows.append(["F", cid, g, label, win, isdir, date if date == "decide" else (1 if date else 0)])
         if k == "block" and t.lower().startswith("owner:") and p["name"] != "YOU":
             edges.append(["E", cid, "YOU", "red"])
         dy += h + 4
@@ -262,9 +263,15 @@ def layout(parts):
     return zones + out + edges
 
 
+def part_folder(name):
+    """the part's folder as a Windows path, for the boards' "Explore here..." (empty: none of that name)"""
+    folder = os.path.join(PROJECTS, FOLDER.get(name, name).split(" / ")[0])
+    return to_win(folder) if os.path.isdir(folder) else ""
+
+
 def place(out, edges, p, block, x, y):
     head_h, rows, bedges, _ = block
-    out.append(["P", p["name"], "core" if p["core"] else "part", x, y, PART_W, head_h, p["name"], p["what"]])
+    out.append(["P", p["name"], "core" if p["core"] else "part", x, y, PART_W, head_h, p["name"], p["what"], part_folder(p["name"])])
     out.extend(rows)
     edges.extend(bedges)
 

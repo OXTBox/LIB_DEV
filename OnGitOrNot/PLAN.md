@@ -94,3 +94,9 @@ The right panel lists every loose thing, biggest first; click to fly there (Proj
   B/L rows of its map_data, not a library), both stacks run it; `tools/git_map.py` matches the survey;
   `OnGitOrNot.oxtstack` opened in OXT-Beyond. Headless: OXT-BEYOND/tests/t39_board_canvas.txt (16 checks).
 - Next: step 4 (decisions popup + GIT_DECISIONS.txt), then the owner's answers to section 5.
+- Step 4 done (17 Nov, late, branch `on-git-or-not`): a loose file's menu offers Commit / Ignore /
+  Delete / Leave, written to LIB_LLMIN/LIB_DEV/GIT_DECISIONS.txt (date, folder, Windows path, decision;
+  last line of a path wins); chips and menu lines show what is decided; `for_review.py feedback` prints
+  it; CLAUDE.md says how Claude carries them out. git_map.py flags those F rows "decide". Every board
+  menu now ends with "Leave comment..." / "Explore here..." (LIB_MENU_PLAN.md). t39: 79 checks.
+  Not yet: branch and not-a-repository decisions (section 2's other rows).
