@@ -1128,14 +1128,15 @@ command pmCommentOpen pTarget, pWords, pId, pText
    put pWords into sCmt["words"]
    put pId into sCmt["id"]
    put 560 into tW
-   put 330 into tH
+   put 350 into tH
    put max(10, (the width of this card - kPanelW - tW) div 2) into tL
    put max(kTop + 10, (the height of this card - tH) div 2) into tT
    create field "HUD_CmtTitle"
    pmStyleField "HUD_CmtTitle", "40,36,12", "232,190,40", "255,236,140", 2
    set the textSize of field "HUD_CmtTitle" to 13
-   set the htmlText of field "HUD_CmtTitle" to "<p><b>" & pmHtml(pWords) & "</b></p><p><font color=" & quote & "#C8B878" & quote & "><i>Comments are kept in the order written: that is not their priority.</i></font></p>"
-   set the rect of field "HUD_CmtTitle" to tL, tT, tL + tW, tT + 54
+   -- the title says what was clicked, so a comment can be picked up again after a break
+   set the htmlText of field "HUD_CmtTitle" to "<p><font color=" & quote & "#C8B878" & quote & ">" & pmHtml(pmCommentWhat(pTarget, pId)) & "</font></p><p><b>" & pmHtml(pWords) & "</b></p><p><font color=" & quote & "#C8B878" & quote & "><i>Comments are kept in the order written: that is not their priority.</i></font></p>"
+   set the rect of field "HUD_CmtTitle" to tL, tT, tL + tW, tT + 74
    create field "HUD_CmtBox"
    pmStyleField "HUD_CmtBox", "255,248,210", "232,190,40", "20,20,20", 2
    set the lockText of field "HUD_CmtBox" to false
@@ -1143,7 +1144,7 @@ command pmCommentOpen pTarget, pWords, pId, pText
    set the vScrollbar of field "HUD_CmtBox" to true
    set the textSize of field "HUD_CmtBox" to 15
    set the margins of field "HUD_CmtBox" to 10
-   set the rect of field "HUD_CmtBox" to tL, tT + 54, tL + tW, tT + tH - 40
+   set the rect of field "HUD_CmtBox" to tL, tT + 74, tL + tW, tT + tH - 40
    put pText into field "HUD_CmtBox"
    create button "HUD_CmtSave"
    set the label of button "HUD_CmtSave" to "Save comment (Ctrl+Enter)"
@@ -1163,6 +1164,31 @@ command pmCommentOpen pTarget, pWords, pId, pText
    select after text of field "HUD_CmtBox"
    pmSay "Writing a comment: Ctrl+Enter (or the button) saves, Esc cancels, Enter makes a new line"
 end pmCommentOpen
+
+-- the comment box's first line: which board, and what kind of thing was right-clicked
+function pmCommentWhat pTarget, pId
+   local tKind, tPart
+   switch
+      case pId is not empty
+         put "editing your comment on" into tKind
+         break
+      case char 1 to 2 of pTarget is "P:"
+         put "you right-clicked the part" into tKind
+         break
+      case char 1 to 2 of pTarget is among the items of "C:,Z:"
+         put char 3 to -1 of pTarget into tPart
+         set the itemDelimiter to "#"
+         put item 1 of tPart into tPart
+         put "you right-clicked a box in" && tPart & ":" into tKind
+         break
+      case char 1 to 2 of pTarget is "E:"
+         put "you right-clicked a string:" into tKind
+         break
+      default
+         put "you right-clicked the board itself (no box), here:" into tKind
+   end switch
+   return toUpper(pmConf("bar", "PROJECT MAP")) && "-" && tKind
+end pmCommentWhat
 
 command pmCommentClose
    local tName

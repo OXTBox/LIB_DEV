@@ -20,3 +20,5 @@ n-e32fb2eb	1	note	Your input, not Claude's work: nothing to do until you write i
 n-4999f456	45	utility	A popup on each loose thing writing GIT_DECISIONS.txt, and Claude carrying the lines out
 n-9662240e	240	big	ComfyUI as a node editor for the games, deeper: open ended
 n-dda4604e	20	utility	Window titles from Users.Title in each stack: small and mechanical
+c1794977086199	10	fix	The comment window says what you clicked on (box, words, board) so you know where you are after a break
+c1794977779027	40	utility	"Leave comment" and "Explore here..." on every right-click menu, plus a one-page LIB_MENU plan (rules for menus everywhere)
