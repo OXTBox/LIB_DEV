@@ -21,7 +21,8 @@ has: Opus alone from here (no Fable time): big things start as a one-page plan
 has: Every branch merged 16 Nov; main is the truth in every repository
 has: Rename Day merged 18 Nov: every contract call is Group.Verb; old names live until release
 has: The contract's new calls merged 18 Nov (XT and xRay)
-next: Move the games to the new names (666 places in 54 scripts)
+done: Games moved to the new names: 666 places down to 76 in 4 scripts (18 Nov overnight)
+next: The last 4 Rename Day games (BlockCityHustle, VectorToss after vector-toss-dangle merges)
 next: Your 16 Nov game notes (GridSprint, InterceptorRun, DeadDays)
 
 == GOAL | TOP | core
@@ -247,7 +248,7 @@ done: GLOSSARY.md
 done: PROCEDURES.md
 done: Rename Day merged (18 Nov): 24 calls renamed, 22 aliases, Camera. group; checker 65/65, t45 t46 pass
 done: The contract's new calls merged (18 Nov): t49 54 checks on both engines, tried in the xRay bench
-next: rename_day.py, then move the games: 666 places in 54 scripts
+done: rename_day.py built, 48 games moved (18 Nov overnight)
 review: owner: which face for the suggestion list next: in-game command line or OXT-Beyond script editor?
 block: owner: say keep / change / later on RELEASE_CHECKLIST.md
 link: LIB_EDITOR, LIB_PUBLIC
