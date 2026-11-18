@@ -27,6 +27,9 @@ first by date; YOU's list is grouped by LIB. Pick one and Explorer opens with th
 folder opens itself). The paths travel with the map: make_map.py writes them into map_data.txt and
 the stack keeps each chip's list in its `cFiles` property, so a click never searches the disk or
 waits on the WSL bridge. Loose (uncommitted) files are listed the same way.
+A listed file that has since moved shows `[moved]` and opens where it is now (found by name at
+rebuild; a common name like README.md must also share a folder name with the old path); one
+that is gone shows `[gone]` and opens the nearest folder that still exists.
 
 ## Using it
 wheel = zoom at the pointer, drag the black = pan, drag a header = move a part with its chips
