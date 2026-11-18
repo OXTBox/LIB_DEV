@@ -184,7 +184,8 @@ link: xtalk_py
 what: Future GUI-building application
 done: Plan by Fable (16 Nov)
 done: PLAN.md stages 1-2: .gui files + native windows (17 Nov, branch gui-step1)
-review: owner: open notes.gui on screen and say if it looks right (LIB_GUI/NEXT.md)
+done: owner saw the Notes window: "LOVELY" (18 Nov)
+next: LIB_GUI look fixes: choice and list text readable, dark File menu, field hint shows
 next: LIB_GUI stage 3: resizing (stick=), panel / slider / tabs / view
 link: LIB_TOOLBAR, LIB_RAYGUI
 

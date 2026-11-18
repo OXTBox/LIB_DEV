@@ -1,4 +1,4 @@
-# map_data.txt made 2026-11-17 22:52 by tools/make_map.py; do not edit (edit board.txt)
+# map_data.txt made 2026-11-17 22:58 by tools/make_map.py; do not edit (edit board.txt)
 Z	ENGINES	ENGINES	0	184	300
 Z	GAMES	GAMES	390	184	630
 Z	BLOCKS	BUILDING BLOCKS	1110	184	960
@@ -163,30 +163,32 @@ F	LIB_THEME#2	LIB_THEME	11-15  theme_studio.livecodescript	\\wsl$\Ubuntu\home\ig
 P	LIB_GLOBALS	part	1440	1308	280	67	LIB_GLOBALS	Every global name, its use and its Python twin	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GLOBALS
 C	LIB_GLOBALS#1	LIB_GLOBALS	review	18	73	262	38	1 file waits your review (oldest 2026-11-15) - click to list them
 F	LIB_GLOBALS#1	LIB_GLOBALS	11-15  GLOBALS.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GLOBALS\GLOBALS.md	0	1
-P	LIB_GUI	part	1440	1457	280	52	LIB_GUI	Future GUI-building application	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI
+P	LIB_GUI	part	1770	260	280	52	LIB_GUI	Future GUI-building application	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI
 C	LIB_GUI#1	LIB_GUI	has	18	58	262	23	35 handlers in 1 scripts
-C	LIB_GUI#2	LIB_GUI	done	18	85	262	57	DONE\n- Plan by Fable (16 Nov)\n- PLAN.md stages 1-2: .gui files + native windows (17 Nov, branch gui-step1)
-C	LIB_GUI#3	LIB_GUI	review	18	146	262	53	owner: open notes.gui on screen and say if it looks right (LIB_GUI/NEXT.md)
-C	LIB_GUI#4	LIB_GUI	next	18	203	262	38	LIB_GUI stage 3: resizing (stick=), panel / slider / tabs / view
-C	LIB_GUI#5	LIB_GUI	review	18	245	262	23	branch gui-step1 not merged
-C	LIB_GUI#6	LIB_GUI	review	18	272	262	38	6 files wait your review (oldest 2026-11-16) - click to list them
+C	LIB_GUI#2	LIB_GUI	done	18	85	262	72	DONE\n- Plan by Fable (16 Nov)\n- PLAN.md stages 1-2: .gui files + native windows (17 Nov, branch gui-step1)\n- owner saw the Notes window: "LOVELY" (18 Nov)
+C	LIB_GUI#3	LIB_GUI	next	18	161	262	53	LIB_GUI look fixes: choice and list text readable, dark File menu, field hint shows
+C	LIB_GUI#4	LIB_GUI	next	18	218	262	38	LIB_GUI stage 3: resizing (stick=), panel / slider / tabs / view
+C	LIB_GUI#5	LIB_GUI	review	18	260	262	23	branch gui-step1 not merged
+C	LIB_GUI#6	LIB_GUI	review	18	287	262	38	6 files wait your review (oldest 2026-11-16) - click to list them
 F	LIB_GUI#6	LIB_GUI	11-16  PLAN.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\PLAN.md	0	1
 F	LIB_GUI#6	LIB_GUI	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\README.md	0	1
 F	LIB_GUI#6	LIB_GUI	11-17  lib_gui.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\livecode\lib_gui.livecodescript	0	1
 F	LIB_GUI#6	LIB_GUI	11-17  notes.gui	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\gui\notes.gui	0	1
 F	LIB_GUI#6	LIB_GUI	11-17  status_browser.gui	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\gui\status_browser.gui	0	1
 F	LIB_GUI#6	LIB_GUI	11-17  NEXT.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_GUI\NEXT.md	0	1
-P	LIB_RAYGUI	part	1770	260	280	67	LIB_RAYGUI	raylib GUI library parroting xt3d and Vibecode3D tools	\\wsl$\Ubuntu\home\igame3d\projects\LIB_RAYGUI
+P	LIB_RAYGUI	part	1770	623	280	67	LIB_RAYGUI	raylib GUI library parroting xt3d and Vibecode3D tools	\\wsl$\Ubuntu\home\igame3d\projects\LIB_RAYGUI
 C	LIB_RAYGUI#1	LIB_RAYGUI	done	18	73	262	42	DONE\n- Plan by Fable (16 Nov)
 C	LIB_RAYGUI#2	LIB_RAYGUI	block	18	119	262	23	Plan only, no code yet
 C	LIB_RAYGUI#3	LIB_RAYGUI	review	18	146	262	38	2 files wait your review (oldest 2026-11-16) - click to list them
 F	LIB_RAYGUI#3	LIB_RAYGUI	11-16  PLAN.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_RAYGUI\PLAN.md	0	1
 F	LIB_RAYGUI#3	LIB_RAYGUI	11-16  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_RAYGUI\README.md	0	1
-P	LIB_MENU	part	1770	482	280	82	LIB_MENU	Menus everywhere, one way: crafty, reusable, user-hackable procedural menu tricks	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MENU
+P	LIB_MENU	part	1770	845	280	82	LIB_MENU	Menus everywhere, one way: crafty, reusable, user-hackable procedural menu tricks	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MENU
 C	LIB_MENU#1	LIB_MENU	done	18	88	262	42	DONE\n- Its own LIB, README + PLAN (17 Nov)
 C	LIB_MENU#2	LIB_MENU	next	18	134	262	53	LIB_MENU step 1: move the boards' menu code into lib_menu (Menu.*) with a test
 C	LIB_MENU#3	LIB_MENU	next	18	191	262	38	LIB_MENU step 2: menus from a text file a user can edit
-P	LIB_TOOLBAR	part	1770	749	280	67	LIB_TOOLBAR	One-stop floating launcher of buttons for every LIB	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TOOLBAR
+C	LIB_MENU#4	LIB_MENU	review	18	233	262	38	1 file waits your review (oldest 2026-11-17) - click to list them
+F	LIB_MENU#4	LIB_MENU	11-17  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MENU\README.md	0	1
+P	LIB_TOOLBAR	part	1770	1154	280	67	LIB_TOOLBAR	One-stop floating launcher of buttons for every LIB	\\wsl$\Ubuntu\home\igame3d\projects\LIB_TOOLBAR
 C	LIB_TOOLBAR#1	LIB_TOOLBAR	done	18	73	262	42	DONE\n- Plan by Fable from your O-8 answer
 C	LIB_TOOLBAR#2	LIB_TOOLBAR	block	18	119	262	23	Plan only, no code yet
 C	LIB_TOOLBAR#3	LIB_TOOLBAR	review	18	146	262	38	2 files wait your review (oldest 2026-11-16) - click to list them
@@ -256,8 +258,7 @@ C	LIB_DEV#4	LIB_DEV	has	18	169	262	38	Project Map (this stack): reviews and bloc
 C	LIB_DEV#5	LIB_DEV	done	18	211	262	72	DONE\n- Status Browser + review list\n- Project Map merged (17 Nov)\n- On Git or Not step 4: Commit / Ignore / Delete / Leave on each loose thing
 C	LIB_DEV#6	LIB_DEV	next	18	287	262	23	Your next input on the Project Map
 C	LIB_DEV#7	LIB_DEV	review	18	314	262	23	branch on-git-or-not not merged
-C	LIB_DEV#8	LIB_DEV	review	18	341	262	38	4 loose files not committed - click to list them
-F	LIB_DEV#8	LIB_DEV	LIB_MENU_PLAN.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\LIB_MENU_PLAN.md	0	0
+C	LIB_DEV#8	LIB_DEV	review	18	341	262	38	3 loose files not committed - click to list them
 F	LIB_DEV#8	LIB_DEV	claude_sizes.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\PriorityTube\claude_sizes.txt	0	0
 F	LIB_DEV#8	LIB_DEV	items.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\PriorityTube\items.txt	0	0
 F	LIB_DEV#8	LIB_DEV	board.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\board.txt	0	0
@@ -370,7 +371,7 @@ C	GOAL#1	GOAL	next	18	58	262	23	iGame3D XT on itch.io (handle xAction)
 C	GOAL#2	GOAL	next	18	85	262	53	"Does it stand alone, and is it easy and enjoyable enough to put away the old IDE?"
 C	GOAL#3	GOAL	next	18	142	262	38	GAD = Generic Any Data; Genetic Anomaly Detector as the long game
 P	YOU	core	1830	-69	280	67	YOU	The owner: red strings end here when only you can unblock them	
-C	YOU#1	YOU	block	18	73	262	53	owner: 163 files wait your review in all (Status Browser) - click to list them
+C	YOU#1	YOU	block	18	73	262	53	owner: 164 files wait your review in all (Status Browser) - click to list them
 F	YOU#1	LIB_BIT	11-16  CELLMAP_V3.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\CELLMAP_V3.md	0	1
 F	YOU#1	LIB_BIT	11-16  two_rooms.cellpack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\maps\two_rooms\two_rooms.cellpack	0	1
 F	YOU#1	LIB_BIT	11-16  py_v3_test.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_BIT\editor\tests\py_v3_test.py	0	1
@@ -450,6 +451,7 @@ F	YOU#1	LIB_LLMOUT	11-16  RELEASE_CHECKLIST.md	\\wsl$\Ubuntu\home\igame3d\projec
 F	YOU#1	LIB_LLMOUT	11-16  LIB_ig3d_README_NEW.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\release-checklist\LIB_ig3d_README_NEW.md	0	1
 F	YOU#1	LIB_LLMOUT	11-16  LIB_USERS_PLAN.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\LIB_USERS\library-plans_kept_11_17\LIB_USERS_PLAN.md	0	1
 F	YOU#1	LIB_LLMOUT	11-17  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_LLMOUT\Read\LIB_XTJSON\XTJSON_batch_11_13_2026\README.md	0	1
+F	YOU#1	LIB_MENU	11-17  README.md	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MENU\README.md	0	1
 F	YOU#1	LIB_MOCAP	11-15  anim_list.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_MOCAP\livecode\anim_list.livecodescript	0	1
 F	YOU#1	LIB_PUBLIC	11-15  catalog.tsv	\\wsl$\Ubuntu\home\igame3d\projects\LIB_PUBLIC\install\catalog.tsv	0	1
 F	YOU#1	LIB_PUBLIC	11-15  Vibecode3D_Launcher.livecode	\\wsl$\Ubuntu\home\igame3d\projects\LIB_PUBLIC\launcher\Vibecode3D_Launcher.livecode	0	1
