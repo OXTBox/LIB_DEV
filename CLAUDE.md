@@ -27,4 +27,6 @@
   owner's private folders; ask when unsure), leave = nothing; then rebuild the board (git_map.py) and log
   it in LIB_LLMOUT/LIB_DEV/FEEDBACK_HANDLED.txt. The board itself runs no git.
 - Menus on the boards: every menu ends with "Leave comment..." and "Explore here..." (one handler,
-  pmMenuEnd); rules in LIB_MENU_PLAN.md.
+  LIB_MENU's Menu.End; the boards load ~/projects/LIB_MENU/livecode/lib_menu.livecodescript themselves);
+  rules in ~/projects/LIB_MENU/PLAN.md. Test: OXT-BEYOND/tests/t39_board_canvas.txt works in its own
+  folder (_work_t39), never in the real LIB_LLMIN.

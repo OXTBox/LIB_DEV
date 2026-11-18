@@ -17,8 +17,11 @@ script "board_canvas"
 -- Keys: F fit all, B blockers only (red and pink), R rebuild (runs make_map.py), 0 zoom 100%.
 -- The right panel lists what is stopping us; click a line to fly there.
 -- Menus: every menu (a box's click menu, a chip's files, a red blocker, a note) ends with the same
--- lines, made by ONE handler (pmMenuEnd): "Leave comment..." and "Explore here...". Explorer is only
--- touched when the owner picks a line (the WSL bridge is slow). Rules: LIB_DEV/LIB_MENU_PLAN.md.
+-- lines, made by ONE handler (LIB_MENU's Menu.End): "Leave comment..." and "Explore here...". Explorer
+-- is only touched when the owner picks a line (the WSL bridge is slow). Rules: LIB_MENU/PLAN.md.
+-- LIB_MENU: the board loads ~/projects/LIB_MENU/livecode/lib_menu.livecodescript itself (pmUseMenu,
+-- at every build: two folders above the board's stack, then LIB_MENU/livecode); without it the board
+-- draws, but its menus say in the help bar that LIB_MENU is missing.
 -- Decisions (On Git or Not): a loose file's lines (F rows flagged "decide") offer Commit / Ignore /
 -- Delete / Leave; a pick appends a line to LIB_LLMIN/LIB_DEV/GIT_DECISIONS.txt for Claude to carry
 -- out (the board runs no git and deletes nothing); decided files are marked on their chip and line.
@@ -84,6 +87,7 @@ end pmReadText
 ---------------------------------------------------------------- building
 command pmBuild pKeepView
    local tData, tLine, tName, tPos, tFiles, tDecide
+   pmUseMenu
    put pmReadText("map_data.txt") into tData
    lock screen
    lock messages
@@ -159,6 +163,24 @@ command pmBuild pKeepView
    end if
    unlock screen
 end pmBuild
+
+-- LIB_MENU (the menu rules every stack shares): ~/projects/LIB_MENU/livecode/lib_menu.livecodescript,
+-- found from the board's own place (LIB_DEV/<Board>/ -> the projects folder); loaded once
+command pmUseMenu
+   local tLib
+   if "LIB_MENU" is among the lines of the stacksInUse then exit pmUseMenu
+   put pmProjects() & "/LIB_MENU/livecode/lib_menu.livecodescript" into tLib
+   if there is a file tLib then
+      start using stack tLib
+   end if
+end pmUseMenu
+
+-- true when LIB_MENU is in use; else the help bar says where it was looked for
+function pmMenuReady
+   if "LIB_MENU" is among the lines of the stacksInUse then return true
+   pmSay "Menus need LIB_MENU: not found at" && pmProjects() & "/LIB_MENU/livecode/lib_menu.livecodescript"
+   return false
+end pmMenuReady
 
 -- a line in the help bar, when it is there (a rebuild may be under way)
 command pmSay pText
@@ -893,21 +915,17 @@ function pmMenuItem pParent, pLine, pIndent
    return tOut
 end pmMenuItem
 
--- menu text treats ( ! - / & and | as commands: keep them out of labels
+-- menu text treats ( ! - / & and | as commands: keep them out of labels (LIB_MENU's Menu.Safe)
 function pmMenuSafe pText
-   replace "&" with "+" in pText
-   replace "/" with numToCodepoint(8725) in pText -- a division slash: looks like / but is no menu command
-   replace "|" with "-" in pText
-   replace tab with " " in pText
-   if char 1 of pText is among the items of "(,!,-" then put " " before pText
-   return pText
+   return Menu.Safe(pText)
 end pmMenuSafe
 
 on menuPick pItem
    local tHit, tAction, tKey
    if the short name of the target is not "HUD_Popup" then pass menuPick
-   if pItem is among the lines of pmMenuEnd() then
-      pmMenuEndPick pItem, sMenuChip
+   if Menu.IsEnd(pItem) then
+      -- LIB_MENU sends it back as menuLeaveComment / menuExploreHere
+      Menu.EndPick pItem, sMenuChip, the long id of this stack
       exit menuPick
    end if
    if pItem is "Edit this comment..." then
@@ -968,13 +986,9 @@ function pmInboxFile pName
    return item 1 to -3 of tPath & "/LIB_LLMIN/LIB_DEV/" & pName
 end pmInboxFile
 
-command pmAppendLine pFile, pLine
-   local tText
-   put pmInboxFile(pFile) into pFile
-   if there is a file pFile then put textDecode(URL ("binfile:" & pFile), "UTF-8") into tText
-   if tText is not empty and the last char of tText is not return then put return after tText
-   put pLine & return after tText
-   put textEncode(tText, "UTF-8") into URL ("binfile:" & pFile)
+-- one record line in LIB_LLMIN/LIB_DEV/pFile (LIB_MENU's Menu.AppendLine); a new file starts with pHeader
+command pmAppendLine pFile, pLine, pHeader
+   Menu.AppendLine pmInboxFile(pFile), pLine, pHeader
 end pmAppendLine
 
 command pmMarkReviewed pWinPath
@@ -1007,19 +1021,8 @@ end pmLastPart
 -- Explorer with the file selected (a folder opens itself). "start" returns at once, so the
 -- map never waits on the WSL bridge; nothing on the disk is checked here (the folder flag came with the data)
 command pmExplore pWinPath, pIsFolder
-   local tCmd
-   if the platform is not "Win32" then
-      pmSay "Path:" && pWinPath
-      exit pmExplore
-   end if
-   set the hideConsoleWindows to true
-   if pIsFolder is 1 then
-      put "start " & quote & quote & " explorer.exe " & quote & pWinPath & quote into tCmd
-   else
-      put "start " & quote & quote & " explorer.exe /select," & quote & pWinPath & quote into tCmd
-   end if
-   get shell(tCmd)
-   pmSay "Explorer:" && pWinPath
+   Menu.Explore pWinPath, pIsFolder
+   pmSay the result
 end pmExplore
 
 ---------------------------------------------------------------- red chips: feedback and files on a blocker
@@ -1262,7 +1265,7 @@ end pmCommentSave
 
 -- append one comment line (the last line of an id wins) with this state
 command pmCommentWrite pLine, pState
-   local tText, tFile
+   local tText, tHeader
    set the itemDelimiter to tab
    put pState into item 6 of pLine
    put the short date && the long time into item 2 of pLine
@@ -1270,13 +1273,10 @@ command pmCommentWrite pLine, pState
    replace return with "\n" in tText
    replace tab with " " in tText
    put tText into item 8 of pLine
-   put pmInboxFile(kCmtFile) into tFile
-   if there is not a file tFile then
-      put textEncode("# Comments from the boards (Project Map, On Git or Not), one a line; the last line of an id wins." & return & \
-            "# The order of comments is NOT their priority (a priority board comes later)." & return & \
-            "# id, date time, board, target, the target's words, open|deleted, where, text (\n = new line)" & return, "UTF-8") into URL ("binfile:" & tFile)
-   end if
-   pmAppendLine kCmtFile, item 1 to 8 of pLine
+   put "# Comments from the boards (Project Map, On Git or Not), one a line; the last line of an id wins." & return & \
+         "# The order of comments is NOT their priority (a priority board comes later)." & return & \
+         "# id, date time, board, target, the target's words, open|deleted, where, text (\n = new line)" into tHeader
+   pmAppendLine kCmtFile, item 1 to 8 of pLine, tHeader
 end pmCommentWrite
 
 -- where a new note goes: right of what it is about, below the notes already there
@@ -1469,21 +1469,21 @@ function pmTextOf pNote
 end pmTextOf
 
 ---------------------------------------------------------------- menus: one ending for every menu
--- Every menu of every board ends with the same lines (LIB_DEV/LIB_MENU_PLAN.md): a new menu calls
--- pmPopupMenu and gets them; menuPick sends them to pmMenuEndPick. Nothing on the disk is touched
--- until the owner picks a line.
+-- Every menu of every board ends with the same lines (LIB_MENU/PLAN.md, made by LIB_MENU's Menu.End):
+-- a new menu calls pmPopupMenu and gets them; menuPick hands them to Menu.EndPick, which sends
+-- menuLeaveComment / menuExploreHere back here. Nothing on the disk is touched until the owner picks a line.
 function pmMenuEnd
-   return "-" & return & "Leave comment..." & return & "Explore here..."
+   return Menu.End()
 end pmMenuEnd
 
 -- fill the one popup button with a menu and the ending, for menuPick (headless tests stop here)
 command pmMenuSet pTarget, pMenu
    put pTarget into sMenuChip
-   if pMenu is not empty and the last char of pMenu is not return then put return after pMenu
-   set the text of button "HUD_Popup" to pMenu & pmMenuEnd()
+   set the text of button "HUD_Popup" to Menu.WithEnd(pMenu)
 end pmMenuSet
 
 command pmPopupMenu pTarget, pMenu
+   if not pmMenuReady() then exit pmPopupMenu
    pmMenuSet pTarget, pMenu
    popup button "HUD_Popup" at the mouseLoc
 end pmPopupMenu
@@ -1498,16 +1498,14 @@ function pmBoxMenu pBox
    return "(" & pmMenuSafe(pmWords(pBox)) & return
 end pmBoxMenu
 
-command pmMenuEndPick pItem, pTarget
-   switch pItem
-      case "Leave comment..."
-         pmCommentOn pTarget
-         break
-      case "Explore here..."
-         pmExploreHere pTarget
-         break
-   end switch
-end pmMenuEndPick
+-- the ending's two lines, sent back by LIB_MENU's Menu.EndPick
+on menuLeaveComment pTarget
+   pmCommentOn pTarget
+end menuLeaveComment
+
+on menuExploreHere pTarget
+   pmExploreHere pTarget
+end menuExploreHere
 
 -- a new comment on the box (on a note: on what the note is about), as a right-click would
 command pmCommentOn pTarget
@@ -1560,8 +1558,7 @@ function pmProjects
 end pmProjects
 
 function pmWinPath pPath
-   replace "/" with "\" in pPath
-   return pPath
+   return Menu.WinPath(pPath)
 end pmWinPath
 
 ---------------------------------------------------------------- decisions on loose files (On Git or Not, PLAN.md step 4)
@@ -1572,15 +1569,12 @@ end pmWinPath
 constant kDecFile = "GIT_DECISIONS.txt"
 
 command pmDecide pChip, pWinPath, pAction
-   local tFile
+   local tHeader
    put toLower(pAction) into pAction
-   put pmInboxFile(kDecFile) into tFile
-   if there is not a file tFile then
-      put textEncode("# Decisions from the On Git or Not board, one a line; the last line of a path wins." & return & \
-            "# Claude carries them out (commit, ignore, delete, leave) and rebuilds; the board runs no git." & return & \
-            "# date time, folder, Windows path, commit|ignore|delete|leave" & return, "UTF-8") into URL ("binfile:" & tFile)
-   end if
-   pmAppendLine kDecFile, the short date && the long time & tab & char 3 to -1 of sPartOf[pChip] & tab & pWinPath & tab & pAction
+   put "# Decisions from the On Git or Not board, one a line; the last line of a path wins." & return & \
+         "# Claude carries them out (commit, ignore, delete, leave) and rebuilds; the board runs no git." & return & \
+         "# date time, folder, Windows path, commit|ignore|delete|leave" into tHeader
+   pmAppendLine kDecFile, the short date && the long time & tab & char 3 to -1 of sPartOf[pChip] & tab & pWinPath & tab & pAction, tHeader
    put pAction into sDecided[pWinPath]
    pmMarkDecided pChip
    pmSay toUpper(char 1 of pAction) & char 2 to -1 of pAction & ":" && pmLastPart(pWinPath) & "   (written for Claude; T tells Claude)"
