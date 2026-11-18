@@ -267,7 +267,7 @@ done: Status Browser + review list
 done: Project Map merged (17 Nov)
 next: Your next input on the Project Map
 done: On Git or Not step 4: Commit / Ignore / Delete / Leave on each loose thing
-next: Status Browser: copy your wheel-zoom (scaleFactor) handlers from the stack into its script file, then load the new menu
+done: Zoom settled in Status Browser, Project Map, On Git or Not and Priority Tube (owner, 18 Nov)
 link: LIB_THEME
 
 == LIB_MCP | TOOLS
