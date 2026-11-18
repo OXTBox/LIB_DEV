@@ -199,8 +199,10 @@ link: xt3d
 == LIB_MENU | BLOCKS
 what: Menus everywhere, one way: crafty, reusable, user-hackable procedural menu tricks
 done: Its own LIB, README + PLAN (17 Nov)
-next: LIB_MENU step 1: move the boards' menu code into lib_menu (Menu.*) with a test
-next: LIB_MENU step 2: menus from a text file a user can edit
+done: Step 1: the boards' menus run on Menu.* (18 Nov, branch menu-steps)
+done: Step 2: menu files, your iGame3D way: Default set + yours in Data, folder-filled menus (18 Nov)
+review: owner: is Library.txt how a menu file should read? (LIB_MENU/Menus/Default)
+next: LIB_MENU: the Priority Tube and the Status Browser use Menu.* too
 link: LIB_GUI, LIB_DEV
 
 == LIB_TOOLBAR | BLOCKS

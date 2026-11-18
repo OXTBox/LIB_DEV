@@ -29,3 +29,4 @@ n-28c49a0c	60	utility	The boards' menu code becomes Menu.* in LIB_MENU with a te
 n-987a959f	45	fun	A menu is a small text file anyone can edit: add a line, get a menu item, no script needed
 n-3c595c1a	25	fix	Four small look fixes in the native face (text colours on choice and list, dark File menu, hint text), seen 18 Nov
 n-2b27d15a	60	utility	Your IDE layouts become .gui files (the plan keeps your hand-laid windows as the source); then the old XTJSON windows can follow
+n-c4ebc5ff	45	utility	The tube and the Status Browser get the same menu ending (Leave comment / Explore here) from LIB_MENU
