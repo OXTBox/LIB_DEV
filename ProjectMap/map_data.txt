@@ -1,4 +1,4 @@
-# map_data.txt made 2026-11-17 19:38 by tools/make_map.py; do not edit (edit board.txt)
+# map_data.txt made 2026-11-17 19:53 by tools/make_map.py; do not edit (edit board.txt)
 Z	ENGINES	ENGINES	0	184	300
 Z	GAMES	GAMES	390	184	630
 Z	BLOCKS	BUILDING BLOCKS	1110	184	960
@@ -226,27 +226,28 @@ F	OXT-BEYOND#4	OXT-BEYOND	11-16  t20_editor_tools.txt	\\wsl$\Ubuntu\home\igame3d
 F	OXT-BEYOND#4	OXT-BEYOND	11-16  t37_editor_layout.txt	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\tests\t37_editor_layout.txt	0	1
 F	OXT-BEYOND#4	OXT-BEYOND	11-16  t38_window_shape.txt	\\wsl$\Ubuntu\home\igame3d\projects\OXT-BEYOND\tests\t38_window_shape.txt	0	1
 P	LIB_DEV	part	2160	1140	280	67	LIB_DEV	Where the developer's needs are met: Status Browser, Game Browser, this map
-C	LIB_DEV#1	LIB_DEV	has	18	73	262	23	183 handlers in 10 scripts
+C	LIB_DEV#1	LIB_DEV	has	18	73	262	23	188 handlers in 10 scripts
 C	LIB_DEV#2	LIB_DEV	has	18	100	262	23	Status Browser + Tell Claude button
 C	LIB_DEV#3	LIB_DEV	has	18	127	262	38	Dev.NewVersion (one dev stack per iteration)
-C	LIB_DEV#4	LIB_DEV	demo	18	169	262	23	Project Map (this stack)
-C	LIB_DEV#5	LIB_DEV	review	18	196	262	23	branch project-map not merged
-C	LIB_DEV#6	LIB_DEV	review	18	223	262	38	1 loose file not committed - click to list them
-F	LIB_DEV#6	LIB_DEV	map_data.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\map_data.txt	0	0
-C	LIB_DEV#7	LIB_DEV	review	18	265	262	38	12 files wait your review (oldest 2026-11-14) - click to list them
-F	LIB_DEV#7	LIB_DEV	11-14  Status_Browser.livecode	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Status_Browser.livecode	0	1
-F	LIB_DEV#7	LIB_DEV	11-14  Status_Browser_Launcher.livecode	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Status_Browser_Launcher.livecode	0	1
-F	LIB_DEV#7	LIB_DEV	11-14  Game_Player_Launcher.livecode	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Game_Player_Launcher.livecode	0	1
-F	LIB_DEV#7	LIB_DEV	11-15  dev_version.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\tools\xtalk\dev_version.livecodescript	0	1
-F	LIB_DEV#7	LIB_DEV	11-15  status_browser.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\status_browser.livecodescript	0	1
-F	LIB_DEV#7	LIB_DEV	11-16  game_player.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\game_player.livecodescript	0	1
-F	LIB_DEV#7	LIB_DEV	11-16  window_shape.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\window_shape.livecodescript	0	1
-F	LIB_DEV#7	LIB_DEV	11-16  window_shape_lab.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\window_shape_lab.livecodescript	0	1
-F	LIB_DEV#7	LIB_DEV	11-17  audit.sh	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\bash\audit.sh	0	1
-F	LIB_DEV#7	LIB_DEV	11-17  board.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\board.txt	0	1
-F	LIB_DEV#7	LIB_DEV	11-17  for_review.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\tools\for_review.py	0	1
-F	LIB_DEV#7	LIB_DEV	11-17  ProjectMap.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\ProjectMap.oxtstack	0	1
-P	LIB_MCP	part	2160	1481	280	67	LIB_MCP	Lets Claude, a local model or any tool drive a running engine
+C	LIB_DEV#4	LIB_DEV	has	18	169	262	38	Project Map (this stack): reviews and blocker notes from the map
+C	LIB_DEV#5	LIB_DEV	done	18	211	262	57	DONE\n- Status Browser + review list\n- Project Map merged (17 Nov)
+C	LIB_DEV#6	LIB_DEV	next	18	272	262	23	Your next input on the Project Map
+C	LIB_DEV#7	LIB_DEV	review	18	299	262	38	1 loose file not committed - click to list them
+F	LIB_DEV#7	LIB_DEV	board.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\board.txt	0	0
+C	LIB_DEV#8	LIB_DEV	review	18	341	262	38	12 files wait your review (oldest 2026-11-14) - click to list them
+F	LIB_DEV#8	LIB_DEV	11-14  Status_Browser.livecode	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Status_Browser.livecode	0	1
+F	LIB_DEV#8	LIB_DEV	11-14  Status_Browser_Launcher.livecode	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Status_Browser_Launcher.livecode	0	1
+F	LIB_DEV#8	LIB_DEV	11-14  Game_Player_Launcher.livecode	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\Game_Player_Launcher.livecode	0	1
+F	LIB_DEV#8	LIB_DEV	11-15  dev_version.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\tools\xtalk\dev_version.livecodescript	0	1
+F	LIB_DEV#8	LIB_DEV	11-15  status_browser.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\status_browser.livecodescript	0	1
+F	LIB_DEV#8	LIB_DEV	11-16  game_player.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\game_player.livecodescript	0	1
+F	LIB_DEV#8	LIB_DEV	11-16  window_shape.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\window_shape.livecodescript	0	1
+F	LIB_DEV#8	LIB_DEV	11-16  window_shape_lab.livecodescript	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\livecode\window_shape_lab.livecodescript	0	1
+F	LIB_DEV#8	LIB_DEV	11-17  audit.sh	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\bash\audit.sh	0	1
+F	LIB_DEV#8	LIB_DEV	11-17  board.txt	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\board.txt	0	1
+F	LIB_DEV#8	LIB_DEV	11-17  for_review.py	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\tools\for_review.py	0	1
+F	LIB_DEV#8	LIB_DEV	11-17  ProjectMap.oxtstack	\\wsl$\Ubuntu\home\igame3d\projects\LIB_DEV\ProjectMap\ProjectMap.oxtstack	0	1
+P	LIB_MCP	part	2160	1557	280	67	LIB_MCP	Lets Claude, a local model or any tool drive a running engine
 C	LIB_MCP#1	LIB_MCP	has	18	73	262	23	24 handlers in 2 scripts
 P	LIB_COMFY	part	2490	260	280	67	LIB_COMFY	ComfyUI as a Blueprint-style node editor for Vibecode3D games
 C	LIB_COMFY#1	LIB_COMFY	has	18	73	262	23	30 handlers in 10 scripts

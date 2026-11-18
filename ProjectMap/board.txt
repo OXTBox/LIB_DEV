@@ -223,7 +223,10 @@ link: LIB_DEV, LIB_TTRPG
 what: Where the developer's needs are met: Status Browser, Game Browser, this map
 has: Status Browser + Tell Claude button
 has: Dev.NewVersion (one dev stack per iteration)
-demo: Project Map (this stack)
+has: Project Map (this stack): reviews and blocker notes from the map
+done: Status Browser + review list
+done: Project Map merged (17 Nov)
+next: Your next input on the Project Map
 link: LIB_THEME
 
 == LIB_MCP | TOOLS
