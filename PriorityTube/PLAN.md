@@ -40,3 +40,9 @@ One tall glass tube. Each thing to do is a bubble in it; **the top of the tube i
 
 Bubbles from more places (TODO.md, GAME_NOTES.txt, the On Git or Not decisions); fly from a bubble to
 its note on its board; Claude's time compared with the time it really took.
+
+## 5. The owner's first look (17 Nov, evening)
+
+"There's something there!" We are going to feel it out before changing much. The owner saw in it the
+old post-Antack T3D game menu: the tube of bubbles is that menu's shape, now holding work instead of
+games. Keep that lineage in mind as it grows (it could become a menu again: games, tools, anything).
