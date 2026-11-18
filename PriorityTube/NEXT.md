@@ -1,4 +1,52 @@
-# When we resume (written 17 Nov 2026, late, before a /clear)
+# Priority Tube: where we are
+
+## READ THIS FIRST (written 18 Nov 2026, evening, before a /clear; weeks may pass)
+
+### What got done on 18 Nov (evening)
+1. **Menus now have a home in the Data folder.**
+   - The Data folder (Documents/Data) has a new folder kind called `Menus`.
+   - Each game or app gets its own folder in it: `Menus/<game or app name>/`.
+   - The menu word lists go in that folder. The code the menus run goes in its `Functions/` folder inside it.
+   - Code asks for the folder like this: `Data.MenuFolder("DeadDays")`, or `Data.MenuFolder("DeadDays", true)` for `Functions/`.
+   - Where it lives: LIB_DATA, branch `data-menus`. The doc table in LIB_ig3d (`DATA_FOLDER.md`) is on a branch of the same name.
+   - Test: `OXT-BEYOND/tests/t50_data_menus.txt`. 13 checks, all pass on both engines.
+   - NOT done yet: LIB_MENU still reads its menus from the old place (`Scripts/Menus`). Moving it is the
+     tube bubble "Menu folders your way".
+2. **The Vector Toss branch got merged.** LIB_GAMES branch `vector-toss-dangle` went into `main` (the owner said yes).
+   - Three files in the LIB_GAMES folder had old changes that were already on main: Hunter, engine_stubs and ComfyPong1.
+     They were put in a git stash, not thrown away (`git stash list` in LIB_GAMES).
+3. **Rename Day is finished for the games.** A helper moved Block City Hustle (27 places) and Vector Toss (16 places) to the new call names.
+   - Where it lives: LIB_GAMES branch `rename-day-last4` (NOT merged). The LIB_GAMES folder is checked out on that branch now.
+   - Tests: both games end the same as before, checked headless. The look was not checked on a screen.
+   - The checker still counts 60 old names. That is expected:
+     - Ig3dEditor has 28 of them. It is already fixed on LIB_EDITOR main, but the LIB_EDITOR folder sits on
+       branch `editor-cards`, which does not have the fix yet. They go away when editor-cards takes main.
+     - demo (19) and Simple_Test2 (13) are kept old on purpose (owner, 17 Nov).
+   - One small leftover: Vector Toss line 524 still uses `the mouse is "down"`. The checker does not flag it.
+
+### Waiting for the owner
+- Merge these branches when happy: LIB_DATA `data-menus`, LIB_ig3d `data-menus`, LIB_GAMES `rename-day-last4`.
+  LIB_EDITOR `editor-cards` also needs to take main.
+- Which comes first in the tube: #3 "A Library menu in a real stack" or #4 "Menu folders your way".
+  Claude suggests #4 first, because #3 builds on it. #3 is the owner's bubble, so the owner decides.
+
+### How to start next time (in plain steps)
+1. Read `LIB_SYSTEM/LIB_ALPHA.md`, then this file.
+2. Run `python3 -I tools/for_review.py feedback` in LIB_DEV. It shows the owner's comments and the tube order.
+3. Do the bubble at the top of `LIB_LLMIN/LIB_DEV/PRIORITY_ORDER.txt`. Never move a bubble the owner placed.
+4. When a bubble is done:
+   - Change its `next:` line in `ProjectMap/board.txt` to `done:`.
+   - Add a line to `LIB_LLMOUT/LIB_DEV/FEEDBACK_HANDLED.txt`.
+   - Add new files to the review list with `tools/for_review.py add`.
+5. One helper agent per bubble (owner's rule). Headless tests run under `flock /tmp/oxt_headless.lock`.
+
+### Traps met on 18 Nov
+- `lcmcp compile` (LIB_MCP) hung for 2 minutes. Use the OXT-Beyond headless runner instead:
+  `python3 -I OXT-BEYOND/tests/oxt_headless.py --engine both tNN.txt`.
+- xTalk strings have no escapes: `"\\"` is TWO backslashes. One backslash is written `"\"`.
+- Do not `pkill -f` with a pattern that is also in your own command line. It kills your own shell.
+
+## The loop (written 17 Nov 2026, still true)
 
 The owner is going to use the boards **one note at a time and see what happens**. So the next session is
 a loop, not a build:
@@ -17,7 +65,7 @@ a loop, not a build:
    echoes the old post-Antack T3D game menu). Change little until he asks; collect his reactions in
    PLAN.md section 5.
 
-## FOR THE NEXT SESSION (18 Nov, afternoon, before a /clear) -- START HERE
+## FOR THE NEXT SESSION (18 Nov, afternoon, before a /clear) -- START HERE (done, see above)
 Owner's order for the next session:
 1. **Main session: "A Menus kind in LIB_DATA"** (bubble n-3a5a9676, ~15 min). LIB_MENU is on main
    (steps 1-2 merged). Mind his layout answer in LIB_MENU/NEXT.md step 0: menus live per game or app,

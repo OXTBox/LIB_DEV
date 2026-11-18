@@ -22,7 +22,7 @@ has: Every branch merged 16 Nov; main is the truth in every repository
 has: Rename Day merged 18 Nov: every contract call is Group.Verb; old names live until release
 has: The contract's new calls merged 18 Nov (XT and xRay)
 done: Games moved to the new names: 666 places down to 76 in 4 scripts (18 Nov overnight)
-next: The last 4 Rename Day games (BlockCityHustle, VectorToss after vector-toss-dangle merges)
+done: The last Rename Day games: BlockCityHustle (27) + VectorToss (16), same end state headless (18 Nov, LIB_GAMES branch rename-day-last4); Ig3dEditor waits for editor-cards to take main
 next: Your 16 Nov game notes (GridSprint, InterceptorRun, DeadDays)
 
 == GOAL | TOP | core
@@ -214,7 +214,7 @@ done: Step 2: menu files, your iGame3D way: Default set + yours in Data, folder-
 done: Merged to main 18 Nov (owner: "MERGE!")
 next: Menu folders your way: Data/Default/<game or app>/Menus/ + Menus/Functions/ callbacks
 next: A Library menu in a real stack (Status Browser or a game's developer pause menu)
-next: A Menus kind in LIB_DATA
+done: A Menus kind in LIB_DATA: Menus/<game or app>/ + Functions/, Data.MenuFolder (18 Nov, branch data-menus, t50)
 done: The Priority Tube and the Status Browser use Menu.* too (18 Nov)
 link: LIB_GUI, LIB_DEV
 
