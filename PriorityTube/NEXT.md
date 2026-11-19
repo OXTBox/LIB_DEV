@@ -6,9 +6,11 @@
 - His design, being built by a helper on branch `editor-library-menu` (LIB_MENU + LIB_EDITOR): menu titles
   are green GRAPHICS; ONE popup button per stack ("one popup button to rule them all") is filled at
   mousedown from what was clicked and popped there, with plain colours. It goes in LIB_MENU so games can use it.
-- Next session: look at the newest commits on `editor-library-menu` in LIB_MENU and LIB_EDITOR. Run t20, t37,
-  t43, t51 (and t52), both engines. If the helper did not finish, finish it from LIB_MENU/NEXT.md and the
-  editor README. Then tell the owner to try shortcut 6 again.
+- DONE before the clear: LIB_MENU 944ff31 (Menu.PopFor, Menu.PopFill, Menu.PopButton, Menu.PopPick,
+  Menu.MakeTitle; popup black on white), LIB_EDITOR 1476053 (titles = graphics menuTitle_<Name>, one popup
+  LIB_MENU_Popup, Ctrl+letter via commandKeyDown). t20, t37, t43, t51, t52 all pass, both engines.
+  Not seen on a screen yet: the owner tries shortcut 6 again. Then he says merge (branch editor-library-menu
+  in LIB_MENU, LIB_EDITOR, LIB_DEV).
 - His rule (saved): colour the template BEFORE every create.
 
 ## LATEST (18 Nov 2026, late evening)
