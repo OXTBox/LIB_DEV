@@ -10,9 +10,8 @@
 - For the owner's merge: LIB_BIT `heights-floor-ceiling` and LIB_EDITOR `cards-heights` go in
   TOGETHER (cards-heights doors need the `[from]` layer; on LIB_BIT main they would be walkable).
   LIB_EDITOR is now checked out on `cards-heights`.
-- Question for the owner: CELLMAP_V2.md section 3 still says "a cell with ceiling at or below its
-  ground is solid to the roof"; the heights library makes it a thin sheet you can walk over.
-  Should the library treat it as From Ceiling (keep the old rule) or should the line go?
+- Owner's answer (19 Nov): drop the 'ceiling at or below its ground is solid' line. Done: LIB_BIT
+  heights-floor-ceiling c3664fb. A solid down to the ground is said with From Ceiling now.
 - Not seen in a window: none of E08-E15, nor the ported doors (headless only).
 - Next in the tube: the new top of PRIORITY_ORDER.txt.
 
