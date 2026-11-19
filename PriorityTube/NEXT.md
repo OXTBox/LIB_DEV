@@ -1,5 +1,16 @@
 # Priority Tube: where we are
 
+## LATEST (18 Nov 2026, late evening)
+- The owner said "merge everything, commit everything". Done: every branch in every repo is on main
+  (one clash, LIB_ig3d README, kept Fable's 16 Nov map whole). LIB_COMFY sits on main too.
+- "Menu folders your way" (#4) is done (LIB_MENU, now on main).
+- Tests after the merge: t22 and t28 fixed (they now add the alias file). Four tests still expect old
+  counts: LIB_SYSTEM/ISSUES 0005 and 0006.
+- The owner has a folder "Tests 18 Nov" on his Windows desktop: 5 shortcuts + WHAT TO TEST.txt.
+  Read his notes from those tests first next session.
+- Next bubble: #3 "A Library menu in a real stack". He picks: Status Browser or a game pause menu
+  (Claude suggests Status Browser).
+
 ## READ THIS FIRST (written 18 Nov 2026, evening, before a /clear; weeks may pass)
 
 ### What got done on 18 Nov (evening)
@@ -24,7 +35,7 @@
      - demo (19) and Simple_Test2 (13) are kept old on purpose (owner, 17 Nov).
    - One small leftover: Vector Toss line 524 still uses `the mouse is "down"`. The checker does not flag it.
 
-### Waiting for the owner
+### Waiting for the owner (merges: DONE 18 Nov late evening)
 - Merge these branches when happy: LIB_DATA `data-menus`, LIB_ig3d `data-menus`, LIB_GAMES `rename-day-last4`.
   LIB_EDITOR `editor-cards` also needs to take main.
 - Which comes first in the tube: #3 "A Library menu in a real stack" or #4 "Menu folders your way".
