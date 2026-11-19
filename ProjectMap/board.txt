@@ -225,7 +225,8 @@ link: LIB_GUI, LIB_DEV
 what: Registry of the Unicode characters we use and plan to use, one meaning each; characters name procedures (drag a house character in, get a 3D house)
 done: Its own LIB, README + REGISTRY.tsv first pass (18 Nov): 30 characters, from a scan of our LIBs
 done: Clashes settled (18 Nov): gear = Tools menu, pencil = Editor; iGame3D XT editor gets new ones for level and path tool
-next: lib_unicode.livecodescript (Unicode.Char / Meaning / Procedure), then a first procedure: the house, by math
+done: lib_unicode.livecodescript (19 Nov): Unicode.Char / Meaning / Procedure / Build / Check, and the first procedure Proc.House (box + gable roof + door, by math); headless tests pass, plain and through Engine 1
+next: A picker palette: drag a character into a scene, its procedure builds the object (then Proc.Car, Proc.Cloud by math)
 link: LIB_TOOLBAR, LIB_ig3d, LIB_GUI, LIB_RAYGUI
 
 == LIB_INPUT | BLOCKS
