@@ -107,6 +107,23 @@ on Player.Quit
    close me
 end Player.Quit
 
+-- end the game but keep the window (LIB_HOWTO: picking another step must not make the
+-- window vanish); pText is shown in it. Player.Start plays the card script again.
+command Player.Halt pText
+   local tErr
+   Player.StopTimer
+   if sRunning is true then
+      put false into sRunning
+      Player.UseMe
+      try
+         if Vibe.Playing() then Game.Exit
+      catch tErr
+      end try
+   end if
+   put true into sEnded
+   Player.Message pText, 0
+end Player.Halt
+
 on closeStack
    local tErr
    Player.StopTimer
