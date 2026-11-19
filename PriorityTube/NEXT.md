@@ -8,8 +8,10 @@
   counts: LIB_SYSTEM/ISSUES 0005 and 0006.
 - The owner has a folder "Tests 18 Nov" on his Windows desktop: 5 shortcuts + WHAT TO TEST.txt.
   Read his notes from those tests first next session.
-- Next bubble: #3 "A Library menu in a real stack". He picks: Status Browser or a game pause menu
-  (Claude suggests Status Browser).
+- #3 "A Library menu in a real stack" DONE in the iGame3D XT editor (the owner's pick). Branch
+  `editor-library-menu` in LIB_EDITOR, LIB_MENU and LIB_DEV (all three folders sit on it, not merged).
+  Desktop shortcut 6 opens it (Game_Player.exe Ig3dEditor). Waiting for his test notes, then his merge.
+- His note on "Explore here..." (50+ scripts in one folder): later, in LIB_MENU/NEXT.md.
 
 ## READ THIS FIRST (written 18 Nov 2026, evening, before a /clear; weeks may pass)
 
