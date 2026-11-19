@@ -1,5 +1,38 @@
 # Priority Tube: where we are
 
+## START HERE NEXT SESSION (after the 19 Nov evening /clear)
+- HOWTO is DONE and MERGED (owner: "excellent work, lets merge this and move on"):
+  LIB_HOWTO main 356e705, xt3D bridge master e37bfbc, LIB_DEV main 63ab374 (Player.Halt),
+  LIB_SPARK main 936a606 (step words). The section below has the details and traps.
+- Its leftover bubble n-9e665fa2 (HOWTO_dev stack + save HOWTO.oxtstack, 30 min) waits for him.
+- NEXT = tube #2 n-c8710ff2 "cellmap v3: BitEditor Slope tool, pack panel, E12 checker (A-92 3-5)"
+  (#1 n-1cb5d94e is done; PRIORITY_ORDER.txt still lists it until the tube stack is opened again).
+  Start by reading LIB_BIT's cellmap v3 notes (A-92) and ISSUES 0008 (BitEditor erases glyphs, parked).
+- Each session: for_review.py feedback, LIB_LLMIN/LIB_GAMES/GAME_NOTES.txt, MAP_NOTES, BOARD_COMMENTS.
+
+## START HERE NEXT SESSION (19 Nov 2026, late evening): HOWTO = STRIP + TWO FLOATING GAME WINDOWS
+- Owner's layout: HOWTO is one 1500x360 strip at the bottom of the screen, scale 1 (topics | steps |
+  words | code; < step / Run / Stop / step > + engine toggle along the bottom). Vibecode3D plays in its
+  own titled window top left, xt3d (bench script in view-only mode, in OXT-Beyond) top right.
+  Run restarts only its own engine, so the same step can show in both; Stop / a new step end both.
+- WHY: a stack with scaleFactor 0.95 in OXT-Beyond is NOT drawn where its rect, globalLoc or mouseLoc
+  say (measured ~+23,+34 off at 200,32); windows laid over its card never lined up. Don't go back.
+- Branches: LIB_HOWTO `howto-stack` (905673e), xt3D bridge `howto-xt3d` (dd55046). Merge waits for him.
+- Tried in OXT-Beyond: 2.4 in xt3d, 5.3 in both side by side. Known limit: both engines share the
+  scene globals (gObjectTransforms...), so the two windows show ONE simulation (cube at the same spot).
+- `LIB_HOWTO/tests/play_step_xt3d.sh` (bench standalone): 92/92 steps start in xt3d.
+- Windows stay: picking a step / Stop halts the games (Player.Halt, LIB_DEV branch `howto-player`
+  b/c it changes the shared Game Player; LIB_DEV is checked out on it) and Run reuses the windows.
+- NEXT: he plays steps; then HOWTO_dev stack + stable HOWTO.oxtstack, commit.
+- NEVER export snapshots of the whole screen (private windows get captured); look_at_card only.
+
+## START HERE NEXT SESSION (19 Nov 2026, afternoon): FINISH THE HOWTO STACK'S xt3d VERSION
+- HOWTO stack script: LIB_HOWTO/livecode/howto_stack.livecodescript, branch `howto-stack` (1f98080).
+  Owner saw it: "looks great", candy syntax colours "very approachable". Opens at 200,32, scale 0.95.
+- NEXT: the xt3d toggle runs the step in the xt3d bench (bench xbPlayGame takes only a LIB_GAMES game
+  name: add a play-this-script command; never write steps into LIB_GAMES). Run not yet tried in a window.
+- Then: new HOWTO_dev stack, look at it with him, save the stable HOWTO.oxtstack, commit.
+
 ## START HERE NEXT SESSION (19 Nov 2026, ~10:15 AM)
 - DONE tube #1 n-1cb5d94e "Step code by Claude, step words by Spark" (LIB_HOWTO): all 18 topics,
   92 steps. Each step = `LIB_HOWTO/topics/<id>_<Title>/step_<n>.livecodescript` (the whole card

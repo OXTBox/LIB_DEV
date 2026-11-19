@@ -119,9 +119,8 @@ next: Step 9: the old studio's world code (later)
 
 == LIB_HOWTO | GAMES
 what: Step-by-step game tutorials (18 topics, 92 steps)
-done: Outline; all 92 steps of the 18 topics: code played on the real engine, words by Spark checked by Claude (branches howto-steps)
-next: The HOWTO stack: topic list, step words, coloured code, run the step (PLAN.md layout)
-block: owner: read a few steps (LIB_HOWTO/topics/<topic>/step_<n>.txt + .livecodescript)
+done: Outline; all 92 steps of the 18 topics (code played on the real engine, words by Spark); the HOWTO stack: a strip of topics, steps, words and coloured code, steps played in Vibecode3D and xt3d windows side by side (merged 19 Nov)
+next: HOWTO_dev stack with the owner, then save the stable HOWTO.oxtstack
 
 # ---------------- BLOCKS (libraries) ----------------
 == LIB_BIT | BLOCKS | core
