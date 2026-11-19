@@ -11,6 +11,7 @@ script "GameLaunch"
 ######################################################################################
 
 constant kGamesRel = "LIB_GAMES/Vibecode3D_Games"
+constant kToolsRel = "LIB_EDITOR/iGame3D_XT"
 constant kEngineRel = "xt3D_Raylib_Livecode_Bridge/testbench/vibe_engine_xt3d.livecodescript"
 constant kPlayerRel = "LIB_DEV/livecode/game_player.livecodescript"
 
@@ -28,7 +29,14 @@ function GL.Projects pFrom
    return "//wsl$/Ubuntu/home/igame3d/projects"
 end GL.Projects
 
+-- a game is in LIB_GAMES; a tool (the iGame3D XT editor) is in LIB_EDITOR/iGame3D_XT. Tools open
+-- only by name (Game_Player.exe Ig3dEditor): the browser lists LIB_GAMES alone, never tools.
 function GL.GameFile pProjects, pName
+   local tFile
+   put pProjects & "/" & kGamesRel & "/Vibecode3D_Play_" & pName & ".livecodescript" into tFile
+   if there is a file tFile then return tFile
+   put pProjects & "/" & kToolsRel & "/Vibecode3D_Play_" & pName & ".livecodescript" into tFile
+   if there is a file tFile then return tFile
    return pProjects & "/" & kGamesRel & "/Vibecode3D_Play_" & pName & ".livecodescript"
 end GL.GameFile
 

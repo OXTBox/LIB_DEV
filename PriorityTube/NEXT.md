@@ -1,5 +1,29 @@
 # Priority Tube: where we are
 
+## NEWEST (18 Nov 2026, ~6:45 PM)
+- Read the 4 new board notes. RTS_Demo "error in left operand" in Demo.PZ: NOT reproduced headless
+  (30,000 random steps, clicks, keys, both engines). Demo.PX/PZ now draw a bad value at 0 and write
+  "BAD z [value] from: <callers>" to LIB_LLMIN/LIB_GAMES/GAME_NOTES.txt once a run. LIB_RTS branch
+  `rts-demo-guard` (507c796); t_rts_demo now expects "FOR OWNER". If a BAD line shows up in GAME_NOTES,
+  its callers name the real cause: fix that.
+- Map: GAD battles plan -> done (his YES), TTRPG Studio -> done ("A work of art"), qwen RAM note is
+  green has: now (red was too harsh).
+- Still waiting: his look at shortcut 6 (one-popup Library menu), then his merge.
+- Next from the tube: #1 c1795033087850 BitEditor heights "From Floor" / "From Ceiling" toggles.
+
+## EARLIER (18 Nov 2026, ~6:15 PM, before a /clear)
+- The owner tested the editor's new Library menu (desktop shortcut 6): the dropdown text is "extreme green".
+  A dark background on the menu buttons did NOT fix it.
+- His design, being built by a helper on branch `editor-library-menu` (LIB_MENU + LIB_EDITOR): menu titles
+  are green GRAPHICS; ONE popup button per stack ("one popup button to rule them all") is filled at
+  mousedown from what was clicked and popped there, with plain colours. It goes in LIB_MENU so games can use it.
+- DONE before the clear: LIB_MENU 944ff31 (Menu.PopFor, Menu.PopFill, Menu.PopButton, Menu.PopPick,
+  Menu.MakeTitle; popup black on white), LIB_EDITOR 1476053 (titles = graphics menuTitle_<Name>, one popup
+  LIB_MENU_Popup, Ctrl+letter via commandKeyDown). t20, t37, t43, t51, t52 all pass, both engines.
+  Not seen on a screen yet: the owner tries shortcut 6 again. Then he says merge (branch editor-library-menu
+  in LIB_MENU, LIB_EDITOR, LIB_DEV).
+- His rule (saved): colour the template BEFORE every create.
+
 ## LATEST (18 Nov 2026, late evening)
 - The owner said "merge everything, commit everything". Done: every branch in every repo is on main
   (one clash, LIB_ig3d README, kept Fable's 16 Nov map whole). LIB_COMFY sits on main too.
@@ -8,8 +32,10 @@
   counts: LIB_SYSTEM/ISSUES 0005 and 0006.
 - The owner has a folder "Tests 18 Nov" on his Windows desktop: 5 shortcuts + WHAT TO TEST.txt.
   Read his notes from those tests first next session.
-- Next bubble: #3 "A Library menu in a real stack". He picks: Status Browser or a game pause menu
-  (Claude suggests Status Browser).
+- #3 "A Library menu in a real stack" DONE in the iGame3D XT editor (the owner's pick). Branch
+  `editor-library-menu` in LIB_EDITOR, LIB_MENU and LIB_DEV (all three folders sit on it, not merged).
+  Desktop shortcut 6 opens it (Game_Player.exe Ig3dEditor). Waiting for his test notes, then his merge.
+- His note on "Explore here..." (50+ scripts in one folder): later, in LIB_MENU/NEXT.md.
 
 ## READ THIS FIRST (written 18 Nov 2026, evening, before a /clear; weeks may pass)
 

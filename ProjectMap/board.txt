@@ -93,7 +93,7 @@ has: GAD essence and variable inventory
 has: Self-writing script system mapped (5 bugs found)
 demo: GeneticAnomaly prototype (ga-turns)
 done: Battles step 1: one-page plan (18 Nov, LIB_GAD branch gad-battles; copy in LIB_LLMOUT/LIB_GAD)
-review: Battles plan: say yes (or change) before step 2; 4 questions at its end
+done: Battles plan: you said YES (step 2 built and played, 18 Nov)
 done: Battles step 2: smallest loop built (18 Nov, 73 checks pass)
 done: You played it: "working great"; merged to main 18 Nov
 block: owner: say yes or no to the one-page battle plan before any code
@@ -102,7 +102,7 @@ link: LIB_RTS, LIB_GENERICA, LIB_LISTS, LIB_SCRIPTBLOCKS
 == LIB_RTS | GAMES
 what: The 2008 RTS system rebuilt in xTalk: select, command, the living and the dead
 demo: RTS_Demo
-block: owner: play RTS_Demo two minutes and say whether it was fun
+block: owner: play RTS_Demo two minutes and say whether it was fun (your Demo.PZ error: guarded 18 Nov, branch rts-demo-guard; if it comes back it writes its cause to GAME_NOTES)
 link: LIB_GAD
 
 == LIB_TTRPG | GAMES
@@ -111,8 +111,8 @@ has: 18 skills, self-play, terminal version ("That was great!")
 done: Engine and prompts
 done: Stack built, owner tests all pass
 done: Tuning pass
-block: owner: open the TTRPG Studio window (never seen on a screen)
-block: qwen 7B + 2B fill RAM to 95%; 13B out of reach
+done: TTRPG Studio window seen by you: "A work of art" (18 Nov)
+has: qwen 7B + 2B run together (RAM at 95%; 13B is out of reach, not a stop)
 next: Step 9: the old studio's world code (later)
 
 == LIB_HOWTO | GAMES
@@ -213,7 +213,7 @@ done: Step 1: the boards' menus run on Menu.* (18 Nov, branch menu-steps)
 done: Step 2: menu files, your iGame3D way: Default set + yours in Data, folder-filled menus (18 Nov)
 done: Merged to main 18 Nov (owner: "MERGE!")
 done: Menu folders your way: LIB_MENU/Data/Default/<app>/Menus/ + Functions/, Menu.Load "<app>" (18 Nov, LIB_MENU branch menu-folders, t43 88 checks)
-next: A Library menu in a real stack (Status Browser or a game's developer pause menu)
+done: A Library menu in a real stack: the iGame3D XT editor (18 Nov, branches editor-library-menu in LIB_EDITOR, LIB_MENU, LIB_DEV; t51, t52)
 done: A Menus kind in LIB_DATA: Menus/<game or app>/ + Functions/, Data.MenuFolder (18 Nov, branch data-menus, t50)
 done: The Priority Tube and the Status Browser use Menu.* too (18 Nov)
 link: LIB_GUI, LIB_DEV
