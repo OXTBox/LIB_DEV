@@ -1,6 +1,37 @@
 # Priority Tube: where we are
 
-## START HERE NEXT SESSION (18 Nov 2026, ~7:30 PM, the owner's answers before a /clear)
+## START HERE NEXT SESSION (18 Nov 2026, ~8 PM)
+- DONE the BitEditor heights job (bubble c1795032797521 done): LIB_BIT 1017033 + LIB_EDITOR ec30964,
+  both on branch `heights-floor-ceiling` (NOT merged; waits for his try and his word).
+  - Bands: green g = a block whose top is 255+g hu, blue b = 510+b (slab 10 thick); a cell can hold both.
+  - [from] layer per cell: 1 From Floor (pillar from the ground up to its highest block), 2 From
+    Ceiling (from the map top down to its roof, else its lowest block), 3 both = floor to top.
+  - Map top = its own `top` else 765; shown in the Heights row ("top 765"), a click changes it.
+  - Editor: From boxes are a brush (click a box, then cells); orange bar = From Floor, sky-blue bar =
+    From Ceiling on the map; "Extrude Glyphs" button = Mesh > Extrude: Glyph Shape.
+  - Try copy: LIB_BIT/editor/BitEditor_HEIGHTS_TRY.livecode (not committed). The real
+    BitEditor.livecode holds his 15 Nov changes: NOT rebuilt; he decides.
+  - Old maps with green/blue change their look (green no longer stands on the grey; e.g.
+    16x16_Cropped_wizard_pool). wizard_pool sample rebuilt the new way (tower same 455).
+  - Tests pass both engines + Python: py_*/lc_v2/v3/check/fill/roundtrip, lc_heights_from + layout2
+    in a copy, LIB_EDITOR e03/e04/e13.
+- "Tests 18 Nov" desktop folder: his WHAT_BILL_TESTED.txt said all 6 work (logged in FEEDBACK_HANDLED,
+  file removed on his word). The 6 shortcuts stay.
+- Betas: 14 games promoted (LIB_PUBLIC cbfc524); still beta DeadDays, GridSprint, InterceptorRun.
+- BUGGED, parked (owner): BitEditor erases the glyphs after the heights work: ISSUES 0008, board block line.
+  Owner: "our procedural levels are more valuable than making editing tools right now".
+- COMFY REMIX (Fable job 4) STEP 1 DONE 18 Nov night: LIB_COMFY branch `comfy-remix` (8464554, not merged).
+  Remix Source node + kits/remix.py; 10 seeds of each game pass tests/remix_play_test.py --real.
+  NOT installed into ComfyUI yet. Waits for his word for STEP 2 (per-game nodes, Mutate, stills,
+  four workflows, install.sh, restart Comfy, Queue). Read the last section of LIB_COMFY/NOTES.md first.
+- Owner wants Comfy nodes for Vector Toss + Squad Buggy ("weird variations"): a FABLE job, brief
+  Next_Steps_With_Claude/FABLE_JOB_4_COMFY_REMIX.md (remix kit on the games' constants; 2 steps with stops).
+- Next in the tube: #2 n-699218f7 "E03-E12, E14, E15 on the cellmap format" (owner, 300 min).
+- Game notes seen 18 Nov evening: VectorToss "get this into a ComfyUI workflow ASAP"; CraterCrawler
+  "I thought I approved these bet games days ago?" (not acted on yet; ask him).
+- Waiting for his merge: LIB_BIT + LIB_EDITOR `heights-floor-ceiling`, LIB_RTS `rts-demo-guard`.
+
+## EARLIER START HERE (18 Nov 2026, ~7:30 PM, the owner's answers before a /clear) -- DONE ~8 PM
 Job: the BitEditor heights, two parts, in this order (LIB_BIT; one helper agent per part, or do it in the
 main session; start from branch `heights-floor-ceiling`, NOT merged yet, it holds part 0):
 0. What exists (branch heights-floor-ceiling, 90d1db0): "From Floor" / "From Ceiling" boxes, ONE setting
