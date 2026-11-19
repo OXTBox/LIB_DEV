@@ -8,8 +8,11 @@
   its callers name the real cause: fix that.
 - Map: GAD battles plan -> done (his YES), TTRPG Studio -> done ("A work of art"), qwen RAM note is
   green has: now (red was too harsh).
-- Still waiting: his look at shortcut 6 (one-popup Library menu), then his merge.
-- Next from the tube: #1 c1795033087850 BitEditor heights "From Floor" / "From Ceiling" toggles.
+- Shortcut 6: the popup closed at once (it popped on mouseDown). Now mouseUp (LIB_MENU + editor);
+  owner: "looks great". editor-library-menu merged to main in LIB_MENU, LIB_EDITOR, LIB_DEV.
+- Tube #1 (BitEditor "From Floor" / "From Ceiling" toggles) is with ONE helper agent on LIB_BIT
+  branch `heights-floor-ceiling`. When it reports: check its tests, tell the owner what to try.
+- Waiting for his merge: LIB_RTS `rts-demo-guard`.
 
 ## EARLIER (18 Nov 2026, ~6:15 PM, before a /clear)
 - The owner tested the editor's new Library menu (desktop shortcut 6): the dropdown text is "extreme green".
