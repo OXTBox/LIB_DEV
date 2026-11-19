@@ -1,5 +1,16 @@
 # Priority Tube: where we are
 
+## NEWEST (18 Nov 2026, ~6:15 PM, before a /clear)
+- The owner tested the editor's new Library menu (desktop shortcut 6): the dropdown text is "extreme green".
+  A dark background on the menu buttons did NOT fix it.
+- His design, being built by a helper on branch `editor-library-menu` (LIB_MENU + LIB_EDITOR): menu titles
+  are green GRAPHICS; ONE popup button per stack ("one popup button to rule them all") is filled at
+  mousedown from what was clicked and popped there, with plain colours. It goes in LIB_MENU so games can use it.
+- Next session: look at the newest commits on `editor-library-menu` in LIB_MENU and LIB_EDITOR. Run t20, t37,
+  t43, t51 (and t52), both engines. If the helper did not finish, finish it from LIB_MENU/NEXT.md and the
+  editor README. Then tell the owner to try shortcut 6 again.
+- His rule (saved): colour the template BEFORE every create.
+
 ## LATEST (18 Nov 2026, late evening)
 - The owner said "merge everything, commit everything". Done: every branch in every repo is on main
   (one clash, LIB_ig3d README, kept Fable's 16 Nov map whole). LIB_COMFY sits on main too.
