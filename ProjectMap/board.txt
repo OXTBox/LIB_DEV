@@ -294,6 +294,7 @@ link: LIB_DEV
 what: ComfyUI as a Blueprint-style node editor for Vibecode3D games
 demo: Build Game -> playable ComfyPong ("it worked!")
 done: Six genre kits (24 nodes) merged 18 Nov; owner tested their output; kit-made games live in LIB_COMFY/games (one ComfyPong demo in LIB_GAMES)
+done: Comfy Games player (LIB_COMFY/Player/ComfyGames.exe, 18 Nov): finds LIB_COMFY/games from its own folder, genre + sort menus, PLAY = own window; desktop shortcut "Comfy Games". Star ratings still to come
 next: Stand-alone Comfy Games app on the Vibecode3D Library stack (genre menu, games menu, star ratings, sort by stars / date): after other projects clear
 link: LIB_GAMES
 
