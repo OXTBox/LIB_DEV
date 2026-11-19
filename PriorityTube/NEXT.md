@@ -1,5 +1,29 @@
 # Priority Tube: where we are
 
+## START HERE NEXT SESSION (18 Nov 2026, ~7:30 PM, the owner's answers before a /clear)
+Job: the BitEditor heights, two parts, in this order (LIB_BIT; one helper agent per part, or do it in the
+main session; start from branch `heights-floor-ceiling`, NOT merged yet, it holds part 0):
+0. What exists (branch heights-floor-ceiling, 90d1db0): "From Floor" / "From Ceiling" boxes, ONE setting
+   for the whole map ([map] fromFloor 1 / fromCeiling 1, optional top <hu>); only blue floats.
+1. **Rework the toggles to CELL BY CELL** (owner: "The extrusions should be cell by cell, that's what the
+   whole height painting is for"). From Floor / From Ceiling get painted per cell like heights.
+   - From Floor = the block is a PILLAR from the floor up (stalagmite), not a free floating platform.
+   - From Ceiling = it hangs from the top of the map (stalactite).
+   - Both off = floating platform. Both on = solid floor to top.
+   - "Ceiling" = the top of the map; the owner: "that probably should be somewhat finite, I'm looking
+     forward to seeing it" (keep `top <hu>`, give it a sensible finite default and show it).
+   - The owner found "a room under it disappears" weird: it is just what a pillar is. Say it as
+     "From Floor fills the cell solid under the block" and nothing more.
+   - Old maps: both off. Drop or migrate the whole-map [map] lines (they were never released).
+2. **Stack the colours (bubble c1795032797521)**: Green starts at White's highest, Blue at Green's
+   highest (White16 = 10 ft -> Green1 = 10 ft, Green16 = 20 ft, Blue1 = 20 ft, Blue16 = 30 ft). Green
+   then floats too, so the cell toggles cover green and blue.
+3. **"Extrude Glyphs to Heights" is a SECONDARY procedure**, maybe a secondary tab (owner: it adds a lot
+   of visual noise; "we shall see"). Height painting stays clean without extruded glyphs; the extrusion
+   is a separate button/menu/tab you turn to. Menus pop on mouseUp.
+Then: tests both engines + Python, ISSUES 0007 (never run lc_editor_test in place), tell him what to try.
+Waiting for his merge too: LIB_RTS `rts-demo-guard`.
+
 ## NEWEST (18 Nov 2026, ~6:45 PM)
 - Read the 4 new board notes. RTS_Demo "error in left operand" in Demo.PZ: NOT reproduced headless
   (30,000 random steps, clicks, keys, both engines). Demo.PX/PZ now draw a bad value at 0 and write
