@@ -1,6 +1,17 @@
 # Priority Tube: where we are
 
-## NEWEST (18 Nov 2026, ~6:15 PM, before a /clear)
+## NEWEST (18 Nov 2026, ~6:45 PM)
+- Read the 4 new board notes. RTS_Demo "error in left operand" in Demo.PZ: NOT reproduced headless
+  (30,000 random steps, clicks, keys, both engines). Demo.PX/PZ now draw a bad value at 0 and write
+  "BAD z [value] from: <callers>" to LIB_LLMIN/LIB_GAMES/GAME_NOTES.txt once a run. LIB_RTS branch
+  `rts-demo-guard` (507c796); t_rts_demo now expects "FOR OWNER". If a BAD line shows up in GAME_NOTES,
+  its callers name the real cause: fix that.
+- Map: GAD battles plan -> done (his YES), TTRPG Studio -> done ("A work of art"), qwen RAM note is
+  green has: now (red was too harsh).
+- Still waiting: his look at shortcut 6 (one-popup Library menu), then his merge.
+- Next from the tube: #1 c1795033087850 BitEditor heights "From Floor" / "From Ceiling" toggles.
+
+## EARLIER (18 Nov 2026, ~6:15 PM, before a /clear)
 - The owner tested the editor's new Library menu (desktop shortcut 6): the dropdown text is "extreme green".
   A dark background on the menu buttons did NOT fix it.
 - His design, being built by a helper on branch `editor-library-menu` (LIB_MENU + LIB_EDITOR): menu titles
