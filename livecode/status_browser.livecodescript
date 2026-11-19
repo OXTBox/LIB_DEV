@@ -7,6 +7,10 @@
 ##          Explorer over the Windows-WSL bridge spins about 30 s). Right-click a name:
 ##          Reviewed / Not Reviewed / Open in Explorer / Copy Path (the only way Explorer opens).
 ##          Each file keeps its own unsent feedback draft: switching files shows that file's text.
+##          The right-click menu ends with LIB_MENU's lines: "Leave comment..." (a line in
+##          LIB_LLMIN/LIB_DEV/BOARD_COMMENTS.txt, board STATUS BROWSER, target = the file's path) and
+##          "Explore here..." (Explorer at the file). LIB_MENU is loaded from <projects>/LIB_MENU/livecode;
+##          without it the menu is the plain one (no ending), and nothing else changes.
 ##          o = waiting, + = reviewed, * = has feedback
 ##   RIGHT  top: what the AI says about the file (LIB, work done, warnings, caveats, path)
 ##          bottom: the owner's feedback; Submit saves it for the AI to read
@@ -21,6 +25,7 @@ local sEntries     -- [n][date|lib|path|done|warn|caveat]; list line n = entry n
 local sCount, sCurrent, sState, sNotes, sNoteText   -- sNoteText[path] = your stamped comments
 local sLastSent      -- the feedback text last submitted (Tell Claude submits unsent text first)
 local sDraft         -- [path] the Feedback field's text for that file (kept while you switch files)
+local sAskAnswer     -- checks only: the next comment's text instead of asking
 
 on openStack
    SB.Refresh
@@ -80,6 +85,7 @@ end SB.AppendLine
 
 on SB.Refresh
    local tText, tLine, tN, tOut, tLines, i, tPath, tName
+   SB.UseMenu
    put SB.ReadText(SB.ListFile()) into tText
    -- review states: the last line for a path wins
    put empty into sState
@@ -192,13 +198,36 @@ end SB.Slashes
 
 on SB.RightClicked pLine
    if pLine < 1 or pLine > sCount then exit SB.RightClicked
-   SB.Clicked pLine, false
-   set the hilitedLine of field "Scrolling List Field" to pLine
+   SB.MenuSet pLine
    popup button "ReviewMenu"
 end SB.RightClicked
 
+-- select the file and fill the menu (headless checks stop here); nothing on the disk is touched
+on SB.MenuSet pLine
+   if pLine < 1 or pLine > sCount then exit SB.MenuSet
+   SB.Clicked pLine, false
+   set the hilitedLine of field "Scrolling List Field" to pLine
+   set the text of button "ReviewMenu" to SB.MenuText()
+end SB.MenuSet
+
+-- the file menu; with LIB_MENU, its ending after it (LIB_MENU/PLAN.md rule 1)
+function SB.MenuText
+   local tMenu
+   put "Reviewed" & return & "Not Reviewed" & return & "-" & return & "Open in Explorer" & return & "Copy Path" into tMenu
+   if SB.MenuOn() then return Menu.WithEnd(tMenu)
+   return tMenu
+end SB.MenuText
+
 on SB.MenuPicked pItem
    if sCurrent is empty then exit SB.MenuPicked
+   -- a guard in its own if: OpenXTalk evaluates both sides of "and"
+   if SB.MenuOn() then
+      if Menu.IsEnd(pItem) then
+         -- LIB_MENU sends it back as menuLeaveComment / menuExploreHere
+         Menu.EndPick pItem, sEntries[sCurrent]["path"], the long id of this stack
+         exit SB.MenuPicked
+      end if
+   end if
    switch pItem
       case "Reviewed"
          SB.SetState "reviewed"
@@ -274,7 +303,118 @@ on SB.TellClaude
    put "Told Claude" && the short time into field "Label Field"
 end SB.TellClaude
 
+-------------------------------------------------------------------- LIB_MENU: the menus' ending
+
+-- LIB_MENU (the menu rules every stack shares): <projects>/LIB_MENU/livecode/lib_menu.livecodescript; loaded once
+on SB.UseMenu
+   local tLib
+   if SB.MenuOn() then exit SB.UseMenu
+   put SB.Projects() & "/LIB_MENU/livecode/lib_menu.livecodescript" into tLib
+   if there is a file tLib then
+      start using stack tLib
+   end if
+end SB.UseMenu
+
+-- every call into Menu.* is guarded by this: without the library the menu is the plain one
+function SB.MenuOn
+   return "LIB_MENU" is among the lines of the stacksInUse
+end SB.MenuOn
+
+-- the ending's two lines, sent back by LIB_MENU's Menu.EndPick
+on menuLeaveComment pTarget
+   SB.CommentAsk pTarget
+end menuLeaveComment
+
+on menuExploreHere pTarget
+   Menu.Explore SB.Slashes(pTarget), empty
+   SB.Say the result
+end menuExploreHere
+
+-- a short word under the list, where Saved / Told Claude show
+on SB.Say pText
+   if there is a field "Label Field" then put pText into field "Label Field"
+end SB.Say
+
+-- checks only: the next comment's text, so no dialog opens
+on SB.TestAnswer pText
+   put pText into sAskAnswer
+end SB.TestAnswer
+
+on SB.CommentAsk pPath
+   local tText
+   if sAskAnswer is not empty then
+      put sAskAnswer into tText
+      put empty into sAskAnswer
+   else
+      ask "Comment on" && SB.ShortName(pPath) & ":"
+      if the result is "Cancel" then exit SB.CommentAsk
+      put it into tText
+   end if
+   if word 1 to -1 of tText is empty then exit SB.CommentAsk
+   SB.CommentWrite pPath, tText
+   SB.Say "Comment saved" && the short time
+end SB.CommentAsk
+
+-- one line in BOARD_COMMENTS.txt, the boards' format:
+--   id TAB date time TAB board TAB target TAB the target's words TAB open TAB where TAB text (\n = new line)
+on SB.CommentWrite pPath, pText
+   local tLine, tHeader, tFile, tWords
+   replace return with "\n" in pText
+   replace tab with " " in pText
+   put SB.ShortName(pPath) into tWords
+   if sCurrent is not empty then
+      if sEntries[sCurrent]["path"] is pPath then put tWords & "   " & sEntries[sCurrent]["lib"] into tWords
+   end if
+   put "c" & the milliseconds & tab & the short date && the long time & tab & "STATUS BROWSER" & tab & pPath & tab & tWords & tab & "open" & tab & "0,0,0,0" & tab & pText into tLine
+   put "# Comments from the boards (Project Map, On Git or Not), one a line; the last line of an id wins." & return & \
+         "# The order of comments is NOT their priority (a priority board comes later)." & return & \
+         "# id, date time, board, target, the target's words, open|deleted, where, text (\n = new line)" into tHeader
+   put SB.InboxFile("BOARD_COMMENTS.txt") into tFile
+   if SB.MenuOn() then
+      Menu.AppendLine tFile, tLine, tHeader
+   else
+      if there is not a file tFile then SB.AppendLine tFile, tHeader
+      SB.AppendLine tFile, tLine
+   end if
+end SB.CommentWrite
+
 -- tests: one line
 function SB.State
    return sCount & " files|current " & sCurrent & "|" & line 1 of field "Scrolling List Field"
 end SB.State
+
+-------------------------------------------------------------------- window zoom
+-- Shift + mouse wheel scales the whole window (the owner's handlers from Status_Browser.livecode,
+-- 15 Nov: "Scroll wheel w/ shift key scale factor adjust"). 0.02 a notch, from 0.1 to 2.
+on mouseWheelScroll tDir
+   local sf, TL
+   lock screen
+   put the scaleFactor of stack (the mainStack of this stack) into sf
+   switch tDir
+      case "up"
+         if sf < 2 then add 0.02 to sf
+         break
+      case "down"
+         if sf > 0.1 then subtract 0.02 from sf
+         break
+   end switch
+   set the scaleFactor of stack (the mainStack of this stack) to sf
+   put the topleft of stack (the mainStack of this stack) into TL
+   add sf to item 1 of TL
+   add sf to item 2 of TL
+   set the topleft of stack (the mainStack of this stack) to TL
+   unlock screen
+end mouseWheelScroll
+
+on rawKeyDown tKey
+   if the tool is not "browse tool" then pass rawKeyDown
+   switch tKey
+      case 65309 -- upscroll
+         if the shiftKey is down then mouseWheelScroll "up"
+         break
+      case 65308 -- downscroll
+         if the shiftKey is down then mouseWheelScroll "down"
+         break
+   end switch
+   pass rawKeyDown
+end rawKeyDown

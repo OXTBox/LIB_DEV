@@ -44,6 +44,12 @@ Claude...** (pick one or more files; only their paths are passed, Claude reads t
 `LIB_LLMIN/LIB_DEV/MAP_NOTES.txt` with the part and the blocker's words; press **T** to wake Claude.
 A red chip that has files (YOU's review total) still lists them under these two.
 
+## Menus
+Every menu (a part's card, a chip's files, a red blocker, a yellow note) ends with **Leave comment...**
+and **Explore here...** (Explorer at that thing's folder, or its file when it has one). A click on a
+part's card (without dragging) focuses it and opens its menu. Nothing on the disk is touched until you
+pick. The rules: `../LIB_MENU_PLAN.md`.
+
 ## Using it
 wheel = zoom at the pointer, drag the black = pan, drag a header = move a part with its chips
 (kept in `positions.txt`), click a box = focus (its strings and neighbours stay lit), click the black = clear.
@@ -54,4 +60,12 @@ Keys: **F** fit all, **B** blockers only (red and pink), **R** rebuild, **T** te
 - `tools/make_map.py` adds the counted half each rebuild: handlers per part, files waiting on the
   Status Browser, branches not merged, loose files, and a red string when a review waits over 2 days.
 - `map_data.txt` is what the stack draws (made by make_map.py; do not edit).
-- Code: `livecode/project_map.livecodescript` (the stack script; apply from the file).
+- Code: `../livecode/board_canvas.livecodescript`, the stack script shared with the On Git or Not board (apply from the file; headless checks: OXT-BEYOND/tests/t39_board_canvas.txt).
+
+## Comments on anything
+Right-click anything (a card, a chip, a column title, a string, a line of the right panel, or the black)
+and a big comment box opens: Enter makes a new line, **Ctrl+Enter** or the button saves, Esc cancels.
+A saved comment becomes a yellow note on the board, tied by a yellow string to what it is about; it
+moves with its card, can be dragged (it keeps its place), and a click on it offers Edit / Delete.
+All comments of both boards go to `LIB_LLMIN/LIB_DEV/BOARD_COMMENTS.txt`, and the right panel lists
+them at its end. **The order of comments is not their priority**: a priority board comes later.

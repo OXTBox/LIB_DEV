@@ -36,7 +36,8 @@ command Lab.Start
    put item 1 to -2 of the effective filename of me & "/window_shape.livecodescript" into tLib
    set the itemDelimiter to comma
    if not ("WindowShape" is among the lines of the stacksInUse) then start using stack tLib
-   set the title of me to "FOR BILL Shape Lab"
+   set the title of me to "FOR OWNER | Shape Lab"
+   dispatch "Users.TitleStack" with the short name of me, "Shape Lab"   -- LIB_USERS words it, when in use
    Lab.Build
 end Lab.Start
 

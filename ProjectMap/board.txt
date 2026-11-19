@@ -19,7 +19,10 @@
 what: Where we are, 17 Nov 2026
 has: Opus alone from here (no Fable time): big things start as a one-page plan
 has: Every branch merged 16 Nov; main is the truth in every repository
-next: GAD battles: one-page plan, then the smallest playable loop
+has: Rename Day merged 18 Nov: every contract call is Group.Verb; old names live until release
+has: The contract's new calls merged 18 Nov (XT and xRay)
+done: Games moved to the new names: 666 places down to 76 in 4 scripts (18 Nov overnight)
+done: The last Rename Day games: BlockCityHustle (27) + VectorToss (16), same end state headless (18 Nov, LIB_GAMES branch rename-day-last4); Ig3dEditor waits for editor-cards to take main
 next: Your 16 Nov game notes (GridSprint, InterceptorRun, DeadDays)
 
 == GOAL | TOP | core
@@ -47,6 +50,8 @@ what: xt3D_Raylib_Livecode_Bridge: xTalk drives raylib 3D (xRay)
 has: Games bench runs Thrmnlra unchanged (27 fps)
 has: Box2DXT physics works outside the IDE (could replace faked physics)
 next: E13 Walk The Map in the xt3d games bench
+done: Engine made again with the contract aliases (18 Nov, Rename Day; t18 t22 t45 pass)
+review: owner: play one game on the new generated engine in a window (nobody has yet)
 link: LIB_GAMES, LIB_RAYGUI, LIB_BIT
 
 == iGame3D_2026_CLAUDE | ENGINES
@@ -87,8 +92,10 @@ what: Generic Any Data + our Genetic Anomaly Detector (Galactica-4 as reference)
 has: GAD essence and variable inventory
 has: Self-writing script system mapped (5 bugs found)
 demo: GeneticAnomaly prototype (ga-turns)
-next: Battles step 1: one-page plan (Bases map turn -> LIB_RTS fight -> back)
-next: Battles step 2: smallest loop (two Bases, one anomaly, one fight)
+done: Battles step 1: one-page plan (18 Nov, LIB_GAD branch gad-battles; copy in LIB_LLMOUT/LIB_GAD)
+review: Battles plan: say yes (or change) before step 2; 4 questions at its end
+done: Battles step 2: smallest loop built (18 Nov, 73 checks pass)
+done: You played it: "working great"; merged to main 18 Nov
 block: owner: say yes or no to the one-page battle plan before any code
 link: LIB_RTS, LIB_GENERICA, LIB_LISTS, LIB_SCRIPTBLOCKS
 
@@ -121,7 +128,9 @@ has: cellmap v2 (five heights a cell), Python + xTalk give identical answers
 has: BitEditor Heights tab
 done: cellmap v2 format
 done: cellmap v3 plan KEPT (stacked maps, packs, slopes)
-next: cellmap v3 follow-ups A-92..A-95
+done: cellmap v3: slopes + packs drawn, E13 walks two_rooms; three failing game tests fixed or explained (18 Nov, branch cellmap-v3-followups)
+review: owner: play E13 -> M twice -> two_rooms, and Block City
+next: cellmap v3: BitEditor Slope tool, pack panel, E12 checker (A-92 3-5)
 block: owner: test the BitEditor Heights tab (F-3), never seen on a screen
 link: LIB_MAP, LIB_EDITOR, Vibecode3D, xt3d
 
@@ -165,7 +174,7 @@ link: LIB_BVH
 what: The BVH motion library (local only: rights unsettled)
 has: Animazoo, FreeBVH, iGame3D, Harold Lloyd clips
 next: Cut the Harold Lloyd take into climb / hang / recover for DeadDays
-block: owner: check the film title for the credit ("Safety Last!", 1923?)
+done: Film title checked by you: "Safety Last!" (1923), credit in the header
 link: LIB_GAMES
 
 == LIB_DATA | BLOCKS
@@ -183,8 +192,12 @@ link: xtalk_py
 == LIB_GUI | BLOCKS
 what: Future GUI-building application
 done: Plan by Fable (16 Nov)
-next: Build from PLAN.md
-block: Plan only, no code; waits its turn after GAD battles
+done: PLAN.md stages 1-2: .gui files + native windows (17 Nov, branch gui-step1)
+done: owner saw the Notes window: "LOVELY" (18 Nov)
+done: LIB_GUI look fixes: choice and list text readable, dark File menu, field hint shows (18 Nov)
+done: LIB_GUI stage 3: resizing, panels, sliders, drawn tabs, view placeholder (18 Nov)
+done: Gui.FromStack: your IDE layouts read into .gui files, exact round trip; Status Browser 7 of 8 controls (18 Nov)
+done: LIB_GUI popup kind: right-click menus in .gui, FromStack reads them (18 Nov, branch gui-step1, t41 251 pass)
 link: LIB_TOOLBAR, LIB_RAYGUI
 
 == LIB_RAYGUI | BLOCKS
@@ -192,6 +205,34 @@ what: raylib GUI library parroting xt3d and Vibecode3D tools
 done: Plan by Fable (16 Nov)
 block: Plan only, no code yet
 link: xt3d
+
+== LIB_MENU | BLOCKS
+what: Menus everywhere, one way: crafty, reusable, user-hackable procedural menu tricks
+done: Its own LIB, README + PLAN (17 Nov)
+done: Step 1: the boards' menus run on Menu.* (18 Nov, branch menu-steps)
+done: Step 2: menu files, your iGame3D way: Default set + yours in Data, folder-filled menus (18 Nov)
+done: Merged to main 18 Nov (owner: "MERGE!")
+done: Menu folders your way: LIB_MENU/Data/Default/<app>/Menus/ + Functions/, Menu.Load "<app>" (18 Nov, LIB_MENU branch menu-folders, t43 88 checks)
+next: A Library menu in a real stack (Status Browser or a game's developer pause menu)
+done: A Menus kind in LIB_DATA: Menus/<game or app>/ + Functions/, Data.MenuFolder (18 Nov, branch data-menus, t50)
+done: The Priority Tube and the Status Browser use Menu.* too (18 Nov)
+link: LIB_GUI, LIB_DEV
+
+== LIB_INPUT | BLOCKS
+what: Mouse, keyboard and game controller as named actions, with presets and profiles; two settings faces
+done: Library, presets, profiles, app face and developer face (18 Nov, t48 113 checks)
+done: Game Player: ... > Controls... for a game with an actions file; Hunter is the first (18 Nov)
+has: Merged to main 18 Nov; the owner: "Lib_input looks great"
+block: Controller written but never tried with a real one (needs the xt3d bridge and a pad)
+link: LIB_GUI, LIB_DATA, LIB_GAMES, xt3d
+
+== LIB_SFX | BLOCKS
+what: Game sound effects from numbers: xTalk drives rfxgen (sfxr) through its own small DLL; no raylib
+done: xtsfx.dll + Sfx. library, 8 presets, .rfx/.wav, demo; 30 checks pass (18 Nov, Fable)
+has: Owner heard it: "Works, sounds good!" (18 Nov)
+done: Several sounds at once through xt3d: 8 at once + overlapping copies (18 Nov, demos/sfx_xt3d_cacophony)
+review: owner: how did the cacophony sound?
+link: xt3d, LIB_GAMES
 
 == LIB_TOOLBAR | BLOCKS
 what: One-stop floating launcher of buttons for every LIB
@@ -210,6 +251,10 @@ what: Where the worlds converge: glossary, procedures, engine categories
 has: iGame3D external API documented (123 commands, 53 functions)
 done: GLOSSARY.md
 done: PROCEDURES.md
+done: Rename Day merged (18 Nov): 24 calls renamed, 22 aliases, Camera. group; checker 65/65, t45 t46 pass
+done: The contract's new calls merged (18 Nov): t49 54 checks on both engines, tried in the xRay bench
+done: rename_day.py built, 48 games moved (18 Nov overnight)
+review: owner: which face for the suggestion list next: in-game command line or OXT-Beyond script editor?
 block: owner: say keep / change / later on RELEASE_CHECKLIST.md
 link: LIB_EDITOR, LIB_PUBLIC
 
@@ -227,6 +272,8 @@ has: Project Map (this stack): reviews and blocker notes from the map
 done: Status Browser + review list
 done: Project Map merged (17 Nov)
 next: Your next input on the Project Map
+done: On Git or Not step 4: Commit / Ignore / Delete / Leave on each loose thing
+done: Zoom settled in Status Browser, Project Map, On Git or Not and Priority Tube (owner, 18 Nov)
 link: LIB_THEME
 
 == LIB_MCP | TOOLS
@@ -236,7 +283,8 @@ link: LIB_DEV
 == LIB_COMFY | TOOLS
 what: ComfyUI as a Blueprint-style node editor for Vibecode3D games
 demo: Build Game -> playable ComfyPong ("it worked!")
-next: Go deep later
+done: Six genre kits (24 nodes) merged 18 Nov; owner tested their output; kit-made games live in LIB_COMFY/games (one ComfyPong demo in LIB_GAMES)
+next: Stand-alone Comfy Games app on the Vibecode3D Library stack (genre menu, games menu, star ratings, sort by stars / date): after other projects clear
 link: LIB_GAMES
 
 == LIB_SPARK | TOOLS
@@ -262,16 +310,20 @@ what: Third-party applications (LiveCode servers 7.1.4 / 9.6.3)
 
 # ---------------- SYSTEM ----------------
 == LIB_SYSTEM | SYSTEM | core
-what: The rules and the plan: LIB_ALPHA, STATUS, TODO, OMEGA
-has: Night shutdown, operating prompt, model economy
-block: owner: correct LIB_ALPHA / OPERATING_PROMPT (O-1), they stand as written
-review: STATUS.md header is from 14 Nov (needs a rewrite)
+what: The rules and the plan: LIB_ALPHA, STATUS, TODO, DONE, OMEGA
+has: Night shutdown, operating prompt, model economy, ISSUES tickets
+done: Operating prompt draft 2, on your word (18 Nov)
+done: STATUS archived (13-17 Nov) and rewritten for 18 Nov
+done: TODO turned into a DONE list; TODO keeps only what is open (18 Nov)
+review: Operating prompt draft 2, STATUS, DONE, TODO (18 Nov)
 link: LIB_USERS
 
 == LIB_USERS | SYSTEM
 what: Who is at the controls: owner, Claude, Spark, other agents
 done: LIB_USERS plan KEPT (17 Nov)
-next: Users.Title words the window titles
+done: Users.Title words the window titles (17 Nov, branch users-title)
+done: Moved the 10 hand-made window titles to Users.Title (17 Nov; LIB_USERS/TITLES_TO_MOVE.md)
+done: Your 6 PLAN answers written in (18 Nov): titles say FOR OWNER, never a name; personas lower case
 link: LIB_SYSTEM
 
 == LIB_PUBLIC | SYSTEM
