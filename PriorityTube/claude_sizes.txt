@@ -40,3 +40,7 @@ n-5a26ab92	40	utility	One real Library menu built with Menu.Load + Menu.Show (St
 n-3a5a9676	15	utility	A Menus kind in LIB_DATA (today Scripts/Menus works without it)
 c1795032797521	60	utility	BitEditor Heights tab: Green stacks on top of White, Blue on Green (16 steps each), plus an "Extrude Glyphs to Heights" button
 c1795033087850	30	utility	Heights tab: From Floor / From Ceiling toggles (both, either, none) so stacked heights are not always floating platforms
+n-2114f9da	240	fun	Thrmnlra redesign: Sarge's script, the launch-code trap, recall and incoming phases, slower missiles, bigger map
+n-fa20247c	240	fun	9-Ball: table, cue drag, Jim Hurley's collisions, pockets and scratch, both engines (owner: at the back of the list)
+n-0c398aa0	30	fun	Spark run on the billiards idea, then Claude reads its concept (owner: at the back of the list)
+n-d88a4930	60	utility	A small library reading REGISTRY.tsv, then a box-and-roof house built by math

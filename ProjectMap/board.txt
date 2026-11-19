@@ -78,6 +78,8 @@ done: Spark road trip: 15 games played on the real engine
 done: Owner's 15 Nov notes (LTA camera, SquadBuggy snipers)
 next: 16 Nov notes: GridSprint crash box + traffic, InterceptorRun homing + rotor + zoom, DeadDays sparks + mouse look + Shift
 block: Engine contract (cellmap v3 follow-ups A-92..A-95) before games move to xRay / Box2DXT
+next: 9-Ball: Scott Rossi's nine ball (Jim Hurley's physics) rewritten for Vibecode3D and xt3d, credit both (scripts in LIB_GENERICA Data/Example: Math, Mouse, Update)
+next: Thrmnlra redesign from your 13 Nov feedback: Sarge, LAUNCH by mistake, recall, launch-code trap on the Big Board, enemy missiles right to left, slower missiles, short target names
 link: Vibecode3D, xt3d, PROMPT_GLAZE, LIB_SPARK, LIB_COMFY
 
 == PROMPT_GLAZE | GAMES | core
@@ -299,6 +301,7 @@ link: LIB_GAMES
 what: The local model (spark-x2.6-4b): unmetered first drafts
 has: Game designs, concept prompts with a FUN block
 block: iGame3D 2008 manifest run stopped since 13 Nov (LM Studio down)
+next: Spark: billiards-type game concept (Bank Shot Bounce, in GAME_IDEAS.txt), then Claude writes it
 link: LIB_GAMES, LIB_HOWTO
 
 == LIB_BUILD | TOOLS
