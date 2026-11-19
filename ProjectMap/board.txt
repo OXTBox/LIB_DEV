@@ -213,7 +213,7 @@ done: Step 1: the boards' menus run on Menu.* (18 Nov, branch menu-steps)
 done: Step 2: menu files, your iGame3D way: Default set + yours in Data, folder-filled menus (18 Nov)
 done: Merged to main 18 Nov (owner: "MERGE!")
 done: Menu folders your way: LIB_MENU/Data/Default/<app>/Menus/ + Functions/, Menu.Load "<app>" (18 Nov, LIB_MENU branch menu-folders, t43 88 checks)
-next: A Library menu in a real stack (Status Browser or a game's developer pause menu)
+done: A Library menu in a real stack: the iGame3D XT editor (18 Nov, branches editor-library-menu in LIB_EDITOR, LIB_MENU, LIB_DEV; t51, t52)
 done: A Menus kind in LIB_DATA: Menus/<game or app>/ + Functions/, Data.MenuFolder (18 Nov, branch data-menus, t50)
 done: The Priority Tube and the Status Browser use Menu.* too (18 Nov)
 link: LIB_GUI, LIB_DEV
