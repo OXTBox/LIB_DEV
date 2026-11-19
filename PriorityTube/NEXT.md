@@ -1,6 +1,22 @@
 # Priority Tube: where we are
 
-## START HERE NEXT SESSION (19 Nov 2026)
+## START HERE NEXT SESSION (19 Nov 2026, later)
+- DONE tube #2 n-699218f7 "E03-E12, E14, E15 on the cellmap format" (+ its comment c1794994520898).
+  The cards were built on the Fable night (LIB_EDITOR `editor-cards`, all 15 cards now exist).
+  Today: they were ported to the waiting heights format on LIB_EDITOR branch **`cards-heights`**
+  (a6de99a = heights-floor-ceiling + editor-cards + the port). Yard doors are From Ceiling under
+  `top 101`; E06/E07 set `from` 2 instead of green. Issue 0010 fixed there.
+  All 13 card tests pass against LIB_BIT heights-floor-ceiling: 166 checks, 0 failures.
+- For the owner's merge: LIB_BIT `heights-floor-ceiling` and LIB_EDITOR `cards-heights` go in
+  TOGETHER (cards-heights doors need the `[from]` layer; on LIB_BIT main they would be walkable).
+  LIB_EDITOR is now checked out on `cards-heights`.
+- Question for the owner: CELLMAP_V2.md section 3 still says "a cell with ceiling at or below its
+  ground is solid to the roof"; the heights library makes it a thin sheet you can walk over.
+  Should the library treat it as From Ceiling (keep the old rule) or should the line go?
+- Not seen in a window: none of E08-E15, nor the ported doors (headless only).
+- Next in the tube: the new top of PRIORITY_ORDER.txt.
+
+## EARLIER START HERE (19 Nov 2026)
 - DONE tube #1 n-d88a4930 (LIB_UNICODE): `LIB_UNICODE/livecode/lib_unicode.livecodescript` reads
   REGISTRY.tsv (Unicode.Char / Meaning / Procedure / Code / List / Check / Build) and the first
   procedure Proc.House (walls + gable roof + door, by math, engine mesh format). LIB_UNICODE branch
