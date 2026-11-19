@@ -131,7 +131,8 @@ done: cellmap v3 plan KEPT (stacked maps, packs, slopes)
 done: cellmap v3: slopes + packs drawn, E13 walks two_rooms; three failing game tests fixed or explained (18 Nov, branch cellmap-v3-followups)
 review: owner: play E13 -> M twice -> two_rooms, and Block City
 next: cellmap v3: BitEditor Slope tool, pack panel, E12 checker (A-92 3-5)
-block: owner: test the BitEditor Heights tab (F-3), never seen on a screen
+done: Heights: green/blue bands + From Floor / From Ceiling cell by cell + map top + Extrude Glyphs button (18 Nov, branch heights-floor-ceiling)
+block: BUGGED (parked, owner 18 Nov): BitEditor erases the glyphs (ISSUES 0008); needs visual clarification later. heights-floor-ceiling not merged
 link: LIB_MAP, LIB_EDITOR, Vibecode3D, xt3d
 
 == LIB_MAP | BLOCKS
@@ -217,6 +218,13 @@ done: A Library menu in a real stack: the iGame3D XT editor, one popup on mouseU
 done: A Menus kind in LIB_DATA: Menus/<game or app>/ + Functions/, Data.MenuFolder (18 Nov, branch data-menus, t50)
 done: The Priority Tube and the Status Browser use Menu.* too (18 Nov)
 link: LIB_GUI, LIB_DEV
+
+== LIB_UNICODE | BLOCKS
+what: Registry of the Unicode characters we use and plan to use, one meaning each; characters name procedures (drag a house character in, get a 3D house)
+done: Its own LIB, README + REGISTRY.tsv first pass (18 Nov): 30 characters, from a scan of our LIBs
+block: owner: two clashes to pick: gear (Tools menu or level) and pencil (Editor or path tool)
+next: lib_unicode.livecodescript (Unicode.Char / Meaning / Procedure), then a first procedure: the house, by math
+link: LIB_TOOLBAR, LIB_ig3d, LIB_GUI, LIB_RAYGUI
 
 == LIB_INPUT | BLOCKS
 what: Mouse, keyboard and game controller as named actions, with presets and profiles; two settings faces
