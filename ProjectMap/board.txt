@@ -222,7 +222,7 @@ link: LIB_GUI, LIB_DEV
 == LIB_UNICODE | BLOCKS
 what: Registry of the Unicode characters we use and plan to use, one meaning each; characters name procedures (drag a house character in, get a 3D house)
 done: Its own LIB, README + REGISTRY.tsv first pass (18 Nov): 30 characters, from a scan of our LIBs
-block: owner: two clashes to pick: gear (Tools menu or level) and pencil (Editor or path tool)
+done: Clashes settled (18 Nov): gear = Tools menu, pencil = Editor; iGame3D XT editor gets new ones for level and path tool
 next: lib_unicode.livecodescript (Unicode.Char / Meaning / Procedure), then a first procedure: the house, by math
 link: LIB_TOOLBAR, LIB_ig3d, LIB_GUI, LIB_RAYGUI
 
