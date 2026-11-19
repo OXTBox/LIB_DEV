@@ -10,8 +10,13 @@
   green has: now (red was too harsh).
 - Shortcut 6: the popup closed at once (it popped on mouseDown). Now mouseUp (LIB_MENU + editor);
   owner: "looks great". editor-library-menu merged to main in LIB_MENU, LIB_EDITOR, LIB_DEV.
-- Tube #1 (BitEditor "From Floor" / "From Ceiling" toggles) is with ONE helper agent on LIB_BIT
-  branch `heights-floor-ceiling`. When it reports: check its tests, tell the owner what to try.
+- Tube #1 DONE by a helper: LIB_BIT branch `heights-floor-ceiling` (4220248 library, 90d1db0 editor).
+  Two boxes "From Floor" / "From Ceiling" in the Heights tab tool row; whole-map setting, cellmap [map]
+  lines fromFloor 1 / fromCeiling 1 (+ optional top <hu>); only blue floats today. Tests pass both
+  engines + Python. Not seen on a screen. Open questions for the owner: per map or per cell? "Ceiling"
+  = top of the map? From Floor fills a room under the block. ISSUES 0007 (lc_editor_test rebuilds his
+  real BitEditor; restored from git).
+- Waiting for his merge: LIB_BIT `heights-floor-ceiling`.
 - Waiting for his merge: LIB_RTS `rts-demo-guard`.
 
 ## EARLIER (18 Nov 2026, ~6:15 PM, before a /clear)
