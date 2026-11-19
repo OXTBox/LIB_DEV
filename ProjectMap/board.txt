@@ -346,3 +346,7 @@ has: FOR_REVIEW.txt feeds the Status Browser
 == Unsorted folders | SYSTEM
 what: LIB_COMPANY, LIB_FACE, LIB_LUA, LIB_OMEGA, LIB_ARRAY: notes or empty, no git
 block: owner: say what each is for, or let them stay notes
+
+== LIB_BAT | TOOLS
+what: Our batch files and utility scripts, each explained: folder & file audit (audit.sh in WSL, .bat in Windows), ImageMagick image tricks, SVN clean-up
+done: Its own LIB, README + 8 scripts (18 Nov)
