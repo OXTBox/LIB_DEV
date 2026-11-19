@@ -1,20 +1,20 @@
 # Priority Tube: where we are
 
-## START HERE NEXT SESSION (19 Nov 2026, ~9:45 AM)
-- WORKED tube #1 n-1cb5d94e "Step code by Claude, step words by Spark" (LIB_HOWTO). NOT finished:
-  topics 01 and 02 are done (10 steps), 03-18 wait. The way to do each topic is now set:
-  1. Claude writes `LIB_HOWTO/topics/<id>_<Title>/step_<n>.livecodescript` = the WHOLE card script
-     after that step (header says what it adds), from LIB_SPARK/howto/OUTLINE.md.
-  2. `LIB_HOWTO/tests/play_step.sh <step> 30 <png>` plays it on the REAL engine (Simple_Test1's
-     window, script swapped; nothing written to LIB_GAMES), lists the scene, takes a picture. Look at it.
-  3. `python3 -I LIB_SPARK/howto/run_steps.py --only <id>` = Spark's words (step_<n>.txt, 1 s each).
-     Read them; fix wrong ones by hand.
-- Branches: LIB_HOWTO `howto-steps` (2f1076f), LIB_SPARK `howto-steps` (d4c56ee). Not merged.
-- Traps found: the camera sits at 0,0,0 (outline put the cube at z 0); Entity.Spawn is a function
-  (as a bare command: error 573). Both are pitfalls in OUTLINE.md now. Topic 03's outline is
-  marked FIX in LIB_SPARK/howto/REVIEW.md (start with a triangle).
-- Not tried: the xt3d bench. The borrowed window shows a yellow "Simple_Test1" label (harmless).
-- Next: the owner says whether to go on with 03-18 here (about 15 min a topic) or move to tube #2.
+## START HERE NEXT SESSION (19 Nov 2026, ~10:15 AM)
+- DONE tube #1 n-1cb5d94e "Step code by Claude, step words by Spark" (LIB_HOWTO): all 18 topics,
+  92 steps. Each step = `LIB_HOWTO/topics/<id>_<Title>/step_<n>.livecodescript` (the whole card
+  script after that step) + `step_<n>.txt` (Spark's words, 38 fixed by Claude).
+  Every step played on the real engine (`LIB_HOWTO/tests/play_step.sh`), pictures looked at;
+  `tests/check_calls.py`: only Engine 1 calls (+ Game.FindFile, + LIB_BIT/LIB_MAP/cellmap calls);
+  lint clean. NOT tried in the xt3d bench. What differs from the outline: LIB_HOWTO/README.md.
+- Branches (not merged): LIB_HOWTO `howto-steps` (6fa6703), LIB_SPARK `howto-steps` (4ef7cd6).
+- Found: the Game Player plays no sound (LIB_SYSTEM/ISSUES 0013, on LIB_SYSTEM main 774b3f2).
+- Board: LIB_HOWTO next = "The HOWTO stack ..." (new bubble n-cde3c9de, sized 120 fun);
+  block = owner reads a few steps. PRIORITY_ORDER.txt still lists n-1cb5d94e until the tube
+  stack is opened again (his file; not edited).
+- Next in the tube: the new top of PRIORITY_ORDER.txt (#2 n-c8710ff2 cellmap v3 Slope tool).
+
+## EARLIER (19 Nov 2026, ~9:45 AM): topics 01-02 and the pipeline, then 03-18 on the owner's "yes please continue"
 
 ## EARLIER START HERE (19 Nov 2026, later)
 - DONE tube #2 n-699218f7 "E03-E12, E14, E15 on the cellmap format" (+ its comment c1794994520898).

@@ -45,3 +45,4 @@ n-fa20247c	240	fun	9-Ball: table, cue drag, Jim Hurley's collisions, pockets and
 n-0c398aa0	30	fun	Spark run on the billiards idea, then Claude reads its concept (owner: at the back of the list)
 n-d88a4930	60	utility	A small library reading REGISTRY.tsv, then a box-and-roof house built by math
 n-9e136064	90	fun	A palette stack of the registry's entity characters; drop one on a Vibecode3D scene, Unicode.Build makes the object; Proc.Car + Proc.Cloud by math
+n-cde3c9de	120	fun	The tutorial stack from PLAN.md: reads topics/*/step_n files, dark mode, colours the code, runs the step in a viewport; 92 steps are ready
