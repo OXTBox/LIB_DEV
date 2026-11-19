@@ -20,10 +20,11 @@
 - Betas: 14 games promoted (LIB_PUBLIC cbfc524); still beta DeadDays, GridSprint, InterceptorRun.
 - BUGGED, parked (owner): BitEditor erases the glyphs after the heights work: ISSUES 0008, board block line.
   Owner: "our procedural levels are more valuable than making editing tools right now".
-- COMFY REMIX (Fable job 4) STEP 1 DONE 18 Nov night: LIB_COMFY branch `comfy-remix` (8464554, not merged).
-  Remix Source node + kits/remix.py; 10 seeds of each game pass tests/remix_play_test.py --real.
-  NOT installed into ComfyUI yet. Waits for his word for STEP 2 (per-game nodes, Mutate, stills,
-  four workflows, install.sh, restart Comfy, Queue). Read the last section of LIB_COMFY/NOTES.md first.
+- COMFY REMIX (Fable job 4) STEPS 1+2 DONE 18 Nov night: LIB_COMFY branch `comfy-remix` (not merged).
+  11 Remix nodes, Mutate, workflows/squad_remix.json + toss_remix.json; installed into both Comfy
+  installs; seeds 1-50 pass tests/remix_play_test.py. NOT yet queued in ComfyUI (it was not running):
+  he restarts Comfy, drags a workflow in, Queues, plays, leaves game notes. Then read his notes;
+  step 3 (event nodes) only on his word. Details: last section of LIB_COMFY/NOTES.md.
 - Owner wants Comfy nodes for Vector Toss + Squad Buggy ("weird variations"): a FABLE job, brief
   Next_Steps_With_Claude/FABLE_JOB_4_COMFY_REMIX.md (remix kit on the games' constants; 2 steps with stops).
 - Next in the tube: #2 n-699218f7 "E03-E12, E14, E15 on the cellmap format" (owner, 300 min).
