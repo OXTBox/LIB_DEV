@@ -12,7 +12,15 @@
 - Board: LIB_HOWTO next = "The HOWTO stack ..." (new bubble n-cde3c9de, sized 120 fun);
   block = owner reads a few steps. PRIORITY_ORDER.txt still lists n-1cb5d94e until the tube
   stack is opened again (his file; not edited).
-- Next in the tube: the new top of PRIORITY_ORDER.txt (#2 n-c8710ff2 cellmap v3 Slope tool).
+- OWNER (19 Nov ~10:20 AM, watched it being made): "looks GREAT. i'll clear and then you can go on
+  with your next phase of this". So NEXT = bubble n-cde3c9de, THE HOWTO STACK (before tube #2):
+  build LIB_HOWTO/livecode/HOWTO stack per LIB_HOWTO/PLAN.md (dark mode; topic list on the left on
+  every card; Vibecode3D viewport right with an xt3d toggle; step words + syntax-coloured code
+  field bottom right; < step / run this step / step > buttons). It READS topics/*/step_n files
+  (never holds lesson text). Run a step = same trick as tests/play_step.sh. Build it in OXT-Beyond
+  (bridge) as a dev stack, stack title "Opus | HOWTO" while I drive; template colours before every
+  create; closeStackRequest frees it. Branch howto-steps (or howto-stack from it).
+- After that: tube #2 n-c8710ff2 (cellmap v3 Slope tool).
 
 ## EARLIER (19 Nov 2026, ~9:45 AM): topics 01-02 and the pipeline, then 03-18 on the owner's "yes please continue"
 
