@@ -1,6 +1,22 @@
 # Priority Tube: where we are
 
-## START HERE NEXT SESSION (19 Nov 2026, later)
+## START HERE NEXT SESSION (19 Nov 2026, ~9:45 AM)
+- WORKED tube #1 n-1cb5d94e "Step code by Claude, step words by Spark" (LIB_HOWTO). NOT finished:
+  topics 01 and 02 are done (10 steps), 03-18 wait. The way to do each topic is now set:
+  1. Claude writes `LIB_HOWTO/topics/<id>_<Title>/step_<n>.livecodescript` = the WHOLE card script
+     after that step (header says what it adds), from LIB_SPARK/howto/OUTLINE.md.
+  2. `LIB_HOWTO/tests/play_step.sh <step> 30 <png>` plays it on the REAL engine (Simple_Test1's
+     window, script swapped; nothing written to LIB_GAMES), lists the scene, takes a picture. Look at it.
+  3. `python3 -I LIB_SPARK/howto/run_steps.py --only <id>` = Spark's words (step_<n>.txt, 1 s each).
+     Read them; fix wrong ones by hand.
+- Branches: LIB_HOWTO `howto-steps` (2f1076f), LIB_SPARK `howto-steps` (d4c56ee). Not merged.
+- Traps found: the camera sits at 0,0,0 (outline put the cube at z 0); Entity.Spawn is a function
+  (as a bare command: error 573). Both are pitfalls in OUTLINE.md now. Topic 03's outline is
+  marked FIX in LIB_SPARK/howto/REVIEW.md (start with a triangle).
+- Not tried: the xt3d bench. The borrowed window shows a yellow "Simple_Test1" label (harmless).
+- Next: the owner says whether to go on with 03-18 here (about 15 min a topic) or move to tube #2.
+
+## EARLIER START HERE (19 Nov 2026, later)
 - DONE tube #2 n-699218f7 "E03-E12, E14, E15 on the cellmap format" (+ its comment c1794994520898).
   The cards were built on the Fable night (LIB_EDITOR `editor-cards`, all 15 cards now exist).
   Today: they were ported to the waiting heights format on LIB_EDITOR branch **`cards-heights`**

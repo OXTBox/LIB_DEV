@@ -119,7 +119,7 @@ next: Step 9: the old studio's world code (later)
 
 == LIB_HOWTO | GAMES
 what: Step-by-step game tutorials (18 topics, 92 steps)
-done: Outline
+done: Outline; steps of 01-02 (code played on the real engine, words by Spark) + the pipeline (branches howto-steps)
 next: Step code by Claude, step words by Spark
 block: owner: review the outline first
 
