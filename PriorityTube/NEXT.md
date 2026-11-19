@@ -1,6 +1,16 @@
 # Priority Tube: where we are
 
-## START HERE NEXT SESSION (18 Nov 2026, ~8 PM)
+## START HERE NEXT SESSION (19 Nov 2026)
+- DONE tube #1 n-d88a4930 (LIB_UNICODE): `LIB_UNICODE/livecode/lib_unicode.livecodescript` reads
+  REGISTRY.tsv (Unicode.Char / Meaning / Procedure / Code / List / Check / Build) and the first
+  procedure Proc.House (walls + gable roof + door, by math, engine mesh format). LIB_UNICODE branch
+  `unicode-library` (652ee05, NOT merged). Headless tests pass, plain and through Engine 1's
+  Mesh.Finalize/Merge. Not yet seen in a game window. Picture: LIB_UNICODE/preview/house_by_math.svg.
+  Registry fix: the em space line held a plain space (U+0020); now U+2003.
+- Its next step is a new bubble n-9e136064 (picker palette, 90 min, fun) at the bottom of the tube.
+- Next in the tube: #2 n-699218f7 "E03-E12, E14, E15 on the cellmap format" (owner, 300 min).
+
+## EARLIER START HERE (18 Nov 2026, ~8 PM)
 - DONE the BitEditor heights job (bubble c1795032797521 done): LIB_BIT 1017033 + LIB_EDITOR ec30964,
   both on branch `heights-floor-ceiling` (NOT merged; waits for his try and his word).
   - Bands: green g = a block whose top is 255+g hu, blue b = 510+b (slab 10 thick); a cell can hold both.
