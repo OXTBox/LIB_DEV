@@ -9,7 +9,8 @@
 ## frame with LiveCode line graphics, one graphic per colour.
 ##
 ## In the window
-##   ... (top right)   Pause / Resume, Reset, Levels > 1..n, Quit
+##   ... (top right)   Pause / Resume, Reset, Levels > 1..n, Controls... (a game with an
+##                     actions file: LIB_INPUT), Quit
 ##   Escape            pause / resume (the engine never closes the window)
 ##   ` or F2           game notes (LIB_GAMES/tools/GameNotes), as in Vibecode3D
 ## Status and message lines are made when first needed (Player.Status, Player.Message),
@@ -31,6 +32,7 @@ local sAway        -- true while the program is in the background and this playe
 local sMovingFPS   -- the frame rate the last time it moved (shown while at rest)
 local sTickMsg, sRunning, sGfx, sGfxCount, sBG, sFrames, sFPSTick, sFPS, sMsgEnd, sEnded
 local sLevel
+local sInput      -- true when the game has an actions file and LIB_INPUT read it (Player.LoadInput)
 
 -------------------------------------------------------------------- start / stop
 
@@ -45,6 +47,11 @@ on Player.Start
    Player.UseMe
    put false into bStill
    put empty into sEnded
+   Player.LoadInput
+   -- the engine contract: Engine.Info("edition") and Engine.Has() answer from these
+   global gV3DEdition, gV3DHas
+   put "XT" into gV3DEdition
+   put empty into gV3DHas
    try
       Vibe.Begin Player.ViewRect()
       dispatch "Game.OnStart" to card 1 of me
@@ -158,6 +165,7 @@ on Player.Tick
       put the defaultStack into tWas
       Player.UseMe
       try
+         if sInput is true then Input.Poll
          Vibe.Step
          if Vibe.Playing() then
             Player.Draw
@@ -380,6 +388,7 @@ command Player.BuildMenu
          put return & tab & "Level" && i after tText
       end repeat
    end if
+   if sInput is true then put return & "Controls..." after tText
    put return & "-" & return & "Quit" after tText
    set the text of button "PlayerMenu" of me to tText
 end Player.BuildMenu
@@ -397,11 +406,67 @@ on Player.MenuPick pItem
       case "Levels"
          Player.GoLevel word 2 of item 2 of pItem
          break
+      case "Controls..."
+         Player.Controls
+         break
       case "Quit"
          Player.Quit
          break
    end switch
 end Player.MenuPick
+
+-------------------------------------------------------------------- LIB_INPUT (rebindable controls)
+
+-- A game with an actions file beside its script (<script name>.input.txt) gets LIB_INPUT: the
+-- player reads the file, polls once a step, and the ... menu offers "Controls...". The game asks
+-- Input.Down("jump") instead of key codes. No file, or no LIB_INPUT: everything is as before.
+command Player.LoadInput
+   local tFile, tLib, tData, tErr
+   put false into sInput
+   put the uScriptFile of me into tFile
+   if tFile is empty then exit Player.LoadInput
+   set the itemDelimiter to "."
+   put item 1 to -2 of tFile & ".input.txt" into tFile
+   if there is no file tFile then exit Player.LoadInput
+   put Player.FindLib("LIB_INPUT/livecode/lib_input.livecodescript") into tLib
+   if tLib is empty then exit Player.LoadInput
+   try
+      if "LIB_DATA" is not among the lines of the stacksInUse then
+         put Player.FindLib("LIB_DATA/livecode/lib_data.livecodescript") into tData
+         if tData is not empty then start using stack tData      -- where the bindings are saved
+      end if
+      start using stack tLib
+      Input.Load the uGame of me, tFile
+      put (the result is empty) into sInput
+   catch tErr
+      put false into sInput
+   end try
+end Player.LoadInput
+
+-- a library beside the game: looked for in each folder from the game's script upward
+function Player.FindLib pRelative
+   local tFolder
+   put the uScriptFile of me into tFolder
+   set the itemDelimiter to "/"
+   repeat while the number of items of tFolder > 1
+      delete the last item of tFolder
+      if there is a file (tFolder & "/" & pRelative) then return tFolder & "/" & pRelative
+   end repeat
+   return empty
+end Player.FindLib
+
+-- the ... menu's "Controls...": the game waits (paused) while its controls are changed
+command Player.Controls
+   local tErr
+   if sInput is not true then exit Player.Controls
+   if bPaused is not true and sRunning is true then Player.TogglePause
+   try
+      Input.ShowSettings
+      if the result is not empty then Player.Message the result, 3000
+   catch tErr
+      Player.Message "Controls: could not open the window", 3000
+   end try
+end Player.Controls
 
 -------------------------------------------------------------------- input
 
