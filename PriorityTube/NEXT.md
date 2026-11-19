@@ -4,7 +4,9 @@
 - HOWTO is DONE and MERGED (owner: "excellent work, lets merge this and move on"):
   LIB_HOWTO main 356e705, xt3D bridge master e37bfbc, LIB_DEV main 63ab374 (Player.Halt),
   LIB_SPARK main 936a606 (step words). The section below has the details and traps.
-- Its leftover bubble n-9e665fa2 (HOWTO_dev stack + save HOWTO.oxtstack, 30 min) waits for him.
+- DONE 19 Nov evening (owner: do it first): bubble n-9e665fa2. LIB_HOWTO/livecode/HOWTO.oxtstack is the
+  stable stack (LIB_HOWTO main); opened fresh from the file it shows itself and plays. Dev file deleted.
+  The owner may reorder the tube: read PRIORITY_ORDER.txt again before starting.
 - NEXT = tube #2 n-c8710ff2 "cellmap v3: BitEditor Slope tool, pack panel, E12 checker (A-92 3-5)"
   (#1 n-1cb5d94e is done; PRIORITY_ORDER.txt still lists it until the tube stack is opened again).
   Start by reading LIB_BIT's cellmap v3 notes (A-92) and ISSUES 0008 (BitEditor erases glyphs, parked).
