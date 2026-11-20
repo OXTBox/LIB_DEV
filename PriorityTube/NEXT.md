@@ -1,5 +1,15 @@
 # Priority Tube: where we are
 
+## START HERE NEXT SESSION (19 Nov, ~4:30 PM): tube #1 n-7c48878c 웃 PERSON is DONE (the person half)
+- LIB_UNICODE branch `unicode-person` (c846437, on top of unicode-picker; none merged):
+  Proc.Person + Person.Pose/Mesh/Frames/Stride/FromClip (bones = LIB_MOCAP's 25 joints; stand/walk/
+  run/wave by math, or any LIB_MOCAP stick clip); picker "웃 moves" button, dropped people animate
+  (walk/run round a ring, wave, dance = FreeBVH_DANCE). Headless tests pass; preview/person_by_math.svg.
+  UnicodePicker.oxtstack re-saved headless. NOT seen in a real window yet: first thing to try with him.
+- Left on this bubble (sized 60 in claude_sizes.txt): drops into xt3d windows (raylib window is not a
+  stack: xt3d_GetWindowPosition + a pick ray from the raylib camera). Needs him + Windows.
+- Then tube #2 n-c8710ff2 (cellmap v3 Slope tool).
+
 ## START HERE NEXT SESSION (after 19 Nov night): tube #1 n-9e136064 UNICODE PICKER is DONE
 - LIB_UNICODE branch `unicode-picker` (4e6bedd, on top of unicode-library; neither merged):
   livecode/UnicodePicker.oxtstack + unicode_picker.livecodescript, Proc.Car/Truck/Cloud/StormCloud.

@@ -47,3 +47,4 @@ n-d88a4930	60	utility	A small library reading REGISTRY.tsv, then a box-and-roof 
 n-9e136064	90	fun	A palette stack of the registry's entity characters; drop one on a Vibecode3D scene, Unicode.Build makes the object; Proc.Car + Proc.Cloud by math
 n-cde3c9de	120	fun	The tutorial stack from PLAN.md: reads topics/*/step_n files, dark mode, colours the code, runs the step in a viewport; 92 steps are ready
 n-9e665fa2	30	utility	save the strip HOWTO as HOWTO.oxtstack with the owner watching; the script is done and merged
+n-7c48878c	60	fun	Person part done 19 Nov (LIB_UNICODE branch unicode-person); left: drops into xt3d windows (raylib window rect + camera pick ray), tried live with you
