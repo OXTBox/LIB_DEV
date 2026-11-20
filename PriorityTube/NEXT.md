@@ -2,6 +2,7 @@
 
 ## START HERE NEXT SESSION (after the 19 Nov night run): ALL SMALL BUBBLES BUILT, NONE MERGED
 - Summary for the owner: LIB_LLMOUT/NIGHT_19NOV_RESULTS.txt (Desktop "Tests 19 Nov night", shortcut 00).
+- LIB_GAMES folder is ON "try-19nov-night" (all six LIB_GAMES branches combined, 5 tests green) so he can play them; merge = those branches into main, then back to main.
 - Branches waiting for his try + "merge": LIB_GAMES vector-toss-stamina, deaddays-lloyd-take, notes-16nov,
   thrmnlra-redesign, nine-ball, bank-shot-bounce; LIB_MOCAP deaddays-lloyd-take (folder LEFT on it: the clip
   Vector Toss needs lives there); xt3D bridge e13-xt3d-bench (folder LEFT on it); LIB_SPARK bank-shot-bounce.
