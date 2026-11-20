@@ -6,8 +6,10 @@
   run/wave by math, or any LIB_MOCAP stick clip); picker "웃 moves" button, dropped people animate
   (walk/run round a ring, wave, dance = FreeBVH_DANCE). Headless tests pass; preview/person_by_math.svg.
   UnicodePicker.oxtstack re-saved headless. NOT seen in a real window yet: first thing to try with him.
-- Left on this bubble (sized 60 in claude_sizes.txt): drops into xt3d windows (raylib window is not a
-  stack: xt3d_GetWindowPosition + a pick ray from the raylib camera). Needs him + Windows.
+- Owner: "working great". MERGED to LIB_UNICODE main (unicode-library/picker/person, 19 Nov ~4:45 PM).
+- xt3d drop DONE on LIB_UNICODE branch `xt3d-drop` (85ee5cb): the bench's raylib camera IS the engine's
+  camera (drawn into its image "view"), so only the mouse mapping + Vibe.ApplyRect were needed; drops
+  only while a game plays there. Headless test passes; not yet tried with the real mouse.
 - Then tube #2 n-c8710ff2 (cellmap v3 Slope tool).
 
 ## START HERE NEXT SESSION (after 19 Nov night): tube #1 n-9e136064 UNICODE PICKER is DONE
