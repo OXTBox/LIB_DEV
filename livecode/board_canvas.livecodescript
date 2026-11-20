@@ -169,12 +169,42 @@ end pmBuild
 -- found from the board's own place (LIB_DEV/<Board>/ -> the projects folder); loaded once
 command pmUseMenu
    local tLib
-   if "LIB_MENU" is among the lines of the stacksInUse then exit pmUseMenu
-   put pmProjects() & "/LIB_MENU/livecode/lib_menu.livecodescript" into tLib
-   if there is a file tLib then
-      start using stack tLib
+   if "LIB_MENU" is not among the lines of the stacksInUse then
+      put pmProjects() & "/LIB_MENU/livecode/lib_menu.livecodescript" into tLib
+      if there is a file tLib then
+         start using stack tLib
+      end if
    end if
+   pmUseOpenIn
 end pmUseMenu
+
+-- "Open in" (LIB_MENU/OPEN_IN.md): the apps for a file, at the end of every menu about a file and
+-- in each review file's submenu. The owner's own lines: LIB_USERS/<kOpenInPerson>/Data/Menus/File/Open
+-- (the owner, 19 Nov: "Let's use LIB_USERS/BILL"). Without lib_menu_openin the menus are as before.
+constant kOpenInPerson = "BILL"
+command pmUseOpenIn
+   local tLib
+   if pmOpenInOn() then exit pmUseOpenIn
+   put pmProjects() & "/LIB_MENU/livecode/lib_menu_openin.livecodescript" into tLib
+   if there is not a file tLib then exit pmUseOpenIn
+   start using stack tLib
+   Menu.OpenInAddFolder pmProjects() & "/LIB_USERS/" & kOpenInPerson & "/Data/Menus/File/Open"
+end pmUseOpenIn
+
+function pmOpenInOn
+   return "LIB_MENU_OpenIn" is among the lines of the stacksInUse
+end pmOpenInOn
+
+-- the file or folder a menu on pTarget is about (the same place "Explore here..." goes)
+function pmOpenInPath pTarget
+   local tWhere
+   if not pmOpenInOn() then return empty
+   put pmExplorePath(pTarget) into tWhere
+   set the itemDelimiter to tab
+   -- a "/" at the end tells Open in it is a folder, so nothing is looked up over the WSL bridge
+   if item 2 of tWhere is 1 then return item 1 of tWhere & "/"
+   return item 1 of tWhere
+end pmOpenInPath
 
 -- true when LIB_MENU is in use (every call into Menu.* is guarded by this: without the library
 -- the board still works, with plain menus that have no ending)
@@ -919,6 +949,13 @@ function pmMenuItem pParent, pLine, pIndent
    repeat for each line tAction in tActions
       put pIndent & tab & tAction & return after tOut
    end repeat
+   -- a file you act on gets its "Open in" apps too (menuPick: "...|file|Open in|App")
+   if tActions is not empty and pmOpenInOn() then
+      put pIndent & tab & "-" & return after tOut
+      repeat for each line tAction in Menu.OpenInText(item 3 of pLine)
+         put pIndent & tab & tAction & return after tOut
+      end repeat
+   end if
    return tOut
 end pmMenuItem
 
@@ -941,6 +978,18 @@ on menuPick pItem
       if Menu.IsEnd(pItem) then
          -- LIB_MENU sends it back as menuLeaveComment / menuExploreHere
          Menu.EndPick pItem, sMenuChip, the long id of this stack
+         if pItem begins with "Open in|" then pmSay the result
+         exit menuPick
+      end if
+   end if
+   -- a file's own "Open in" submenu: "...|file|Open in|App"
+   if pItem contains "|Open in|" and pmOpenInOn() then
+      get offset("|Open in|", pItem)
+      put sMenuMap[char 1 to it - 1 of pItem] into tHit
+      if tHit is not empty then
+         set the itemDelimiter to tab
+         Menu.OpenInPick item 1 of tHit, char it + 1 to -1 of pItem
+         pmSay the result
          exit menuPick
       end if
    end if
@@ -1514,7 +1563,7 @@ end pmMenuEnd
 command pmMenuSet pTarget, pMenu
    put pTarget into sMenuChip
    if pmMenuOn() then
-      set the text of button "HUD_Popup" to Menu.WithEnd(pMenu)
+      set the text of button "HUD_Popup" to Menu.WithEnd(pMenu, pmOpenInPath(pTarget))
    else
       -- without LIB_MENU: the plain menu, no ending
       set the text of button "HUD_Popup" to pMenu
