@@ -1,6 +1,12 @@
 # Priority Tube: where we are
 
-## START HERE NEXT SESSION (19 Nov, ~5 PM): tube #2 n-c8710ff2 cellmap v3 SLOPE TOOL + PACK WINDOW: BUILT
+## START HERE NEXT SESSION (19 Nov evening): tube #2 SLOPE TAB + PACK WINDOW: DONE AND MERGED
+- Owner: "Very cool tool!, Merge that!". LIB_BIT main 7b838d7 (brought heights-floor-ceiling with it),
+  LIB_EDITOR main 9cac9e0 (its heights-floor-ceiling: E13 test at the green band). Tests green on main.
+  ISSUES 0008 (glyph erasing) is still parked, now on main.
+- NEXT = tube #3 (read LIB_LLMIN/LIB_DEV/PRIORITY_ORDER.txt first; it may have been reordered).
+
+## (earlier, ~5 PM) tube #2 n-c8710ff2 cellmap v3 SLOPE TOOL + PACK WINDOW: BUILT
 - LIB_BIT branch `cellmap-v3-slope-tool` (d8dc25c), built ON `heights-floor-ceiling` (not merged; the
   Slope tool sits in the same Heights tab). Neither is merged. LIB_BIT is checked out on it.
   `LIB_BIT/editor/BitEditor.livecode` is rebuilt: open it in OXT-Beyond to try.
