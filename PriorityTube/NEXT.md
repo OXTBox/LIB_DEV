@@ -1,5 +1,12 @@
 # Priority Tube: where we are
 
+## START HERE AFTER THE 19 Nov NIGHT /clear: BUILD PHOTON BALL (owner said go)
+- Plan: LIB_DEV/PriorityTube/PHOTON_BALL_PLAN.md (step 1 hand-placed game + play test, step 2 ComfyUI random mode).
+- Owner's decisions 19 Nov late: Vector Toss frozen as is; DeadDays work stays; Pythonizing postponed (loose ends first).
+- Still open from him: two Project Map comments of 9:35 PM ("What do you mean which face?", RELEASE_CHECKLIST gone?).
+- Owner asleep: one helper per step, shortcuts in Desktop "Tests 20 Nov", logs via LIB_BAT/save_session_log.sh,
+  nothing armed when done.
+
 ## START HERE NEXT SESSION (after the 19 Nov night run): ALL SMALL BUBBLES BUILT, NONE MERGED
 - Summary for the owner: LIB_LLMOUT/NIGHT_19NOV_RESULTS.txt (Desktop "Tests 19 Nov night", shortcut 00).
 - LIB_GAMES folder is ON "try-19nov-night" (all six LIB_GAMES branches combined, 5 tests green) so he can play them; merge = those branches into main, then back to main.
