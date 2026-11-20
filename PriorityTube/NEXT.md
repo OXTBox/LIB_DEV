@@ -1,5 +1,13 @@
 # Priority Tube: where we are
 
+## START HERE NEXT SESSION (after the 19 Nov night run): ALL SMALL BUBBLES BUILT, NONE MERGED
+- Summary for the owner: LIB_LLMOUT/NIGHT_19NOV_RESULTS.txt (Desktop "Tests 19 Nov night", shortcut 00).
+- Branches waiting for his try + "merge": LIB_GAMES vector-toss-stamina, deaddays-lloyd-take, notes-16nov,
+  thrmnlra-redesign, nine-ball, bank-shot-bounce; LIB_MOCAP deaddays-lloyd-take (folder LEFT on it: the clip
+  Vector Toss needs lives there); xt3D bridge e13-xt3d-bench (folder LEFT on it); LIB_SPARK bank-shot-bounce.
+- Left in the tube: Pythonizing day and Comfy Games app (big, by his word only). Ask him what is next.
+- Leftover: ~/Documents/Data in WSL made by the stamina test (harmless; ask before deleting).
+
 ## START HERE NEXT SESSION (19 Nov late evening): tube #3 n-b3296cad STEP 9 WORLD CODE: BUILT, NOT MERGED
 - LIB_TTRPG branch `ttrpg-world-code` (9a15f7c). Spec `ref/ttrpg_world.py`, port
   `livecode/lib_ttrpg_world.livecodescript`, same answers on `ref/world_vectors.json`; map of every

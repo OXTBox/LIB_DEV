@@ -23,7 +23,7 @@ has: Rename Day merged 18 Nov: every contract call is Group.Verb; old names live
 has: The contract's new calls merged 18 Nov (XT and xRay)
 done: Games moved to the new names: 666 places down to 76 in 4 scripts (18 Nov overnight)
 done: The last Rename Day games: BlockCityHustle (27) + VectorToss (16), same end state headless (18 Nov, LIB_GAMES branch rename-day-last4); Ig3dEditor waits for editor-cards to take main
-next: Your 16 Nov game notes (GridSprint, InterceptorRun, DeadDays)
+done: Your 16 Nov game notes (GridSprint, InterceptorRun, DeadDays): built 19 Nov night on LIB_GAMES branch notes-16nov (b7bda8c), waits for your try
 
 == GOAL | TOP | core
 what: Where we are going
@@ -49,7 +49,7 @@ link: LIB_GAMES, LIB_BIT, LIB_BUILD
 what: xt3D_Raylib_Livecode_Bridge: xTalk drives raylib 3D (xRay)
 has: Games bench runs Thrmnlra unchanged (27 fps)
 has: Box2DXT physics works outside the IDE (could replace faked physics)
-next: E13 Walk The Map in the xt3d games bench
+done: E13 Walk The Map in the xt3d games bench
 done: Engine made again with the contract aliases (18 Nov, Rename Day; t18 t22 t45 pass)
 review: owner: play one game on the new generated engine in a window (nobody has yet)
 link: LIB_GAMES, LIB_RAYGUI, LIB_BIT
@@ -76,16 +76,16 @@ done: Round one games
 done: Round two games (owner concepts)
 done: Spark road trip: 15 games played on the real engine
 done: Owner's 15 Nov notes (LTA camera, SquadBuggy snipers)
-next: 16 Nov notes: GridSprint crash box + traffic, InterceptorRun homing + rotor + zoom, DeadDays sparks + mouse look + Shift
+done: 16 Nov notes: GridSprint crash box + traffic, InterceptorRun homing + rotor + zoom, DeadDays sparks + mouse look + Shift (19 Nov night, LIB_GAMES branch notes-16nov b7bda8c, not merged)
 block: Engine contract (cellmap v3 follow-ups A-92..A-95) before games move to xRay / Box2DXT
-next: 9-Ball: Scott Rossi's nine ball (Jim Hurley's physics) rewritten for Vibecode3D and xt3d, credit both (scripts in LIB_GENERICA Data/Example: Math, Mouse, Update)
-next: Thrmnlra redesign from your 13 Nov feedback: Sarge, LAUNCH by mistake, recall, launch-code trap on the Big Board, enemy missiles right to left, slower missiles, short target names
+done: 9-Ball: Scott Rossi's nine ball (Jim Hurley's physics) rewritten for Vibecode3D and xt3d, credit both: 19 Nov night on LIB_GAMES branch nine-ball (215952d), not merged, waits for your try
+done: Thrmnlra redesign from your 13 Nov feedback (LAUNCH trap, pads + recall by name, bombers, STAND DOWN, launch codes on the Big Board, Strike left to right, their answer right to left, Tab, spoiled LAUNCH): 19 Nov night on LIB_GAMES branch thrmnlra-redesign (0b5edae), not merged, waits for your try
 link: Vibecode3D, xt3d, PROMPT_GLAZE, LIB_SPARK, LIB_COMFY
 
 == PROMPT_GLAZE | GAMES | core
 what: The umbrella game: two vector heroes dropped into every game we build
 has: Banter / glossary work feeds GAD tropes
-next: Vector Toss Stamina rules (HANG TIME) when its work resumes
+done: Vector Toss Stamina rules (HANG TIME): built 19 Nov night on LIB_GAMES branch vector-toss-stamina (da8360d), waits for your try
 block: Waits on LIB_GAMES games settling (not now, by plan)
 link: LIB_GAMES, LIB_GAD
 
@@ -174,7 +174,7 @@ link: LIB_BVH
 == LIB_BVH | BLOCKS
 what: The BVH motion library (local only: rights unsettled)
 has: Animazoo, FreeBVH, iGame3D, Harold Lloyd clips
-next: Cut the Harold Lloyd take into climb / hang / recover for DeadDays
+done: Cut the Harold Lloyd take into climb / hang / recover for DeadDays (19 Nov night: climb 1-44, hang 132-182, recover 45-108; DeadDays temple step, branches deaddays-lloyd-take in LIB_GAMES + LIB_MOCAP, not merged)
 done: Film title checked by you: "Safety Last!" (1923), credit in the header
 link: LIB_GAMES
 
@@ -304,7 +304,7 @@ link: LIB_GAMES
 what: The local model (spark-x2.6-4b): unmetered first drafts
 has: Game designs, concept prompts with a FUN block
 block: iGame3D 2008 manifest run stopped since 13 Nov (LM Studio down)
-next: Spark: billiards-type game concept (Bank Shot Bounce, in GAME_IDEAS.txt), then Claude writes it
+done: Spark: billiards-type game concept (Bank Shot Bounce): Spark wrote concept + levels 19 Nov night (LIB_SPARK branch bank-shot-bounce ef1882e); Claude wrote the game on LIB_GAMES branch bank-shot-bounce (2c212df), not merged, waits for your try
 link: LIB_GAMES, LIB_HOWTO
 
 == LIB_BUILD | TOOLS
