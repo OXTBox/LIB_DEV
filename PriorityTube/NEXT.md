@@ -15,7 +15,11 @@
   21 checks each, both headless engines; lc_heights_from / lc_layout2 still pass.
 - Not built: map below drawn dimly ("line rooms up"), slopes in LevelBoxes / Pick, door far cell by click.
   3D-preview slope painting uses the edge/corner last chosen in the 2D map.
-- NEXT: owner tries it in a window (no screen grabs; look_at_card only). Then tube #3 (read PRIORITY_ORDER.txt).
+- OWNER'S FIRST TRY (19 Nov ~5:15 PM): needs its own tab, direction control, slopes that connect (not /|/|/|),
+  hiding options in a menu (extruded glyphs = chaos). DONE same evening (cf7be6d): Slope TAB (compass, Ramp =
+  drag a box -> one plane, Join floor-before to floor-after, One Cell, Flatten; Heights tab back as before),
+  Scene menu Hiding: Off / Hidden Lines (~200 ms wizard_pool, when the view stops) + Show: <class> / All.
+- NEXT: owner tries the Slope tab + Hiding in a window. Then tube #3 (read PRIORITY_ORDER.txt).
 
 ## START HERE NEXT SESSION (19 Nov, ~5 PM): tube #1 n-7c48878c 웃 PERSON + xt3d DROP: DONE AND MERGED
 - Owner tried the xt3d drop live: "works great merge it!". LIB_UNICODE main 85ee5cb, no branches left.
