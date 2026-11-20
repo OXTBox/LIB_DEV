@@ -7,7 +7,11 @@
 - Owner tries it: `cd ~/projects/LIB_TTRPG; python3 ref/ttrpg_world.py new; python3 ref/ttrpg_world.py play`.
   Then merge on his word. Next for it (ask him): a World panel in the Studio window.
 - Trap: `python3 ref/ttrpg_ref.py test` LOADS gemma-2-2b (live test). Unloaded again 19 Nov.
-- NEXT = tube #4 n-df980b7d Vector Toss Stamina rules (read PRIORITY_ORDER.txt first).
+- Owner tried it: "works great, like 1981 all over again". Merge not asked for yet: ask once.
+- Raon-1-nano NPC model: PARKED by the owner (build + test later); plan in LIB_TTRPG/NEXT.md.
+- AFTER THE REBOOT (19 Nov late): the owner is deleting done bubbles from the tube (it "looks stuck":
+  #1 and #2 are done but still listed). Re-read LIB_LLMIN/LIB_DEV/PRIORITY_ORDER.txt fresh and take
+  the top bubble that is not done; was going to be n-df980b7d Vector Toss Stamina rules.
 
 
 ## START HERE NEXT SESSION (19 Nov evening): tube #2 SLOPE TAB + PACK WINDOW: DONE AND MERGED
