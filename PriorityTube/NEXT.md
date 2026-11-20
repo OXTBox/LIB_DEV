@@ -4,7 +4,12 @@
 - Owner: "Very cool tool!, Merge that!". LIB_BIT main 7b838d7 (brought heights-floor-ceiling with it),
   LIB_EDITOR main 9cac9e0 (its heights-floor-ceiling: E13 test at the green band). Tests green on main.
   ISSUES 0008 (glyph erasing) is still parked, now on main.
-- NEXT = tube #3 (read LIB_LLMIN/LIB_DEV/PRIORITY_ORDER.txt first; it may have been reordered).
+- NEXT = tube #3 n-b3296cad "Step 9: the old studio's world code". OWNER SAID GO TONIGHT (19 Nov evening,
+  "we may as well do that tonight"): it is no longer "later". It is LIB_TTRPG's job: read LIB_TTRPG/NEXT.md
+  (item 7), OPUS_BUILD.md step 9 and DESIGN.md line ~132; the source is the harvested old studio stack
+  XTJSON/batch/TTRPG_STUDIO_020920229AM (in LIB_LLMOUT/Read/LIB_XTJSON). Carry the world / item code into
+  LIB_TTRPG on a branch (e.g. ttrpg-world-code), Python ref is the spec (memory lib-ttrpg). He is head
+  congested: work quietly, plain words, show results at the end.
 
 ## (earlier, ~5 PM) tube #2 n-c8710ff2 cellmap v3 SLOPE TOOL + PACK WINDOW: BUILT
 - LIB_BIT branch `cellmap-v3-slope-tool` (d8dc25c), built ON `heights-floor-ceiling` (not merged; the
