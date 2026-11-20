@@ -1,5 +1,37 @@
 # Priority Tube: where we are
 
+## DONE 20 Nov (night): PHOTON BALL STEP 2, COMFYUI DANGEROUS MODE, NOT MERGED
+- LIB_COMFY branch `comfy-photon-ball` (from comfy-games-app; folder LEFT on it): kits/photon.py + nodes Walls and
+  Break Rules (Vibecode3D/Photon Ball), Photon Ball in Remix Source, genre Photon, workflows/photon_dangerous(.json, _api).
+  LIB_GAMES `photon-ball` 1b8136d: hooks kMatchRules / kMatchOffMS / kMatchOnMS, PB.WallsText (folder LEFT on photon-ball).
+- Tests: tests/photon_play_test.py 0 failed (incl. real engine); t65_photon_dangerous 17/17; t63 87/87 both engines; t64 45/45.
+- YOUR STEP: `tools/install.sh` in LIB_COMFY, restart Comfy Desktop (not done: you were away). Try: Desktop\Tests 20 Nov\03 Photon
+  Dangerous (seeds 11-13 under genre Photon in Comfy Games). What playing showed: LIB_COMFY/NOTES.md, last section.
+
+## DONE 20 Nov (night): COMFY GAMES APP BUILT, NOT MERGED (bubble n-7e9762f3)
+- LIB_COMFY branch `comfy-games-app` (from comfy-remix; folder LEFT on it), LIB_PUBLIC branch `comfy-games-app`
+  (vibeinstall.py comfygames; LIB_PUBLIC folder back on main), LIB_UNICODE branch `comfy-games-app` (✦ ✧ rating stars).
+- Try: Desktop\Tests 20 Nov\02 Comfy Games - open the app in OXT-Beyond (ComfyGames.livecode). Pick a genre, pick a
+  game, PLAY; click stars; Best rated / Newest / A-Z; Make a new one (no ComfyUI); Open in ComfyUI (needs it running).
+  The .exe is still the 18 Nov build: build recipe in LIB_COMFY/Player/README.md.
+- Tests: OXT-BEYOND/tests/t64_comfy_games_app.txt 45/45 on both engines; t53 updated 21/21. What's next:
+  LIB_COMFY/PLAN_STANDALONE.md (end).
+
+## DONE 20 Nov (night): PHOTON BALL STEP 1 BUILT, NOT MERGED (step 2 ComfyUI not started)
+- LIB_GAMES branch `photon-ball` (from try-19nov-night; folder LEFT on it so the Game Player / Game Browser list it).
+  `Vibecode3D_Games/Vibecode3D_Play_PhotonBall.livecodescript` (PB.), data `Vibecode3D_Games/PhotonBall/`
+  (walls.cellmap, banter.txt, README.md = how to play + the wall layout format step 2 must write),
+  `Animations/PhotonBall.anims.txt`. Vector Toss untouched.
+- Play: open Photon Ball from the Game Player / Game Browser (LIB_GAMES on photon-ball), or LIB_TEST
+  INSTALL_ALL_GAMES then the game menu. Mouse aims + button throws, WASD run, SPACE jump, SPACE/W/UP climbs out of a hole.
+- Matches (10 catches each, floor mended): 1 first touch breaks a square; 2 every bounce breaks; 3 + cracks the 8
+  round it; 4+ punches holes. Broken squares fall 2.5 s after you step off (match 1) / 1.5 s after you step on (2+);
+  landing on one from a jump smashes through (no hang). Lloyd grab/hang/recover; stamina: grip 1.5-5 s, climb 40-100% speed.
+- Tests: OXT-BEYOND/tests/t63_photon_ball.txt 75/75 on both engines; real engine via engine_play.sh (auto play to
+  match 4, a hang and SPACE climb-out; 7-17 fps on a busy PC, Vector Toss 7-10 the same minutes).
+- LIB_PUBLIC branch `photon-ball`: BETA_BRANCHES + catalog row 1540 (beta). LIB_PUBLIC folder left on main.
+- Shortcuts: Desktop "Tests 20 Nov" (01 Photon Ball ...). Next: the owner plays it; then step 2 (LIB_COMFY comfy-photon-ball).
+
 ## START HERE AFTER THE 19 Nov NIGHT /clear: BUILD PHOTON BALL (owner said go)
 - Plan: LIB_DEV/PriorityTube/PHOTON_BALL_PLAN.md (step 1 hand-placed game + play test, step 2 ComfyUI random mode).
 - Owner's decisions 19 Nov late: Vector Toss frozen as is; DeadDays work stays; Pythonizing postponed (loose ends first).
