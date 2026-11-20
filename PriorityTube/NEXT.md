@@ -1,5 +1,15 @@
 # Priority Tube: where we are
 
+## START HERE NEXT SESSION (19 Nov late evening): tube #3 n-b3296cad STEP 9 WORLD CODE: BUILT, NOT MERGED
+- LIB_TTRPG branch `ttrpg-world-code` (9a15f7c). Spec `ref/ttrpg_world.py`, port
+  `livecode/lib_ttrpg_world.livecodescript`, same answers on `ref/world_vectors.json`; map of every
+  old handler in `livecode/WORLD_PORT.md`. Words from LIB_LISTS by name (they were already there).
+- Owner tries it: `cd ~/projects/LIB_TTRPG; python3 ref/ttrpg_world.py new; python3 ref/ttrpg_world.py play`.
+  Then merge on his word. Next for it (ask him): a World panel in the Studio window.
+- Trap: `python3 ref/ttrpg_ref.py test` LOADS gemma-2-2b (live test). Unloaded again 19 Nov.
+- NEXT = tube #4 n-df980b7d Vector Toss Stamina rules (read PRIORITY_ORDER.txt first).
+
+
 ## START HERE NEXT SESSION (19 Nov evening): tube #2 SLOPE TAB + PACK WINDOW: DONE AND MERGED
 - Owner: "Very cool tool!, Merge that!". LIB_BIT main 7b838d7 (brought heights-floor-ceiling with it),
   LIB_EDITOR main 9cac9e0 (its heights-floor-ceiling: E13 test at the green band). Tests green on main.
