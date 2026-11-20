@@ -224,7 +224,9 @@ what: Registry of the Unicode characters we use and plan to use, one meaning eac
 done: Its own LIB, README + REGISTRY.tsv first pass (18 Nov): 30 characters, from a scan of our LIBs
 done: Clashes settled (18 Nov): gear = Tools menu, pencil = Editor; iGame3D XT editor gets new ones for level and path tool
 done: lib_unicode.livecodescript (19 Nov): Unicode.Char / Meaning / Procedure / Build / Check, and the first procedure Proc.House (box + gable roof + door, by math); headless tests pass, plain and through Engine 1
-next: A picker palette: drag a character into a scene, its procedure builds the object (then Proc.Car, Proc.Cloud by math)
+done: Picker palette UnicodePicker.oxtstack (19 Nov evening): drag a character into a Vibecode3D game window, it is built on the ground there; Take back; Proc.Car, Proc.Truck, Proc.Cloud, Proc.StormCloud by math (branch unicode-picker)
+block: Owner tries the drag with the real mouse; branches unicode-library + unicode-picker wait for his merge
+next: Person (웃) by math or from LIB_MOCAP stick figures; drops into xt3d windows (raylib camera)
 link: LIB_TOOLBAR, LIB_ig3d, LIB_GUI, LIB_RAYGUI
 
 == LIB_INPUT | BLOCKS

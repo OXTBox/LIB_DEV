@@ -1,5 +1,11 @@
 # Priority Tube: where we are
 
+## START HERE NEXT SESSION (after 19 Nov night): tube #1 n-9e136064 UNICODE PICKER is DONE
+- LIB_UNICODE branch `unicode-picker` (4e6bedd, on top of unicode-library; neither merged):
+  livecode/UnicodePicker.oxtstack + unicode_picker.livecodescript, Proc.Car/Truck/Cloud/StormCloud.
+  Drop tested by script in OXT-Beyond on Simple_Test1; the real-mouse drag waits for the owner.
+- NEXT = tube #2 n-c8710ff2 cellmap v3 Slope tool (see the section below). Read PRIORITY_ORDER.txt first.
+
 ## START HERE NEXT SESSION (after the 19 Nov evening /clear)
 - HOWTO is DONE and MERGED (owner: "excellent work, lets merge this and move on"):
   LIB_HOWTO main 356e705, xt3D bridge master e37bfbc, LIB_DEV main 63ab374 (Player.Halt),
