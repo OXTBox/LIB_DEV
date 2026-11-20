@@ -1,6 +1,10 @@
 # Priority Tube: where we are
 
-## START HERE NEXT SESSION (19 Nov, ~4:30 PM): tube #1 n-7c48878c 웃 PERSON is DONE (the person half)
+## START HERE NEXT SESSION (19 Nov, ~5 PM): tube #1 n-7c48878c 웃 PERSON + xt3d DROP: DONE AND MERGED
+- Owner tried the xt3d drop live: "works great merge it!". LIB_UNICODE main 85ee5cb, no branches left.
+- NEXT = tube #2 n-c8710ff2 cellmap v3 Slope tool (read PRIORITY_ORDER.txt first).
+
+## (earlier, ~4:30 PM) the person half
 - LIB_UNICODE branch `unicode-person` (c846437, on top of unicode-picker; none merged):
   Proc.Person + Person.Pose/Mesh/Frames/Stride/FromClip (bones = LIB_MOCAP's 25 joints; stand/walk/
   run/wave by math, or any LIB_MOCAP stick clip); picker "웃 moves" button, dropped people animate
