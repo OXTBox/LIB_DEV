@@ -1,5 +1,22 @@
 # Priority Tube: where we are
 
+## START HERE NEXT SESSION (19 Nov, ~5 PM): tube #2 n-c8710ff2 cellmap v3 SLOPE TOOL + PACK WINDOW: BUILT
+- LIB_BIT branch `cellmap-v3-slope-tool` (d8dc25c), built ON `heights-floor-ceiling` (not merged; the
+  Slope tool sits in the same Heights tab). Neither is merged. LIB_BIT is checked out on it.
+  `LIB_BIT/editor/BitEditor.livecode` is rebuilt: open it in OXT-Beyond to try.
+- Slope tool: Heights tab, button "Slope" beside Floor / Ceiling. Grey swatch = rise; click near a cell's
+  edge / corner lifts it; drag = same part on every cell; grey 0 flattens; right-click picks a cell's
+  rises up and stamps them. Arrows uphill (red = steep), corner dots, hover words. Tidy: all four lifted
+  -> floor raised.
+- Pack window: File > Open Pack... (try maps/two_rooms/two_rooms.cellpack) / New Pack... / Pack Window /
+  Check Map (E12). Maps list (double-click paints), Up/Down/Place/Add/Remove/Start, doors (Door to...),
+  checker lines (click frames the cell in pink).
+- Tests (run in a COPY, they rebuild the stack): tests/lc_slope_tool_test.txt, lc_pack_panel_test.txt,
+  21 checks each, both headless engines; lc_heights_from / lc_layout2 still pass.
+- Not built: map below drawn dimly ("line rooms up"), slopes in LevelBoxes / Pick, door far cell by click.
+  3D-preview slope painting uses the edge/corner last chosen in the 2D map.
+- NEXT: owner tries it in a window (no screen grabs; look_at_card only). Then tube #3 (read PRIORITY_ORDER.txt).
+
 ## START HERE NEXT SESSION (19 Nov, ~5 PM): tube #1 n-7c48878c 웃 PERSON + xt3d DROP: DONE AND MERGED
 - Owner tried the xt3d drop live: "works great merge it!". LIB_UNICODE main 85ee5cb, no branches left.
 - NEXT = tube #2 n-c8710ff2 cellmap v3 Slope tool (read PRIORITY_ORDER.txt first).
