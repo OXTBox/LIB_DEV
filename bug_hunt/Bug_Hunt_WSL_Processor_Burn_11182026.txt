@@ -1,3 +1,0 @@
-When you're back, open it in Windows Terminal if you can, and tell me and I'll check the CPU again. If it's still high, wsl --update followed by wsl --shutdown is the next step.
-
-NOTE memory still sitting at 50%
