@@ -164,7 +164,8 @@ end Player.ViewRect
 -------------------------------------------------------------------- the loop
 
 on Player.Tick
-   local tErr, tWas, tWait
+   local tErr, tWas, tWait, tTickStart
+   put the milliseconds into tTickStart
    put empty into sTickMsg
    if sRunning is not true then exit Player.Tick
    put kTickMS into tWait
@@ -194,6 +195,9 @@ on Player.Tick
       end try
       if tWas is not empty and there is a stack tWas then set the defaultStack to tWas
       add 1 to sFrames
+      -- the next frame is due one step after this one STARTED: the time spent stepping and drawing
+      -- comes off the wait (it used to come on top, so a frame of 15 ms gave 21 fps, not 30)
+      put max(1, tWait - (the milliseconds - tTickStart)) into tWait
    end if
    if sRunning is true then
       send "Player.Tick" to me in tWait milliseconds
