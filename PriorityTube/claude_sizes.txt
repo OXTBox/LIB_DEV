@@ -48,3 +48,6 @@ n-9e136064	90	fun	A palette stack of the registry's entity characters; drop one 
 n-cde3c9de	120	fun	The tutorial stack from PLAN.md: reads topics/*/step_n files, dark mode, colours the code, runs the step in a viewport; 92 steps are ready
 n-9e665fa2	30	utility	save the strip HOWTO as HOWTO.oxtstack with the owner watching; the script is done and merged
 n-7c48878c	60	fun	Person part done 19 Nov (LIB_UNICODE branch unicode-person); left: drops into xt3d windows (raylib window rect + camera pick ray), tried live with you
+n-d241ef1c	20	utility	DotMazeLean swaps its inline wall builder for Lean.Walls (same lines, checked by its fps and a snapshot)
+n-15396035	15	utility	A style switch (water=off) in lib_lean and a test; one line in the BitEditor and E13
+n-7ce789eb	35	utility	Six cards, about five minutes each: read meta style lean, call Lean.MapSegments, run each headless test

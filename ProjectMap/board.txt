@@ -80,6 +80,7 @@ done: 16 Nov notes: GridSprint crash box + traffic, InterceptorRun homing + roto
 block: Engine contract (cellmap v3 follow-ups A-92..A-95) before games move to xRay / Box2DXT
 done: 9-Ball: Scott Rossi's nine ball (Jim Hurley's physics) rewritten for Vibecode3D and xt3d, credit both: 19 Nov night on LIB_GAMES branch nine-ball (215952d), not merged, waits for your try
 done: Thrmnlra redesign from your 13 Nov feedback (LAUNCH trap, pads + recall by name, bombers, STAND DOWN, launch codes on the Big Board, Strike left to right, their answer right to left, Tab, spoiled LAUNCH): 19 Nov night on LIB_GAMES branch thrmnlra-redesign (0b5edae), not merged, waits for your try
+next: DotMazeLean draws its walls with the shared Lean.Walls instead of its own copy
 link: Vibecode3D, xt3d, PROMPT_GLAZE, LIB_SPARK, LIB_COMFY
 
 == PROMPT_GLAZE | GAMES | core
@@ -133,7 +134,10 @@ review: owner: play E13 -> M twice -> two_rooms, and Block City
 next: cellmap v3: BitEditor Slope tool, pack panel, E12 checker (A-92 3-5)
 done: Heights: green/blue bands + From Floor / From Ceiling cell by cell + map top + Extrude Glyphs button (18 Nov, branch heights-floor-ceiling)
 block: BUGGED (parked, owner 18 Nov): BitEditor erases the glyphs (ISSUES 0008); needs visual clarification later. heights-floor-ceiling not merged
+done: Lean style: cube level -> clean outline (lib_lean, BitEditor Scene > Lean Style, E13 L key, roof seams cut), merged 22 Nov
+next: Lean style: an option to leave the water's diagonal marks out
 link: LIB_MAP, LIB_EDITOR, Vibecode3D, xt3d
+
 
 == LIB_MAP | BLOCKS
 what: Levels from 1-bit grids for both engines
@@ -256,6 +260,7 @@ what: Editing tools as one-method example cards; iGame3D XT lives here
 has: E01 Blocks, E02 RaiseLower, E13 Walk The Map (30 fps)
 has: E01-E15 all fifteen cards, each with a headless test
 done: E03-E12, E14, E15 on the cellmap format
+next: Lean style in the other example cards (E05, E06, E08, E09, E11, E12): a map saved lean draws lean, as E13 does
 link: LIB_BIT, LIB_ig3d
 
 == LIB_ig3d | TOOLS | core
