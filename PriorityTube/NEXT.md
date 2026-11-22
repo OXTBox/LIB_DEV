@@ -1,6 +1,39 @@
 # Priority Tube: where we are
 
-## START HERE (owner, 22 Nov, before his /clear): THE CONSOLE
+## START HERE AFTER THE 22 Nov REBOOT: THE CONSOLE IS DONE AND MERGED
+- Owner tried both consoles 22 Nov ("only took 21 years to get that! Great work.") and said "commit, merge".
+  Merged to main: LIB_ig3d dc85837, LIB_EDITOR 1cb0ddb, xt3D bridge master 64a98e8. Branch `console` can go.
+- Where it is: LIB_ig3d/livecode/lib_console.livecodescript (the thinking, one place; words from lib_suggest);
+  iGame3D XT editor: Window > Console (lower left, Ig.Console*); xt3d Games bench: always under the view
+  (xbConsoleSetup, a game waits while the line has the keyboard, click the view to give keys back,
+  Tab anywhere in the bench = the console's Tab, engine calls with no game say "pick a game").
+- Tests: OXT-BEYOND/tests/t66_console.txt (33 checks), xt3D bridge tests/console_bench_headless.txt (16),
+  both engines, green on main.
+- Desktop "Tests 22 Nov": 01 iGame3D XT (Game_Player.exe Ig3dEditor), 02 Games bench (.url: PowerShell
+  kept timing out from WSL, so not a .lnk).
+- OPEN, owner's note: games that use Tab need another key: LIB_SYSTEM/ISSUES/0015 (Amazing_Couple,
+  PromptAndGlazeMaze, VectorToss, PhotonBall, Thrmnlra). Ask him which key; cheap guard idea in the ticket.
+- Next ideas from CONSOLE_NOTE.md: the console in the Game Player and xRay windows; comments to Claude
+  through it. Not started. Otherwise: top of LIB_LLMIN/LIB_DEV/PRIORITY_ORDER.txt.
+- Not mine, left alone: LIB_SYSTEM/LIB_ALPHA.md has an uncommitted change (the owner's?).
+
+## DONE 22 Nov: THE CONSOLE BUILT, NOT MERGED (LIB_EDITOR branch `console`, db8d5e0)
+- Window > Console in iGame3D XT: lower left, answers above, one line below. Typing fills in the rest of a
+  contract name (rest selected: type on or Backspace); Tab = a popup of what fits ("Entity." all Entity calls,
+  "Entity.Po" the Position calls; one fit goes in at once; no cycling); a pick puts the call in with its
+  parameters selected and its meaning in the answers; Return runs (gives-a-value calls show it, even typed as
+  commands); Up/Down history; help, clear. Camera keys and Ctrl+A/C/V/X/Z belong to the line while it has focus.
+- Test: OXT-BEYOND/tests/t66_console.txt 64/64 on both engines; t37/t20/t51 still green (t34/t35 = ISSUES 0011, old).
+- Owner tries it in a real window, then "merge". Note: there is no Entity.Position in the contract.
+- Owner tried it 22 Nov: "only took 21 years to get that! Great work." Then: put it in the xt3d bench as a
+  CONSTANT console under the viewport. Done the same evening: the thinking moved to LIB_ig3d
+  `livecode/lib_console.livecodescript` (branch `console`, 4c0f812), the editor uses it (LIB_EDITOR 0d23985,
+  t66 66/66), the Games bench has it always under the view (xt3D bridge branch `console`, 69b8873;
+  tests/console_bench_headless.txt 13/13 both engines). In the bench a game waits while the line has the
+  keyboard (games read the keysDown themselves); a click on the view gives the keys back.
+- Three folders sit on `console` (LIB_ig3d, LIB_EDITOR, xt3D bridge): merge all three on his word.
+
+## (done, see above) START HERE (owner, 22 Nov, before his /clear): THE CONSOLE
 - Build the console in the iGame3D XT editor first: read `LIB_EDITOR/iGame3D_XT/CONSOLE_NOTE.md` (his words, what to
   build, what already exists: LIB_ig3d lib_suggest + Data/contract_words.txt). Tube bubble n-6976b289.
 - Lower left of the window, like Blender's Python console. Try BOTH: autofill while typing (Entity.Po -> Entity.Position)
