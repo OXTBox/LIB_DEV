@@ -51,3 +51,4 @@ n-7c48878c	60	fun	Person part done 19 Nov (LIB_UNICODE branch unicode-person); l
 n-d241ef1c	20	utility	DotMazeLean swaps its inline wall builder for Lean.Walls (same lines, checked by its fps and a snapshot)
 n-15396035	15	utility	A style switch (water=off) in lib_lean and a test; one line in the BitEditor and E13
 n-7ce789eb	35	utility	Six cards, about five minutes each: read meta style lean, call Lean.MapSegments, run each headless test
+n-6976b289	90	fun	The console box, autofill and the Tab menu in the iGame3D XT editor, on lib_suggest that exists, plus a test (owner wants it first after his /clear, 22 Nov)

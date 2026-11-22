@@ -1,5 +1,12 @@
 # Priority Tube: where we are
 
+## START HERE (owner, 22 Nov, before his /clear): THE CONSOLE
+- Build the console in the iGame3D XT editor first: read `LIB_EDITOR/iGame3D_XT/CONSOLE_NOTE.md` (his words, what to
+  build, what already exists: LIB_ig3d lib_suggest + Data/contract_words.txt). Tube bubble n-6976b289.
+- Lower left of the window, like Blender's Python console. Try BOTH: autofill while typing (Entity.Po -> Entity.Position)
+  and Entity. + Tab pops a menu of the group's words. Not Tab cycling one word at a time.
+- Lean style is merged (22 Nov); its three follow-ups are small bubbles in the tube.
+
 ## DONE 20 Nov (night): PHOTON BALL STEP 2, COMFYUI DANGEROUS MODE, NOT MERGED
 - LIB_COMFY branch `comfy-photon-ball` (from comfy-games-app; folder LEFT on it): kits/photon.py + nodes Walls and
   Break Rules (Vibecode3D/Photon Ball), Photon Ball in Remix Source, genre Photon, workflows/photon_dangerous(.json, _api).
