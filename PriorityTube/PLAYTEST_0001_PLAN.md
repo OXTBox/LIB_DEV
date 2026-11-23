@@ -93,6 +93,16 @@ p1-35 Bit Raider & Opus (parked), p1-36 Matrix Lock, p1-37 Genetic Anomaly (last
 `game_scan.py` is a plain script on purpose: counting and listing is cheaper and surer as code than
 as a model reading 69 files.
 
+## 4b. Added 22 Nov night: p1-38, it really runs DOOM (owner: "Great Plan!")
+- A LiveCode external in its own folder LIB_DOOM, built like the xt3d bridge (small DLL + wrapper), on
+  **doomgeneric** (step 1: check its licence is GPL). `Doom.Start`, `Doom.Tick` once a frame,
+  `Doom.Frame` = the 320x200 picture for a LiveCode image, `Doom.Key`.
+- DOOM's loop never returns: one step per frame. Its quit and fatal error must return, not close LiveCode.
+- Data: Freedoom (free), never id's own files. Sound last, through xt3d's sound.
+- The 1997 source in LIB_LLMIN/DOOM-main is reference only: its licence is non-profit use, so it never
+  goes into our public folders.
+- Separate from p1-33 (our own corridor shooter on cellmaps). Opus builds; about a day to picture + keys.
+
 ## 5. Things I noted, not built
 
 - **The juice:** two games hooked the tester at once. Crater Crawler ("fun IMMEDIATELY") and Genetic
