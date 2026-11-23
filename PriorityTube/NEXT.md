@@ -1,5 +1,16 @@
 # Priority Tube: where we are
 
+## START HERE (23 Nov, after p1-08): BAT DUEL CRASH ON TWO HELD ARROWS = TOP PRIORITY (owner)
+
+- Owner: "Down and Left crashed it in about a tenth of a second" (Bat Duel, Game Player, XT). Bubbles p1-04
+  (Bat Duel quits on arrows) + p1-05 (held keys pile up, ISSUES 0017) meet here.
+- Read first: LIB_SYSTEM/ISSUES/0020 (start steps added 23 Nov) and 0017 (Fable's guard design: repeats
+  swallowed at the door, tick wait 4 ms, navigationArrows off). 0.1 s is too fast for a pile-up: find the
+  error text first (LIB_LLMIN/LIB_DEV/GAME_PLAYER_ERRORS.txt), then Game.OnUpdate with both keys held.
+- Game: LIB_GAMES/Vibecode3D_Games/Vibecode3D_Play_BatDuel.livecodescript (keysDown once a frame, no key handlers).
+- Fix on a branch, test both engines, held-key test in OXT-BEYOND/tests; then the other games game_scan lists.
+- p1-08 (play log) still waits for his look on branches play-log (LIB_TEST, LIB_BAT).
+
 ## START HERE (23 Nov, morning): p1-08 PLAY LOG BUILT ON BRANCHES `play-log`, waits for his look; NEXT = n-15396035
 
 - The record was already there (LIB_LOADING_SCREEN writes start / level / end / quit lines to
