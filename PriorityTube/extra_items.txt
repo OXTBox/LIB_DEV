@@ -6,7 +6,7 @@ p1-02	open	LIB_PUBLIC	Clean machine check: the installed copy starts every game 
 p1-03	open	LIB_PUBLIC	Library: Show Folder and Verify Folder buttons look switched off (white on grey)	They work, but nobody can read them. Colour them like the other buttons (template colours before create)
 p1-04	done	LIB_GAMES	Bat Duel quits on the arrow keys	Find why the arrow keys end the game, fix, test on both engines
 p1-05	done	Vibecode3D	Held keys pile up and crash the XT engine (two arrows on the Genetic Anomaly star map)	Key presses queue up as pending messages. One guard in the engine or player (read the keys once a frame, drop repeats still waiting), then every game the scan shows with the same habit. ISSUES 0017 Design of the fix is written in the ticket (22 Nov)
-p1-06	open	LIB_GAMES	Crater Crawler: wheels spin the right way	Flip the wheel spin
+p1-06	done	LIB_GAMES	Crater Crawler: wheels spin the right way	Flip the wheel spin
 p1-07	done	LIB_PUBLIC	Library: numbers left of the game names (game 21, not 'Thrmnlra')	So a tester can say where they are in the list
 p1-08	done	LIB_PUBLIC	Play log: minutes per game, levels reached, 'x games in y minutes'; a tester pack that gathers log and notes	Library and Game Player write start, stop and level changes; play_report.py prints the session; a .bat in LIB_BAT collects log + game notes to bring back on the card
 p1-09	open	Vibecode3D	Sound and music back in the Game Player (ISSUES 0013)	No sound for weeks: Audio.Init only makes players in a 'Viewport' group. Claude's addition, from your loading note

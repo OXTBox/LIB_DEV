@@ -1,10 +1,10 @@
 # Priority Tube: where we are
 
-## START HERE (23 Nov, night): p1-06 CRATER CRAWLER WHEELS on LIB_GAMES branch `crater-wheels` (waits for his look)
+## START HERE (23 Nov, night): p1-06 CRATER CRAWLER WHEELS MERGED (owner: "Wheels look great"), LIB_GAMES main bf466f4
 
 - One sign: Entity.SetRotation sWheel[i], 0, 0, sDist / 9 (was -sDist / 9), line 436. LIB_GAMES checked out on the
   branch so the Game Browser plays it. t22 + t70 pass both engines; t26 stops at Camera.Reset (ISSUES 0011).
-- His look, then "merge" -> set p1-06 done.
+- p1-06 set done.
 
 ## START HERE (23 Nov, night): p1-05 GENETIC ANOMALY ARROWS MERGED (owner: "Maximum Key mashing is crash free")
 
