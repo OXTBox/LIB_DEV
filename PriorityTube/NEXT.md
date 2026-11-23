@@ -1,5 +1,19 @@
 # Priority Tube: where we are
 
+## START HERE (23 Nov, night): p1-28 MEADOW MARSH FIRST PLAYABLE on LIB_GAMES branch `meadow-marsh` (waits for his look)
+
+- Owner's words: copy Dead Days into open country (hills, villages; dungeons/castles later), uDead's orders
+  (click, R rush, F follow, stop moved from Space to H), mana + LIB_EMITTERS spells, soldiers -> casters /
+  bowmen with their own emitters, slightly raised camera, food + jewels refill mana. Gameplay first.
+- Built: LIB_GAMES edb8adc `Vibecode3D_Play_MeadowMarsh.livecodescript` (prefix MM., Engine 1) +
+  `MeadowMarsh/README.md` (controls, spells-in-3D trick, 14 tutorial sections, MMO ladder).
+  Two places (Meadow: village + 3 goblin camps; Marsh: water slows, ruin, bog witch), prisoners join you,
+  right click = everyone. Dead Days untouched.
+- Test OXT-BEYOND/tests/t74_meadow_marsh.txt 16/16 (Beyond). 47-50 ms a frame headless (Dead Days 41);
+  own lean trees (the prop maker's trees were 3558 lines).
+- NOT seen on a screen (he was in the Priority Tube). His first game: camera height, spell planes, hills.
+- The LIB_GAMES folder is left on `meadow-marsh` (it holds main's crater-wheels merge too).
+
 ## START HERE (23 Nov, night): p1-22 LIGHT TRAIL ARENA FPS on LIB_GAMES branch `light-trail-fps` (waits for his look)
 
 - Cause: every straight trail (and every 4-cell piece of the open run) was its own object; the engine pays
