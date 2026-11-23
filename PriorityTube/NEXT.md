@@ -1,5 +1,22 @@
 # Priority Tube: where we are
 
+## START HERE (23 Nov, evening): p1-12 LEVEL REVEAL BUILT, NOT MERGED; waits for his look; NEXT = p1-13
+
+- Branches `level-reveal` (folders LEFT on them): Vibecode3D 7385ef3 (Engine 1: `Scene.SetReveal pX,pY,pZ,pRadius,pKeep,pStyle`,
+  `Scene.Reveal()`, `Scene.RevealReach()`, `Reveal.Share`; off by default; Game.Exit turns it off), xt3D bridge 0c06f44
+  (xRay `Vibe.Frame`: object by object, faded by its share; engine regenerated), LIB_LOADING_SCREEN 63d5fdf (reveal phases,
+  styles grow / dash / fade / none, `Loading.Player` guess: `<Prefix>.Player()`, else a key beginning player/hero/ship, else
+  the middle of the view). README.md has the how.
+- Reveal timing: veil black 0.3 s, lifts 0.2 s, player alone 0.25 s, the radius grows ~1 s (quick first, slow at the end).
+- Test: OXT-BEYOND/tests/t69_level_reveal.txt NEW, 26 checks, both engines green; t68 t54 t67 still green (308 passes
+  together; t54's mode-0 md5s unchanged = the picture with the reveal off is as before).
+- His look (plan: "a look at three games in a real window"): Desktop\Tests 23 Nov\01 Canyon (from the ship),
+  02 Vector Toss (from the middle: no player key yet), 03 Deep Dive (use Levels menu for a second reveal).
+  No game calls Loading.Go yet (p1-13), so the reveal shows at the first level, Levels menu and Reset.
+- Not done: the VIBECODE3D_GUI_v1 stack embeds its own engine copy (not patched; the Game Player uses the generated one).
+  p1-13 adds `Loading.Player` / a style per game where the guess is wrong (VectorToss VT.Ball, DeepDive, ShaftDescent).
+- Game note read (23 Nov 4:50): ProbeVsCone "javelin lands quietly at the cone, unreachable": belongs with p1-23.
+
 ## START HERE (23 Nov, later): p1-01 GAME SCAN DONE (branch game-scan in LIB_TEST); NEXT = p1-12
 
 - `LIB_TEST/game_scan.py` (MIT, reads only): `python3 -I game_scan.py` writes `game_scan.tsv`,
