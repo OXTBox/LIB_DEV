@@ -4,7 +4,9 @@
 - First outside tester (21 Nov). Their notes became 37 bubbles `p1-01`..`p1-37` (`extra_items.txt`, a new third
   source read by tools/tube_items.py; set a line to `done` when finished). Plan: `PLAYTEST_0001_PLAN.md`
   (order in four waves, LIB_LOADING_SCREEN sketch, helper tools, which model does what).
-- Start with p1-01 (game_scan.py), then wave 1. p1-10 (loading screen page) needs the owner's yes before p1-11.
+- Order re-made 22 Nov night on his word (PRIORITY_ORDER.txt): p1-10 his yes, p1-01, p1-11, p1-12, p1-13, p1-08, utilities, fixes, fun.
+  Fable work done: ~/projects/LIB_LOADING_SCREEN/PLAN.md (waits for his yes + 3 answers; folder not under git yet) and the
+  held-keys fix design at the end of ISSUES 0017. Opus can take everything from p1-01 down.
 - Tickets opened, not looked into: ISSUES 0017-0020. Never write the tester's name in a public folder.
 - The notes file is in LIB_LLMOUT/Read/LIB_PUBLIC. t40 not rerun after the tube_items.py change.
 

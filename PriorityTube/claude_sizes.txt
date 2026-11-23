@@ -64,7 +64,7 @@ p1-06	10	fix	One sign
 p1-07	15	utility	One column in the list, same order everywhere
 p1-08	60	utility	Log lines, one report script, one bat; saves under Documents/My Games
 p1-09	60	fix	Engine fix known from the ticket, plus a test with a real sound
-p1-10	30	plan	Fable writes it; you say yes or change
+p1-10	5	note	Written 22 Nov; five minutes of your reading
 p1-11	85	utility	New library and a test; after p1-10
 p1-12	100	fun	Shared reveal in the Game Player; after p1-11
 p1-13	120	utility	Many small same-shaped edits: Sonnet helpers, one batch of games each; after p1-12
