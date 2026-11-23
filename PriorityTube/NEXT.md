@@ -1,16 +1,32 @@
 # Priority Tube: where we are
 
-## START HERE (22 Nov, late): LOADING SCREEN BUILT (p1-10 yes, p1-11 done), NOT MERGED
-- Owner said yes to LIB_LOADING_SCREEN/PLAN.md with all three defaults (1.2 s, a key skips once built;
-  Escape pauses; Documents/My Games/Vibecode3D).
-- Built: LIB_LOADING_SCREEN (own repo, main 2fc8dbf: lib_loading + README), LIB_DEV branch `loading-screen`
-  2af8935 (Game Player), bridge branch `loading-screen` 4506d1a (xt3d bench). Test t68: 31 pass on each
-  headless engine. t48/t67 skip the screen now (Loading.Stop after Player.Start); t33-t36 Camera.Reset throws
-  and t48 "profiles listed" were failing before this.
-- HIS STEP: play any game in the Game Player: black + green text at the start, Reset and Levels go through
-  the screen. Games do not call Loading.Go yet (that is p1-13), so a level the game changes itself still snaps.
-- Not on V: (install sim): the installed Game Player will not find the library until vibeinstall copies it.
-- Next for Opus: p1-01 game scan, then p1-12 (Scene.SetReveal).
+## START HERE (23 Nov): LOADING SCREEN MERGED; NEXT = p1-01 GAME SCAN
+
+**Done and merged (owner: "merge", 23 Nov):** the loading screen, p1-10 + p1-11.
+- LIB_LOADING_SCREEN: own repo, main. `livecode/lib_loading.livecodescript`, README.md (how a game uses it),
+  PLAN.md (his yes + answers). LIB_DEV main 2af8935 (Game Player), bridge master 4506d1a (xt3d bench).
+- Test: `OXT-BEYOND/tests/t68_loading_screen.txt`, 31 pass on each headless engine.
+- His first look: the dimmed last picture is too quick to see, the green text "nearly blink of an eye":
+  **fine for now; don't slow things down for non-gameplay gimmicks.** Smooth it out later.
+- Traps learned: after the screen the host calls `Vibe.Go` (fresh clock), or the engine runs ~8 catch-up steps;
+  tests that tick right after `Player.Start` call `Loading.Stop` first (t48, t67 do). Old failures, not ours:
+  t33-t36 Camera.Reset throws, t48 "profiles listed".
+- Not on V: (install sim) yet: the installed Game Player won't find the library until vibeinstall copies it.
+- Uncommitted in LIB_DEV (the owner's, leave alone): PriorityTube/items.txt, ProjectMap/map_data.txt,
+  livecode/game_launch.livecodescript.
+
+**Next: p1-01 game scan** (about 30 min, utility; plan section 3 of PLAYTEST_0001_PLAN.md).
+- A plain Python tool `LIB_TEST/game_scan.py` (counting is surer as code than as a model reading files).
+  It changes no game.
+- Reads every game card script: `LIB_GAMES/Vibecode3D_Games/Vibecode3D_Play_*.livecodescript` (56 today),
+  plus LIB_GAD/GeneticAnomaly and the other game folders the plan's "69" counted (find them; say the count).
+- One table row a game: prefix (`on X.StartLevel` / handler names), levels (count, how found), how keys are
+  read (keyDown/rawKeyDown messages or `the keysDown`), uses Tab / arrows, libraries loaded (`start using`),
+  **and for p1-13: each line that changes level by calling its own `<Prefix>.StartLevel`, and whether code
+  after it expects the new level at once** (41 games have a StartLevel today).
+- Out: a TSV + a short markdown table; it feeds p1-02, p1-05 and p1-13. Then p1-12 (Scene.SetReveal).
+- Python: MIT licence; run with `python3 -I`; add to FOR_REVIEW via `LIB_DEV/tools/for_review.py add`;
+  set p1-01 `done` in extra_items.txt when finished.
 
 ## START HERE (22 Nov night): PLAY TEST 0001 IS PLANNED, NOTHING BUILT
 - First outside tester (21 Nov). Their notes became 37 bubbles `p1-01`..`p1-37` (`extra_items.txt`, a new third
