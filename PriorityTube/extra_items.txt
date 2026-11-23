@@ -13,7 +13,7 @@ p1-09	open	Vibecode3D	Sound and music back in the Game Player (ISSUES 0013)	No s
 p1-10	done	LIB_LOADING_SCREEN	LIB_LOADING_SCREEN plan is written: read it, answer its three questions, say yes	The page: ~/projects/LIB_LOADING_SCREEN/PLAN.md (what the player sees, the one call a game needs, what it always saves, steps). Yours, not Claude's: building (p1-11) waits for your yes
 p1-11	done	LIB_SYSTEM	LIB_LOADING_SCREEN built: the default screen between levels, saving state and the play record	lib_loading: Loading.Begin / Line / End; both engines; a game needs one call
 p1-12	done	Vibecode3D	Level start: the player shows first, the rest draws itself in (dashes, fades)	No more snap. One Level.Enter the player calls for every game; razzle dazzle with the dashes of graphics and blend
-p1-13	open	LIB_GAMES	Every game with levels goes through the loading screen and the level start	Roll out from the scan table, each game's own test rerun
+p1-13	done	LIB_GAMES	Every game with levels goes through the loading screen and the level start	Roll out from the scan table, each game's own test rerun
 p1-14	open	LIB_GAMES	Tabletop Racers: empty map, you pull up, the others pull up, 3 2 1 go; and the crash on a new level	Hard start on a new level, and a crash seen there. ISSUES 0019
 p1-15	open	LIB_GAMES	Big Ball of Vectors: enemies rain down on shadow markers, never onto the hero	Safe spawn zone; fall like digital rain; a Vector Toss style shadow shows where each lands; not cluttered
 p1-16	open	LIB_GAMES	Bounce Rally: cars bump each other, a hit car spins out one way and leaves the screen	Red and purple cars overlap; bounced-on cars stay on the road. Pick the first direction, spin out all the way

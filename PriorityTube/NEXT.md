@@ -1,6 +1,9 @@
 # Priority Tube: where we are
 
-## START HERE (23 Nov, night): p1-12 MERGED; p1-13 ROLL-OUT BUILT, NOT MERGED; waits for his look; NEXT = p1-08
+## START HERE (23 Nov, night): p1-12 AND p1-13 MERGED; NEXT = p1-08 (play log)
+
+- p1-13 merged on his word ("Merge, the effects are really neat ... original film transition! Harold Lloyd would approve"):
+  LIB_GAMES 18b842d, LIB_COMFY fc58cd6, LIB_LOADING_SCREEN c5cc39d, bridge 07b914d. Old notes below about branches are history.
 
 - p1-12 merged on his word ("very nice, very computer feeling. merge!"): Vibecode3D 922ed68, bridge b0133cd, LIB_LOADING_SCREEN 24570ff.
 - p1-13 on branches `loading-rollout` (folders LEFT on them): LIB_GAMES 9bd3c8c (39 games), LIB_COMFY 6064f65 (7 kit
