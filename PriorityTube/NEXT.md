@@ -1,5 +1,21 @@
 # Priority Tube: where we are
 
+## START HERE (23 Nov, later): p1-01 GAME SCAN DONE (branch game-scan in LIB_TEST); NEXT = p1-12
+
+- `LIB_TEST/game_scan.py` (MIT, reads only): `python3 -I game_scan.py` writes `game_scan.tsv`,
+  `game_scan_level_calls.tsv` and `GAME_SCAN.md` beside it. `--no-comfy` leaves out LIB_COMFY/games.
+- **The count: 92 card scripts** = 56 LIB_GAMES + 1 LIB_GAD (Genetic Anomaly) + 35 LIB_COMFY (generated).
+  The plan's "69" was never found; the Library on V: lists 55 (catalog.tsv). Not in the catalog:
+  BankShotBounce, NineBall, uDead_CullTest.
+- 66 have their own `<Prefix>.StartLevel` (41 in LIB_GAMES, 25 Comfy); 209 calls of it; 87 of them have
+  code after them in the same handler (mostly `put tKeys into sKeysWas` or `X.ShowHUD`), the p1-13 list.
+  Spot-checked by hand: BatDuel 142/145, RockField 109, Antack's switch cases (correctly "nothing").
+- Found, not changed: Genetic Anomaly and 10 Comfy Photon/Toss games still read Tab (65289), the
+  console's key since ISSUES 0015 (the LIB_GAMES games were moved off it 22 Nov).
+- Levels: "header" = the card's comment says "5 levels"; "compare" = biggest number sLevel is compared
+  with (a guess); "?" = StartLevel but no count (Antack, uDead).
+- Next: p1-12 (Scene.SetReveal: the player first, the rest draws in), then p1-13 reads the calls list.
+
 ## START HERE (23 Nov): LOADING SCREEN MERGED; NEXT = p1-01 GAME SCAN
 
 **Done and merged (owner: "merge", 23 Nov):** the loading screen, p1-10 + p1-11.
