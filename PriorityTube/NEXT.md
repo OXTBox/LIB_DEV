@@ -1,5 +1,18 @@
 # Priority Tube: where we are
 
+## START HERE (23 Nov, night): p1-22 LIGHT TRAIL ARENA FPS on LIB_GAMES branch `light-trail-fps` (waits for his look)
+
+- Cause: every straight trail (and every 4-cell piece of the open run) was its own object; the engine pays
+  ~0.15 ms an object a frame. Now a bike's trails are drawn as chunks (kChunk = 12 runs = ONE mesh object,
+  rebuilt on a turn or a wall break) and the open run is one line made longer. Rules untouched.
+- New test OXT-BEYOND/tests/t74_lta_fps.txt (real engine, no window, seed 7, rounds 3+, T74_ROOT = a folder
+  copy): before 17.4 ms a frame / 187 objects most; after ~6 ms / 26. t25 26/26 both engines before and after
+  (t25 now loads LIB_ig3d contract_aliases, so it runs past Camera.Reset: ISSUES 0011's fix for one test).
+- LIB_GAMES' own folder is on `meadow-marsh` (another session), so the branch is a worktree in my scratchpad;
+  the branch file is copied onto V: (Light Trail Arena) for his look. "merge" -> merge light-trail-fps into main
+  (from the worktree), set p1-22 done. "no" -> put main's copy back on V:.
+- Not done: tails eating themselves / more balls (the tester's other ideas): rules changes, ask him.
+
 ## START HERE (23 Nov, night): p1-06 CRATER CRAWLER WHEELS MERGED (owner: "Wheels look great"), LIB_GAMES main bf466f4
 
 - One sign: Entity.SetRotation sWheel[i], 0, 0, sDist / 9 (was -sDist / 9), line 436. LIB_GAMES checked out on the
