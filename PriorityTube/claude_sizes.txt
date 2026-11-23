@@ -55,3 +55,40 @@ n-6976b289	90	fun	The console box, autofill and the Tab menu in the iGame3D XT e
 n-5c59e4c5	120	plan	Ask the owner what the World panel holds, then build it on lib_ttrpg_world (exists, tested) with a headless test
 n-2221d8c7	20	fix	Five games get the owner's new key instead of Tab (keysDown 65289 / tabKey), each game's test rerun; waits for his pick
 n-c58324eb	240	big	Rebuild ComfyGames.exe (Player/README.md), then the public installer: embeddable Python, node pack copy, Data folder games (PLAN_STANDALONE.md)
+p1-01	30	utility	A Python script and its table; no game changes
+p1-02	45	fix	A check in vibeinstall.py on a throw-away copy, then the install list fixed; needs p1-01's table
+p1-03	15	fix	Two buttons, the house colours, a look at the card
+p1-04	30	fix	One game, one test
+p1-05	60	fix	Engine-side guard plus a sweep; needs p1-01's table
+p1-06	10	fix	One sign
+p1-07	15	utility	One column in the list, same order everywhere
+p1-08	60	utility	Log lines, one report script, one bat; saves under Documents/My Games
+p1-09	60	fix	Engine fix known from the ticket, plus a test with a real sound
+p1-10	30	plan	Fable writes it; you say yes or change
+p1-11	85	utility	New library and a test; after p1-10
+p1-12	100	fun	Shared reveal in the Game Player; after p1-11
+p1-13	120	utility	Many small same-shaped edits: Sonnet helpers, one batch of games each; after p1-12
+p1-14	80	fix	Find the crash first, then the grid start; after p1-12
+p1-15	45	fun	Spawn rule + marker from Vector Toss
+p1-16	60	fun	Fake physics between cars, one test
+p1-17	60	fun	Reuses the enemy's crater code
+p1-18	45	fun	Camera number + one kit knob
+p1-19	40	fun	A short message and two sliders in the pause menu
+p1-20	60	fun	New level maker for the game; slopes from cellmap heights
+p1-21	50	fun	Two small changes in one game
+p1-22	45	fix	Cap + recycle, fps measured before and after
+p1-23	40	fun	A blocker and an LIB_EMITTERS ring
+p1-24	20	fun	One key, one number
+p1-25	15	fun	One slow sine on the scene
+p1-26	15	utility	Two catalogue rows
+p1-27	120	fun	Emitters wired to the entities' attacks, one at a time
+p1-28	30	plan	One page; the rename itself waits for your yes
+p1-29	180	fun	New game on Probe vs Cone's rules; after p1-23
+p1-30	20	plan	A page in PROMPT_GLAZE
+p1-31	120	fun	The torch trial decides the rest; Shaft Descent's rules upside down
+p1-32	120	fun	Flight camera + terrain we have
+p1-33	240	big	A new game kind; plan page first
+p1-34	300	big	New app; Fable plan, then Opus build
+p1-35	360	big	Parked; the idea is written down in the plan
+p1-36	240	big	A lot; last but one
+p1-37	500	big	Always last

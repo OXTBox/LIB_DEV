@@ -4,7 +4,9 @@
     python3 -I tools/tube_items.py           writes items.txt, prints a summary and the unsized bubbles
 
 Bubbles: every open comment of the boards (LIB_LLMIN/LIB_DEV/BOARD_COMMENTS.txt; the last line of an
-id wins) and every `next:` step of the Project Map's parts (ProjectMap/board.txt; not GOAL or YOU).
+id wins), every `next:` step of the Project Map's parts (ProjectMap/board.txt; not GOAL or YOU), and
+every open line of extra_items.txt (lists that are too long for the map, such as a play test's notes):
+  id TAB open|done TAB part TAB title TAB detail      (done = finished, no bubble)
 Claude's sizes: claude_sizes.txt, hand-kept, one a line:  id TAB minutes TAB kind TAB why
   kind: utility | fun | fix | plan | big | note
 items.txt, tab separated:  id  source  minutes  kind  score  title  detail  why
@@ -19,6 +21,7 @@ PROJECTS = os.path.dirname(LIB_DEV)
 COMMENTS = os.path.join(PROJECTS, "LIB_LLMIN", "LIB_DEV", "BOARD_COMMENTS.txt")
 BOARD = os.path.join(LIB_DEV, "ProjectMap", "board.txt")
 SIZES = os.path.join(HERE, "claude_sizes.txt")
+EXTRA = os.path.join(HERE, "extra_items.txt")
 OUT = os.path.join(HERE, "items.txt")
 REMOVED = os.path.join(PROJECTS, "LIB_LLMIN", "LIB_DEV", "TUBE_REMOVED.txt")  # the owner took these off the tube
 FACTOR = {"fun": 0.75, "utility": 0.85}
@@ -60,6 +63,18 @@ def next_steps():
     return out
 
 
+def extra_items():
+    out = []
+    if os.path.exists(EXTRA):
+        for l in open(EXTRA, encoding="utf-8"):
+            if l.startswith("#") or not l.strip():
+                continue
+            b = l.rstrip("\n").split("\t")
+            if len(b) >= 4 and b[1] == "open":
+                out.append([b[0], f"play test, {b[2]}", clean(b[3]), clean(b[4] if len(b) > 4 else b[3])])
+    return out
+
+
 def sizes():
     s = {}
     if os.path.exists(SIZES):
@@ -85,7 +100,7 @@ def main():
     sz = sizes()
     gone = removed()
     rows, unsized = [], []
-    for iid, source, title, detail in comments() + next_steps():
+    for iid, source, title, detail in comments() + next_steps() + extra_items():
         if iid in sz:
             minutes, kind, why = sz[iid]
             score = round(float(minutes) * FACTOR.get(kind, 1.0), 1)

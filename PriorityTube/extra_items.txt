@@ -1,0 +1,40 @@
+# Priority Tube: extra bubbles that are not Project Map next steps or board comments.
+# id TAB open|done TAB part TAB title TAB detail    (set done when finished: the bubble goes)
+# p1-NN = play test 0001 (21 Nov 2026), plan: PLAYTEST_0001_PLAN.md
+p1-01	open	LIB_TEST	Game scan: one table of every game (levels, keys, libraries)	Helper tool game_scan.py: for all 69 game scripts, its prefix, how many levels, how it reads keys (messages or keysDown), which libraries it loads. Feeds the missing-library check, the held-keys fix and the loading screen roll-out
+p1-02	open	LIB_PUBLIC	Clean machine check: the installed copy starts every game with nothing missing (Amazing Couple's missing library)	Amazing Couple gave a missing Lib warning on the tester's PC. Tool: copy the install to an empty place, start each game with no window, list what it cannot find; then ship what is missing
+p1-03	open	LIB_PUBLIC	Library: Show Folder and Verify Folder buttons look switched off (white on grey)	They work, but nobody can read them. Colour them like the other buttons (template colours before create)
+p1-04	open	LIB_GAMES	Bat Duel quits on the arrow keys	Find why the arrow keys end the game, fix, test on both engines
+p1-05	open	Vibecode3D	Held keys pile up and crash the XT engine (two arrows on the Genetic Anomaly star map)	Key presses queue up as pending messages. One guard in the engine or player (read the keys once a frame, drop repeats still waiting), then every game the scan shows with the same habit. ISSUES 0017
+p1-06	open	LIB_GAMES	Crater Crawler: wheels spin the right way	Flip the wheel spin
+p1-07	open	LIB_PUBLIC	Library: numbers left of the game names (game 21, not 'Thrmnlra')	So a tester can say where they are in the list
+p1-08	open	LIB_PUBLIC	Play log: minutes per game, levels reached, 'x games in y minutes'; a tester pack that gathers log and notes	Library and Game Player write start, stop and level changes; play_report.py prints the session; a .bat in LIB_BAT collects log + game notes to bring back on the card
+p1-09	open	Vibecode3D	Sound and music back in the Game Player (ISSUES 0013)	No sound for weeks: Audio.Init only makes players in a 'Viewport' group. Claude's addition, from your loading note
+p1-10	open	LIB_SYSTEM	LIB_LOADING_SCREEN: the one-page plan (how it works, how it looks, what it saves)	Green command line on black over the last frame's vectors (tube burn); always a default that saves the game state and counts levels played; sketch in PLAYTEST_0001_PLAN.md
+p1-11	open	LIB_SYSTEM	LIB_LOADING_SCREEN built: the default screen between levels, saving state and the play record	lib_loading: Loading.Begin / Line / End; both engines; a game needs one call
+p1-12	open	Vibecode3D	Level start: the player shows first, the rest draws itself in (dashes, fades)	No more snap. One Level.Enter the player calls for every game; razzle dazzle with the dashes of graphics and blend
+p1-13	open	LIB_GAMES	Every game with levels goes through the loading screen and the level start	Roll out from the scan table, each game's own test rerun
+p1-14	open	LIB_GAMES	Tabletop Racers: empty map, you pull up, the others pull up, 3 2 1 go; and the crash on a new level	Hard start on a new level, and a crash seen there. ISSUES 0019
+p1-15	open	LIB_GAMES	Big Ball of Vectors: enemies rain down on shadow markers, never onto the hero	Safe spawn zone; fall like digital rain; a Vector Toss style shadow shows where each lands; not cluttered
+p1-16	open	LIB_GAMES	Bounce Rally: cars bump each other, a hit car spins out one way and leaves the screen	Red and purple cars overlap; bounced-on cars stay on the road. Pick the first direction, spin out all the way
+p1-17	open	LIB_GAMES	Crater Crawler: grenades and missiles that dig holes; camera pulled back	Like the enemy's holes. Tester had fun at once
+p1-18	open	LIB_GAMES	Squad Buggy: wider view; grenade spam at the land becomes a ComfyUI knob	Wider field of view when the land can be wrecked; how much wrecking = a kit setting in LIB_COMFY
+p1-19	open	LIB_GAMES	Deep Dive: 'P = Pause / Preferences' hint, sliders for most oxygen and danger speed	Too much oxygen, not enough danger; a demo, so let the player set it
+p1-20	open	LIB_GAMES	Grid Sprint: wide open grid, little traffic, random low slopes spaced out	Less crowding, more grid; start with very low simple slopes and see what happens
+p1-21	open	LIB_GAMES	Interceptor Run: the helicopter flies straight down half the screen with a hidden turret; cars on water sink	The whole helicopter spins today. Cars on water sink (funny); dock pile-ups later
+p1-22	open	LIB_GAMES	Light Trail Arena: no frame rate collapse (reuse lines, fewer segments)	Too many segments. Try: recycle lines, trails eat their own tail, more balls
+p1-23	open	LIB_GAMES	Probe vs Cone: an energy pulse between wall blocks stops the javelin	One big wiggling ring between standing blocks; gaps where blocks are gone stay open
+p1-24	open	LIB_GAMES	Shaft Descent: a run button (Shift, uses more air)	Shaft Descent: a run button (Shift, uses more air)
+p1-25	open	LIB_GAMES	Stack Down: sways slowly between -2 and +2 degrees	So it looks alive; any plane
+p1-26	open	LIB_PUBLIC	Dot Maze: the fast Lean one takes the name in the Library; the slow original moves to the end	Slowest fps of the test, and the fix exists (DotMazeLean, 30 fps). Your call; default as written
+p1-27	open	LIB_GAMES	Dead Days: the test bed for LIB_EMITTERS particles and weapon animations	The robot's always-on aura stays. Lightning, plasma, fire, machine guns, missiles tried here first
+p1-28	open	LIB_GAMES	Meadow Marsh: the new name for Dead Days, and commanding the entities' attacks (plan)	Same idea: you command entities to use whatever attacks they have. Plan and rename list first
+p1-29	open	LIB_GAMES	New game: ConeProbe3D (Probe vs Cone in third person with the LIB_POWERBAR power bar)	More of a third-person MMO feel
+p1-30	open	PROMPT_GLAZE	Probe and Cone appear in the Prompt & Glaze universe (story note)	Defeat Cone and free one of them; then the story is tell / save / find / warn the other
+p1-31	open	LIB_GAMES	New game: Lantern and Ladders (torch in the dark, ladders going up, run button)	First a trial of the torch: a black-to-clear gradient over the view, small blendLevel flicker, on both engines. Spooky
+p1-32	open	LIB_GAMES	New game: an eagle flight game (the tester's TempleOS idea), our own	Fly an eagle over wireframe land and water, dive for fish. Our own game in that spirit
+p1-33	open	LIB_GAMES	'Make it run DOOM': our own first-person corridor shooter on cellmaps	Our own levels, monsters and look in vectors, built on the five-heights cellmap; not a copy of the real game
+p1-34	open	LIB_GAMES	Spreadsheet that turns into games (the tester's idea; before Christmas, not too soon)	An app that looks like a spreadsheet and becomes games. Concept page first
+p1-35	open	PROMPT_GLAZE	Bit Raider & Opus: endless runner with parkour, cars, ramps, bikes, wingsuits (parked by your word)	Opus trains Bit Raider, Yoda style. Idea saved; 'don't get sidetracked yet'
+p1-36	open	LIB_GAMES	Matrix Lock: camera control, shifting and turning blocks, jump, climb (bottom of the list, your word)	That game is hell, that's the point
+p1-37	open	LIB_GAD	Genetic Anomaly: study what hooked the tester, then the UI. LAST, your word	The tester got it fast and was hooked ('you've found the juice'). UI is a mess; to discuss; sum of all the other trials

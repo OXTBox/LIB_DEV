@@ -1,5 +1,14 @@
 # Priority Tube: where we are
 
+## START HERE (22 Nov night): PLAY TEST 0001 IS PLANNED, NOTHING BUILT
+- First outside tester (21 Nov). Their notes became 37 bubbles `p1-01`..`p1-37` (`extra_items.txt`, a new third
+  source read by tools/tube_items.py; set a line to `done` when finished). Plan: `PLAYTEST_0001_PLAN.md`
+  (order in four waves, LIB_LOADING_SCREEN sketch, helper tools, which model does what).
+- Start with p1-01 (game_scan.py), then wave 1. p1-10 (loading screen page) needs the owner's yes before p1-11.
+- Tickets opened, not looked into: ISSUES 0017-0020. Never write the tester's name in a public folder.
+- The notes file is in LIB_LLMOUT/Read/LIB_PUBLIC. t40 not rerun after the tube_items.py change.
+
+
 ## DONE 22 Nov: CONSOLE IN THE GAME PLAYER, MERGED (owner tried it: "works great!", then "merge"; LIB_DEV f2da048, LIB_ig3d 42498fb, xt3D bridge f289a4f, LIB_SYSTEM c8e9fed)
 - Branches (from main, folders LEFT on them): LIB_DEV (game_player, this note), LIB_ig3d 68f6720 (lib_console:
   Con.TabIsMine / Con.TabFromHost), xt3D bridge 16af8f3 (bench Tab guard), LIB_SYSTEM b311ba5 (ISSUES 0015).
