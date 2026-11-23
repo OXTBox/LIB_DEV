@@ -1,5 +1,16 @@
 # Priority Tube: where we are
 
+## START HERE (23 Nov, 15:00): n-7ce789eb LEAN IN SIX EDITOR CARDS DONE on LIB_EDITOR branch `lean-cards` (waits for his look)
+
+- E05 E06 E08 E09 E11 E12 load lib_lean (optional) and draw through <Prefix>.LevelSegments: Lean.MapSegments with
+  the map's meta lean when meta style is lean, else CellMap.LevelSegments. LIB_EDITOR f41877a.
+- Test LIB_EDITOR/tests/lean_cards_headless.txt 36/36 both engines (plain 297 lines, lean 109 on cards_yard);
+  e05..e12 headless tests all pass unchanged. cards_yard itself is not lean: save it lean in BitEditor to see it.
+- Board: LIB_EDITOR next -> done; bubble gone. Owner moved n-c58324eb (Comfy installer) to the bottom: his
+  rebuild of ComfyGames.exe is in LIB_COMFY/Player/build/ComfyGames (23 Nov 14:17); bubble kept as is.
+- Seen: tube comment c1795473221928 "fixed by Bill" on p1-03 (Library buttons): he fixed it himself.
+- Another session takes the next bubble.
+
 ## START HERE (23 Nov, afternoon): n-d241ef1c MERGED (owner: "merge"), LIB_GAMES main e55337b, installed on V: (verify: Dot Maze start ok)
 
 - DotMazeLean's walls: `Lean.Walls(sMaze, kCell, Lean.Style("view=front|layers=-20,20|posts=none"))`; its own

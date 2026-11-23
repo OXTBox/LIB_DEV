@@ -263,7 +263,7 @@ has: E01-E15 all fifteen cards, each with a headless test
 done: E03-E12, E14, E15 on the cellmap format
 done: The console (lib_console in LIB_ig3d): iGame3D XT editor (Window > Console), xt3d Games bench (under the view), Game Player (F4); autofill + Tab menu; merged 22 Nov ("only took 21 years", "works great!")
 done: Tab-key games have new keys (C swap, \\ Thrmnlra, Photon ring per match), ISSUES 0015 closed 22 Nov
-next: Lean style in the other example cards (E05, E06, E08, E09, E11, E12): a map saved lean draws lean, as E13 does
+done: Lean style in E05, E06, E08, E09, E11, E12: a map saved lean draws lean, as E13 does (23 Nov, branch lean-cards, waits for your look)
 link: LIB_BIT, LIB_ig3d
 
 == LIB_ig3d | TOOLS | core
