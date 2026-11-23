@@ -52,3 +52,6 @@ n-d241ef1c	20	utility	DotMazeLean swaps its inline wall builder for Lean.Walls (
 n-15396035	15	utility	A style switch (water=off) in lib_lean and a test; one line in the BitEditor and E13
 n-7ce789eb	35	utility	Six cards, about five minutes each: read meta style lean, call Lean.MapSegments, run each headless test
 n-6976b289	90	fun	The console box, autofill and the Tab menu in the iGame3D XT editor, on lib_suggest that exists, plus a test (owner wants it first after his /clear, 22 Nov)
+n-5c59e4c5	120	plan	Ask the owner what the World panel holds, then build it on lib_ttrpg_world (exists, tested) with a headless test
+n-2221d8c7	20	fix	Five games get the owner's new key instead of Tab (keysDown 65289 / tabKey), each game's test rerun; waits for his pick
+n-c58324eb	240	big	Rebuild ComfyGames.exe (Player/README.md), then the public installer: embeddable Python, node pack copy, Data folder games (PLAN_STANDALONE.md)

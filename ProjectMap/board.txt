@@ -76,10 +76,10 @@ done: Round one games
 done: Round two games (owner concepts)
 done: Spark road trip: 15 games played on the real engine
 done: Owner's 15 Nov notes (LTA camera, SquadBuggy snipers)
-done: 16 Nov notes: GridSprint crash box + traffic, InterceptorRun homing + rotor + zoom, DeadDays sparks + mouse look + Shift (19 Nov night, LIB_GAMES branch notes-16nov b7bda8c, not merged)
+done: 16 Nov notes: GridSprint crash box + traffic, InterceptorRun homing + rotor + zoom, DeadDays sparks + mouse look + Shift (merged 20 Nov)
 block: Engine contract (cellmap v3 follow-ups A-92..A-95) before games move to xRay / Box2DXT
-done: 9-Ball: Scott Rossi's nine ball (Jim Hurley's physics) rewritten for Vibecode3D and xt3d, credit both: 19 Nov night on LIB_GAMES branch nine-ball (215952d), not merged, waits for your try
-done: Thrmnlra redesign from your 13 Nov feedback (LAUNCH trap, pads + recall by name, bombers, STAND DOWN, launch codes on the Big Board, Strike left to right, their answer right to left, Tab, spoiled LAUNCH): 19 Nov night on LIB_GAMES branch thrmnlra-redesign (0b5edae), not merged, waits for your try
+done: 9-Ball: Scott Rossi's nine ball (Jim Hurley's physics) rewritten for Vibecode3D and xt3d, credit both: merged 20 Nov
+done: Thrmnlra redesign from your 13 Nov feedback (LAUNCH trap, pads + recall by name, bombers, STAND DOWN, launch codes on the Big Board, Strike left to right, their answer right to left, Tab, spoiled LAUNCH): merged 20 Nov
 next: DotMazeLean draws its walls with the shared Lean.Walls instead of its own copy
 link: Vibecode3D, xt3d, PROMPT_GLAZE, LIB_SPARK, LIB_COMFY
 
@@ -116,7 +116,8 @@ done: Stack built, owner tests all pass
 done: Tuning pass
 done: TTRPG Studio window seen by you: "A work of art" (18 Nov)
 has: qwen 7B + 2B run together (RAM at 95%; 13B is out of reach, not a stop)
-next: Step 9: the old studio's world code (later)
+done: Step 9: the old studio's world code (ref/ttrpg_world.py + lib_ttrpg_world; you played it 19 Nov: "like 1981 all over again!"), merged 20 Nov
+next: A World panel in the Studio (New World, Scene here, NPCs here): ask you first (LIB_TTRPG/NEXT.md)
 
 == LIB_HOWTO | GAMES
 what: Step-by-step game tutorials (18 topics, 92 steps)
@@ -131,9 +132,9 @@ done: cellmap v2 format
 done: cellmap v3 plan KEPT (stacked maps, packs, slopes)
 done: cellmap v3: slopes + packs drawn, E13 walks two_rooms; three failing game tests fixed or explained (18 Nov, branch cellmap-v3-followups)
 review: owner: play E13 -> M twice -> two_rooms, and Block City
-next: cellmap v3: BitEditor Slope tool, pack panel, E12 checker (A-92 3-5)
+done: cellmap v3: BitEditor Slope tab, pack window, preview hiding (merged 19 Nov), E12 checker (Fable night 18 Nov, merged)
 done: Heights: green/blue bands + From Floor / From Ceiling cell by cell + map top + Extrude Glyphs button (18 Nov, branch heights-floor-ceiling)
-block: BUGGED (parked, owner 18 Nov): BitEditor erases the glyphs (ISSUES 0008); needs visual clarification later. heights-floor-ceiling not merged
+block: BUGGED (parked, owner 18 Nov): BitEditor erases the glyphs (ISSUES 0008); needs visual clarification later (heights-floor-ceiling merged 19 Nov with the Slope tab)
 done: Lean style: cube level -> clean outline (lib_lean, BitEditor Scene > Lean Style, E13 L key, roof seams cut), merged 22 Nov
 next: Lean style: an option to leave the water's diagonal marks out
 link: LIB_MAP, LIB_EDITOR, Vibecode3D, xt3d
@@ -229,8 +230,7 @@ done: Its own LIB, README + REGISTRY.tsv first pass (18 Nov): 30 characters, fro
 done: Clashes settled (18 Nov): gear = Tools menu, pencil = Editor; iGame3D XT editor gets new ones for level and path tool
 done: lib_unicode.livecodescript (19 Nov): Unicode.Char / Meaning / Procedure / Build / Check, and the first procedure Proc.House (box + gable roof + door, by math); headless tests pass, plain and through Engine 1
 done: Picker palette UnicodePicker.oxtstack (19 Nov evening): drag a character into a Vibecode3D game window, it is built on the ground there; Take back; Proc.Car, Proc.Truck, Proc.Cloud, Proc.StormCloud by math (branch unicode-picker)
-block: Owner tries the drag with the real mouse; branches unicode-library + unicode-picker wait for his merge
-next: Person (웃) by math or from LIB_MOCAP stick figures; drops into xt3d windows (raylib camera)
+done: 웃 Person by math or from LIB_MOCAP clips; the picker drops people (and houses, cars) into the xt3d Games bench too; all merged 19-20 Nov
 link: LIB_TOOLBAR, LIB_ig3d, LIB_GUI, LIB_RAYGUI
 
 == LIB_INPUT | BLOCKS
@@ -260,7 +260,8 @@ what: Editing tools as one-method example cards; iGame3D XT lives here
 has: E01 Blocks, E02 RaiseLower, E13 Walk The Map (30 fps)
 has: E01-E15 all fifteen cards, each with a headless test
 done: E03-E12, E14, E15 on the cellmap format
-next: The console in the iGame3D XT editor: autofill (Entity.Po -> Entity.Position) and Tab after a dot pops the group's words (iGame3D_XT/CONSOLE_NOTE.md)
+done: The console (lib_console in LIB_ig3d): iGame3D XT editor (Window > Console), xt3d Games bench (under the view), Game Player (F4); autofill + Tab menu; merged 22 Nov ("only took 21 years", "works great!")
+next: Tab-key games need a new key (ISSUES 0015): your pick of key
 next: Lean style in the other example cards (E05, E06, E08, E09, E11, E12): a map saved lean draws lean, as E13 does
 link: LIB_BIT, LIB_ig3d
 
@@ -303,7 +304,8 @@ what: ComfyUI as a Blueprint-style node editor for Vibecode3D games
 demo: Build Game -> playable ComfyPong ("it worked!")
 done: Six genre kits (24 nodes) merged 18 Nov; owner tested their output; kit-made games live in LIB_COMFY/games (one ComfyPong demo in LIB_GAMES)
 done: Comfy Games player (LIB_COMFY/Player/ComfyGames.exe, 18 Nov): finds LIB_COMFY/games from its own folder, genre + sort menus, PLAY = own window; desktop shortcut "Comfy Games". Star ratings still to come
-next: Stand-alone Comfy Games app on the Vibecode3D Library stack (genre menu, games menu, star ratings, sort by stars / date): after other projects clear
+done: Comfy Games app (genre + games menus, star ratings, Best rated / Newest / A-Z, Make a new one), merged 20 Nov
+next: Comfy Games: rebuild the .exe (the one in Player/ is still 18 Nov), then one download for the public (LIB_COMFY/PLAN_STANDALONE.md, What's next)
 link: LIB_GAMES
 
 == LIB_SPARK | TOOLS
