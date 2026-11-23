@@ -1,5 +1,11 @@
 # Priority Tube: where we are
 
+## START HERE (23 Nov, night): p1-06 CRATER CRAWLER WHEELS on LIB_GAMES branch `crater-wheels` (waits for his look)
+
+- One sign: Entity.SetRotation sWheel[i], 0, 0, sDist / 9 (was -sDist / 9), line 436. LIB_GAMES checked out on the
+  branch so the Game Browser plays it. t22 + t70 pass both engines; t26 stops at Camera.Reset (ISSUES 0011).
+- His look, then "merge" -> set p1-06 done.
+
 ## START HERE (23 Nov, night): p1-05 GENETIC ANOMALY ARROWS MERGED (owner: "Maximum Key mashing is crash free")
 
 - LIB_GAD main d4fce48; game file copied onto V:; ISSUES 0017 closed; p1-05 done (bubble gone).
