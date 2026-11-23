@@ -1,13 +1,13 @@
 # Priority Tube: where we are
 
-## START HERE (23 Nov, afternoon): n-d241ef1c DONE on LIB_GAMES branch `dotmaze-lean-walls` (abad313), waits for his look
+## START HERE (23 Nov, afternoon): n-d241ef1c MERGED (owner: "merge"), LIB_GAMES main e55337b, installed on V: (verify: Dot Maze start ok)
 
 - DotMazeLean's walls: `Lean.Walls(sMaze, kCell, Lean.Style("view=front|layers=-20,20|posts=none"))`; its own
   builder (Maze.Wall / CornerX / CornerY / AddSeg) is gone. lib_lean loaded by Game.FindFile
   ("LIB_BIT/livecode/lib_lean.livecodescript"); missing = empty walls + a HUD line, no crash.
 - Test OXT-BEYOND/tests/t73_dotmaze_lean_walls.txt PASS both engines: the same 208 lines as the old builder
   (kept in the test as Old.*), lib_lean in use, 60 frames no error. fps not measurable headless.
-- V: already has lib_lean (Vibecode3D Common/LIB_BIT/livecode); the V: game script stays the old one until merge + install.
+- V: reinstalled after the merge (54 titles); lib_lean in Vibecode3D Common/LIB_BIT/livecode.
 - Trap seen: a parameter named pI is the constant pi (compile error 165): never name a variable pI.
 - NEXT on the tube: n-7ce789eb (lean style in E05, E06, E08, E09, E11, E12).
 

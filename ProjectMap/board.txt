@@ -80,8 +80,7 @@ done: 16 Nov notes: GridSprint crash box + traffic, InterceptorRun homing + roto
 block: Engine contract (cellmap v3 follow-ups A-92..A-95) before games move to xRay / Box2DXT
 done: 9-Ball: Scott Rossi's nine ball (Jim Hurley's physics) rewritten for Vibecode3D and xt3d, credit both: merged 20 Nov
 done: Thrmnlra redesign from your 13 Nov feedback (LAUNCH trap, pads + recall by name, bombers, STAND DOWN, launch codes on the Big Board, Strike left to right, their answer right to left, Tab, spoiled LAUNCH): merged 20 Nov
-done: DotMazeLean walls drawn by the shared Lean.Walls (LIB_BIT lib_lean), same 208 lines, own copy gone (23 Nov, branch dotmaze-lean-walls)
-review: owner: play Dot Maze in the Game Player (it should look and run as before), then say merge
+done: DotMazeLean walls drawn by the shared Lean.Walls (LIB_BIT lib_lean), same 208 lines, own copy gone (23 Nov, merged, on V:)
 link: Vibecode3D, xt3d, PROMPT_GLAZE, LIB_SPARK, LIB_COMFY
 
 == PROMPT_GLAZE | GAMES | core
