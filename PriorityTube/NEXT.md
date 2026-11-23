@@ -1,5 +1,25 @@
 # Priority Tube: where we are
 
+## START HERE (23 Nov, night): p1-05 GENETIC ANOMALY ARROWS FIXED on LIB_GAD branch `arrow-keys-stay` (waits for his look)
+
+- Same cause as Bat Duel (ISSUES 0020): no `on arrowKey` in the game, so Left = previous card. Not a pile-up.
+  The Game Player has swallowed stray arrows since 8232292, so it should already be fine there; the game now has
+  its own empty handler too (LIB_GAD d4fce48), for the xRay bench.
+- t71 now includes GeneticAnomaly: 12/12 PASS both engines. t15 stops at Camera.Reset as before (ISSUES 0011).
+- His try: hold two arrows on the star map in the Game Player; then "merge" -> close 0017, set p1-05 done,
+  reinstall V: (GeneticAnomaly comes from LIB_GAD main).
+
+## START HERE (23 Nov, late afternoon): n-5c59e4c5 WORLD PANEL IN THE STUDIO DONE on LIB_TTRPG branch `world-panel` (waits for his look)
+
+- Asked him first (bubble said so): own card; New/Load/Save World; NPCs here -> Add Character; small map (click a
+  neighbour = walk); Scene here; NO "You are at" prose: cell = plain data he (later a model) edits; Verbose = DM
+  model pads it into words; typing tries world actions first.
+- LIB_TTRPG 7e7fbf3 (spec + port + vectors: cell_data / set_cell_data / map_lines) and 49585b8 (World card,
+  lc_world_ui_test.txt 0 fails; world/ui/mock/selftest/skills/build tests still pass). Details: LIB_TTRPG/NEXT.md.
+- Choice I made: during a running scene, typed look / search still go to the DM (clues); go/take/drop/open/close
+  go to the world. Not seen on a screen yet. LIB_TEST's Studio copy is old (LIB_TEST is on play-log): untouched.
+- Next for it (his word): a model that edits the cell data.
+
 ## START HERE (23 Nov, 15:00): n-7ce789eb LEAN IN SIX EDITOR CARDS DONE on LIB_EDITOR branch `lean-cards` (waits for his look)
 
 - E05 E06 E08 E09 E11 E12 load lib_lean (optional) and draw through <Prefix>.LevelSegments: Lean.MapSegments with
