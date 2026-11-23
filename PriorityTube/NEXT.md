@@ -1,6 +1,6 @@
 # Priority Tube: where we are
 
-## DONE 22 Nov: CONSOLE IN THE GAME PLAYER, NOT MERGED (branch `console-player`)
+## DONE 22 Nov: CONSOLE IN THE GAME PLAYER, MERGED (owner tried it: "works great!", then "merge"; LIB_DEV f2da048, LIB_ig3d 42498fb, xt3D bridge f289a4f, LIB_SYSTEM c8e9fed)
 - Branches (from main, folders LEFT on them): LIB_DEV (game_player, this note), LIB_ig3d 68f6720 (lib_console:
   Con.TabIsMine / Con.TabFromHost), xt3D bridge 16af8f3 (bench Tab guard), LIB_SYSTEM b311ba5 (ISSUES 0015).
   LIB_DEV 7a1f7ff (game_player + this note).
