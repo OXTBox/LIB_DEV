@@ -7,7 +7,7 @@
 - **The count: 92 card scripts** = 56 LIB_GAMES + 1 LIB_GAD (Genetic Anomaly) + 35 LIB_COMFY (generated).
   The plan's "69" was never found; the Library on V: lists 55 (catalog.tsv). Not in the catalog:
   BankShotBounce, NineBall, uDead_CullTest.
-- 66 have their own `<Prefix>.StartLevel` (41 in LIB_GAMES, 25 Comfy); 209 calls of it; 87 of them have
+- 66 have their own `<Prefix>.StartLevel` (41 in LIB_GAMES, 25 Comfy); 209 calls of it; 85 of them have
   code after them in the same handler (mostly `put tKeys into sKeysWas` or `X.ShowHUD`), the p1-13 list.
   Spot-checked by hand: BatDuel 142/145, RockField 109, Antack's switch cases (correctly "nothing").
 - Found, not changed: Genetic Anomaly and 10 Comfy Photon/Toss games still read Tab (65289), the
