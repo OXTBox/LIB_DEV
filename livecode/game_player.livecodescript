@@ -19,6 +19,9 @@
 ##                     the keyboard the game waits; Escape or a click on the game gives the keys back.
 ##   Tab               the console's only while its line has the keyboard (or no game plays): a game
 ##                     that plays keeps Tab (ISSUES 0015)
+## The loading screen (LIB_LOADING_SCREEN lib_loading, 22 Nov 2026): the first level, Reset and the
+## Levels menu go through it (burn, green text, reveal); a game that calls Loading.Go does too.
+## While it is up the game is not stepped (no Game.OnUpdate); it is still drawn. No library: as before.
 ## Status and message lines are made when first needed (Player.Status, Player.Message),
 ## never left on the card as fixed objects.
 ## One game per Game_Player app (the engine keeps its state in globals); closing the window
@@ -41,6 +44,7 @@ local sLevel
 local sInput      -- true when the game has an actions file and LIB_INPUT read it (Player.LoadInput)
 local sConLoaded  -- true once lib_console was looked for (Player.ConsoleLoad); sConWhy: why there is none
 local sConWhy
+local sLoad       -- true when lib_loading is in use (Player.LoadLoading)
 
 -------------------------------------------------------------------- start / stop
 
@@ -49,13 +53,20 @@ local sConWhy
 on preOpenStack
 end preOpenStack
 
-on Player.Start
+-- pNoScreen true: the caller puts up the loading screen itself (Player.GoLevel)
+on Player.Start pNoScreen
    local tErr
    Player.StopTimer
    Player.UseMe
    put false into bStill
    put empty into sEnded
    Player.LoadInput
+   Player.LoadLoading
+   if sLoad then
+      -- a game still open (Reset): its last level goes into the play record as left
+      Loading.Host the long id of card 1 of me, the uPrefix of me, Player.ViewRect(), the uGame of me
+      if pNoScreen is not true then Loading.Begin 1, "start", false
+   end if
    -- the engine contract: Engine.Info("edition") and Engine.Has() answer from these
    global gV3DEdition, gV3DHas
    put "XT" into gV3DEdition
@@ -82,8 +93,14 @@ on Player.Reset
 end Player.Reset
 
 -- a level from the ... menu: restart the game, then the game's own <Prefix>.StartLevel n
+-- (with the loading screen: the picture is taken first, the level is built behind the screen)
 on Player.GoLevel pLevel
    local tErr
+   if sLoad and the uPrefix of me is not empty then
+      Loading.Begin pLevel, "level", true
+      Player.Start true
+      exit Player.GoLevel
+   end if
    Player.Start
    if the uPrefix of me is empty then exit Player.GoLevel
    try
@@ -120,6 +137,7 @@ end Player.Quit
 command Player.Halt pText
    local tErr
    Player.StopTimer
+   Player.LoadingEnd "quit"
    if sRunning is true then
       put false into sRunning
       Player.UseMe
@@ -135,6 +153,7 @@ end Player.Halt
 on closeStack
    local tErr
    Player.StopTimer
+   Player.LoadingEnd "quit"
    if sRunning is true then
       put false into sRunning
       Player.UseMe
@@ -172,7 +191,7 @@ end Player.ViewRect
 -------------------------------------------------------------------- the loop
 
 on Player.Tick
-   local tErr, tWas, tWait, tTickStart
+   local tErr, tWas, tWait, tTickStart, tWasLoading
    put the milliseconds into tTickStart
    put empty into sTickMsg
    if sRunning is not true then exit Player.Tick
@@ -193,7 +212,15 @@ on Player.Tick
       try
          -- while the console line has the keyboard the game waits (games read the keysDown
          -- themselves, they would see the typing); it is still drawn, so a line's change shows
-         if not Player.ConsoleTyping() then
+         -- the loading screen: stepped every frame; while it is up the game waits (still drawn)
+         if sLoad then
+            put Loading.Busy() into tWasLoading
+            Loading.Tick
+            -- the screen just went: a fresh clock, or the engine would catch up the seconds it
+            -- waited (up to 8 game steps in one frame)
+            if tWasLoading and not Loading.Busy() then Vibe.Go
+         end if
+         if not Player.ConsoleTyping() and not Player.Loading() then
             if sInput is true then Input.Poll
             Vibe.Step
          end if
@@ -230,15 +257,49 @@ on Player.Tick
 end Player.Tick
 
 function Player.LevelText
+   if sLoad and Loading.Level() is a number then put Loading.Level() into sLevel
    if the uLevels of me > 0 then return " | level" && sLevel
    return empty
 end Player.LevelText
+
+-- true while the loading screen is up
+function Player.Loading
+   if sLoad then return Loading.Busy()
+   return false
+end Player.Loading
+
+-- the game ended or the window goes: one line in the play record, the screen down
+command Player.LoadingEnd pEvent
+   local tErr
+   if not sLoad then exit Player.LoadingEnd
+   try
+      Loading.Record pEvent
+      Loading.Stop
+   catch tErr
+   end try
+end Player.LoadingEnd
+
+-- LIB_LOADING_SCREEN beside the game (looked for upward from its script, like LIB_INPUT)
+command Player.LoadLoading
+   local tLib, tErr
+   if sLoad is true and "LIB_LOADING" is among the lines of the stacksInUse then exit Player.LoadLoading
+   put false into sLoad
+   put Player.FindLib("LIB_LOADING_SCREEN/livecode/lib_loading.livecodescript") into tLib
+   if tLib is empty then exit Player.LoadLoading
+   try
+      start using stack tLib
+      put true into sLoad
+   catch tErr
+      put false into sLoad
+   end try
+end Player.LoadLoading
 
 -- the game stopped itself (Game.Exit, game over that exits): keep the window, offer a restart
 command Player.Ended
    if sEnded is true then exit Player.Ended
    put true into sEnded
    put false into sRunning
+   Player.LoadingEnd "end"
    Player.Message "GAME OVER   (... > Reset to play again)", 0
 end Player.Ended
 
@@ -246,6 +307,7 @@ command Player.Failed pErr, pWhen
    local tText
    put false into sRunning
    Player.StopTimer
+   if sLoad then Loading.Stop
    set the uLastError of me to pErr
    put "STOPPED: an error while" && pWhen && "(line" && item 2 of line 1 of pErr & ")." && \
          "... > Reset to try again" into tText
@@ -552,7 +614,7 @@ on mouseUp pButton
    if the short name of the target is "PlayerMenu" then pass mouseUp
    if the short name of the target begins with "PlayerCon" then exit mouseUp   -- the console's own
    if Player.ConsoleTyping() then focus on nothing      -- a click on the game: the keys back to it
-   if sRunning is not true or bPaused is true then exit mouseUp
+   if sRunning is not true or bPaused is true or Player.Loading() then exit mouseUp
    Player.UseMe
    dispatch "Game.OnClick" to card 1 of me with the mouseH, the mouseV, pButton
 end mouseUp
