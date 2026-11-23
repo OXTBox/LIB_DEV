@@ -1,5 +1,17 @@
 # Priority Tube: where we are
 
+## START HERE (23 Nov, morning): p1-08 PLAY LOG BUILT ON BRANCHES `play-log`, waits for his look; NEXT = n-15396035
+
+- The record was already there (LIB_LOADING_SCREEN writes start / level / end / quit lines to
+  Documents/My Games/Vibecode3D/play_record.txt), so p1-08 is two tools, nothing in the engines changed:
+  - LIB_TEST 065fb70 `play_report.py` (MIT): `python3 -I play_report.py` = his last session; `--all`, `--date`,
+    `--gap 30`, `--out`; a tester pack folder also lists the notes written during each session. On his record
+    of 23 Nov: "10 games in 22.6 minutes, 10 never got past level 1" (4:41) and "7 games in 39.4 minutes" (6:35).
+  - LIB_BAT c5f7f46 `tester_pack.bat`: double-click on the tester's PC; record + last.state + tell_*.txt notes
+    into Desktop\Vibecode3D_PlayPack_<stamp> + .zip. Tried from WSL into a temp folder: 19 notes + record, zip ok.
+- Not done: the Game Player's error log goes to LIB_LLMIN (missing on a tester's PC), so crashes are not in the
+  pack (only seen as "open" runs). The bat is not yet copied onto the V: install / tester card (vibeinstall.py).
+
 ## START HERE (23 Nov, night): p1-12 AND p1-13 MERGED; NEXT = p1-08 (play log)
 
 - p1-13 merged on his word ("Merge, the effects are really neat ... original film transition! Harold Lloyd would approve"):
