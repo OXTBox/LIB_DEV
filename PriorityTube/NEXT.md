@@ -3,7 +3,7 @@
 ## DONE 22 Nov: CONSOLE IN THE GAME PLAYER, NOT MERGED (branch `console-player`)
 - Branches (from main, folders LEFT on them): LIB_DEV (game_player, this note), LIB_ig3d 68f6720 (lib_console:
   Con.TabIsMine / Con.TabFromHost), xt3D bridge 16af8f3 (bench Tab guard), LIB_SYSTEM b311ba5 (ISSUES 0015).
-  LIB_DEV commit: see `git log console-player` (the line under this one is written before the commit).
+  LIB_DEV 7a1f7ff (game_player + this note).
 - Game Player (Engine 1 window, LIB_DEV/livecode/game_player.livecodescript): F4 or ... > Console shows the same
   console in the lower left (answers above, one line below; the status line moves above it). Hidden until asked
   for: the game needs the window and its keys. Typing fills in names, Tab = the menu, Return runs the line in the
