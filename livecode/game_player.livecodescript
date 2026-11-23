@@ -13,6 +13,12 @@
 ##                     actions file: LIB_INPUT), Quit
 ##   Escape            pause / resume (the engine never closes the window)
 ##   ` or F2           game notes (LIB_GAMES/tools/GameNotes), as in Vibecode3D
+##   F4 or ... > Console   the console (22 Nov 2026, LIB_ig3d lib_console, as in iGame3D XT and the
+##                     xt3d bench): lower left, typing fills in engine names, Tab = a menu of what fits,
+##                     Return runs the line in this window, Up/Down the lines before. While the line has
+##                     the keyboard the game waits; Escape or a click on the game gives the keys back.
+##   Tab               the console's only while its line has the keyboard (or no game plays): a game
+##                     that plays keeps Tab (ISSUES 0015)
 ## Status and message lines are made when first needed (Player.Status, Player.Message),
 ## never left on the card as fixed objects.
 ## One game per Game_Player app (the engine keeps its state in globals); closing the window
@@ -33,6 +39,8 @@ local sMovingFPS   -- the frame rate the last time it moved (shown while at rest
 local sTickMsg, sRunning, sGfx, sGfxCount, sBG, sFrames, sFPSTick, sFPS, sMsgEnd, sEnded
 local sLevel
 local sInput      -- true when the game has an actions file and LIB_INPUT read it (Player.LoadInput)
+local sConLoaded  -- true once lib_console was looked for (Player.ConsoleLoad); sConWhy: why there is none
+local sConWhy
 
 -------------------------------------------------------------------- start / stop
 
@@ -183,8 +191,12 @@ on Player.Tick
       put the defaultStack into tWas
       Player.UseMe
       try
-         if sInput is true then Input.Poll
-         Vibe.Step
+         -- while the console line has the keyboard the game waits (games read the keysDown
+         -- themselves, they would see the typing); it is still drawn, so a line's change shows
+         if not Player.ConsoleTyping() then
+            if sInput is true then Input.Poll
+            Vibe.Step
+         end if
          if Vibe.Playing() then
             Player.Draw
          else
@@ -333,7 +345,7 @@ command Player.Status pText
       exit Player.Status
    end if
    if there is not a field "PlayerStatus" of me then
-      Player.MakeLabel "PlayerStatus", 10, the height of me - 22, 420, 18, "65,200,120"
+      Player.MakeLabel "PlayerStatus", 10, Player.StatusTop(), 420, 18, "65,200,120"
    end if
    put pText into field "PlayerStatus" of me
    -- above anything the game made on the card (the editor's panels)
@@ -410,6 +422,7 @@ command Player.BuildMenu
       end repeat
    end if
    if sInput is true then put return & "Controls..." after tText
+   put return & "Console" after tText
    put return & "-" & return & "Quit" after tText
    set the text of button "PlayerMenu" of me to tText
 end Player.BuildMenu
@@ -429,6 +442,9 @@ on Player.MenuPick pItem
          break
       case "Controls..."
          Player.Controls
+         break
+      case "Console"
+         Player.Console
          break
       case "Quit"
          Player.Quit
@@ -514,6 +530,14 @@ end resume
 -- Escape pauses and resumes here; it never reaches the engine (which would stop the game).
 -- GameNotes (a front script) sees keys first, so ` and F2 still open the note box.
 on rawKeyDown pKey
+   if pKey is 65307 and Player.ConsoleTyping() then
+      focus on nothing                    -- Escape in the console line: the keys go back to the game
+      exit rawKeyDown
+   end if
+   if pKey is 65473 then
+      Player.Console                      -- F4: the console, shown / hidden
+      exit rawKeyDown
+   end if
    if pKey is 65307 then
       Player.TogglePause
       exit rawKeyDown
@@ -526,7 +550,193 @@ end escapeKey
 
 on mouseUp pButton
    if the short name of the target is "PlayerMenu" then pass mouseUp
+   if the short name of the target begins with "PlayerCon" then exit mouseUp   -- the console's own
+   if Player.ConsoleTyping() then focus on nothing      -- a click on the game: the keys back to it
    if sRunning is not true or bPaused is true then exit mouseUp
    Player.UseMe
    dispatch "Game.OnClick" to card 1 of me with the mouseH, the mouseV, pButton
 end mouseUp
+
+-------------------------------------------------------------------- the console (22 Nov 2026)
+-- LIB_ig3d's lib_console (the same thinking as iGame3D XT's Window > Console and the xt3d Games
+-- bench): F4 or ... > Console shows it in the lower left, the answers above, one line below. Hidden
+-- until asked for: the game needs the whole window and its keys. Lines run here (Con.DoHere): the
+-- engine's calls and the player's own Player... handlers.
+
+on Player.Console pShow
+   local tErr
+   if pShow is empty then put not Player.ConsoleShown() into pShow
+   if pShow then Player.ConsoleBuild
+   if there is not a field "PlayerConIn" of me then exit Player.Console
+   lock screen
+   set the visible of field "PlayerConOut" of me to pShow
+   set the visible of field "PlayerConIn" of me to pShow
+   set the visible of button "PlayerConClose" of me to pShow
+   Player.PlaceConsole
+   unlock screen
+   try
+      if pShow then
+         focus on field "PlayerConIn" of me
+         select after char (the number of chars of the text of field "PlayerConIn" of me) of field "PlayerConIn" of me
+      else
+         focus on nothing
+      end if
+   catch tErr
+   end try
+end Player.Console
+
+function Player.ConsoleShown
+   if there is not a field "PlayerConIn" of me then return false
+   return the visible of field "PlayerConIn" of me
+end Player.ConsoleShown
+
+-- true while the console line has the keyboard (the game then waits)
+function Player.ConsoleTyping
+   local tErr
+   if sConLoaded is not true or sConWhy is not empty then return false
+   try
+      return Con.Typing()
+   catch tErr
+      return false
+   end try
+end Player.ConsoleTyping
+
+-- true while a game plays (not paused, not ended): Tab is then the game's
+function Player.GamePlays
+   return sRunning is true and bPaused is not true
+end Player.GamePlays
+
+-- lib_console (lib_suggest and the words beside it), looked for from the game's folder upward
+command Player.ConsoleLoad
+   local tLib, tErr
+   if sConLoaded is true then exit Player.ConsoleLoad
+   put true into sConLoaded
+   put empty into sConWhy
+   if not ("LibConsole" is among the lines of the stacksInUse) then
+      put Player.FindLib("LIB_ig3d/livecode/lib_console.livecodescript") into tLib
+      if tLib is empty then
+         put "No console here: LIB_ig3d/livecode/lib_console.livecodescript is not above this game." into sConWhy
+         exit Player.ConsoleLoad
+      end if
+      try
+         start using stack tLib
+      catch tErr
+         put "No console:" && line 1 of tErr into sConWhy
+         exit Player.ConsoleLoad
+      end try
+   end if
+   try
+      Con.Load
+      if the result is not empty then put "Console:" && the result into sConWhy
+   catch tErr
+      put "No console:" && line 1 of tErr into sConWhy
+   end try
+end Player.ConsoleLoad
+
+-- the three controls, coloured on the templates before they are made (house rule)
+command Player.ConsoleBuild
+   if there is a field "PlayerConIn" of me then exit Player.ConsoleBuild
+   Player.ConsoleLoad
+   lock messages
+   reset the templateField
+   set the opaque of the templateField to true
+   set the backgroundColor of the templateField to "8,20,12"
+   set the foregroundColor of the templateField to "124,255,124"
+   set the borderColor of the templateField to "40,90,55"
+   set the showBorder of the templateField to true
+   set the textFont of the templateField to "Courier New"
+   set the textSize of the templateField to 11
+   set the visible of the templateField to false
+   create field "PlayerConOut" in card 1 of me
+   set the lockText of field "PlayerConOut" of me to true
+   set the traversalOn of field "PlayerConOut" of me to false
+   set the vScrollbar of field "PlayerConOut" of me to true
+   set the backgroundColor of the templateField to "10,26,14"
+   set the textSize of the templateField to 12
+   create field "PlayerConIn" in card 1 of me
+   reset the templateField
+   reset the templateButton
+   set the backgroundColor of the templateButton to "40,90,55"
+   set the foregroundColor of the templateButton to "200,255,200"
+   set the visible of the templateButton to false
+   create button "PlayerConClose" in card 1 of me
+   reset the templateButton
+   set the label of button "PlayerConClose" of me to "X"
+   set the showBorder of button "PlayerConClose" of me to false
+   set the opaque of button "PlayerConClose" of me to true
+   set the traversalOn of button "PlayerConClose" of me to false
+   set the textStyle of button "PlayerConClose" of me to "bold"
+   set the textSize of button "PlayerConClose" of me to 11
+   set the tooltip of button "PlayerConClose" of me to "Close the console (F4)"
+   set the script of button "PlayerConClose" of me to "on mouseUp" & cr & "   Player.Console false" & cr & "end mouseUp"
+   unlock messages
+   put "Console (F4 hides it). Type Entity. and press Tab; Return runs the line; help lists the groups." & cr & \
+         "While you type here the game waits; Escape or a click on the game gives it the keys back." into field "PlayerConOut" of me
+   if sConWhy is not empty then
+      put cr & sConWhy after field "PlayerConOut" of me
+      set the lockText of field "PlayerConIn" of me to true
+   else
+      Con.Attach the long id of field "PlayerConIn" of me, the long id of field "PlayerConOut" of me, the long id of me
+      set the cConHint of field "PlayerConIn" of me to "the engine library is not loaded (open the game from the Game Player)"
+   end if
+end Player.ConsoleBuild
+
+-- lower left, up to 520 wide; above the game's graphics; the status line goes above it
+on Player.PlaceConsole
+   local tL, tR, tB, tT
+   if not Player.ConsoleShown() then
+      if there is a field "PlayerStatus" of me then set the top of field "PlayerStatus" of me to Player.StatusTop()
+      exit Player.PlaceConsole
+   end if
+   put 10 into tL
+   put min(tL + 520, the width of me - 60) into tR
+   put the height of me - 6 into tB
+   put max(kMenuH + 10, tB - 24 - 132) into tT
+   set the rect of field "PlayerConOut" of me to tL, tT, tR, tB - 24
+   set the rect of field "PlayerConIn" of me to tL, tB - 22, tR, tB
+   set the rect of button "PlayerConClose" of me to tR - 20, tT - 19, tR, tT - 1
+   set the layer of field "PlayerConOut" of me to top
+   set the layer of field "PlayerConIn" of me to top
+   set the layer of button "PlayerConClose" of me to top
+   if there is a field "PlayerStatus" of me then set the top of field "PlayerStatus" of me to Player.StatusTop()
+end Player.PlaceConsole
+
+-- the status line's top: the bottom left, or above the console while it shows
+function Player.StatusTop
+   if Player.ConsoleShown() then return the top of field "PlayerConOut" of me - 42
+   return the height of me - 22
+end Player.StatusTop
+
+-- Tab with the keyboard elsewhere in the window (the line's own Tab never comes here). ISSUES 0015:
+-- while a game plays it is the game's (it reads the keysDown; a card's tabKey came first), and
+-- nothing is done with it here: passed on, the engine would move the keyboard into the line.
+-- Paused, ended or no game: the console's Tab (its menu). No console shown: as before.
+on tabKey
+   if not Player.ConsoleShown() or sConWhy is not empty then pass tabKey
+   if Con.TabIsMine(Player.GamePlays()) then Con.TabFromHost the long id of field "PlayerConIn" of me
+end tabKey
+
+-- a console line runs here: "this card" is the game's, the engine's calls and Player... handlers work
+on Con.DoHere pGlobals, pCode, pIsValue
+   local tAnswer, tWas, tErr
+   put the defaultStack into tWas
+   Player.UseMe
+   -- no try here: an error goes up to lib_console, which says it (a catch and throw again is
+   -- lost on the 9.6.3 engine); the default stack then stays this window, which does no harm
+   if pIsValue then
+      do pGlobals & cr & "put (" & pCode & ") into tAnswer"
+   else
+      do pGlobals & cr & pCode
+      put the result into tAnswer
+   end if
+   -- paused or still: draw once, so what the line changed shows
+   put false into bStill
+   if sRunning is true and (bPaused is true or Player.ConsoleTyping()) then
+      try
+         Player.Draw
+      catch tErr
+      end try
+   end if
+   if tWas is not empty and there is a stack tWas then set the defaultStack to tWas
+   return tAnswer
+end Con.DoHere

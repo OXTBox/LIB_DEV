@@ -1,5 +1,33 @@
 # Priority Tube: where we are
 
+## DONE 22 Nov: CONSOLE IN THE GAME PLAYER, NOT MERGED (branch `console-player`)
+- Branches (from main, folders LEFT on them): LIB_DEV (game_player, this note), LIB_ig3d 68f6720 (lib_console:
+  Con.TabIsMine / Con.TabFromHost), xt3D bridge 16af8f3 (bench Tab guard), LIB_SYSTEM b311ba5 (ISSUES 0015).
+  LIB_DEV commit: see `git log console-player` (the line under this one is written before the commit).
+- Game Player (Engine 1 window, LIB_DEV/livecode/game_player.livecodescript): F4 or ... > Console shows the same
+  console in the lower left (answers above, one line below; the status line moves above it). Hidden until asked
+  for: the game needs the window and its keys. Typing fills in names, Tab = the menu, Return runs the line in the
+  player (engine calls + Player... handlers; "this card" = the game), Up/Down. While the line has the keyboard the
+  game waits (still drawn); Escape or a click on the game gives the keys back (Escape then does NOT pause).
+- ISSUES 0015 guard (games NOT changed, the key is still his): Tab is the console's only while its line has the
+  keyboard or no game plays. Playing: Tab is the game's, in the Game Player and in the xt3d bench.
+- Try: Desktop\TEST_DESK\Tests 22 Nov\03 Console in Game Player (Vector Toss, F4) (Game_Player.exe VectorToss):
+  F4, type Entity. Tab; click the game, Tab = landing ring on/off as before; Escape pauses; Tab now = the menu.
+- Tests: OXT-BEYOND/tests/t67_console_player.txt NEW 25/25 on both engines (the "game waits while typing" check
+  needs keyboard focus, which a run with no window does not give: skipped, INFO line); bridge
+  tests/console_bench_headless.txt 19/19 both; t66 33/33, t37 39/39, t20 7/7, t51 36/36 both; t48 112/113 both
+  (its one fail "profiles listed" is the old ISSUES 0006; its Hunter-in-the-player part passes). t34/t35 not run (0011).
+- Open: (1) the key for the five Tab games (his call, ISSUES 0015). (2) The installed V: copy has no LIB_ig3d, so
+  its Game Player says "No console here" (vibeinstall.py would need lib_console + lib_suggest + contract_words).
+  (3) ` typed in the line opens the game notes (GameNotes sees keys first). (4) Lines cannot call the game's own
+  card handlers (they run in the player's stack script); engine calls are fine.
+- xRay window (noted, not built): there is no xRay player yet (ENGINE_CONTRACT "iGame3D xRay: its own player").
+  If it shows raylib's frame in a LiveCode image like the bench, it gets the console for free: two fields, Con.Attach,
+  a Con.DoHere, a stack tabKey asking Con.TabIsMine, and skip Vibe.Step while Con.Typing() (as game_player does).
+  If raylib owns the window, there are no LiveCode fields: the line would be drawn by raylib (raygui text box,
+  LIB_RAYGUI), keys read with GetCharPressed / IsKeyPressed (new shim helpers + EXTRA in gen_xt3d.py + build.bat),
+  lib_console would need a field-free entry (Con.Key on a text, not a field) and the Tab menu a raygui list.
+
 ## START HERE AFTER THE 22 Nov REBOOT: THE CONSOLE IS DONE AND MERGED
 - Owner tried both consoles 22 Nov ("only took 21 years to get that! Great work.") and said "commit, merge".
   Merged to main: LIB_ig3d dc85837, LIB_EDITOR 1cb0ddb, xt3D bridge master 64a98e8. Branch `console` can go.
