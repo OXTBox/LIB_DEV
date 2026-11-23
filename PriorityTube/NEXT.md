@@ -1,5 +1,23 @@
 # Priority Tube: where we are
 
+## START HERE (23 Nov, night): p1-12 MERGED; p1-13 ROLL-OUT BUILT, NOT MERGED; waits for his look; NEXT = p1-08
+
+- p1-12 merged on his word ("very nice, very computer feeling. merge!"): Vibecode3D 922ed68, bridge b0133cd, LIB_LOADING_SCREEN 24570ff.
+- p1-13 on branches `loading-rollout` (folders LEFT on them): LIB_GAMES 9bd3c8c (39 games), LIB_COMFY 6064f65 (7 kit
+  parts + the 25 made games, same change), LIB_LOADING_SCREEN ec006d1, bridge 96c1b16.
+- The change in a game: a `<Prefix>.GoLevel pLevel` handler (Loading.Go when "LIB_LOADING" is in the stacksInUse, else
+  `<Prefix>.StartLevel` at once, so the V: install and the Vibecode3D GUI play as before). 80 calls changed: next level,
+  menu picks, back to level 1 after game over. KEPT as they were: `StartLevel sLevel` (12, the same level again after
+  a loss: a retry stays instant) and every call inside Game.OnStart (the host does the first level).
+- Library: global gLoadingBusy; the engine's Vibe.Step stops stepping the moment the screen is up (else a catch-up
+  burst ran the "level won" code again: Deep Dive's air bonus twice). After the build it calls `<Prefix>.ShowHUD`.
+- Test: OXT-BEYOND/tests/t70_loading_rollout.txt NEW: each of the 39 games opened as the Game Player opens it,
+  first level, then its own GoLevel: screen up, built once, no error. 78/78 on both engines (env T70_GAMES="A,B"
+  for a few). t68 t69 t67 green; LIB_COMFY kit_play_test 0 failed.
+- His look: Desktop\Tests 23 Nov\04 Soft Landing, 05 Comfy Pong (play to level 2).
+- Not done: players named per game (Loading.Player) - the guess finds Ship/Player/Hero keys only; Comfy's generator
+  kit_test needs PIL for previews (old). LIB_TEST game-scan branch still not merged (a reading tool).
+
 ## START HERE (23 Nov, evening): p1-12 LEVEL REVEAL BUILT, NOT MERGED; waits for his look; NEXT = p1-13
 
 - Branches `level-reveal` (folders LEFT on them): Vibecode3D 7385ef3 (Engine 1: `Scene.SetReveal pX,pY,pZ,pRadius,pKeep,pStyle`,
