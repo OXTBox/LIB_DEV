@@ -1,6 +1,12 @@
 # Priority Tube: where we are
 
-## START HERE (23 Nov, night): p1-05 GENETIC ANOMALY ARROWS FIXED on LIB_GAD branch `arrow-keys-stay` (waits for his look)
+## START HERE (23 Nov, night): p1-05 GENETIC ANOMALY ARROWS MERGED (owner: "Maximum Key mashing is crash free")
+
+- LIB_GAD main d4fce48; game file copied onto V:; ISSUES 0017 closed; p1-05 done (bubble gone).
+- Seen: the Game Browser lists LIB_GAMES only, so Genetic Anomaly (home LIB_GAD) is not in it: he played it from
+  the V: Library. Offered: let GL.GameFile look in LIB_GAD too (game_launch has another session's unsaved edits).
+
+### Before the merge
 
 - Same cause as Bat Duel (ISSUES 0020): no `on arrowKey` in the game, so Left = previous card. Not a pile-up.
   The Game Player has swallowed stray arrows since 8232292, so it should already be fine there; the game now has
@@ -18,7 +24,7 @@
   lc_world_ui_test.txt 0 fails; world/ui/mock/selftest/skills/build tests still pass). Details: LIB_TTRPG/NEXT.md.
 - Choice I made: during a running scene, typed look / search still go to the DM (clues); go/take/drop/open/close
   go to the world. Not seen on a screen yet. LIB_TEST's Studio copy is old (LIB_TEST is on play-log): untouched.
-- Next for it (his word): a model that edits the cell data.
+- Owner 23 Nov: Verbose talks as if it sees a LiveCode object / the whole map (needs a real system prompt). Whole Studio PARKED in bubble n-58af1221 "TTRPG STUDIO: Total Application Review & Comments Required by Owner." at the bottom of the tube (sized 490, just above Genetic Anomaly). Do not work on TTRPG until he lifts it.
 
 ## START HERE (23 Nov, 15:00): n-7ce789eb LEAN IN SIX EDITOR CARDS DONE on LIB_EDITOR branch `lean-cards` (waits for his look)
 
