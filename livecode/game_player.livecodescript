@@ -610,6 +610,13 @@ end rawKeyDown
 on escapeKey
 end escapeKey
 
+-- an arrow no game took never reaches the engine: its card navigation (the navigationArrows) would
+-- turn the play card away on Left (ISSUES 0020, Bat Duel, 23 Nov 2026). Games read arrows from the
+-- keysDown; the console line still gets them while it is typed in.
+on arrowKey pKey
+   if Player.ConsoleTyping() then pass arrowKey
+end arrowKey
+
 on mouseUp pButton
    if the short name of the target is "PlayerMenu" then pass mouseUp
    if the short name of the target begins with "PlayerCon" then exit mouseUp   -- the console's own
