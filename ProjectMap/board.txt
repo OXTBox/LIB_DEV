@@ -80,7 +80,8 @@ done: 16 Nov notes: GridSprint crash box + traffic, InterceptorRun homing + roto
 block: Engine contract (cellmap v3 follow-ups A-92..A-95) before games move to xRay / Box2DXT
 done: 9-Ball: Scott Rossi's nine ball (Jim Hurley's physics) rewritten for Vibecode3D and xt3d, credit both: merged 20 Nov
 done: Thrmnlra redesign from your 13 Nov feedback (LAUNCH trap, pads + recall by name, bombers, STAND DOWN, launch codes on the Big Board, Strike left to right, their answer right to left, Tab, spoiled LAUNCH): merged 20 Nov
-next: DotMazeLean draws its walls with the shared Lean.Walls instead of its own copy
+done: DotMazeLean walls drawn by the shared Lean.Walls (LIB_BIT lib_lean), same 208 lines, own copy gone (23 Nov, branch dotmaze-lean-walls)
+review: owner: play Dot Maze in the Game Player (it should look and run as before), then say merge
 link: Vibecode3D, xt3d, PROMPT_GLAZE, LIB_SPARK, LIB_COMFY
 
 == PROMPT_GLAZE | GAMES | core
@@ -136,7 +137,8 @@ done: cellmap v3: BitEditor Slope tab, pack window, preview hiding (merged 19 No
 done: Heights: green/blue bands + From Floor / From Ceiling cell by cell + map top + Extrude Glyphs button (18 Nov, branch heights-floor-ceiling)
 block: BUGGED (parked, owner 18 Nov): BitEditor erases the glyphs (ISSUES 0008); needs visual clarification later (heights-floor-ceiling merged 19 Nov with the Slope tab)
 done: Lean style: cube level -> clean outline (lib_lean, BitEditor Scene > Lean Style, E13 L key, roof seams cut), merged 22 Nov
-next: Lean style: an option to leave the water's diagonal marks out
+done: Lean style water=off: BitEditor Scene > Lean: Water Marks Off (saved as meta "lean"), E13 reads it; wizard_pool 295 -> 253 lines (23 Nov, merged)
+review: owner: BitEditor, wizard_pool, Scene > Lean Style then Lean: Water Marks Off
 link: LIB_MAP, LIB_EDITOR, Vibecode3D, xt3d
 
 

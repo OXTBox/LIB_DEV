@@ -1,5 +1,58 @@
 # Priority Tube: where we are
 
+## START HERE (23 Nov, afternoon): n-d241ef1c DONE on LIB_GAMES branch `dotmaze-lean-walls` (abad313), waits for his look
+
+- DotMazeLean's walls: `Lean.Walls(sMaze, kCell, Lean.Style("view=front|layers=-20,20|posts=none"))`; its own
+  builder (Maze.Wall / CornerX / CornerY / AddSeg) is gone. lib_lean loaded by Game.FindFile
+  ("LIB_BIT/livecode/lib_lean.livecodescript"); missing = empty walls + a HUD line, no crash.
+- Test OXT-BEYOND/tests/t73_dotmaze_lean_walls.txt PASS both engines: the same 208 lines as the old builder
+  (kept in the test as Old.*), lib_lean in use, 60 frames no error. fps not measurable headless.
+- V: already has lib_lean (Vibecode3D Common/LIB_BIT/livecode); the V: game script stays the old one until merge + install.
+- Trap seen: a parameter named pI is the constant pi (compile error 165): never name a variable pI.
+- NEXT on the tube: n-7ce789eb (lean style in E05, E06, E08, E09, E11, E12).
+
+## START HERE (23 Nov, 13:50): p1-07 LIBRARY NUMBERS DONE on LIB_PUBLIC branch `library-numbers` (on top of `dot-maze-name`)
+
+- The list reads "21<tab>Floppy Flynn"; the title line "21  Floppy Flynn". Numbers follow the filter shown.
+  t72 (8 checks) + t27 (counts updated to the 23 Nov install: 54 titles, 4 betas, 4 tools) pass both engines.
+- He rebuilt the Library at 13:44 for p1-26; rebuild once more for p1-07 (paste the script minus line 1).
+  His saved Vibecode3D_Launcher.livecode is uncommitted in LIB_PUBLIC: commit it after this rebuild.
+- 13:55 SOLVED: he had cleared the build folder (build1/build2 clutter) and rebuilt 64-bit only, so there is no
+  "Windows x86-64" folder. vibeinstall LAUNCHER_DIR = launcher/build/Vibecode3D Library (skips .lnk); installed on V:,
+  Library exe = Vibecode3D.exe there. His saved stack (p1-26 + p1-07 script) committed on library-numbers (fd19d03).
+  ENGINE_BUILD and the Comfy Games exe path still point at "Windows x86-64" folders.
+- NEXT on the tube: n-d241ef1c (DotMazeLean uses the shared Lean.Walls).
+
+## START HERE (23 Nov, night): p1-26 DOT MAZE NAME DONE on LIB_PUBLIC branch `dot-maze-name` (waits for his look)
+
+- Library: "Dot Maze" = the lean one (appid 1560, 30 fps); the old slow one = "Dot Maze Original" (1150), with
+  `listed last` in its game.txt (vibeinstall LAST set) so the Library sorts it after every title. Installed on V:
+  (whole install: old "Dot Maze Lean" folder pruned). Test OXT-BEYOND/tests/t72_library_order.txt 3/3 both engines.
+- The Library .exe on V: is the 16 Nov build: it needs a rebuild in OXT-Beyond (launcher/README "Build") to sort
+  "listed last"; until then Original sits right under Dot Maze. p1-07 (numbers left of names) is launcher work too:
+  one rebuild can carry both.
+- Seen: `vibeinstall.py catalog` would add BankShotBounce, NineBall, uDead_CullTest (a test) and flip PhotonBall's
+  ref to main. NOT done (catalog rows edited by hand); his word first.
+- extra_items: p1-26 and p1-04 set done. NEXT on the tube: p1-07, then n-d241ef1c.
+
+## START HERE (23 Nov, late): LEAN WATER SWITCH (n-15396035) MERGED to main (owner said merge)
+
+- lib_lean style key `water` (marks = default | off). A map keeps its lean style text in meta `lean`
+  ("water=off"). BitEditor: Scene > "Lean: Water Marks Off" (under Lean Style; an old built editor gets the
+  item when a map loads, no rebuild needed). E13 reads meta lean too. wizard_pool lean 295 -> 253 lines.
+- LIB_BIT f688326 + LIB_EDITOR 69454e0. lc_lean_seams_test 14/14 both engines; both scripts compile both engines.
+- His try: BitEditor, wizard_pool, Scene > Lean Style, then Scene > Lean: Water Marks Off (save, open in E13).
+- Seen on the way: E13 test teleporter FAIL (y 265, wants 231) is on main already: ISSUES 0021.
+- NEXT on the tube: p1-26 (Dot Maze: the Lean one takes the name), then p1-07, n-d241ef1c.
+
+## START HERE (23 Nov, evening): BAT DUEL ARROW CRASH FIXED AND MERGED (owner: "Fixed Achieved ... no crash")
+
+- Cause: Bat Duel (and Floppy Flynn) had no `on arrowKey`; Left went to card navigation = previous card. Not a
+  pile-up. Details: LIB_SYSTEM/ISSUES/0020. LIB_GAMES 3d606cb (both games) + LIB_DEV 8232292 (Game Player swallows
+  any arrow no game took, console line excepted). Test OXT-BEYOND/tests/t71_arrow_keys_stay.txt 10/10 PASS.
+- He held every key he could: no crash. Merged to main, branches deleted. ISSUES 0020 closed.
+- NEXT on the tube after this: n-15396035; 0017 (GA star map) still open; p1-08 play log still waits on `play-log`.
+
 ## START HERE (23 Nov, after p1-08): BAT DUEL CRASH ON TWO HELD ARROWS = TOP PRIORITY (owner)
 
 - Owner: "Down and Left crashed it in about a tenth of a second" (Bat Duel, Game Player, XT). Bubbles p1-04
