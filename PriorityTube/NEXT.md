@@ -1,5 +1,17 @@
 # Priority Tube: where we are
 
+## START HERE (22 Nov, late): LOADING SCREEN BUILT (p1-10 yes, p1-11 done), NOT MERGED
+- Owner said yes to LIB_LOADING_SCREEN/PLAN.md with all three defaults (1.2 s, a key skips once built;
+  Escape pauses; Documents/My Games/Vibecode3D).
+- Built: LIB_LOADING_SCREEN (own repo, main 2fc8dbf: lib_loading + README), LIB_DEV branch `loading-screen`
+  2af8935 (Game Player), bridge branch `loading-screen` 4506d1a (xt3d bench). Test t68: 31 pass on each
+  headless engine. t48/t67 skip the screen now (Loading.Stop after Player.Start); t33-t36 Camera.Reset throws
+  and t48 "profiles listed" were failing before this.
+- HIS STEP: play any game in the Game Player: black + green text at the start, Reset and Levels go through
+  the screen. Games do not call Loading.Go yet (that is p1-13), so a level the game changes itself still snaps.
+- Not on V: (install sim): the installed Game Player will not find the library until vibeinstall copies it.
+- Next for Opus: p1-01 game scan, then p1-12 (Scene.SetReveal).
+
 ## START HERE (22 Nov night): PLAY TEST 0001 IS PLANNED, NOTHING BUILT
 - First outside tester (21 Nov). Their notes became 37 bubbles `p1-01`..`p1-37` (`extra_items.txt`, a new third
   source read by tools/tube_items.py; set a line to `done` when finished). Plan: `PLAYTEST_0001_PLAN.md`
