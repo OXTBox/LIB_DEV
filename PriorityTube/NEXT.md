@@ -1,5 +1,15 @@
 # Priority Tube: where we are
 
+## START HERE (23 Nov, latest): owner "they are great": 10 fun games MERGED to LIB_GAMES main (839068f, Big Ball
+   fixed first: the HAZARDS rain, never on the ball or its rolling path; agents on the board). Bubbles marked done.
+- p1-18 Squad Buggy goes on: owner, the wider view is for OUR grenades to wreck the land ahead/behind. Built on
+  LIB_GAMES `squadbuggy-view` (= main + wider view + grenades, 28ad885): G / right button lobs a grenade to the
+  ground under the reticle; crater sized by kWreck; hold G = one every 20 steps; too near = a soldier thrown off.
+  t76_squadbuggy_grenade 8/8, t76_squadbuggy_view 16/16, t24 34/34, t70 Squad 2/2, both engines.
+  LIB_GAMES FOLDER LEFT ON squadbuggy-view for his look. "merge" -> merge it to main, then LIB_COMFY
+  squadbuggy-wreck-knob (needs kWreck; then tools/install.sh + restart Comfy), p1-18 done.
+- try-23nov-fun branch is now history (main has it all but Squad Buggy). Worktrees removed.
+
 ## START HERE (23 Nov, late night): the 11 FUN BUBBLES p1-24, p1-19, p1-23, p1-15, p1-18, p1-21, p1-16, p1-20,
    p1-32, p1-31, p1-29 ALL BUILT (owner away; "stop at Make it run DOOM": stopped there, p1-33 not started).
 - One helper per bubble, each on its own LIB_GAMES branch (shaft-run, deepdive-prefs, probecone-pulse, bigball-rain,
