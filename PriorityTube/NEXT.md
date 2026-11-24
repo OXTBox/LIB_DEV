@@ -1,5 +1,14 @@
 # Priority Tube: where we are
 
+## START HERE (23 Nov, night): p1-25 STACK DOWN SWAY on LIB_GAMES branch `stackdown-sway` (waits for his look)
+
+- Camera.SetLook each frame (Stack.Sway): roll 1.5 deg over 16 s, turn 1 deg over 23 s (he said "very gentle":
+  less than the bubble's 2); constants kSwayRoll / kSwayRollSecs / kSwayTurn / kSwayTurnSecs at the top.
+  Game.OnStop straightens the camera. Play unchanged.
+- Test OXT-BEYOND/tests/t75_stackdown_sway.txt 4/4 both engines (T74_ROOT for a folder copy).
+- Branch in a worktree at <scratchpad>/lg (LIB_GAMES folder is on another session's tabletop-grid); the file is
+  copied onto V: (Stack Down) for his look. "merge" -> merge in a worktree on main, p1-25 done.
+
 ## START HERE (23 Nov, night): p1-14 TABLETOP RACERS GRID START on LIB_GAMES branch `tabletop-grid` (waits for his look)
 
 - Each table and each retry: empty stretch (clutter from 900), you pull up to a green start line, the rivals
