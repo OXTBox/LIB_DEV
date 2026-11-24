@@ -28,7 +28,7 @@ p1-24	open	LIB_GAMES	Shaft Descent: a run button (Shift, uses more air)	Shaft De
 p1-25	open	LIB_GAMES	Stack Down: sways slowly between -2 and +2 degrees	So it looks alive; any plane
 p1-26	done	LIB_PUBLIC	Dot Maze: the fast Lean one takes the name in the Library; the slow original moves to the end	Slowest fps of the test, and the fix exists (DotMazeLean, 30 fps). Your call; default as written
 p1-27	open	LIB_GAMES	Dead Days: the test bed for LIB_EMITTERS particles and weapon animations	The robot's always-on aura stays. Lightning, plasma, fire, machine guns, missiles tried here first
-p1-28	open	LIB_GAMES	Meadow Marsh: the new name for Dead Days, and commanding the entities' attacks (plan)	Same idea: you command entities to use whatever attacks they have. Plan and rename list first
+p1-28	done	LIB_GAMES	Meadow Marsh: the new name for Dead Days, and commanding the entities' attacks (plan)	Same idea: you command entities to use whatever attacks they have. Plan and rename list first
 p1-29	open	LIB_GAMES	New game: ConeProbe3D (Probe vs Cone in third person with the LIB_POWERBAR power bar)	More of a third-person MMO feel
 p1-30	open	PROMPT_GLAZE	Probe and Cone appear in the Prompt & Glaze universe (story note)	Defeat Cone and free one of them; then the story is tell / save / find / warn the other
 p1-31	open	LIB_GAMES	New game: Lantern and Ladders (torch in the dark, ladders going up, run button)	First a trial of the torch: a black-to-clear gradient over the view, small blendLevel flicker, on both engines. Spooky
