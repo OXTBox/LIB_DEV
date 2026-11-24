@@ -4,7 +4,11 @@
 ## closed; p1-28 Meadow Marsh merged earlier; p1-22 Light Trail bubble cleared on his word. Folder on main.
 ## Owner clears context next; start from the top of PRIORITY_ORDER.txt.
 
-## START HERE (23 Nov, night): p1-25 STACK DOWN SWAY on LIB_GAMES branch `stackdown-sway` (waits for his look)
+## START HERE (23 Nov, night): p1-25 STACK DOWN SWAY MERGED (owner: "Not as fanciful as I pictured it in my head,
+   but it breaks nothing, MERGE"), LIB_GAMES main; LIB_GAMES folder back on main; V: has it; p1-25 done.
+   If he wants it fancier later: bigger kSwayTurn, or a nod (pitch) on its own slower sine.
+
+### Before the merge
 
 - 3rd try (his words: "the pivot point should be at the center of the game board ... shaking head no"): the camera
   goes on an arc round the well's middle (0,0,kZ) and looks at it: 6 deg each way / 20 s (kSwayTurn, kSwayTurnSecs).

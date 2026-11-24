@@ -25,7 +25,7 @@ p1-21	open	LIB_GAMES	Interceptor Run: the helicopter flies straight down half th
 p1-22	done	LIB_GAMES	Light Trail Arena: no frame rate collapse (reuse lines, fewer segments)	Too many segments. Try: recycle lines, trails eat their own tail, more balls
 p1-23	open	LIB_GAMES	Probe vs Cone: an energy pulse between wall blocks stops the javelin	One big wiggling ring between standing blocks; gaps where blocks are gone stay open
 p1-24	open	LIB_GAMES	Shaft Descent: a run button (Shift, uses more air)	Shaft Descent: a run button (Shift, uses more air)
-p1-25	open	LIB_GAMES	Stack Down: sways slowly between -2 and +2 degrees	So it looks alive; any plane
+p1-25	done	LIB_GAMES	Stack Down: sways slowly between -2 and +2 degrees	So it looks alive; any plane
 p1-26	done	LIB_PUBLIC	Dot Maze: the fast Lean one takes the name in the Library; the slow original moves to the end	Slowest fps of the test, and the fix exists (DotMazeLean, 30 fps). Your call; default as written
 p1-27	open	LIB_GAMES	Dead Days: the test bed for LIB_EMITTERS particles and weapon animations	The robot's always-on aura stays. Lightning, plasma, fire, machine guns, missiles tried here first
 p1-28	done	LIB_GAMES	Meadow Marsh: the new name for Dead Days, and commanding the entities' attacks (plan)	Same idea: you command entities to use whatever attacks they have. Plan and rename list first
