@@ -71,6 +71,7 @@ on Player.Start pNoScreen
    global gV3DEdition, gV3DHas
    put "XT" into gV3DEdition
    put empty into gV3DHas
+   Player.SoundStart
    try
       Vibe.Begin Player.ViewRect()
       dispatch "Game.OnStart" to card 1 of me
@@ -85,8 +86,27 @@ on Player.Start pNoScreen
    put the milliseconds into sFPSTick
    Player.BuildMenu
    Player.Message the uGame of me, 1500
+   try
+      Audio.StartMusic
+   catch tErr
+   end try
    Player.Tick
 end Player.Start
+
+-- sound and music (ISSUES 0013): the engine's players, made on this window's card from the
+-- game's own Audio folder or the shared kit (LIB_SFX/kit). No sound files: plays on silent.
+command Player.SoundStart
+   global gV3DHas
+   local tErr
+   try
+      Audio.StopMusic
+      Audio.Init
+      if Audio.Types() is not empty then put "sound" into item (the number of items of gV3DHas + 1) of gV3DHas
+      if Audio.Songs() is not empty then put "music" into item (the number of items of gV3DHas + 1) of gV3DHas
+   catch tErr
+      Player.LogError tErr, "loading sounds"
+   end try
+end Player.SoundStart
 
 on Player.Reset
    Player.Start
@@ -118,10 +138,18 @@ on Player.TogglePause
    Player.UseMe
    if bPaused is true then
       put false into bPaused
+      try
+         Audio.ResumeMusic
+      catch tErr
+      end try
       dispatch "Game.OnResume" to card 1 of me
       Player.Message empty
    else
       put true into bPaused
+      try
+         Audio.PauseMusic
+      catch tErr
+      end try
       dispatch "Game.OnPause" to card 1 of me
       Player.Message "PAUSED   (Escape to go on,  ... for Reset / Levels / Quit)", 0
    end if
@@ -143,6 +171,7 @@ command Player.Halt pText
       Player.UseMe
       try
          if Vibe.Playing() then Game.Exit
+         Audio.StopMusic
       catch tErr
       end try
    end if
@@ -159,6 +188,7 @@ on closeStack
       Player.UseMe
       try
          if Vibe.Playing() then Game.Exit
+         Audio.StopMusic
       catch tErr
       end try
    end if
