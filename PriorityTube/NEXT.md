@@ -1,5 +1,14 @@
 # Priority Tube: where we are
 
+## START HERE (23 Nov, night): p1-14 TABLETOP RACERS GRID START on LIB_GAMES branch `tabletop-grid` (waits for his look)
+
+- Each table and each retry: empty stretch (clutter from 900), you pull up to a green start line, the rivals
+  pull up in their own grid slots, 3 2 1 GO; keys and clock wait for GO.
+- ISSUES 0019 not reproduced: t75_tabletop_grid.txt 9/9 on both engines plays all five tables through the
+  loading screen; off-table, game over and long waits gave no error either.
+- p1-28 Meadow Marsh MERGED (LIB_GAMES 6cca4a7, owner: "great prototype"); p1-22 Light Trail is another
+  session's (branch light-trail-fps). LIB_GAMES folder left on `tabletop-grid`.
+
 ## START HERE (23 Nov, night): p1-28 MEADOW MARSH FIRST PLAYABLE on LIB_GAMES branch `meadow-marsh` (waits for his look)
 
 - Owner's words: copy Dead Days into open country (hills, villages; dungeons/castles later), uDead's orders
