@@ -519,6 +519,7 @@ command Player.BuildMenu
       end repeat
    end if
    if sInput is true then put return & "Controls..." after tText
+   if Player.HasAudio() then put return & "Sounds..." after tText
    put return & "Console" after tText
    put return & "-" & return & "Quit" after tText
    set the text of button "PlayerMenu" of me to tText
@@ -543,11 +544,35 @@ on Player.MenuPick pItem
       case "Console"
          Player.Console
          break
+      case "Sounds..."
+         Player.Sounds
+         break
       case "Quit"
          Player.Quit
          break
    end switch
 end Player.MenuPick
+
+-------------------------------------------------------------------- LIB_AUDIO (choosing sounds)
+
+-- "Sounds..." shows when the hidden AUDIO stack runs (GL.Audio): the game pauses and the AUDIO
+-- window opens on this game's words (LIB_AUDIO step 5): click to hear, double-click to appoint, Save.
+function Player.HasAudio
+   if not ("lib_audio" is among the lines of the stacksInUse) then return false
+   local tOpen
+   try
+      put Audio.IsOpen() into tOpen
+   catch tOpen
+      return false
+   end try
+   return tOpen is true
+end Player.HasAudio
+
+command Player.Sounds
+   global bPaused
+   if sRunning is true and bPaused is not true then Player.TogglePause
+   if Player.HasAudio() then Audio.Show the uGame of me
+end Player.Sounds
 
 -------------------------------------------------------------------- LIB_INPUT (rebindable controls)
 
