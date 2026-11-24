@@ -1,5 +1,10 @@
 # Priority Tube: where we are
 
+## START HERE (23 Nov, last): owner "Greatest games of all time, merge!": Squad Buggy (wider view + G grenades)
+   MERGED to LIB_GAMES main 28ad885; LIB_COMFY squadbuggy-wreck-knob merged (main), tools/install.sh run: the
+   wreck slider shows after a Comfy restart (reload squad_remix workflow). p1-18 done: all 11 fun bubbles done.
+   LIB_GAMES folder on main. Next in the tube: p1-33 DOOM, only after the test-subject review is looked at.
+
 ## START HERE (23 Nov, latest): owner "they are great": 10 fun games MERGED to LIB_GAMES main (839068f, Big Ball
    fixed first: the HAZARDS rain, never on the ball or its rolling path; agents on the board). Bubbles marked done.
 - p1-18 Squad Buggy goes on: owner, the wider view is for OUR grenades to wreck the land ahead/behind. Built on

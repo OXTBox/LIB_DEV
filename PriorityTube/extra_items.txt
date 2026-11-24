@@ -18,7 +18,7 @@ p1-14	done	LIB_GAMES	Tabletop Racers: empty map, you pull up, the others pull up
 p1-15	done	LIB_GAMES	Big Ball of Vectors: enemies rain down on shadow markers, never onto the hero	Safe spawn zone; fall like digital rain; a Vector Toss style shadow shows where each lands; not cluttered
 p1-16	done	LIB_GAMES	Bounce Rally: cars bump each other, a hit car spins out one way and leaves the screen	Red and purple cars overlap; bounced-on cars stay on the road. Pick the first direction, spin out all the way
 p1-17	open	LIB_GAMES	Crater Crawler: grenades and missiles that dig holes; camera pulled back	Like the enemy's holes. Tester had fun at once
-p1-18	open	LIB_GAMES	Squad Buggy: wider view; grenade spam at the land becomes a ComfyUI knob	Wider field of view when the land can be wrecked; how much wrecking = a kit setting in LIB_COMFY
+p1-18	done	LIB_GAMES	Squad Buggy: wider view; grenade spam at the land becomes a ComfyUI knob	Wider field of view when the land can be wrecked; how much wrecking = a kit setting in LIB_COMFY
 p1-19	done	LIB_GAMES	Deep Dive: 'P = Pause / Preferences' hint, sliders for most oxygen and danger speed	Too much oxygen, not enough danger; a demo, so let the player set it
 p1-20	done	LIB_GAMES	Grid Sprint: wide open grid, little traffic, random low slopes spaced out	Less crowding, more grid; start with very low simple slopes and see what happens
 p1-21	done	LIB_GAMES	Interceptor Run: the helicopter flies straight down half the screen with a hidden turret; cars on water sink	The whole helicopter spins today. Cars on water sink (funny); dock pile-ups later
