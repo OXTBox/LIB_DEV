@@ -1,5 +1,14 @@
 # Priority Tube: where we are
 
+## START HERE (23 Nov, night): p1-33 "Make it run DOOM" DONE and MERGED (owner: "PERFECTLY acceptable game,
+   very well done"). CORRIDOR LAB (LIB_GAMES main 05d7309): first-person raycast shooter, black dedication screen
+   in memory of Scott McDonald (The LiveCode Lab), level 1 = Scott's own map, looks solid/glass/lines (V), rays (C).
+   New repo LIB_RAYCAST (Ray.*, Scott's join-rays-into-polygons idea + exact corners); his stack harvested and filed.
+   Tests: LIB_RAYCAST/tests (19 + 1), OXT-BEYOND/tests/t77_corridor_lab.txt 33/33. Live: 31 fps solid and glass.
+   Fixed after his look: a close right-hand wall vanished at 1-15 degrees of turn (an end behind the eye).
+   Known: solid walls jitter a little (ideas in CorridorLab/README.md). LIB_GAMES folder back on main.
+   NEXT (owner): put SOUND AND MUSIC back into the engine, after he clears.
+
 ## START HERE (23 Nov, last): owner "Greatest games of all time, merge!": Squad Buggy (wider view + G grenades)
    MERGED to LIB_GAMES main 28ad885; LIB_COMFY squadbuggy-wreck-knob merged (main), tools/install.sh run: the
    wreck slider shows after a Comfy restart (reload squad_remix workflow). p1-18 done: all 11 fun bubbles done.

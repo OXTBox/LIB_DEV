@@ -33,7 +33,7 @@ p1-29	done	LIB_GAMES	New game: ConeProbe3D (Probe vs Cone in third person with t
 p1-30	open	PROMPT_GLAZE	Probe and Cone appear in the Prompt & Glaze universe (story note)	Defeat Cone and free one of them; then the story is tell / save / find / warn the other
 p1-31	done	LIB_GAMES	New game: Lantern and Ladders (torch in the dark, ladders going up, run button)	First a trial of the torch: a black-to-clear gradient over the view, small blendLevel flicker, on both engines. Spooky
 p1-32	done	LIB_GAMES	New game: an eagle flight game (the tester's TempleOS idea), our own	Fly an eagle over wireframe land and water, dive for fish. Our own game in that spirit
-p1-33	open	LIB_GAMES	'Make it run DOOM': our own first-person corridor shooter on cellmaps	Our own levels, monsters and look in vectors, built on the five-heights cellmap; not a copy of the real game
+p1-33	done	LIB_GAMES	'Make it run DOOM': our own first-person corridor shooter on cellmaps	Our own levels, monsters and look in vectors, built on the five-heights cellmap; not a copy of the real game
 p1-34	open	LIB_GAMES	Spreadsheet that turns into games (the tester's idea; before Christmas, not too soon)	An app that looks like a spreadsheet and becomes games. Concept page first
 p1-35	open	PROMPT_GLAZE	Bit Raider & Opus: endless runner with parkour, cars, ramps, bikes, wingsuits (parked by your word)	Opus trains Bit Raider, Yoda style. Idea saved; 'don't get sidetracked yet'
 p1-36	open	LIB_GAMES	Matrix Lock: camera control, shifting and turning blocks, jump, climb (bottom of the list, your word)	That game is hell, that's the point
