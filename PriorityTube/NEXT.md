@@ -6,7 +6,8 @@
 
 ## START HERE (23 Nov, night): p1-25 STACK DOWN SWAY on LIB_GAMES branch `stackdown-sway` (waits for his look)
 
-- Camera.SetLook each frame (Stack.Sway): roll 1.5 deg over 16 s, turn 1 deg over 23 s (he said "very gentle":
+- Camera.SetLook each frame (Stack.Sway): YAW ONLY (owner: "Yaw is the way it should go"), 1.5 deg over 20 s;
+  first try was roll 1.5 + yaw 1 (he said "very gentle":
   less than the bubble's 2); constants kSwayRoll / kSwayRollSecs / kSwayTurn / kSwayTurnSecs at the top.
   Game.OnStop straightens the camera. Play unchanged.
 - Test OXT-BEYOND/tests/t75_stackdown_sway.txt 4/4 both engines (T74_ROOT for a folder copy).
