@@ -14,7 +14,11 @@
 - NOT seen on a screen (he was in the Priority Tube). His first game: camera height, spell planes, hills.
 - The LIB_GAMES folder is left on `meadow-marsh` (it holds main's crater-wheels merge too).
 
-## START HERE (23 Nov, night): p1-22 LIGHT TRAIL ARENA FPS on LIB_GAMES branch `light-trail-fps` (waits for his look)
+## START HERE (23 Nov, night): p1-22 LIGHT TRAIL ARENA FPS MERGED (owner: "merge, that is one of the best light cycle
+   games ever made!"), LIB_GAMES main ed80ee3 (merged in a worktree: the main folder is on another session's
+   tabletop-grid); V: already has it; p1-22 done.
+
+### Before the merge
 
 - Cause: every straight trail (and every 4-cell piece of the open run) was its own object; the engine pays
   ~0.15 ms an object a frame. Now a bike's trails are drawn as chunks (kChunk = 12 runs = ONE mesh object,

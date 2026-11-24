@@ -1,11 +1,9 @@
 n-e32fb2eb	next step of LIB_DEV	1	note	1.0	Your next input on the Project Map	Project Map, LIB_DEV: Your next input on the Project Map	Your input, not Claude's work: nothing to do until you write it
-p1-06	play test, LIB_GAMES	10	fix	10.0	Crater Crawler: wheels spin the right way	Flip the wheel spin	One sign
 p1-25	play test, LIB_GAMES	15	fun	11.2	Stack Down: sways slowly between -2 and +2 degrees	So it looks alive; any plane	One slow sine on the scene
 p1-03	play test, LIB_PUBLIC	15	fix	15.0	Library: Show Folder and Verify Folder buttons look switched off (white on grey)	They work, but nobody can read them. Colour them like the other buttons (template colours before create)	Two buttons, the house colours, a look at the card
 p1-24	play test, LIB_GAMES	20	fun	15.0	Shaft Descent: a run button (Shift, uses more air)	Shaft Descent: a run button (Shift, uses more air)	One key, one number
 p1-30	play test, PROMPT_GLAZE	20	plan	20.0	Probe and Cone appear in the Prompt & Glaze universe (story note)	Defeat Cone and free one of them; then the story is tell / save / find / warn the other	A page in PROMPT_GLAZE
 p1-19	play test, LIB_GAMES	40	fun	30.0	Deep Dive: 'P = Pause / Preferences' hint, sliders for most oxygen and danger speed	Too much oxygen, not enough danger; a demo, so let the player set it	A short message and two sliders in the pause menu
-p1-28	play test, LIB_GAMES	30	plan	30.0	Meadow Marsh: the new name for Dead Days, and commanding the entities' attacks (plan)	Same idea: you command entities to use whatever attacks they have. Plan and rename list first	One page; the rename itself waits for your yes
 p1-23	play test, LIB_GAMES	40	fun	30.0	Probe vs Cone: an energy pulse between wall blocks stops the javelin	One big wiggling ring between standing blocks; gaps where blocks are gone stay open	A blocker and an LIB_EMITTERS ring
 p1-15	play test, LIB_GAMES	45	fun	33.8	Big Ball of Vectors: enemies rain down on shadow markers, never onto the hero	Safe spawn zone; fall like digital rain; a Vector Toss style shadow shows where each lands; not cluttered	Spawn rule + marker from Vector Toss
 p1-18	play test, LIB_GAMES	45	fun	33.8	Squad Buggy: wider view; grenade spam at the land becomes a ComfyUI knob	Wider field of view when the land can be wrecked; how much wrecking = a kit setting in LIB_COMFY	Camera number + one kit knob

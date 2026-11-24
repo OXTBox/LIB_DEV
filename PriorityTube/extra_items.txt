@@ -22,7 +22,7 @@ p1-18	open	LIB_GAMES	Squad Buggy: wider view; grenade spam at the land becomes a
 p1-19	open	LIB_GAMES	Deep Dive: 'P = Pause / Preferences' hint, sliders for most oxygen and danger speed	Too much oxygen, not enough danger; a demo, so let the player set it
 p1-20	open	LIB_GAMES	Grid Sprint: wide open grid, little traffic, random low slopes spaced out	Less crowding, more grid; start with very low simple slopes and see what happens
 p1-21	open	LIB_GAMES	Interceptor Run: the helicopter flies straight down half the screen with a hidden turret; cars on water sink	The whole helicopter spins today. Cars on water sink (funny); dock pile-ups later
-p1-22	open	LIB_GAMES	Light Trail Arena: no frame rate collapse (reuse lines, fewer segments)	Too many segments. Try: recycle lines, trails eat their own tail, more balls
+p1-22	done	LIB_GAMES	Light Trail Arena: no frame rate collapse (reuse lines, fewer segments)	Too many segments. Try: recycle lines, trails eat their own tail, more balls
 p1-23	open	LIB_GAMES	Probe vs Cone: an energy pulse between wall blocks stops the javelin	One big wiggling ring between standing blocks; gaps where blocks are gone stay open
 p1-24	open	LIB_GAMES	Shaft Descent: a run button (Shift, uses more air)	Shaft Descent: a run button (Shift, uses more air)
 p1-25	open	LIB_GAMES	Stack Down: sways slowly between -2 and +2 degrees	So it looks alive; any plane
