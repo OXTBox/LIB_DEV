@@ -1,5 +1,21 @@
 # Priority Tube: where we are
 
+## START HERE (23 Nov, very late; machine rested): read ~/projects/LIB_AUDIO/HANDOFF.md first.
+   Sound + music are back (owner heard them). LIB_AUDIO built (hidden AUDIO stack, pool of 100, one file
+   per tick) steps 1-4; step 4 (Game Player through AUDIO) passes headless but its live Windows run hung:
+   redo it in small run_code pieces. Restart the Vibecode3D and xt3d MCP bridges first (owner closed them).
+   DONE 23 Nov 23:10: live run in 5 pieces, owner HEARD sounds + music through AUDIO (Canyon, then
+   Hunter with 0 disk reads). `sound-kit` waits for his word to merge; then LIB_AUDIO step 5.
+
+## START HERE (23 Nov, late night): p1-09 SOUND AND MUSIC back, on branches `sound-kit` (Vibecode3D,
+   xt3D bridge, LIB_DEV, LIB_SFX, OXT-BEYOND test; folders left on them). Waits for his ears.
+   Kit: LIB_SFX/kit/Sounds (42 LIB_SFX sounds, 20 types, baked by Windows python tools/bake_kit.py via
+   xtsfx.dll) + kit/Music (5 chip songs, tools/make_music.py). Engine Audio.Roots: game's own
+   Vibecode3D_Games/Audio/<Game>/, stack Data/, "Vibecode3D Common/", then the kit. Game Player: music on
+   start, pause with Escape, stop on quit. t78_sound_back 16/16 both engines; t77/t70/t76/t74 still pass.
+   NOT done: 59 of 61 games call no Sound.Play yet (only Canyon, Hunter) = next bubble; V: install needs the
+   kit copied into "Vibecode3D Common" (after the test-subject notes); no volume knob in the Game Player.
+
 ## START HERE (23 Nov, night): p1-33 "Make it run DOOM" DONE and MERGED (owner: "PERFECTLY acceptable game,
    very well done"). CORRIDOR LAB (LIB_GAMES main 05d7309): first-person raycast shooter, black dedication screen
    in memory of Scott McDonald (The LiveCode Lab), level 1 = Scott's own map, looks solid/glass/lines (V), rays (C).
