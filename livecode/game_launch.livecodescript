@@ -132,6 +132,7 @@ function GL.Open pProjects, pName, pQuitOnClose
       return "The engine library did not load:" && tErr
    end try
    GL.GameNotes pProjects
+   GL.Audio pProjects, pName
    GL.LoadSkin pProjects, pName
    put GL.Info(pProjects, pName) into tInfo
    put "Play" && pName into tStack
@@ -173,6 +174,26 @@ function GL.Open pProjects, pName, pQuitOnClose
    send "Player.Start" to stack tStack in 50 milliseconds
    return empty
 end GL.Open
+
+-- LIB_AUDIO: the hidden AUDIO stack opens (once), gets a card per game, and this game's sounds
+-- start filling its players one per tick, before the window is even made. A launcher may call it
+-- as soon as a game name is clicked. No LIB_AUDIO, or bNoAudio: the engine's own way (or silence).
+command GL.Audio pProjects, pName
+   global bNoAudio
+   local tLib, tErr
+   if bNoAudio is true then exit GL.Audio
+   put pProjects & "/LIB_AUDIO/livecode/lib_audio.livecodescript" into tLib
+   if there is not a file tLib then exit GL.Audio
+   try
+      if not ("lib_audio" is among the lines of the stacksInUse) then start using stack tLib
+      if not Audio.IsOpen() then
+         Audio.Open
+         Audio.Refresh pProjects & "/" & kGamesRel
+      end if
+      Audio.Select pName, GL.GameFile(pProjects, pName)
+   catch tErr
+   end try
+end GL.Audio
 
 -- 900 x 600, centred on the main screen
 function GL.WindowRect

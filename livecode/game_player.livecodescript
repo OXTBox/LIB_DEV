@@ -100,9 +100,14 @@ command Player.SoundStart
    local tErr
    try
       Audio.StopMusic
-      Audio.Init
-      if Audio.Types() is not empty then put "sound" into item (the number of items of gV3DHas + 1) of gV3DHas
-      if Audio.Songs() is not empty then put "music" into item (the number of items of gV3DHas + 1) of gV3DHas
+      if Audio.Hosted() then
+         -- LIB_AUDIO (GL.Audio): the sounds are filling already, one per tick
+         put "sound,music" into gV3DHas
+      else
+         Audio.Init
+         if Audio.Types() is not empty then put "sound" into item (the number of items of gV3DHas + 1) of gV3DHas
+         if Audio.Songs() is not empty then put "music" into item (the number of items of gV3DHas + 1) of gV3DHas
+      end if
    catch tErr
       Player.LogError tErr, "loading sounds"
    end try
