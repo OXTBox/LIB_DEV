@@ -1,0 +1,32 @@
+TRY THESE IN THE GAME BROWSER  (23 Nov night, the fun bubbles p1-24 .. p1-29, stopped at "Make it run DOOM")
+
+The LIB_GAMES folder is left on the try-out branch try-23nov-fun, which holds all eleven, so the
+Game Browser shows them now. Nothing is merged to main. Say "merge" (all, or by name) when you like them.
+Nobody has seen any of them on a screen yet; all were tested headless on both engines.
+
+CHANGED GAMES
+ 1  Shaft Descent      hold Left/Right + Shift = run (1.7x speed, air goes 2x faster). Help line at the top.
+ 2  Deep Dive          P = pause + preferences: sliders MOST AIR and DANGER. New defaults: less air (18 s), more danger (130%).
+                       (In the Vibecode3D app P also opens the app's own Pause menu next to the panel.)
+ 3  Probe vs Cone      a wiggling blue line between standing cubes of the outer ring stops the javelin; break a
+                       cube and the gap is open. YOUR NOTE FIXED: the javelin no longer rests where Probe can't reach.
+ 4  Big Ball of Vectors  grey rings on the floor first, then agents rain down onto them, never on or near the ball.
+ 5  Squad Buggy        camera further back: more land each side, ground where it was. Craters the same size.
+                       (ComfyUI: new `wreck` slider on the Terrain node, on LIB_COMFY branch squadbuggy-wreck-knob:
+                       needs tools/install.sh + Comfy restart, merge the game first.)
+ 6  Interceptor Run    from level 2: helicopter flies straight down to mid-screen, body never turns, a small turret
+                       follows you and shoots (replaced the old bombs). Cars reaching the water sink.
+ 7  Bounce Rally       cars never overlap; a car you bump or land on spins one way and slides off the side.
+ 8  Grid Sprint        wider road, 3 rivals (was 7), a few low hills; hold Up on level 1, first hill after the first gate.
+
+NEW GAMES
+ 9  EagleDive          fly an eagle over wireframe hills and water. Arrows/A D turn, Up climbs, Down noses down,
+                       HOLD Space to dive (let go to pull up). Skim the water over a fish or dive on a jumping one.
+                       Sunset after 2 min; catch enough -> Space flies on (Blue Lake, Twin Ponds, The Bay).
+10  LanternLadders     the torch trial + game: climb a dark tower by ladders. A/D walk, W/S climb, Shift run (burns
+                       oil), Space jump. Look: spooky enough? flicker right? light shrinks as oil runs low?
+11  ConeProbe3D        Probe vs Cone from behind Probe. W/S run, A/D turn, Q/E sidestep, HOLD Space to charge a
+                       throw (power bar bottom left: 1 throw, 2 dash, 3 recall). Look: camera, charge time, bar place.
+
+Details, test counts and the choices I made for you: RESULTS_23NOV_FUN.md (same folder).
+Not done (your in-game note): Comfy Photon "player respawns on open holes" (you said not high priority).

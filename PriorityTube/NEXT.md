@@ -1,5 +1,19 @@
 # Priority Tube: where we are
 
+## START HERE (23 Nov, late night): the 11 FUN BUBBLES p1-24, p1-19, p1-23, p1-15, p1-18, p1-21, p1-16, p1-20,
+   p1-32, p1-31, p1-29 ALL BUILT (owner away; "stop at Make it run DOOM": stopped there, p1-33 not started).
+- One helper per bubble, each on its own LIB_GAMES branch (shaft-run, deepdive-prefs, probecone-pulse, bigball-rain,
+  squadbuggy-view, interceptor-heli, bouncerally-spin, gridsprint-open, eagle-dive, lantern-ladders, coneprobe3d
+  (on top of probecone-pulse)) + LIB_COMFY squadbuggy-wreck-knob. Worktrees left in the session scratchpad.
+- All combined in LIB_GAMES `try-23nov-fun`; the LIB_GAMES FOLDER IS LEFT ON IT so the Game Browser shows them.
+  Every t76_* passes on both engines there; t70 168/0 (now lists ConeProbe3D, LanternLadders, EagleDive, reads T74_ROOT).
+  t76_interceptor_heli got `set the randomSeed to 3` (the hover leaves at random; seed 7/1/2 failed).
+- His list: TRY_23NOV_FUN.txt; details + choices made for him: RESULTS_23NOV_FUN.md; brief: BRIEF_23NOV_FUN.md.
+  Desktop\Tests 23 Nov has 00/01 shortcuts.
+- "merge" -> merge try-23nov-fun (or the named branches) to main; then LIB_COMFY squadbuggy-wreck-knob (needs kWreck
+  in the game first); then mark the bubbles done. Next in the tube: p1-33 DOOM, only after the test-subject review.
+- Open: Comfy Photon game note "player respawns on open holes" (not high priority, his words), still in GAME_NOTES.
+
 ## 23 Nov, night: p1-14 Tabletop grid MERGED (owner: "works splendidly", LIB_GAMES main b4f1104), ISSUES 0019
 ## closed; p1-28 Meadow Marsh merged earlier; p1-22 Light Trail bubble cleared on his word. Folder on main.
 ## Owner clears context next; start from the top of PRIORITY_ORDER.txt.
