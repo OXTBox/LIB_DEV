@@ -117,7 +117,8 @@ done: Tuning pass
 done: TTRPG Studio window seen by you: "A work of art" (18 Nov)
 has: qwen 7B + 2B run together (RAM at 95%; 13B is out of reach, not a stop)
 done: Step 9: the old studio's world code (ref/ttrpg_world.py + lib_ttrpg_world; you played it 19 Nov: "like 1981 all over again!"), merged 20 Nov
-next: A World panel in the Studio (New World, Scene here, NPCs here): ask you first (LIB_TTRPG/NEXT.md)
+done: World panel in the Studio (map, cell as plain data, Verbose, Here -> Add Character, Scene here), 23 Nov, merged 23 Nov
+next: TTRPG STUDIO: Total Application Review & Comments Required by Owner. (bottom of the tube, your word: a full application that needs dedicated testing, feedback and design)
 
 == LIB_HOWTO | GAMES
 what: Step-by-step game tutorials (18 topics, 92 steps)
