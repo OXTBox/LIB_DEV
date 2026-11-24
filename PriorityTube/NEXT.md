@@ -1,5 +1,9 @@
 # Priority Tube: where we are
 
+## 23 Nov, night: p1-14 Tabletop grid MERGED (owner: "works splendidly", LIB_GAMES main b4f1104), ISSUES 0019
+## closed; p1-28 Meadow Marsh merged earlier; p1-22 Light Trail bubble cleared on his word. Folder on main.
+## Owner clears context next; start from the top of PRIORITY_ORDER.txt.
+
 ## START HERE (23 Nov, night): p1-25 STACK DOWN SWAY on LIB_GAMES branch `stackdown-sway` (waits for his look)
 
 - Camera.SetLook each frame (Stack.Sway): roll 1.5 deg over 16 s, turn 1 deg over 23 s (he said "very gentle":
