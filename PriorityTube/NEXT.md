@@ -6,7 +6,11 @@
 
 ## START HERE (23 Nov, night): p1-25 STACK DOWN SWAY on LIB_GAMES branch `stackdown-sway` (waits for his look)
 
-- Camera.SetLook each frame (Stack.Sway): YAW ONLY (owner: "Yaw is the way it should go"), 1.5 deg over 20 s;
+- 3rd try (his words: "the pivot point should be at the center of the game board ... shaking head no"): the camera
+  goes on an arc round the well's middle (0,0,kZ) and looks at it: 6 deg each way / 20 s (kSwayTurn, kSwayTurnSecs).
+  t75 6/6 both engines: middle stays put, a back edge swings ~6.5 px (the perspective is weak: raise kSwayTurn
+  if he wants more).
+- 2nd try: Camera.SetLook each frame (Stack.Sway): YAW ONLY (owner: "Yaw is the way it should go"), 1.5 deg over 20 s;
   first try was roll 1.5 + yaw 1 (he said "very gentle":
   less than the bubble's 2); constants kSwayRoll / kSwayRollSecs / kSwayTurn / kSwayTurnSecs at the top.
   Game.OnStop straightens the camera. Play unchanged.
