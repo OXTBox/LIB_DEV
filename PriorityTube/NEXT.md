@@ -10,7 +10,7 @@
   less than the bubble's 2); constants kSwayRoll / kSwayRollSecs / kSwayTurn / kSwayTurnSecs at the top.
   Game.OnStop straightens the camera. Play unchanged.
 - Test OXT-BEYOND/tests/t75_stackdown_sway.txt 4/4 both engines (T74_ROOT for a folder copy).
-- Branch in a worktree at <scratchpad>/lg (LIB_GAMES folder is on another session's tabletop-grid); the file is
+- LIB_GAMES folder now on stackdown-sway (on top of main b4f1104; owner tests in the Game Browser); the file is also
   copied onto V: (Stack Down) for his look. "merge" -> merge in a worktree on main, p1-25 done.
 
 ## START HERE (23 Nov, night): p1-14 TABLETOP RACERS GRID START on LIB_GAMES branch `tabletop-grid` (waits for his look)
