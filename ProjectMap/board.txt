@@ -307,7 +307,8 @@ demo: Build Game -> playable ComfyPong ("it worked!")
 done: Six genre kits (24 nodes) merged 18 Nov; owner tested their output; kit-made games live in LIB_COMFY/games (one ComfyPong demo in LIB_GAMES)
 done: Comfy Games player (LIB_COMFY/Player/ComfyGames.exe, 18 Nov): finds LIB_COMFY/games from its own folder, genre + sort menus, PLAY = own window; desktop shortcut "Comfy Games". Star ratings still to come
 done: Comfy Games app (genre + games menus, star ratings, Best rated / Newest / A-Z, Make a new one), merged 20 Nov
-next: Comfy Games: rebuild the .exe (the one in Player/ is still 18 Nov), then one download for the public (LIB_COMFY/PLAN_STANDALONE.md, What's next)
+done: Comfy Games plays through AUDIO (Sounds... window, sound editor); .exe rebuilt by the owner and installed on V: with the sound kit, merged + pushed 24 Nov
+next: Comfy Games: one download for the public, an installer with Python, the node pack and the sound kit (LIB_COMFY/PLAN_STANDALONE.md, What's next)
 link: LIB_GAMES
 
 == LIB_SPARK | TOOLS

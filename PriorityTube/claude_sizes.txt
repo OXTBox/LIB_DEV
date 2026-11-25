@@ -94,3 +94,8 @@ p1-36	240	big	A lot; last but one
 p1-37	500	big	Always last
 p1-38	240	fun	Half a day to first picture, half for keys and speed; sound is a later bubble
 n-58af1221	490	big	Bottom of the tube, owner 23 Nov (just above Genetic Anomaly, which is always last): whole-app review of TTRPG Studio with him; Verbose prompt fix waits here
+a1-01	120	big	Edit... in the AUDIO window (sliders, presets, Mutate, Hear, wave picture)
+a1-02	60	big	Save the new sound for this game (or for every game)
+a1-03	60	fun	tuning pass, the games whose sounds need to pop
+a1-04	45	utility	in the installed and public copies (xtsfx.dll, kit, lib_audio)
+n-cf46e52a	180	big	The public Comfy Games download: installer (Inno Setup/NSIS) from vibeinstall comfygames + embeddable Python + node pack + sound kit (the .exe part done 24 Nov)

@@ -1,5 +1,21 @@
 # Priority Tube: where we are
 
+## START HERE (24 Nov, night): a1-04 DONE (owner built both exes 22:51/22:53, installed on V:): V: refreshed (54 games + Comfy with
+   AUDIO, editor, kit). Rebuild Vibecode3D Library.exe + ComfyGames.exe, then reinstall (LIB_AUDIO/HANDOFF.md
+   last section). a1-03 tuning pass skipped for now (his word: takes forever). ALL MERGED 24 Nov night
+   (owner: "merge"): sound-editor (incl. comfy-audio) in LIB_AUDIO, comfy-audio in LIB_COMFY, audio-install
+   in LIB_PUBLIC. Pushed to OXTBox. His uncommitted: LIB_PUBLIC launcher/Vibecode3D_Launcher.livecode(+script), LIB_COMFY stack.
+
+## START HERE (24 Nov, late): SOUND EDITOR a1-01 + a1-02 BUILT, LIB_AUDIO branch `sound-editor` (on top of
+   `comfy-audio`), wait for his look: AUDIO window > Edit... (see LIB_AUDIO/HANDOFF.md, last section).
+   Next in the tube: a1-03 tuning pass (needs his list of games that need to pop), a1-04 installed copies.
+
+## START HERE (24 Nov, later): COMFY AUDIO steps 1-3 BUILT on branches `comfy-audio` (LIB_AUDIO 4e550ab,
+   LIB_COMFY 131bb72), wait for his look. Comfy games now play through AUDIO (... > Sounds...), node parts
+   call kit names, a choice saved for "Whole family" or for Photon Ball follows into the Comfy remixes.
+   Details + what's open: LIB_COMFY/AUDIO_HANDOFF.md (DONE 24 Nov section). Asked him: old 37 games silent or
+   rebuilt. Rest of rank 2 = re-save ComfyGames.livecode with the new script, build the .exe, public download.
+
 ## START HERE (24 Nov): SOUNDS IN 55 GAMES, MERGED to LIB_GAMES main (aa8b531). Owner tried lots: "Very nicely
    done ... an arcade with these 55 or so games would sound very lively"; some need special attention to pop.
    LIB_AUDIO step 5 (AUDIO window) on main too. List per game: LIB_AUDIO/GAME_SOUNDS.md; test t82_game_sounds.
