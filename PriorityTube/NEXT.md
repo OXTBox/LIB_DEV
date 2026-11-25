@@ -1,5 +1,12 @@
 # Priority Tube: where we are
 
+## START HERE (24 Nov): SOUNDS IN 55 GAMES, MERGED to LIB_GAMES main (aa8b531). Owner tried lots: "Very nicely
+   done ... an arcade with these 55 or so games would sound very lively"; some need special attention to pop.
+   LIB_AUDIO step 5 (AUDIO window) on main too. List per game: LIB_AUDIO/GAME_SOUNDS.md; test t82_game_sounds.
+   p1-09 (rank 1) is done: sound and music are back. NEXT = rank 2, the Comfy Games rebuild (n-c58324eb),
+   and WITH it the Comfy audio: read LIB_COMFY/AUDIO_HANDOFF.md (player opens AUDIO, kit names in parts,
+   a game's sound choices follow its Comfy remixes/family). Comfy games stay silent until then (his word).
+
 ## START HERE (23 Nov, very late; machine rested): read ~/projects/LIB_AUDIO/HANDOFF.md first.
    Sound + music are back (owner heard them). LIB_AUDIO built (hidden AUDIO stack, pool of 100, one file
    per tick) steps 1-4; step 4 (Game Player through AUDIO) passes headless but its live Windows run hung:
