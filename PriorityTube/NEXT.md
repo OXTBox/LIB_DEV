@@ -2,7 +2,7 @@
 
 ## START HERE (24 Nov, night, later): PYTHONIZING (rank 1, n-f59d34e9) DONE as far as it goes without him.
    Interpreter was done; the second step (his order of 21 Nov) is the TRANSLATOR xTalk -> Python: built on
-   xtalk_py branch `translator` (2 commits), waits for his look. 338 LiveCode answers match both ways; all
+   xtalk_py branch `translator` (2 commits), waits for his look. 352 LiveCode answers match both ways; all
    1652 distinct scripts in ~/projects: 20,591 handlers become Python that compiles (430 do not parse).
    Found + fixed on the way: switch falls through in LiveCode (asked it), the interpreter did not.
    Details: xtalk_py/docs/HANDOFF_2026-11-24.md. Bubble now n-8b385175 (his look). Phase 2 (stack runtime)
