@@ -1,5 +1,7 @@
 # Priority Tube: where we are
 
+## START HERE (25 Nov, after /clear): xtalk_py next phase = read xtalk_py/docs/HANDOFF_2026-11-25.md (ask him
+   first how open_stack.sh looked; then Phase 2 gaps, bubble n-59f50fa4).
 ## 25 Nov: translator + stack-runtime MERGED to xtalk_py main on his word (local; push was not asked, not done).
 ## START HERE (25 Nov, small hours): PHASE 2 STARTED on his word ("continue with phase 2 and pip your needs").
    xtalk_py branch `stack-runtime` (on `translator`): .venv with raylib + imgui-bundle; xtalk/stack/ runs his
