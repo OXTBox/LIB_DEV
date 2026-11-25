@@ -63,9 +63,9 @@ link: LIB_ig3d
 == xtalk_py | ENGINES
 what: xTalk runtime in Python + the script corpus
 has: Script corpus with INDEX.md (toCorpus / fromXJSON)
-has: Interpreter (352 LiveCode answers match) + translator xTalk -> Python (branch translator, 24 Nov)
-has: Phase 2 started: stack runtime runs Game_card_reader + LightCycles3 (branch stack-runtime, 25 Nov)
-next: Try tools/open_stack.sh on the card reader and LightCycles3; then say merge (translator + stack-runtime)
+has: Interpreter (360 LiveCode answers match) + translator xTalk -> Python (MERGED 25 Nov)
+has: Phase 2 stack runtime runs Game_card_reader + LightCycles3 (MERGED 25 Nov; tools/open_stack.sh)
+next: Phase 2 gaps: grab, popup, ask, create, GAD bad-operand (xtalk_py/docs/HANDOFF_2026-11-24.md)
 link: LIB_XTJSON, LIB_GLOBALS
 
 # ---------------- GAMES ----------------

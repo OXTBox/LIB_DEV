@@ -1,5 +1,6 @@
 # Priority Tube: where we are
 
+## 25 Nov: translator + stack-runtime MERGED to xtalk_py main on his word (local; push was not asked, not done).
 ## START HERE (25 Nov, small hours): PHASE 2 STARTED on his word ("continue with phase 2 and pip your needs").
    xtalk_py branch `stack-runtime` (on `translator`): .venv with raylib + imgui-bundle; xtalk/stack/ runs his
    harvested Game_card_reader and LightCycles3 (32 headless checks). Not seen on screen by anyone yet:
