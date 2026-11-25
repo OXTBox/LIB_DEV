@@ -100,3 +100,4 @@ a1-03	60	fun	tuning pass, the games whose sounds need to pop
 a1-04	45	utility	in the installed and public copies (xtsfx.dll, kit, lib_audio)
 n-cf46e52a	180	big	The public Comfy Games download: installer (Inno Setup/NSIS) from vibeinstall comfygames + embeddable Python + node pack + sound kit (the .exe part done 24 Nov)
 n-8b385175	15	note	Your look: the translator is built and tested (xtalk_py/docs/HANDOFF_2026-11-24.md); merging is your word
+n-b61101e4	15	note	Your look: two of your stacks running in the Python runtime (window), then merge translator + stack-runtime

@@ -64,7 +64,8 @@ link: LIB_ig3d
 what: xTalk runtime in Python + the script corpus
 has: Script corpus with INDEX.md (toCorpus / fromXJSON)
 has: Interpreter (352 LiveCode answers match) + translator xTalk -> Python (branch translator, 24 Nov)
-next: Look at the translator (branch translator): generated/lib_bit.py, then say merge
+has: Phase 2 started: stack runtime runs Game_card_reader + LightCycles3 (branch stack-runtime, 25 Nov)
+next: Try tools/open_stack.sh on the card reader and LightCycles3; then say merge (translator + stack-runtime)
 link: LIB_XTJSON, LIB_GLOBALS
 
 # ---------------- GAMES ----------------

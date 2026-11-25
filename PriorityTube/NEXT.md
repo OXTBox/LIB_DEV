@@ -1,5 +1,11 @@
 # Priority Tube: where we are
 
+## START HERE (25 Nov, small hours): PHASE 2 STARTED on his word ("continue with phase 2 and pip your needs").
+   xtalk_py branch `stack-runtime` (on `translator`): .venv with raylib + imgui-bundle; xtalk/stack/ runs his
+   harvested Game_card_reader and LightCycles3 (32 headless checks). Not seen on screen by anyone yet:
+   `~/projects/xtalk_py/tools/open_stack.sh ~/projects/XTJSON/LightCycles3`. switch-ignores-case fact corrected.
+   Details + gaps table: xtalk_py/docs/HANDOFF_2026-11-24.md (Phase 2 part). Nothing merged or pushed.
+
 ## START HERE (24 Nov, night, later): PYTHONIZING (rank 1, n-f59d34e9) DONE as far as it goes without him.
    Interpreter was done; the second step (his order of 21 Nov) is the TRANSLATOR xTalk -> Python: built on
    xtalk_py branch `translator` (2 commits), waits for his look. 352 LiveCode answers match both ways; all
