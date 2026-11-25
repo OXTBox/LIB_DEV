@@ -63,7 +63,8 @@ link: LIB_ig3d
 == xtalk_py | ENGINES
 what: xTalk runtime in Python + the script corpus
 has: Script corpus with INDEX.md (toCorpus / fromXJSON)
-next: Pythonizing day (later, by the owner's word)
+has: Interpreter (338 LiveCode answers match) + translator xTalk -> Python (branch translator, 24 Nov)
+next: Look at the translator (branch translator): generated/lib_bit.py, then say merge
 link: LIB_XTJSON, LIB_GLOBALS
 
 # ---------------- GAMES ----------------

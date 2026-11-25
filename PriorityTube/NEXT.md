@@ -1,5 +1,13 @@
 # Priority Tube: where we are
 
+## START HERE (24 Nov, night, later): PYTHONIZING (rank 1, n-f59d34e9) DONE as far as it goes without him.
+   Interpreter was done; the second step (his order of 21 Nov) is the TRANSLATOR xTalk -> Python: built on
+   xtalk_py branch `translator` (2 commits), waits for his look. 338 LiveCode answers match both ways; all
+   1652 distinct scripts in ~/projects: 20,591 handlers become Python that compiles (430 do not parse).
+   Found + fixed on the way: switch falls through in LiveCode (asked it), the interpreter did not.
+   Details: xtalk_py/docs/HANDOFF_2026-11-24.md. Bubble now n-8b385175 (his look). Phase 2 (stack runtime)
+   needs raylib + ImGui installed: his OK.
+
 ## START HERE (24 Nov, night): a1-04 DONE (owner built both exes 22:51/22:53, installed on V:): V: refreshed (54 games + Comfy with
    AUDIO, editor, kit). Rebuild Vibecode3D Library.exe + ComfyGames.exe, then reinstall (LIB_AUDIO/HANDOFF.md
    last section). a1-03 tuning pass skipped for now (his word: takes forever). ALL MERGED 24 Nov night
