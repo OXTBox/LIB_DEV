@@ -65,7 +65,7 @@ what: xTalk runtime in Python + the script corpus
 has: Script corpus with INDEX.md (toCorpus / fromXJSON)
 has: Interpreter (393 LiveCode answers match) + translator xTalk -> Python (MERGED 25 Nov)
 has: Phase 2 stack runtime: Game_card_reader, LightCycles3, Scott Rossi nine-ball play (grab + mouse, 25 Nov; tools/open_stack.sh)
-next: Phase 2 gaps: GAD bad-operand, popup, ask, create (xtalk_py/docs/HANDOFF_2026-11-25.md)
+next: Phase 2 gaps: popup, ask, create (GAD skipped, owner 25 Nov) (xtalk_py/docs/HANDOFF_2026-11-25.md)
 link: LIB_XTJSON, LIB_GLOBALS
 
 # ---------------- GAMES ----------------
