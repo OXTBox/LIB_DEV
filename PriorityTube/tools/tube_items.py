@@ -71,7 +71,8 @@ def extra_items():
                 continue
             b = l.rstrip("\n").split("\t")
             if len(b) >= 4 and b[1] == "open":
-                out.append([b[0], f"play test, {b[2]}", clean(b[3]), clean(b[4] if len(b) > 4 else b[3])])
+                out.append([b[0], f"{'play test' if b[0].startswith('p1-') else 'next step of'}, {b[2]}".replace("next step of, ", "next step of "),
+                            clean(b[3]), clean(b[4] if len(b) > 4 else b[3])])
     return out
 
 

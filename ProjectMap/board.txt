@@ -65,7 +65,8 @@ what: xTalk runtime in Python + the script corpus
 has: Script corpus with INDEX.md (toCorpus / fromXJSON)
 has: Interpreter (393 LiveCode answers match) + translator xTalk -> Python (MERGED 25 Nov)
 has: Phase 2 stack runtime: Game_card_reader, LightCycles3, Scott Rossi nine-ball play (grab + mouse, 25 Nov; tools/open_stack.sh)
-next: owner picks: round off Phase 2 or Phase 3 (xtalk_py/docs/HANDOFF_2026-11-26.md)
+has: Project Map as a real Python app (26 Nov, idle CPU 0%); Priority Tube runs in Python (26 Nov)
+next: Your look: the Priority Tube in Python (right-click menu fixed 26 Nov), then merge xtalk_py priority-tube (docs/HANDOFF_2026-11-26_EVENING.md)
 link: LIB_XTJSON, LIB_GLOBALS
 
 # ---------------- GAMES ----------------
