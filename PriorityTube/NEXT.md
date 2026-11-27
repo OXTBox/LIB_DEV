@@ -1,3 +1,5 @@
+> **27 Nov later morning: START at `xtalk_py/docs/HANDOFF_2026-11-27.md`** (window-show-once to try, then x1-03 GPU).
+
 > **27 Nov fresh terminal: helpers in parallel** -> `xtalk_py/docs/PLAN_HELPERS_2026-11-27.md` (then `xtalk_py/docs/HANDOFF_2026-11-26_EVENING.md` top).
 
 # Priority Tube: where we are
