@@ -125,3 +125,4 @@ g1-08	60	fix	caseSensitive in the shared compare rules, tests both ways (hot pat
 g1-09	15	fix	one keyDown line in Thrmnlra (game script: his word first)
 x1-10	60	utility	measure fullScreen in LiveCode, menu item in Library/player, Python window follows
 s1-01	360	big	steps 1-7 of LIB_SCREENS/PLAN.md, each its own branch
+s1-02	90	utility	title card on demand from the keepsake look, MAIN button
