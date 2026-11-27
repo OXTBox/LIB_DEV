@@ -66,7 +66,7 @@ has: Script corpus with INDEX.md (toCorpus / fromXJSON)
 has: Interpreter (393 LiveCode answers match) + translator xTalk -> Python (MERGED 25 Nov)
 has: Phase 2 stack runtime: Game_card_reader, LightCycles3, Scott Rossi nine-ball play (grab + mouse, 25 Nov; tools/open_stack.sh)
 has: Project Map as a real Python app (26 Nov, idle CPU 0%); Priority Tube runs in Python (26 Nov)
-next: Your look: the Priority Tube in Python (right-click menu fixed 26 Nov), then merge xtalk_py priority-tube (docs/HANDOFF_2026-11-26_EVENING.md)
+next: Your look: the Tube reloads by itself now (x1-01): keep it open; when Claude changes the bubbles it rebuilds within 2 seconds, scroll kept (merge LIB_DEV tube-auto-reload)
 link: LIB_XTJSON, LIB_GLOBALS
 
 # ---------------- GAMES ----------------

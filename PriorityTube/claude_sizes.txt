@@ -113,3 +113,4 @@ n-55aa8b41	10	note	Your look, not Claude work: open the Tube, try the right-clic
 x1-00	180	utility	the View draws everything through one scale; fonts at the scaled size; a setting per stack
 x1-08	120	utility	rules written once, built in the View, checked in each app
 x1-09	360	big	measure LiveCode's effects, then a shader at a time
+n-439916ab	10	note	Your look, not Claude work: keep the Tube open while Claude changes a bubble; say merge
