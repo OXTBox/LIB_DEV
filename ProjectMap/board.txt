@@ -229,6 +229,13 @@ done: A Menus kind in LIB_DATA: Menus/<game or app>/ + Functions/, Data.MenuFold
 done: The Priority Tube and the Status Browser use Menu.* too (18 Nov)
 link: LIB_GUI, LIB_DEV
 
+== LIB_FACE | BLOCKS
+what: Human and robot faces: procedural makers, editors and a library of faces (flat grids, vector, 3D)
+done: FaceKit lib_face.livecodescript (26 Nov): a face from any seed or name, human or robot, 8 expressions incl. two shout frames; 48 x 26 grids like the Claude face and the Sarge; headless tests pass on both engines, through Map.BlockEdges too
+done: Library (26 Nov): INDEX.md + faces/ (Claude, Sarge, 4 TTRPG party faces); own repo on main
+next: Face Studio window: one control set per method and per look (branch face-studio)
+link: LIB_MAP, LIB_MCP, LIB_UNICODE, LIB_GAMES
+
 == LIB_UNICODE | BLOCKS
 what: Registry of the Unicode characters we use and plan to use, one meaning each; characters name procedures (drag a house character in, get a 3D house)
 done: Its own LIB, README + REGISTRY.tsv first pass (18 Nov): 30 characters, from a scan of our LIBs
@@ -364,7 +371,7 @@ what: The inbox (LIB_LLMIN/<project>) and the done pile (LIB_LLMOUT/Read)
 has: FOR_REVIEW.txt feeds the Status Browser
 
 == Unsorted folders | SYSTEM
-what: LIB_COMPANY, LIB_FACE, LIB_LUA, LIB_OMEGA, LIB_ARRAY: notes or empty, no git
+what: LIB_COMPANY, LIB_LUA, LIB_OMEGA, LIB_ARRAY: notes or empty, no git
 block: owner: say what each is for, or let them stay notes
 
 == LIB_BAT | TOOLS
