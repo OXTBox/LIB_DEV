@@ -104,7 +104,7 @@ n-b61101e4	15	note	Your look: two of your stacks running in the Python runtime (
 n-59f50fa4	240	big	Phase 2 gaps: grab, popup menus, ask dialogs, create objects, GAD bad-operand; each small, measured in LiveCode first
 x1-01	45	utility	a file watch in the Python window; the Tube reloads itself
 x1-02	240	big	a full app: harvest, hidden checks, your window, fixes
-x1-03	30	utility	two environment settings and a frames-a-second comparison
+x1-03	20	utility	two environment settings and a frames-a-second comparison
 x1-04	240	big	a full app, raylib calls already twinned in Python
 x1-05	45	fix	two measured rules, small code
 x1-06	60	plan	reading and a plan, no building
