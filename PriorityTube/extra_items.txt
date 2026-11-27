@@ -45,7 +45,7 @@ a1-03	open	LIB_AUDIO	Sound editor 3: tuning pass, the games whose sounds need to
 a1-04	done	LIB_AUDIO	Sound editor 4: in the installed and public copies (xtsfx.dll, kit, lib_audio)	V: install and the public download carry the DLL, the kit and lib_audio; without the DLL the Edit button is hidden, never an error
 # x1-NN = Pythonizing our apps (xtalk_py), added by Claude 26 Nov evening on the owner's ask
 x1-01	done	LIB_DEV	Priority Tube: a running window reloads by itself when Claude changes its bubbles or order	The Python window watches items.txt and PRIORITY_ORDER.txt and reloads (as R does) when they change from outside, so Claude can refresh it
-x1-02	open	xtalk_py	Vibecode3D Library in Python: the launcher as a real app	Harvest it, check it hidden, then your window; fix what you report, as with Project Map and the Tube
+x1-02	done	xtalk_py	Vibecode3D Library in Python: the launcher as a real app	Harvest it, check it hidden, then your window; fix what you report, as with Project Map and the Tube
 x1-03	open	xtalk_py	GPU drawing on your RTX 3060 (d3d12) for the 3D games in Python	GALLIUM_DRIVER=d3d12: measure frames a second against the processor drawing; offered 26 Nov, not tested
 x1-04	open	xtalk_py	xt3d (the raylib bridge test bench) in Python	The next app on your list after the Library
 x1-05	open	xtalk_py	Behaviours leftovers: `it` after dispatch, the long id of a script-only stack	Both measured in LiveCode; small
