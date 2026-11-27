@@ -119,3 +119,4 @@ g1-02	45	fix	GameNotes close path inside the play window
 g1-03	60	fix	scale for game windows (xt3d clipping follows) + cropping
 g1-04	30	fix	run hidden, read errors
 g1-05	90	fix	profile then native or cache the slow part
+g1-06	30	fix	Users.Driver / Data.Root in Python
