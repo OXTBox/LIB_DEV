@@ -114,3 +114,8 @@ x1-00	180	utility	the View draws everything through one scale; fonts at the scal
 x1-08	120	utility	rules written once, built in the View, checked in each app
 x1-09	360	big	measure LiveCode's effects, then a shader at a time
 n-439916ab	10	note	Your look, not Claude work: keep the Tube open while Claude changes a bubble; say merge
+g1-01	45	fix	find the field the names go to; draw it
+g1-02	45	fix	GameNotes close path inside the play window
+g1-03	60	fix	scale for game windows (xt3d clipping follows) + cropping
+g1-04	30	fix	run hidden, read errors
+g1-05	90	fix	profile then native or cache the slow part
