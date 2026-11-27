@@ -123,3 +123,4 @@ g1-06	30	fix	Users.Driver / Data.Root in Python
 g1-07	60	fix	profile spawn spells, native/cache
 g1-08	60	fix	caseSensitive in the shared compare rules, tests both ways (hot paths: measure speed)
 g1-09	15	fix	one keyDown line in Thrmnlra (game script: his word first)
+x1-10	60	utility	measure fullScreen in LiveCode, menu item in Library/player, Python window follows
