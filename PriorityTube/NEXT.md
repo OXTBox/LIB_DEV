@@ -1,3 +1,5 @@
+> **26 Nov: Priority Tube in Python** notes live in `xtalk_py/docs/HANDOFF_2026-11-26_EVENING.md` (top section), not here.
+
 # Priority Tube: where we are
 
 ## START HERE (25 Nov, after /clear): xtalk_py next phase = read xtalk_py/docs/HANDOFF_2026-11-25.md (ask him
