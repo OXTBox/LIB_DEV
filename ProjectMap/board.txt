@@ -233,7 +233,9 @@ link: LIB_GUI, LIB_DEV
 what: Human and robot faces: procedural makers, editors and a library of faces (flat grids, vector, 3D)
 done: FaceKit lib_face.livecodescript (26 Nov): a face from any seed or name, human or robot, 8 expressions incl. two shout frames; 48 x 26 grids like the Claude face and the Sarge; headless tests pass on both engines, through Map.BlockEdges too
 done: Library (26 Nov): INDEX.md + faces/ (Claude, Sarge, 4 TTRPG party faces); own repo on main
-next: Face Studio window: one control set per method and per look (branch face-studio)
+done: 10 line looks + jitter, pareidolia (8 things with faces), xt3d depth face as a source (26 Nov, main)
+review: Face Studio window (branch face-studio): every source in every look, sliders from looks.tsv/opts.tsv; seen in OXT-Beyond 26 Nov
+next: more looks (glyphs, circles, isometric, mirror), find a face in noise or a level map
 link: LIB_MAP, LIB_MCP, LIB_UNICODE, LIB_GAMES
 
 == LIB_UNICODE | BLOCKS
