@@ -1,4 +1,4 @@
-> **26 Nov: Priority Tube in Python** notes live in `xtalk_py/docs/HANDOFF_2026-11-26_EVENING.md` (top section), not here.
+> **27 Nov fresh terminal: helpers in parallel** -> `xtalk_py/docs/PLAN_HELPERS_2026-11-27.md` (then `xtalk_py/docs/HANDOFF_2026-11-26_EVENING.md` top).
 
 # Priority Tube: where we are
 
