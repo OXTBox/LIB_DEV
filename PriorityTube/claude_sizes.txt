@@ -124,3 +124,4 @@ g1-07	60	fix	profile spawn spells, native/cache
 g1-08	60	fix	caseSensitive in the shared compare rules, tests both ways (hot paths: measure speed)
 g1-09	15	fix	one keyDown line in Thrmnlra (game script: his word first)
 x1-10	60	utility	measure fullScreen in LiveCode, menu item in Library/player, Python window follows
+s1-01	20	plan	read the plan, answer 3 questions; build steps after are ~6 h
