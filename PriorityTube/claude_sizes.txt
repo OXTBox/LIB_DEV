@@ -127,3 +127,8 @@ x1-10	60	utility	measure fullScreen in LiveCode, menu item in Library/player, Py
 s1-01	360	big	steps 1-7 of LIB_SCREENS/PLAN.md, each its own branch
 s1-02	90	utility	title card on demand from the keepsake look, MAIN button
 n-d89b0ed2	360	big	16 planned options in LIB_FACE/OPTIONS.md (eyes, nose, mouth sliders, asymmetry, face crop, glyphs...), each a FaceKit change + a Studio control
+x1-11	30	fix	one option in xt3d_game_check, a test
+x1-12	90	utility	one tool built on open_stack and the game check
+x1-13	60	utility	golden.py's pieces as one command
+x1-14	120	big	MCP pack on x1-12, sessions kept in memory
+x1-15	20	utility	one try with the local model, a primer
