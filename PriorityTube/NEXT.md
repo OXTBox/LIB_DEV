@@ -1,3 +1,5 @@
+> **27 Nov evening: START at `xtalk_py/docs/HANDOFF_2026-11-27_EVENING.md`** (helpers + advisor run: lead x1-06 MCP plan, A x1-05, B x1-08 then x1-09, C x1-04). Lines below are history.
+
 > **27 Nov later morning: START at `xtalk_py/docs/HANDOFF_2026-11-27.md`** (window-show-once to try, then x1-03 GPU).
 
 > **27 Nov fresh terminal: helpers in parallel** -> `xtalk_py/docs/PLAN_HELPERS_2026-11-27.md` (then `xtalk_py/docs/HANDOFF_2026-11-26_EVENING.md` top).
