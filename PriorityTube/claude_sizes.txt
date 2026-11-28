@@ -132,3 +132,4 @@ x1-12	90	utility	one tool built on open_stack and the game check
 x1-13	60	utility	golden.py's pieces as one command
 x1-14	120	big	MCP pack on x1-12, sessions kept in memory
 x1-15	20	utility	one try with the local model, a primer
+x1-16	600	big	many batches: browser, then ~20 examples a batch, new bridge calls as needed
